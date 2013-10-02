@@ -21,8 +21,9 @@ Setting up environment
 
 Create a virtual environment where pycontw dependencies will live::
 
-    $ virtualenv pycontw
-    $ source pycontw/bin/activate
+    $ mkdir ~/.virtualenvs
+    $ virtualenv ~/.virtualenvs/pycontw
+    $ source ~/.virtualenvs/pycontw/bin/activate
     (pycontw)$
 
 Clone this repository::
