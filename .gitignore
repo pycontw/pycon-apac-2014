@@ -5,6 +5,9 @@ docs/_build/
 # C extensions
 *.so
 
+# virtualenv folder
+.venv
+
 # Packages
 *.egg
 *.egg-info
