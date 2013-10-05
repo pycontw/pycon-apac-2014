@@ -15,26 +15,19 @@ Requirements
  * Git 1.8+
  * Python 2.7+
  * virtualenv 1.10.1+
+ * fabric
 
 Setting up environment
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Create a virtual environment where pycontw dependencies will live::
-
-    $ mkdir ~/.virtualenvs
-    $ virtualenv ~/.virtualenvs/pycontw
-    $ source ~/.virtualenvs/pycontw/bin/activate
-    (pycontw)$
-
 Clone this repository::
 
-    (pycontw)$ cd pycontw
-    (pycontw)$ git clone git@bitbucket.org:pycontw/pycon-apac-2014.git
+    $ git clone git@bitbucket.org:pycontw/pycon-apac-2014.git
 
-Install project dependencies::
+Setup its virtualenv and requirements through fabric script:
 
-    (pycontw)$ cd pycon-apac-2014
-    (pycontw)$ pip install -r requirements/project.txt
+    $ cd pycon-apac-2014
+    $ fab create_virtualenv
 
 Setting up the database
 -----------------------
@@ -44,12 +37,20 @@ up to run on a SQLite database. If you are setting up a production database
 see the Configuration section below for where to place settings and get the
 database running. Now you can run::
 
-    (pycontw)$ python confweb/manage.py createdb
+    $ fab deploy:deployment
+
+For developer,
+
+    $ fab deploy:developer
 
 Running a web server
 --------------------
 
 In development you should run::
 
-    (pycontw)$ cd confweb
-    (pycontw)$ python manage.py runserver
+    $ fab runserver
+
+This will run a web server with default port, 8000. If you want to run the
+server in a specific port:
+
+    $ fab runserver:8090

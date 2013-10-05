@@ -6,7 +6,7 @@ docs/_build/
 *.so
 
 # virtualenv folder
-.venv
+.virtualenvs
 
 # Packages
 *.egg
