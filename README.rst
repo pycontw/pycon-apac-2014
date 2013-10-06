@@ -14,8 +14,6 @@ Requirements
 
  * Git 1.8+
  * Python 2.7+
- * virtualenv 1.10.1+
- * fabric
 
 Setting up environment
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -27,27 +25,14 @@ Clone this repository::
 Setup its virtualenv and requirements through fabric script:
 
     $ cd pycon-apac-2014
-    $ fab create_virtualenv
-
-Setting up the database
------------------------
-
-This will vary for production and development. By default the project is set
-up to run on a SQLite database. If you are setting up a production database
-see the Configuration section below for where to place settings and get the
-database running. Now you can run::
-
-    $ fab deploy:deployment
-
-For developer,
-
-    $ fab deploy:developer
+    $ python scripts/bootstrap_dev.py
 
 Running a web server
 --------------------
 
 In development you should run::
 
+    $ source .virtualenvs/pythontw/bin/activate
     $ fab runserver
 
 This will run a web server with default port, 8000. If you want to run the
