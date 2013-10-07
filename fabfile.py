@@ -1,3 +1,5 @@
+from os import path
+
 from fabric.api import (
     local,
     #run,
@@ -7,8 +9,10 @@ from fabric.api import (
     #cd,
     lcd,
     #settings,
-    #prefix
+    prefix
 )
+
+from scripts.make_virtualenv import get_venv_prefix
 
 
 # env.hosts = ["127.0.0.1"]
@@ -16,14 +20,19 @@ from fabric.api import (
 # env.password = "qwerty"
 
 
-def deploy(role):
-    with lcd("confweb"):
-        if role == "developer":
-            local("python manage.py syncdb --noinput")
-        elif role == "deployment":
-            local("python manage.py syncdb --noinput")
+VENV_PREFIX = get_venv_prefix()
 
 
-def runserver(port="8000"):
+def deploy(role, venv_prefix=VENV_PREFIX):
     with lcd("confweb"):
-        local("python manage.py runserver %s" % port)
+        with prefix('source %s/bin/activate' % venv_prefix):
+            if role == "developer":
+                local("python manage.py syncdb --noinput")
+            elif role == "deployment":
+                local("python manage.py syncdb --noinput")
+
+
+def runserver(port="8000", venv_prefix=VENV_PREFIX):
+    with lcd("confweb"):
+        with prefix('source %s/bin/activate' % venv_prefix):
+            local("python manage.py runserver %s" % port)
