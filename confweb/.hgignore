@@ -7,4 +7,4 @@ syntax: glob
 local_settings.py
 
 syntax: regexp
-^static/
+^static/media/
