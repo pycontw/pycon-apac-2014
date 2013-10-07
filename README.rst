@@ -83,7 +83,7 @@ Question about my favor of virtualenv
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Can I use my favor of virtualenv version and path?
-e.g. ($HOME/.virtualenvs/pycontw)
+e.g. (~/.virtualenvs/pycontw)
 
 Answer
 ~~~~~~
@@ -92,7 +92,7 @@ Yes you can. Create a file named "venv_prefix" inside pycon-apac-2014
 folder and put (or replace) your own created virtualenv path in first line.
 The example of file content::
 
-    $HOME/.virtualenvs/pycontw
+    ~/.virtualenvs/pycontw
 
 You will need to replace above virtualenv prefix ``.venv/bin/*`` with
 ``{your_virutalenv_path}/bin/*``; or source your virtualenv before hand.
