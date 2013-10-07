@@ -2,7 +2,7 @@
 PyCon APAC 2014
 ===============
 
-This repository serves the website of PyCon APAC 2024.
+This repository serves the website of PyCon APAC 2014.
 This project is open source and the license can be found in LICENSE.
 
 
@@ -27,12 +27,12 @@ Setup its virtualenv and requirements::
 
     $ python scripts/make_virtualenv.py .venv
 
-Which will create a default virtualenv path ".venv" inside pycon-apace-2014
+Which will create a default virtualenv path ".venv" inside pycon-apac-2014
 folder.
 
 Then install the required packages in this virtualenv (.venv)::
 
-    $ .venv/bin/pip install -r requirements/project.txt  # install r
+    $ .venv/bin/pip install -r requirements/project.txt
 
 
 Setting up the database

@@ -64,6 +64,18 @@ def extract_virtual_env_tarball(filename):
         tar.extractall()
 
 
+def print_summary(venv_prefix):
+    summary = """
+PyConTW environment setup is complete.
+
+To activate the virtualenv for the extent of your current shell session you
+can run:
+
+$ source %s/bin/activate
+""" % venv_prefix
+    print summary
+
+
 def make_virtualenv(venv_prefix):
     fileurl = (
         'https://pypi.python.org/'
@@ -71,12 +83,18 @@ def make_virtualenv(venv_prefix):
             DEFAULT_VENV_VERSION
         ))
     filename = fileurl.split('/')[-1]
-    if not os.path.exists(filename):
-        get_virtualenv_file(fileurl)
-    if not os.path.exists(filename.split('.')[1]):
-        extract_virtual_env_tarball(filename)
-    cmd(['python', '{}/virtualenv.py'.format(filename[:-7]), venv_prefix])
-    cmd(['rm', '-rf', '{}/'.format(filename[:-7])])
+    try:
+        import virtualenv
+    except ImportError:
+        if not os.path.exists(filename):
+            get_virtualenv_file(fileurl)
+        if not os.path.exists(filename.split('.')[1]):
+            extract_virtual_env_tarball(filename)
+        cmd(['python', '{}/virtualenv.py'.format(filename[:-7]), venv_prefix])
+        cmd(['rm', '-rf', '{}/'.format(filename[:-7])])
+    else:
+        virtualenv.create_environment(venv_prefix)
+        print_summary(venv_prefix)
 
 
 def main():
