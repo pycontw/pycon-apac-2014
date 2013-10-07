@@ -66,7 +66,7 @@ def extract_virtual_env_tarball(filename):
 
 def print_summary(venv_prefix):
     summary = """
-PyConTW environment setup is complete.
+Setup of virtualenv is complete.
 
 To activate the virtualenv for the extent of your current shell session you
 can run:
@@ -94,7 +94,7 @@ def make_virtualenv(venv_prefix):
         cmd(['rm', '-rf', '{}/'.format(filename[:-7])])
     else:
         virtualenv.create_environment(venv_prefix)
-        print_summary(venv_prefix)
+    print_summary(venv_prefix)
 
 
 def main():

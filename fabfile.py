@@ -1,5 +1,3 @@
-from os import path
-
 from fabric.api import (
     local,
     #run,
@@ -25,7 +23,7 @@ VENV_PREFIX = get_venv_prefix()
 
 def deploy(role, venv_prefix=VENV_PREFIX):
     with lcd("confweb"):
-        with prefix('source %s/bin/activate' % venv_prefix):
+        with prefix('. %s/bin/activate' % venv_prefix):
             if role == "developer":
                 local("python manage.py syncdb --noinput")
             elif role == "deployment":
@@ -34,5 +32,5 @@ def deploy(role, venv_prefix=VENV_PREFIX):
 
 def runserver(port="8000", venv_prefix=VENV_PREFIX):
     with lcd("confweb"):
-        with prefix('source %s/bin/activate' % venv_prefix):
+        with prefix('. %s/bin/activate' % venv_prefix):
             local("python manage.py runserver %s" % port)
