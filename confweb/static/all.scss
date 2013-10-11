@@ -73,6 +73,7 @@ a:hover {
   font-size: 36px;
   line-height: 2;
   font-weight: bold;
+  margin: 0.8em 0;
 }
 .footer {
   background-color: $main-green;
@@ -100,7 +101,8 @@ a:hover {
 .doc-title {
   font-size: 32px;
   position: relative;
-  margin-top: 1.5em;
+  margin: 1.5em 0 0.7em;
+  font-weight: bold;
   color: $main-red;
 
   // &:before {
@@ -118,6 +120,9 @@ a:hover {
     margin: 0 0 1em;
     color: #555;
   }
+  li {
+    list-style-type: square;
+  }
 }
 
 .section-title {
@@ -125,4 +130,9 @@ a:hover {
   padding: 0 0 4px;
   margin-bottom: 20px;
 }
+
+
+
+
+
 

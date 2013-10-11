@@ -64,15 +64,21 @@
     </div>
     {% endfor %}
     {% endnevercache %}
+
+    {% block #title %}
     <div id="title">
         <h1>{% block title %}{% endblock %}</h1>
     </div>
+    {% endblock %}
 
+    {% block .breadcrumb %}
     <ul class="breadcrumb">
     {% spaceless %}
     {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
     {% endspaceless %}
     </ul>
+    {% endblock %}
+
     {% block main %}{% endblock %}
 </div>
 

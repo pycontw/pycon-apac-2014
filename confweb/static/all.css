@@ -58,7 +58,8 @@ a:hover {
 .hero-text {
   font-size: 36px;
   line-height: 2;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0.8em 0; }
 
 .footer {
   background-color: #005468;
@@ -82,7 +83,8 @@ a:hover {
 .doc-title {
   font-size: 32px;
   position: relative;
-  margin-top: 1.5em;
+  margin: 1.5em 0 0.7em;
+  font-weight: bold;
   color: #d32230; }
 
 .doc-content p {
@@ -90,6 +92,8 @@ a:hover {
   font-size: 18px;
   margin: 0 0 1em;
   color: #555; }
+.doc-content li {
+  list-style-type: square; }
 
 .section-title {
   border-bottom: 3px solid #D3202E;

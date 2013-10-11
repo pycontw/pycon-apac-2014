@@ -2,27 +2,35 @@
 {% load i18n %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
 
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
+{% block #title %}{% endblock %}
+
+{% block .breadcrumb %}{% endblock %}
 
 {% block main %}
-{% blocktrans %}
-<h2 class="section-title">Congratulations!</h2>
-<p>PyCon Taiwan is organized by the Taiwan Python community for the community. PyCon Taiwan is intended to provide a professional venue to exchange technical information of Python. We want to clone the experience of PyCon (US), the largest annual gathering of Python programmers, in Taiwan, and bring the joy to more people.</p>
-<p>
-PyCon Taiwan 2012 will also stress on industrial applications of Python. We hope to connect the community, including the business members, and further develop the technology in Taiwan.</p>
 
-<ul>
-    <li><a href="/admin/">Log in to the admin interface</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
-</ul>
+<div id="title">
+  <div class="welcome-header">
+    <img src="{{ STATIC_URL }}images/logo.svg" alt="">
+    <p class="hero-text">from everything import future</p>
+  </div>
+</div>
+
+{% blocktrans %}
+
+<h2 class="doc-title">What is PyCon and PyCon Taiwan</h2>
+<div class="doc-content">
+  <p>PyCon Taiwan is organized by the Taiwan Python community for the community. PyCon Taiwan is intended to provide a professional venue to exchange technical information of Python. We want to clone the experience of PyCon (US), the largest annual gathering of Python programmers, in Taiwan, and bring the joy to more people.</p>
+  <p>
+  PyCon Taiwan 2012 will also stress on industrial applications of Python. We hope to connect the community, including the business members, and further develop the technology in Taiwan.</p>
+
+  <ul>
+    <li><a href="http://www.meetup.com/pythonhug/">PyHUG - Python Hsinchu User Group</a></li>
+    <li><a href="http://taipei.python.org.tw/">Taipei.py - Taipei Python User Group</a></li>
+    <li><a href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">Tainan.py - Python Tainan User Group</a></li>
+    <li>PyLadies Taiwan</li>
+  </ul>
+
+</div>
 {% endblocktrans %}
 {% endblock %}
