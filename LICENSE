@@ -1,27 +1,21 @@
-=======
-LICENSE
-=======
+The MIT License
 
-Code License: MIT License
--------------------------
+Copyright (c) 2013 PyCon Taiwan. http://tw.pycon.org/
 
-    URL: http://opensource.org/licenses/mit-license.html
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-    Applies to all Python, SASS, CSS, Javascript, HTML, Django templates,
-    and shell files in the project.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-Documentation License: CC BY 3.0
---------------------------------
-
-    URL: http://creativecommons.org/licenses/by/3.0/
-
-    Applies to README.rst and all project files in the directory pycon-apac-2014/doc.
-
-Multimedia License: CC BY 3.0
------------------------------
-
-    URL: http://creativecommons.org/licenses/by/3.0/
-
-    Applies to all image and multimedia files.
-
-    - Logo of PyCon APAC 2014: Copyright (c) Art Pai
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
