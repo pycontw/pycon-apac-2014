@@ -96,3 +96,52 @@ The example of file content::
 
 You will need to replace above virtualenv prefix ``.venv/bin/*`` with
 ``{your_virutalenv_path}/bin/*``; or source your virtualenv before hand.
+
+
+How to contribute
+-----------------
+
+Everyone who desires to improve the pycon-apac-2014 website can involve it
+by the following working flow.
+
+Fork on Bitbucket
+~~~~~~~~~~~~~~~~~
+
+First, you have to fork this repository::
+
+    `Fork it on pycontw<https://bitbucket.org/pycontw/pycon-apac-2014/fork>`_
+
+Then, clone the repository which you has forked::
+
+    $ git clone git@bitbucket.org:<your_bitbucket_id>/pycon-apac-2014.git
+
+Follow the steps of getting started on the top of the tutorial to setup
+your environment.
+
+Create a new branch
+~~~~~~~~~~~~~~~~~~~
+
+It is a good practice to generate a new branch for the new feature or
+bugs that you want to fix. The branch name is not restricted but a
+related name is prefered. You can create a branch by::
+
+    $ git checkout master -b <branch_name>
+
+Submit a pull request
+~~~~~~~~~~~~~~~~~~~~~
+
+After you had finished your patch and committed the new branch onto your
+repository, you could submit a pull request onto "pycontw/pycon-apac-2014".
+
+You can find the button on the top-left of you repository page on bitbucket.
+
+Gotcha
+~~~~~~
+
+Q: The master had updated before I committed
+============================================
+
+You need to rebase your repositary on to the origin/master before you
+update your pull request.
+
+    $ git pull --rebase origin/master
