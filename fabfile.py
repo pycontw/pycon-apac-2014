@@ -1,3 +1,4 @@
+import os
 from fabric.api import (
     local,
     #run,
@@ -19,6 +20,13 @@ from scripts.make_virtualenv import get_venv_prefix
 
 
 VENV_PREFIX = get_venv_prefix()
+
+
+def dumpdata(venv_prefix=VENV_PREFIX, output="dumpdata.json"):
+    with lcd("confweb"):
+        with prefix('. %s/bin/activate' % venv_prefix):
+            local("python manage.py dumpdata > {}{}{}".format(
+                os.getcwd(), os.sep, output))
 
 
 def deploy(role, venv_prefix=VENV_PREFIX):
