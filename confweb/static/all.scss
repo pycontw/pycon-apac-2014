@@ -41,6 +41,19 @@ html, body {
   overflow: auto;
   padding: 20px;
 }
+
+#sider {
+  width: 200px;
+  float: right;
+
+  h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 4px;
+    color: #999;
+  }
+}
+
+
 #title {
   margin: -20px -20px 20px;
   padding: 20px 20px;
@@ -132,7 +145,13 @@ a:hover {
 }
 
 
-
+.sponsers {
+  margin: 10px -10px;
+  img {
+    float: left;
+    margin: 10px;
+  }
+}
 
 
 
