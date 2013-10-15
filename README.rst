@@ -127,21 +127,23 @@ related name is prefered. You can create a branch by::
 
     $ git checkout master -b <branch_name>
 
-Submit a pull request
+Submit a pull-request
 ~~~~~~~~~~~~~~~~~~~~~
 
 After you had finished your patch and committed the new branch onto your
-repository, you could submit a pull request onto "pycontw/pycon-apac-2014".
+repository, you could submit a pull-request onto "pycontw/pycon-apac-2014".
 
-You can find the button on the top-left of you repository page on bitbucket.
+You can find the button on the top-left of you repository page on Bitbucket.
 
 Gotcha
 ~~~~~~
 
-Q: The master had updated before I committed
-============================================
+Q: The master had updated and conflicted with my pull-request?
+==============================================================
 
-You need to rebase your repositary on to the origin/master before you
-update your pull request.
+You need to rebase your repositary on to the origin/master
 
     $ git pull --rebase origin/master
+
+After you updated and pushed your commit, you will need to click "Update"
+on the pull-request which you had posted on Bitbucket.
