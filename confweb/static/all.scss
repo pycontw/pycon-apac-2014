@@ -152,6 +152,44 @@ a:hover {
     margin: 10px;
   }
 }
+.home-sponsers {
+  text-align: center;
+  background-color: rgba(#F5F4EE, 0.8);
+  margin: -19px -20px 0;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 1px rgba(#666, 0.1);
+          box-shadow: 0 1px 1px rgba(#666, 0.1);
+
+  h4 {
+    color: darken(#F6F5EF, 10%);
+    margin: 5 0 15px;
+
+
+  }
+  .sponser-logos {
+    margin: 5px;
+    img {
+      margin: 10px 5px;
+    }
+  }
+  .sponser-more {
+    margin: -3px 0 0;
+    height: 0;
+
+    a.btn {
+      padding: 10px 20px;
+      background-color: #F6F5EF;
+      color: #999;
+      border: none;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+  }
+}
 
 
 

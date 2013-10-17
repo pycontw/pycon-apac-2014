@@ -113,3 +113,29 @@ a:hover {
   .sponsers img {
     float: left;
     margin: 10px; }
+
+.home-sponsers {
+  text-align: center;
+  background-color: rgba(245, 244, 238, 0.8);
+  margin: -19px -20px 0;
+  padding: 10px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 1px rgba(102, 102, 102, 0.1);
+  box-shadow: 0 1px 1px rgba(102, 102, 102, 0.1); }
+  .home-sponsers h4 {
+    color: #e4e1ce;
+    margin: 5 0 15px; }
+  .home-sponsers .sponser-logos {
+    margin: 5px; }
+    .home-sponsers .sponser-logos img {
+      margin: 10px 5px; }
+  .home-sponsers .sponser-more {
+    margin: -3px 0 0;
+    height: 0; }
+    .home-sponsers .sponser-more a.btn {
+      padding: 10px 20px;
+      background-color: #F6F5EF;
+      color: #999;
+      border: none; }
+      .home-sponsers .sponser-more a.btn:hover {
+        color: #000; }
