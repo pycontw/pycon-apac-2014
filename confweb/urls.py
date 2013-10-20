@@ -1,6 +1,7 @@
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 
 from mezzanine.core.views import direct_to_template
 
@@ -26,6 +27,10 @@ urlpatterns = patterns("",
     # commented out like the others, so it's the default. You only need
     # one homepage pattern, so if you use a different one, comment this
     # one out.
+
+)
+
+urlpatterns += i18n_patterns("",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 

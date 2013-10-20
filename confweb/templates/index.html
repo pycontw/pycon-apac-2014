@@ -16,9 +16,8 @@
   </div>
 </div>
 
-{% blocktrans %}
 <div class="home-sponsers">
-  <h4>Sponsers</h4>
+  <h4>{% trans "Sponsers" %}</h4>
   <div class="sponser-logos">
     <img src="http://placehold.it/200x80" alt="">
     <img src="http://placehold.it/200x80" alt="">
@@ -27,15 +26,15 @@
 
   </div>
   <div class="sponser-more clear">
-    <a href="" class="btn btn-info">Show me all</a>
+    <a href="" class="btn btn-info">{% trans "Show me all" %}</a>
   </div>
 
 </div>
 <h2 class="doc-title">What is PyCon and PyCon Taiwan</h2>
 <div class="doc-content">
-  <p>PyCon Taiwan is organized by the Taiwan Python community for the community. PyCon Taiwan is intended to provide a professional venue to exchange technical information of Python. We want to clone the experience of PyCon (US), the largest annual gathering of Python programmers, in Taiwan, and bring the joy to more people.</p>
+  <p>{% blocktrans %}PyCon Taiwan is organized by the Taiwan Python community for the community. PyCon Taiwan is intended to provide a professional venue to exchange technical information of Python. We want to clone the experience of PyCon (US), the largest annual gathering of Python programmers, in Taiwan, and bring the joy to more people.{% endblocktrans %}</p>
   <p>
-  PyCon Taiwan 2012 will also stress on industrial applications of Python. We hope to connect the community, including the business members, and further develop the technology in Taiwan.</p>
+  {% blocktrans %}PyCon Taiwan 2012 will also stress on industrial applications of Python. We hope to connect the community, including the business members, and further develop the technology in Taiwan.{% endblocktrans %}</p>
 
   <ul>
     <li><a href="http://www.meetup.com/pythonhug/">PyHUG - Python Hsinchu User Group</a></li>
@@ -46,7 +45,7 @@
 
 </div>
 
-{% endblocktrans %}
+
 {% endblock %}
 
 {% block sider %}{% endblock %}
