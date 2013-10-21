@@ -25,6 +25,7 @@
     {% compress js %}
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "vendor/angular-1.2.0-rc.3/angular.min.js" %}"></script>
     {% block extra_js %}{% endblock %}
     {% endcompress %}
     <!--[if lt IE 9]>
