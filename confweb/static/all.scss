@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import 'mixins';
+
 $main-green: #005468;
 $main-red:   #D32230;
 
@@ -30,6 +32,11 @@ html, body {
   a:hover, .active a {
     background-color: darken(#D3202E, 6%);
   }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+
 }
 
 #main {
@@ -40,6 +47,10 @@ html, body {
   top:0;
   overflow: auto;
   padding: 20px;
+
+  @include respond-to(mobile) {
+    left: 0;
+  }
 }
 
 #sider {

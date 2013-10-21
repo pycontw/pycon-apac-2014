@@ -21,6 +21,9 @@ html, body {
     padding-left: 40px; }
   #nav a:hover, #nav .active a {
     background-color: #b81c28; }
+  @media only screen and (max-width: 1000px) {
+    #nav {
+      display: none; } }
 
 #main {
   position: absolute;
@@ -30,6 +33,9 @@ html, body {
   top: 0;
   overflow: auto;
   padding: 20px; }
+  @media only screen and (max-width: 1000px) {
+    #main {
+      left: 0; } }
 
 #sider {
   width: 200px;

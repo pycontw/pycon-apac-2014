@@ -1,0 +1,23 @@
+$iphone-width: 480px;
+$ipad-width: 1000px;
+$screen-width: 1300px;
+$wide-screen-width: 1300px;
+
+@mixin respond-to($media) {
+  @if $media == iphone {
+    @media only screen and (max-device-width: $iphone-width) { @content; }
+  }
+  @else if $media == ipad {
+    @media only screen and (min-device-width: $iphone-width + 1) and (max-device-width: $ipad-width) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: $ipad-width) { @content; }
+  }
+
+  @else if $media == screen {
+    @media only screen and (min-width: $ipad-width + 1) and (max-width: $screen-width) { @content; }
+  }
+  @else if $media == wide-screen {
+    @media only screen and (min-width: $wide-screen-width + 1) { @content; }
+  }
+}
