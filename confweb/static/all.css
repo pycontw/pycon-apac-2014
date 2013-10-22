@@ -1,6 +1,9 @@
 html, body {
   height: 100%; }
 
+body {
+  overflow: hidden; }
+
 #logo {
   padding: 50px 0;
   text-align: center; }
@@ -12,7 +15,8 @@ html, body {
   top: 0;
   width: 250px;
   background-color: #D3202E;
-  color: #FCFBF5; }
+  color: #FCFBF5;
+  z-index: 10; }
   #nav ul {
     border-top: 1px solid #DC4F55; }
   #nav a {
@@ -23,7 +27,10 @@ html, body {
     background-color: #b81c28; }
   @media only screen and (max-width: 1000px) {
     #nav {
-      display: none; } }
+      width: 200px;
+      display: none; }
+      #nav #logo {
+        display: none; } }
 
 #main {
   position: absolute;
@@ -36,6 +43,14 @@ html, body {
   @media only screen and (max-width: 1000px) {
     #main {
       left: 0; } }
+  #main .btn-nav {
+    position: absolute;
+    left: 10px;
+    top: 10px; }
+
+@media only screen and (min-width: 1001px) {
+  .btn-nav {
+    display: none; } }
 
 #sider {
   width: 200px;
@@ -145,3 +160,10 @@ a:hover {
       border: none; }
       .home-sponsers .sponser-more a.btn:hover {
         color: #000; }
+
+.Show {
+  display: block !important; }
+
+#main.SlideRight {
+  left: 200px;
+  width: 100%; }

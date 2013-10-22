@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ LANGUAGE_CODE }}" ng-app="App">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
 
@@ -26,6 +26,7 @@
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
     <script src="{% static "vendor/angular-1.2.0-rc.3/angular.min.js" %}"></script>
+    <script src="{% static "all.js" %}"></script>
     {% block extra_js %}{% endblock %}
     {% endcompress %}
     <!--[if lt IE 9]>
@@ -46,7 +47,7 @@
 
 
 
-<div id=nav>
+<div id="nav" ng-class="{Show: showNav}">
     <div id="logo">
         <img src="{% static "images/logo.png" %}" alt="">
     </div>
@@ -55,7 +56,8 @@
     {% endblock %}
 </div>
 
-<div id="main">
+<div id="main" ng-class="{SlideRight: showNav}">
+    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
     {% nevercache %}
     {% for message in messages %}
     <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">

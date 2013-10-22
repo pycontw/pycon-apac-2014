@@ -8,6 +8,11 @@ $main-red:   #D32230;
 html, body {
   height: 100%;
 }
+
+body {
+  overflow: hidden;
+}
+
 #logo {
   padding: 50px 0;
   text-align: center;
@@ -21,6 +26,7 @@ html, body {
   width: 250px;
   background-color: #D3202E;
   color: #FCFBF5;
+  z-index: 10;
   ul {
     border-top: 1px solid #DC4F55;
   }
@@ -33,9 +39,17 @@ html, body {
     background-color: darken(#D3202E, 6%);
   }
 
+
+
   @include respond-to(mobile) {
+    width: 200px;
+    #logo {
+      display: none;
+    }
     display: none;
   }
+
+
 
 }
 
@@ -50,7 +64,21 @@ html, body {
 
   @include respond-to(mobile) {
     left: 0;
+
   }
+
+  .btn-nav {
+    position: absolute;
+    left: 10px;
+    top:10px;
+  }
+}
+
+.btn-nav {
+  @include respond-to(desktop) {
+    display: none;
+  }
+
 }
 
 #sider {
@@ -203,4 +231,10 @@ a:hover {
 }
 
 
-
+.Show {
+  display: block !important;
+}
+#main.SlideRight {
+  left:200px;
+  width: 100%;
+}
