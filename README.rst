@@ -70,7 +70,7 @@ For Python developers
 Live in a shell
 ~~~~~~~~~~~~~~~
 
-Want to run ``django-admin.py shell``? You just just::
+Want to run ``django-admin.py shell``? You can just::
 
     $ .venv/bin/fab shell
 
