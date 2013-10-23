@@ -54,16 +54,37 @@ Running a web server
 
 In development you should run::
 
-    $ .venv/bin/fab runserver
+    $ .venv/bin/fab serve
 
 This will run a web server with default port, 8000. If you want to run the
-server in a specific port::
+server in a specific port and/or host, consider these examples::
 
-    $ .venv/bin/fab runserver:8090
+    $ .venv/bin/fab serve:port=8090
+    $ .venv/bin/fab serve:host=127.0.0.1
+    $ .venv/bin/fab serve:host=192.168.1.15,port=8090
 
 
 For Python developers
 ---------------------
+
+Live in a shell
+~~~~~~~~~~~~~~~
+
+Want to run ``django-admin.py shell``? You just just::
+
+    $ .venv/bin/fab shell
+
+or if you like to go with IPython or bpython::
+
+    $ .venv/bin/fab shell:interface=ipython
+    $ .venv/bin/fab shell:interface=bpython
+
+You're recommended to use IPython with it. Install IPython by::
+
+    $ .venv/bin/pip install IPython
+
+Note: if you had IPython installed, django-admin.py shell will use it
+automatically.
 
 Question about ".venv/bin/fab"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
