@@ -21,14 +21,14 @@ html, body {
   color: #FCFBF5;
   ul {
     border-top: 1px solid #DC4F55;
-  }
-  a {
-    color: #FCFBF5;
-    border-bottom: 1px solid #DC4F55;
-    padding-left: 40px;
-  }
-  a:hover, .active a {
-    background-color: darken(#D3202E, 6%);
+    a {
+      color: #FCFBF5;
+      border-bottom: 1px solid #DC4F55;
+      padding-left: 40px;
+    }
+    a:hover, .active a {
+      background-color: darken(#D3202E, 6%);
+    }
   }
 }
 
