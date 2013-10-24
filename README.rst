@@ -107,9 +107,7 @@ by the following working flow.
 Fork on Bitbucket
 ~~~~~~~~~~~~~~~~~
 
-First, you have to fork this repository::
-
-    `Fork it on pycontw<https://bitbucket.org/pycontw/pycon-apac-2014/fork>`_
+First, `fork PyCon APAC 2014 repository on Bitbucket <https://bitbucket.org/pycontw/pycon-apac-2014/fork>`_.
 
 Then, clone the repository which you has forked::
 
