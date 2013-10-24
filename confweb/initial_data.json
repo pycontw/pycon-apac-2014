@@ -941,5 +941,29 @@
       "password": "pbkdf2_sha256$10000$8o8A8Luiyhqv$Q4kHxl5qyr0XKqxVY/9LjLh9yWGJ6VWo0oTR1YCj8JQ=",
       "email": "editor@pycon.tw"
     }
+  },
+  {
+    "pk": 1,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/en/",
+      "name": "en"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/zh/",
+      "name": "zh"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/ja/",
+      "name": "ja"
+    }
   }
 ]
