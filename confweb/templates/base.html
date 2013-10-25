@@ -45,9 +45,9 @@
 
 
 
-<div id=nav>
+<div id="nav">
     <div id="logo">
-        <img src="{% static "images/logo.png" %}" alt="">
+        <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
     </div>
     {% block left_panel %}
     {% page_menu "pages/menus/tree.html" %}
