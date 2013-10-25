@@ -62,6 +62,7 @@ server in a specific port and/or host, consider these examples::
     $ .venv/bin/fab serve:port=8090
     $ .venv/bin/fab serve:host=127.0.0.1
     $ .venv/bin/fab serve:host=192.168.1.15,port=8090
+    $ .venv/bin/fab serve:192.168.1.15,8090
 
 
 For Python developers
