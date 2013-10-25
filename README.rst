@@ -84,8 +84,8 @@ You're recommended to use IPython with it. Install IPython by::
 
     $ .venv/bin/pip install IPython
 
-Note: if you had IPython installed, django-admin.py shell will use it
-automatically.
+Note: if you had IPython or bpython installed, django-admin.py shell will use
+it automatically.
 
 Question about ".venv/bin/fab"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
