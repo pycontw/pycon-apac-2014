@@ -22,23 +22,40 @@ from scripts.make_virtualenv import get_venv_prefix
 VENV_PREFIX = get_venv_prefix()
 
 
+class in_virtualenv(object):
+    "Used as decorator"
+    def __init__(self, f, venv_prefix=VENV_PREFIX):
+        self.f = f
+        self.venv_prefix = venv_prefix
+
+    def __call__(self, *args, **kwargs):
+        with lcd("confweb"):
+            with prefix('. %s/bin/activate' % self.venv_prefix):
+                self.f(*args, **kwargs)
+
+
+@in_virtualenv
 def dumpdata(venv_prefix=VENV_PREFIX, output="dumpdata.json"):
-    with lcd("confweb"):
-        with prefix('. %s/bin/activate' % venv_prefix):
-            local("python manage.py dumpdata > {}{}{}".format(
-                os.getcwd(), os.sep, output))
+    local("python manage.py dumpdata > {}{}{}".format(
+        os.getcwd(), os.sep, output))
 
 
-def deploy(role, venv_prefix=VENV_PREFIX):
-    with lcd("confweb"):
-        with prefix('. %s/bin/activate' % venv_prefix):
-            if role == "developer":
-                local("python manage.py syncdb --noinput")
-            elif role == "deployment":
-                local("python manage.py syncdb --noinput")
+@in_virtualenv
+def deploy(role):
+    if role == "developer":
+        local("python manage.py syncdb --noinput")
+    elif role == "deployment":
+        local("python manage.py syncdb --noinput")
 
 
-def runserver(port="8000", venv_prefix=VENV_PREFIX):
-    with lcd("confweb"):
-        with prefix('. %s/bin/activate' % venv_prefix):
-            local("python manage.py runserver %s" % port)
+@in_virtualenv
+def shell(interface=""):
+    cmd = "python manage.py shell"
+    if interface:
+        cmd += " -i {}".format(interface)
+    local(cmd)
+
+
+@in_virtualenv
+def serve(host="0.0.0.0", port="8000"):
+    local("python manage.py runserver {}:{}".format(host, port))
