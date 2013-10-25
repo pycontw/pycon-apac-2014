@@ -133,6 +133,7 @@ LANGUAGES = (
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = LANGUAGES[0][0]
+LANGUAGE_CODES = tuple(lang[0] for lang in LANGUAGES)
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "e47c6122-d8fa-4711-8831-13f3aae96c0dcfaaa4e2-d0f2-4bb3-8997-4219a92c71dad350d701-33ad-4ebf-8371-b5abd3124484"
