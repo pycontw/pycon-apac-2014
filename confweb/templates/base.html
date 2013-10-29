@@ -52,11 +52,19 @@
     {% block left_panel %}
     {% page_menu "pages/menus/tree.html" %}
     {% endblock %}
-    <a href="/en/{{request.no_lang_path}}">English</a>
-    <br>
-    <a href="/zh/{{request.no_lang_path}}">中文</a>
-    <br>
-    <a href="/ja/{{request.no_lang_path}}">日本語</a>
+
+    <form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+    {% for lang_code, lang_name in LANGUAGES %}
+    <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+        {{ lang_name }}
+    </option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Go" />
+    </form>
 
 </div>
 
