@@ -18,6 +18,9 @@ urlpatterns = patterns("",
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
 
+    # I18n locale URL
+    (r'^i18n/', include('django.conf.urls.i18n')),
+
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
@@ -65,9 +68,6 @@ urlpatterns += i18n_patterns("",
     # ``mezzanine.urls`` INCLUDES A *CATCH ALL* PATTERN
     # FOR PAGES, SO URLPATTERNS ADDED BELOW ``mezzanine.urls``
     # WILL NEVER BE MATCHED!
-
-    # I18n locale URL
-    (r'^i18n/', include('django.conf.urls.i18n')),
 
     # If you'd like more granular control over the patterns in
     # ``mezzanine.urls``, go right ahead and take the parts you want
