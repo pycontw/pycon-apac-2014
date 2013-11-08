@@ -52,6 +52,20 @@
     {% block left_panel %}
     {% page_menu "pages/menus/tree.html" %}
     {% endblock %}
+
+    <form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+    {% for lang_code, lang_name in LANGUAGES %}
+    <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+        {{ lang_name }}
+    </option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Go" />
+    </form>
+
 </div>
 
 <div id="main">
@@ -81,7 +95,7 @@
     {% block main %}{% endblock %}
     {% block sider %}
         <div id="sider">
-            <h3>Sponsers</h3>
+            <h3>{% trans "Sponsers" %}</h3>
             <div class="sponsers">
                 <img src="http://placehold.it/200x80" alt="">
                 <img src="http://placehold.it/200x80" alt="">
