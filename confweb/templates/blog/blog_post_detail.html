@@ -34,6 +34,7 @@
 </h6>
 {% endeditable %}
 {% endblock %}
+<div class="hide">
 {% block blog_post_detail_commentlink %}
 <p>
     {% if blog_post.allow_comments %}
@@ -49,6 +50,7 @@
     {% endif %}
 </p>
 {% endblock %}
+</div>
 
 {% block blog_post_detail_featured_image %}
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
@@ -80,7 +82,9 @@
 {% endif %}
 {% endblock %}
 
+<div class="hide">
 {% rating_for blog_post %}
+</div>
 
 {% block blog_post_detail_sharebuttons %}
 {% set_short_url_for blog_post %}
@@ -120,8 +124,10 @@
 {% endif %}
 {% endblock %}
 
+<div class="hide">
 {% block blog_post_detail_comments %}
 {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
 {% endblock %}
+</div>
 
 {% endblock %}

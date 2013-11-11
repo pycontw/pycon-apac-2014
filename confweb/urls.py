@@ -61,6 +61,7 @@ urlpatterns += i18n_patterns("",
     # page tree in the admin if it was installed.
 
     # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    url("^blog/$", "mezzanine.blog.views.blog_post_list", name="blog"),
 
     # MEZZANINE'S URLS
     # ----------------
