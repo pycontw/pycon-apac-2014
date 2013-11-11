@@ -4,9 +4,7 @@
 
 from django.conf import settings
 from django.utils import translation
-from django.core.urlresolvers import resolve
 from django.contrib.sites.models import Site
-
 
 
 class MultiHostMiddleware:
@@ -18,7 +16,7 @@ class MultiHostMiddleware:
                 site = Site.objects.get(id=site_id)
                 request.session['django_language'] = site.name
 
-            if not resolve(request.path_info).namespace == "admin":
+            if not request.resolver_match.namespace == "admin":
                 site_lang = translation.get_language()
                 site = Site.objects.get(name=site_lang)
                 request.session['site_id'] = site.id
