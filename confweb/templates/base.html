@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <title>
+      {% block meta_title_block %}
+      {% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}
+      {% endblock %}
+    </title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
     {% ifinstalled mezzanine.blog %}
@@ -82,14 +86,6 @@
     <div id="title">
         <h1>{% block title %}{% endblock %}</h1>
     </div>
-    {% endblock %}
-
-    {% block .breadcrumb %}
-    <ul class="breadcrumb">
-    {% spaceless %}
-    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-    {% endspaceless %}
-    </ul>
     {% endblock %}
 
     {% block main %}{% endblock %}
