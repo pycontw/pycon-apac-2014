@@ -19,7 +19,9 @@ urlpatterns = patterns("",
     ("^admin/", include(admin.site.urls)),
 
     # I18n locale URL
-    (r'^i18n/', include('django.conf.urls.i18n')),
+    # Using confweb.views.i18n isntead
+    #(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^setlang/$', 'confweb.views.i18n.set_language', name='set_language'),
 
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
