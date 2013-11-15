@@ -148,14 +148,21 @@ a:hover {
   margin: 1.5em 0 0.7em;
   font-weight: bold;
   color: #d32230; }
+  @media only screen and (max-width: 1000px) {
+    .doc-title {
+      font-size: 24px; } }
 
-.doc-content p {
-  line-height: 1.5;
+.doc-content {
   font-size: 18px;
-  margin: 0 0 1em;
-  color: #555; }
-.doc-content li {
-  list-style-type: square; }
+  margin: 0 0 1em; }
+  @media only screen and (max-width: 1000px) {
+    .doc-content {
+      font-size: 15px; } }
+  .doc-content p {
+    line-height: 1.5;
+    color: #555; }
+  .doc-content li {
+    list-style-type: square; }
 
 .section-title {
   border-bottom: 3px solid #D3202E;

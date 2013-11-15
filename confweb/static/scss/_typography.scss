@@ -19,18 +19,28 @@
   font-weight: bold;
   color: $main-red;
 
+  @include respond-to(mobile) {
+    font-size: 24px;
+  }
+
 }
 
 .doc-content {
+  font-size: 18px;
+  margin: 0 0 1em;
+
+  @include respond-to(mobile) {
+    font-size: 15px;
+  }
+
   p {
     line-height: 1.5;
-    font-size: 18px;
-    margin: 0 0 1em;
     color: #555;
   }
   li {
     list-style-type: square;
   }
+
 }
 
 .section-title {
