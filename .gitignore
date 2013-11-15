@@ -43,3 +43,4 @@ nosetests.xml
 # Vim
 *.sw[po]
 confweb/static/.sass-cache/
+venv_prefix
