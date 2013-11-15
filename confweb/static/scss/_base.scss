@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: #FDFCF6;
+  font-size: 18px;
+}
+
+a {
+  color: #D3202E;
+}
+a:hover {
+  color: darken(#D3202E, 10%);
+}

@@ -2,7 +2,15 @@ html, body {
   height: 100%; }
 
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  background: #FDFCF6;
+  font-size: 18px; }
+
+a {
+  color: #D3202E; }
+
+a:hover {
+  color: #a71924; }
 
 #logo {
   padding: 50px 0;
@@ -68,16 +76,6 @@ body {
   padding: 20px 20px;
   background: url("images/pattern.png"); }
 
-body {
-  background: #FDFCF6;
-  font-size: 18px; }
-
-a {
-  color: #D3202E; }
-
-a:hover {
-  color: #a71924; }
-
 .container {
   width: 800px;
   margin: 0 auto; }
@@ -86,12 +84,6 @@ a:hover {
   text-align: center;
   padding: 50px 0 5px;
   background: #f5f4ee image-url("pattern.png"); }
-
-.hero-text {
-  font-size: 36px;
-  line-height: 2;
-  font-weight: bold;
-  margin: 0.8em 0; }
 
 .footer {
   background-color: #005468;
@@ -102,35 +94,11 @@ a:hover {
     font-size: 40px;
     margin: 0.5em; }
 
-.divider:before {
-  content: '. . . . . .';
-  width: 100%;
-  display: block;
-  text-align: center;
-  color: #005468; }
-
-.text-center {
-  text-align: center; }
-
-.doc-title {
-  font-size: 32px;
-  position: relative;
-  margin: 1.5em 0 0.7em;
+.hero-text {
+  font-size: 36px;
+  line-height: 2;
   font-weight: bold;
-  color: #d32230; }
-
-.doc-content p {
-  line-height: 1.5;
-  font-size: 18px;
-  margin: 0 0 1em;
-  color: #555; }
-.doc-content li {
-  list-style-type: square; }
-
-.section-title {
-  border-bottom: 3px solid #D3202E;
-  padding: 0 0 4px;
-  margin-bottom: 20px; }
+  margin: 0.8em 0; }
 
 .sponsers {
   margin: 10px -10px; }
@@ -164,6 +132,32 @@ a:hover {
       .home-sponsers .sponser-more a.btn:hover {
         color: #000; }
 
-#main.SlideRight {
-  left: 200px;
-  width: 100%; }
+.divider:before {
+  content: '. . . . . .';
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #005468; }
+
+.text-center {
+  text-align: center; }
+
+.doc-title {
+  font-size: 32px;
+  position: relative;
+  margin: 1.5em 0 0.7em;
+  font-weight: bold;
+  color: #d32230; }
+
+.doc-content p {
+  line-height: 1.5;
+  font-size: 18px;
+  margin: 0 0 1em;
+  color: #555; }
+.doc-content li {
+  list-style-type: square; }
+
+.section-title {
+  border-bottom: 3px solid #D3202E;
+  padding: 0 0 4px;
+  margin-bottom: 20px; }
