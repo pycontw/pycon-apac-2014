@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 ######################
 # MEZZANINE SETTINGS #
@@ -109,10 +110,6 @@ TIME_ZONE = "Asia/Taipei"
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
 
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "zh-TW"
-
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
@@ -125,7 +122,17 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('zh', '中文'),
+    ('ja', '日本語'),
+)
+
+# Language code for this installation. All choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = LANGUAGES[0][0]
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "e47c6122-d8fa-4711-8831-13f3aae96c0dcfaaa4e2-d0f2-4bb3-8997-4219a92c71dad350d701-33ad-4ebf-8371-b5abd3124484"
@@ -224,6 +231,10 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # Don't forget to use absolute paths, not relative paths.
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, STATIC_URL.strip("/")),)
+
+LOCALE_PATHS = (os.path.join(PROJECT_ROOT, "locale"),)
+
 
 ################
 # APPLICATIONS #
@@ -270,9 +281,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
+    "confweb.middleware.MultiHostMiddleware",
     "mezzanine.core.middleware.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    'django.middleware.locale.LocaleMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",

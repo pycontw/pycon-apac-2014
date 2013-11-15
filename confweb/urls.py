@@ -1,6 +1,7 @@
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 
 from mezzanine.core.views import direct_to_template
 
@@ -17,6 +18,11 @@ urlpatterns = patterns("",
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
 
+    # I18n locale URL
+    # Using confweb.views.i18n isntead
+    #(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^setlang/$', 'confweb.views.i18n.set_language', name='set_language'),
+
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
@@ -26,6 +32,10 @@ urlpatterns = patterns("",
     # commented out like the others, so it's the default. You only need
     # one homepage pattern, so if you use a different one, comment this
     # one out.
+
+)
+
+urlpatterns += i18n_patterns("",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
@@ -53,6 +63,7 @@ urlpatterns = patterns("",
     # page tree in the admin if it was installed.
 
     # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    url("^blog/$", "mezzanine.blog.views.blog_post_list", name="blog"),
 
     # MEZZANINE'S URLS
     # ----------------
@@ -82,7 +93,6 @@ urlpatterns = patterns("",
     # need to use the ``SITE_PREFIX`` setting as well.
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
-
 )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error

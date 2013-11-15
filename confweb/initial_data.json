@@ -806,6 +806,20 @@
     }
   },
   {
+    "pk": 3,
+    "model": "pages.richtextpage",
+    "fields": {
+      "content": "<p>アバウト</p>"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "pages.richtextpage",
+    "fields": {
+      "content": "<p>關於</p>"
+    }
+  },
+  {
     "pk": 1,
     "model": "pages.page",
     "fields": {
@@ -848,6 +862,52 @@
       "content_model": "richtextpage",
       "in_menus": "1,2,3",
       "slug": "sponsorship",
+      "gen_description": true
+    }
+  },
+  {
+    "pk": 3,
+    "model": "pages.page",
+    "fields": {
+      "status": 2,
+      "login_required": false,
+      "_order": 0,
+      "titles": "アバウト",
+      "description": "アバウト",
+      "parent": null,
+      "title": "アバウト",
+      "short_url": null,
+      "site": 3,
+      "in_sitemap": true,
+      "keywords_string": "",
+      "_meta_title": "",
+      "expiry_date": null,
+      "content_model": "richtextpage",
+      "in_menus": "1,2,3",
+      "slug": "about",
+      "gen_description": true
+    }
+  },
+  {
+    "pk": 4,
+    "model": "pages.page",
+    "fields": {
+      "status": 2,
+      "login_required": false,
+      "_order": 0,
+      "titles": "關於",
+      "description": "關於",
+      "parent": null,
+      "title": "關於",
+      "short_url": null,
+      "site": 2,
+      "in_sitemap": true,
+      "keywords_string": "",
+      "_meta_title": "",
+      "expiry_date": null,
+      "content_model": "richtextpage",
+      "in_menus": "1,2,3",
+      "slug": "about",
       "gen_description": true
     }
   },
@@ -940,6 +1000,30 @@
       "is_superuser": false,
       "password": "pbkdf2_sha256$10000$8o8A8Luiyhqv$Q4kHxl5qyr0XKqxVY/9LjLh9yWGJ6VWo0oTR1YCj8JQ=",
       "email": "editor@pycon.tw"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/en/",
+      "name": "en"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/zh/",
+      "name": "zh"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "sites.site",
+    "fields": {
+      "domain": "/ja/",
+      "name": "ja"
     }
   }
 ]

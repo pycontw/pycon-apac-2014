@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <title>
+      {% block meta_title_block %}
+      {% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}
+      {% endblock %}
+    </title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
     {% ifinstalled mezzanine.blog %}
@@ -49,11 +53,25 @@
 
 <div id="nav" ng-class="{Show: showNav}">
     <div id="logo">
-        <img src="{% static "images/logo.png" %}" alt="">
+        <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
     </div>
     {% block left_panel %}
     {% page_menu "pages/menus/tree.html" %}
     {% endblock %}
+
+    <form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+    {% for lang_code, lang_name in LANGUAGES %}
+    <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+        {{ lang_name }}
+    </option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Go" />
+    </form>
+
 </div>
 
 <div id="main" ng-class="{SlideRight: showNav}">
@@ -73,18 +91,10 @@
     </div>
     {% endblock %}
 
-    {% block .breadcrumb %}
-    <ul class="breadcrumb">
-    {% spaceless %}
-    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-    {% endspaceless %}
-    </ul>
-    {% endblock %}
-
     {% block main %}{% endblock %}
     {% block sider %}
         <div id="sider">
-            <h3>Sponsers</h3>
+            <h3>{% trans "Sponsers" %}</h3>
             <div class="sponsers">
                 <img src="http://placehold.it/200x80" alt="">
                 <img src="http://placehold.it/200x80" alt="">

@@ -54,16 +54,38 @@ Running a web server
 
 In development you should run::
 
-    $ .venv/bin/fab runserver
+    $ .venv/bin/fab serve
 
 This will run a web server with default port, 8000. If you want to run the
-server in a specific port::
+server in a specific port and/or host, consider these examples::
 
-    $ .venv/bin/fab runserver:8090
+    $ .venv/bin/fab serve:port=8090
+    $ .venv/bin/fab serve:host=127.0.0.1
+    $ .venv/bin/fab serve:host=192.168.1.15,port=8090
+    $ .venv/bin/fab serve:192.168.1.15,8090
 
 
 For Python developers
 ---------------------
+
+Live in a shell
+~~~~~~~~~~~~~~~
+
+Want to run ``django-admin.py shell``? You can just::
+
+    $ .venv/bin/fab shell
+
+or if you like to go with IPython or bpython::
+
+    $ .venv/bin/fab shell:interface=ipython
+    $ .venv/bin/fab shell:interface=bpython
+
+You're recommended to use IPython with it. Install IPython by::
+
+    $ .venv/bin/pip install IPython
+
+Note: if you had IPython or bpython installed, django-admin.py shell will use
+it automatically.
 
 Question about ".venv/bin/fab"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,3 +118,52 @@ The example of file content::
 
 You will need to replace above virtualenv prefix ``.venv/bin/*`` with
 ``{your_virutalenv_path}/bin/*``; or source your virtualenv before hand.
+
+
+How to contribute
+-----------------
+
+Everyone who desires to improve the pycon-apac-2014 website can involve it
+by the following working flow.
+
+Fork on Bitbucket
+~~~~~~~~~~~~~~~~~
+
+First, `fork PyCon APAC 2014 repository on Bitbucket <https://bitbucket.org/pycontw/pycon-apac-2014/fork>`_.
+
+Then, clone the repository which you has forked::
+
+    $ git clone git@bitbucket.org:<your_bitbucket_id>/pycon-apac-2014.git
+
+Follow the steps of getting started on the top of the tutorial to setup
+your environment.
+
+Create a new branch
+~~~~~~~~~~~~~~~~~~~
+
+It is a good practice to generate a new branch for the new feature or
+bugs that you want to fix. The branch name is not restricted but a
+related name is prefered. You can create a branch by::
+
+    $ git checkout master -b <branch_name>
+
+Submit a pull-request
+~~~~~~~~~~~~~~~~~~~~~
+
+After you had finished your patch and committed the new branch onto your
+repository, you could submit a pull-request onto "pycontw/pycon-apac-2014".
+
+You can find the button on the top-left of you repository page on Bitbucket.
+
+Gotcha
+~~~~~~
+
+Q: The master had updated and conflicted with my pull-request?
+==============================================================
+
+You need to rebase your repositary on to the origin/master
+
+    $ git pull --rebase origin/master
+
+After you updated and pushed your commit, you will need to click "Update"
+on the pull-request which you had posted on Bitbucket.
