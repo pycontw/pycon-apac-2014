@@ -18,13 +18,12 @@ def set_language(request):
             next = url_lang_prefix
 
     response = None
-    if request.method == 'POST':
-        lang_code = request.POST.get('language', None)
-        if lang_code and check_for_language(lang_code):
-            next = next.replace(url_lang_prefix, '/{}/'.format(lang_code))
-            if hasattr(request, 'session'):
-                request.session['django_language'] = lang_code
-            else:
-                response = http.HttpResponseRedirect(next)
-                response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
+    lang_code = request.GET.get('language', None)
+    if lang_code and check_for_language(lang_code):
+        next = next.replace(url_lang_prefix, '/{}/'.format(lang_code))
+        if hasattr(request, 'session'):
+            request.session['django_language'] = lang_code
+        else:
+            response = http.HttpResponseRedirect(next)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
     return response or http.HttpResponseRedirect(next)

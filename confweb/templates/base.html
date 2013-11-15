@@ -2,7 +2,6 @@
 <html lang="{{ LANGUAGE_CODE }}" ng-app="App">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
-
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
@@ -42,15 +41,6 @@
 
 </head>
 <body id="{% block body_id %}body{% endblock %}">
-
-<div class="container">
-
-
-
-</div>
-
-
-
 <div id="nav" ng-class="{show: showNav}">
     <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
     <div class="inner">
@@ -61,21 +51,13 @@
         {% page_menu "pages/menus/tree.html" %}
         {% endblock %}
 
-        <form action="{% url 'set_language' %}" method="post">
-        {% csrf_token %}
-        <input name="next" type="hidden" value="{{ redirect_to }}" />
-        <select name="language">
-        {% for lang_code, lang_name in LANGUAGES %}
-        <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-            {{ lang_name }}
-        </option>
-        {% endfor %}
-        </select>
-        <input type="submit" value="Go" />
-        </form>
+        <div class="lang-select">
+            {% for lang_code, lang_name in LANGUAGES %}
+                <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
+            {% endfor %}
 
+        </div>
     </div>
-
 </div>
 
 <div id="main">
@@ -110,8 +92,6 @@
         </div>
     {% endblock %}
 </div>
-
-
 
 {% include "includes/footer_scripts.html" %}
 
