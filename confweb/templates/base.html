@@ -51,31 +51,34 @@
 
 
 
-<div id="nav" ng-class="{Show: showNav}">
-    <div id="logo">
-        <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
-    </div>
-    {% block left_panel %}
-    {% page_menu "pages/menus/tree.html" %}
-    {% endblock %}
+<div id="nav" ng-class="{show: showNav}">
+    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
+    <div class="inner">
+        <div id="logo">
+            <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
+        </div>
+        {% block left_panel %}
+        {% page_menu "pages/menus/tree.html" %}
+        {% endblock %}
 
-    <form action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}" />
-    <select name="language">
-    {% for lang_code, lang_name in LANGUAGES %}
-    <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-        {{ lang_name }}
-    </option>
-    {% endfor %}
-    </select>
-    <input type="submit" value="Go" />
-    </form>
+        <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select name="language">
+        {% for lang_code, lang_name in LANGUAGES %}
+        <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+            {{ lang_name }}
+        </option>
+        {% endfor %}
+        </select>
+        <input type="submit" value="Go" />
+        </form>
+
+    </div>
 
 </div>
 
-<div id="main" ng-class="{SlideRight: showNav}">
-    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
+<div id="main">
     {% nevercache %}
     {% for message in messages %}
     <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">

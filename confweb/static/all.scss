@@ -40,14 +40,28 @@ body {
   }
 
   @include respond-to(mobile) {
-    width: 200px;
-    #logo {
-      display: none;
+    width: 0;
+    .inner {
+      overflow: hidden;
     }
-    display: none;
   }
 
+  .btn-nav {
+    position: absolute;
+    left: 100%;
+    top:10px;
+    margin-left: 10px;
+
+    @include respond-to(desktop) {
+      visibility: hidden;
+    }
+  }
+  &.show {
+     width: 250px!important;
+  }
 }
+
+
 
 #main {
   position: absolute;
@@ -63,22 +77,12 @@ body {
 
   }
 
-  .btn-nav {
-    position: absolute;
-    left: 10px;
-    top:10px;
-  }
+
   img {
     max-width:100%;
   }
 }
 
-.btn-nav {
-  @include respond-to(desktop) {
-    display: none;
-  }
-
-}
 
 #sider {
   width: 200px;
@@ -156,12 +160,6 @@ a:hover {
   font-weight: bold;
   color: $main-red;
 
-  // &:before {
-  //   display: inline-block;
-  //   width: 30px;
-  //   height: 30px;
-  //   background: image-url;
-  // }
 }
 
 .doc-content {
@@ -225,14 +223,10 @@ a:hover {
         color: #000;
       }
     }
-
   }
 }
 
 
-.Show {
-  display: block !important;
-}
 #main.SlideRight {
   left:200px;
   width: 100%;
