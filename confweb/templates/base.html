@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ LANGUAGE_CODE }}" ng-app="App">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
-
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
@@ -29,6 +28,8 @@
     {% compress js %}
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "vendor/angular-1.2.0/angular.min.js" %}"></script>
+    <script src="{% static "all.js" %}"></script>
     {% block extra_js %}{% endblock %}
     {% endcompress %}
     <!--[if lt IE 9]>
@@ -40,36 +41,23 @@
 
 </head>
 <body id="{% block body_id %}body{% endblock %}">
+<div id="nav" ng-class="{show: showNav}">
+    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
+    <div class="inner">
+        <div id="logo">
+            <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
+        </div>
+        {% block left_panel %}
+        {% page_menu "pages/menus/tree.html" %}
+        {% endblock %}
 
-<div class="container">
+        <div class="lang-select">
+            {% for lang_code, lang_name in LANGUAGES %}
+                <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
+            {% endfor %}
 
-
-
-</div>
-
-
-
-<div id="nav">
-    <div id="logo">
-        <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
+        </div>
     </div>
-    {% block left_panel %}
-    {% page_menu "pages/menus/tree.html" %}
-    {% endblock %}
-
-    <form action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}" />
-    <select name="language">
-    {% for lang_code, lang_name in LANGUAGES %}
-    <option value="{{ lang_code }}"{% if lang_code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-        {{ lang_name }}
-    </option>
-    {% endfor %}
-    </select>
-    <input type="submit" value="Go" />
-    </form>
-
 </div>
 
 <div id="main">
@@ -104,8 +92,6 @@
         </div>
     {% endblock %}
 </div>
-
-
 
 {% include "includes/footer_scripts.html" %}
 

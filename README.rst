@@ -65,6 +65,13 @@ server in a specific port and/or host, consider these examples::
     $ .venv/bin/fab serve:192.168.1.15,8090
 
 
+Compile static
+--------------
+Under /static::
+
+    $ sass --watch scss/all.scss:all.css
+    $ coffee --join all.js -cw coffees/*.coffee
+
 For Python developers
 ---------------------
 
