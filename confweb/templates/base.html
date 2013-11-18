@@ -60,6 +60,8 @@
     </div>
 </div>
 
+
+
 <div id="main">
     {% nevercache %}
     {% for message in messages %}
@@ -76,22 +78,16 @@
     </div>
     {% endblock %}
 
+    {% block content %}
+
     {% block main %}{% endblock %}
-    {% block sider %}
-        <div id="sider">
-            <h3>{% trans "Sponsers" %}</h3>
-            <div class="sponsers">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-            </div>
-        </div>
+
     {% endblock %}
+
+
 </div>
+
+
 
 {% include "includes/footer_scripts.html" %}
 
