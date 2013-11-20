@@ -64,7 +64,6 @@
   bottom: 0;
   top:0;
   overflow: auto;
-  padding: 20px;
 
   @include respond-to(mobile) {
     left: 0;
@@ -76,11 +75,38 @@
     max-width:100%;
   }
 }
+.col-left {
+  margin-right: -240px;
+  float: left;
+  width: 100%;
+  > .inner {
+    padding: 40px 260px 40px 40px;
+  }
 
+  @include respond-to(mobile) {
+
+    margin-right: 0;
+    float: none;
+    width: 100%;
+
+    > .inner {
+      padding: 40px;
+    }
+  }
+}
+.col-right {
+  width: 240px;
+  float: right;
+  padding: 0 20px;
+  margin: 20px 0;
+  border-left: 1px solid #eee;
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
 
 #sider {
-  width: 200px;
-  float: right;
 
   h3{
     border-bottom: 1px solid #ccc;
@@ -91,7 +117,11 @@
 
 
 #title {
-  margin: -20px -20px 20px;
-  padding: 20px 20px;
+  margin: 0;
+  padding: 40px 40px;
   background: url('images/pattern.png');
+}
+
+.content {
+  padding: 30px;
 }
