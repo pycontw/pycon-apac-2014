@@ -32,8 +32,11 @@ a:hover {
     #nav ul a {
       border-bottom: 1px solid #DC4F55;
       padding-left: 40px; }
-    #nav ul a:hover, #nav ul .active a {
+    #nav ul a:hover, #nav ul .active > a {
       background-color: #b81c28; }
+  #nav ul ul li > a {
+    padding-left: 60px;
+    font-size: 0.8em; }
   @media only screen and (max-width: 1000px) {
     #nav {
       width: 0; }
