@@ -80,7 +80,25 @@
 
     {% block content %}
 
-    {% block main %}{% endblock %}
+    <div class="col-left">
+      <div class="inner">
+        {% block main %}{% endblock %}
+      </div>
+    </div>
+    {% block sider %}
+      <div id="sider" class="col-right">
+          <div class="sponsers">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+              <img src="http://placehold.it/200x80" alt="">
+          </div>
+      </div>
+    {% endblock %}
+
 
     {% endblock %}
 
