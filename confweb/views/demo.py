@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def show(request, page='show'):
 
-    data = {'foo': 'bar'}
+    data = {'page': page}
 
     if request.is_ajax():
         template = 'demo/' + page + '_content.html'
