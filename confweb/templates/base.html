@@ -14,8 +14,8 @@
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
     {% ifinstalled mezzanine.blog %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+    <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">-->
+    <!--<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">-->
     {% endifinstalled %}
 
     {% compress css %}
@@ -42,16 +42,23 @@
 </head>
 <body id="{% block body_id %}body{% endblock %}">
 <div id="nav" ng-class="{show: showNav}">
-    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
+    <a href="#" class="btn btn-default btn-nav reversed"
+      ng-click="showNav=!showNav"
+    >MENU</a>
     <div class="inner">
         <div id="logo">
             <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
         </div>
         {% block left_panel %}
         {% page_menu "pages/menus/tree.html" %}
+        <ul class="hide nav nav-list navlist-menu-level-1">
+          <li id="tree-menu-blog">
+            <a href="{% url "blog" %}">{% trans "Blog" %}</a>
+          </li>
+        </ul>
         {% endblock %}
 
-        <div class="lang-select">
+        <div class="lang-select hide">
             {% for lang_code, lang_name in LANGUAGES %}
                 <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
             {% endfor %}
@@ -87,13 +94,7 @@
     </div>
     {% block sider %}
       <div id="sider" class="col-right">
-          <div class="sponsers">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
+          <div class="sponsers hide">
               <img src="http://placehold.it/200x80" alt="">
           </div>
       </div>
