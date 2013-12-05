@@ -76,7 +76,8 @@ a:hover {
   float: left;
   width: 100%; }
   .col-left > .inner {
-    padding: 40px 260px 40px 40px; }
+    padding: 40px 260px 40px 40px;
+    position: relative; }
   @media only screen and (max-width: 1000px) {
     .col-left {
       margin-right: 0;
@@ -107,6 +108,32 @@ a:hover {
 
 .content {
   padding: 30px; }
+
+.slideInPage {
+  background-color: #F5F4EE;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 250px;
+  padding: 0 40px 0 280px;
+  box-shadow: 0 0 20px 2px #999;
+  overflow: auto; }
+  .slideInPage .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.close-btn {
+  padding: 10px 15px;
+  display: inline-block;
+  color: #999;
+  font-size: 32px;
+  z-index: 10;
+  line-height: 32px;
+  cursor: pointer; }
+  .close-btn:hover {
+    color: #c00; }
 
 .lang-select {
   margin: 10px;
