@@ -2,7 +2,7 @@
 (function() {
   var App;
 
-  App = angular.module('App', []);
+  App = angular.module('App', ['ngAnimate']);
 
   App.config(function($httpProvider) {
     return $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

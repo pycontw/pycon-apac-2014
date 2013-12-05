@@ -110,19 +110,40 @@ a:hover {
   padding: 30px; }
 
 .slideInPage {
-  background-color: #F5F4EE;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   right: 250px;
   padding: 0 40px 0 280px;
+  background-color: #F5F4EE;
   box-shadow: 0 0 20px 2px #999;
+  height: 100%;
   overflow: auto; }
   .slideInPage .close-btn {
     position: absolute;
     right: 0;
     top: 0; }
+
+.ng-trans.ng-enter, .ng-trans.ng-leave {
+  -webkit-transition: 600ms all;
+  transition: 600ms all; }
+
+.ng-trans-slide.ng-enter {
+  opacity: 0.3;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0); }
+
+.ng-trans-slide.ng-enter.ng-enter-active,
+.ng-trans-slide.ng-leave {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.ng-trans-slide.ng-leave.ng-leave-active {
+  opacity: 0.3;
+  transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0); }
 
 .close-btn {
   padding: 10px 15px;

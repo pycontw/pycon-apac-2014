@@ -29,6 +29,7 @@
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
     <script src="{% static "vendor/angular-1.2.3/angular.min.js" %}"></script>
+    <script src="{% static "vendor/angular-1.2.3/angular-animate.min.js" %}"></script>
     <script src="{% static "all.js" %}"></script>
     {% block extra_js %}{% endblock %}
     {% endcompress %}
@@ -84,7 +85,7 @@
       <div class="inner">
         {% block main %}{% endblock %}
         <div class="slide"></div>
-        <div class="slideInPage" ng-show="slidePageUrl">
+        <div class="slideInPage ng-trans ng-trans-slide" ng-if="slidePageUrl">
           <div class="close-btn" ng-click=" closePage() ">&times</div>
           <div ng-include src="slidePageUrl"></div>
         </div>

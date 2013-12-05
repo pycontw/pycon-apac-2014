@@ -1,4 +1,4 @@
-App = angular.module('App', [])
+App = angular.module('App', ['ngAnimate'])
 
 App.config ($httpProvider)->
   $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
