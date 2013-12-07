@@ -62,6 +62,10 @@ def serve(host="0.0.0.0", port="8000"):
     if which('sass'):
         subprocess.Popen("sass --watch scss/all.scss:all.css".split(),
                          cwd='confweb/static/')
+    if which('coffee'):
+        subprocess.Popen("coffee --join all.js --watch --compile coffees/app.coffee",
+                         shell=True,
+                         cwd='confweb/static/')
     local("python manage.py runserver {}:{}".format(host, port))
 
 
