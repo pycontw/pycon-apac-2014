@@ -42,11 +42,6 @@ urlpatterns += i18n_patterns(
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
-    # Login and logout
-    url(r'^login$', 'confweb.views.login.login_view', name='login'),
-    url(r'^logout$', 'confweb.views.login.logout_view', name='logout'),
-    url(r'^signup$', 'confweb.views.signup.signup_view', name='signup'),
-
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
     # This pattern gives us a normal ``Page`` object, so that your
