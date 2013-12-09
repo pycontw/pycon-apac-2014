@@ -30,7 +30,7 @@ class in_virtualenv(object):
         self.venv_prefix = venv_prefix
 
     def __call__(self, *args, **kwargs):
-        with lcd("confweb"):
+        with lcd("conweb"):
             with prefix('. %s/bin/activate' % self.venv_prefix):
                 self.f(*args, **kwargs)
 
@@ -61,7 +61,7 @@ def shell(interface=""):
 def serve(host="0.0.0.0", port="8000"):
     if which('sass'):
         subprocess.Popen("sass --watch scss/all.scss:all.css".split(),
-                         cwd='confweb/static/')
+                         cwd='conweb/static/')
     local("python manage.py runserver {}:{}".format(host, port))
 
 
