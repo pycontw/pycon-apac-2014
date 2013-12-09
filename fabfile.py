@@ -1,4 +1,5 @@
 import os
+import subprocess
 from fabric.api import (
     local,
     #run,
@@ -58,4 +59,26 @@ def shell(interface=""):
 
 @in_virtualenv
 def serve(host="0.0.0.0", port="8000"):
+    if which('sass'):
+        subprocess.Popen("sass --watch scss/all.scss:all.css".split(),
+                         cwd='confweb/static/')
     local("python manage.py runserver {}:{}".format(host, port))
+
+
+def which(program):
+    # http://stackoverflow.com/a/377028
+    def is_exe(fpath):
+        return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+
+    fpath, fname = os.path.split(program)
+    if fpath:
+        if is_exe(program):
+            return program
+    else:
+        for path in os.environ["PATH"].split(os.pathsep):
+            path = path.strip('"')
+            exe_file = os.path.join(path, program)
+            if is_exe(exe_file):
+                return exe_file
+
+    return None

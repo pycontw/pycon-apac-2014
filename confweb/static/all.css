@@ -27,6 +27,8 @@ a:hover {
   z-index: 10; }
   #nav a {
     color: #FCFBF5; }
+    #nav a.reversed {
+      color: #1C1B15; }
   #nav ul {
     border-top: 1px solid #DC4F55; }
     #nav ul a {
@@ -107,7 +109,28 @@ a:hover {
   background: url("images/pattern.png"); }
 
 .content {
-  padding: 30px; }
+  padding: 0 30px 30px; }
+
+.prompt {
+  float: right;
+  width: 328px;
+  border: 3px solid #F6F5EF;
+  border-radius: 6px;
+  padding: 0 10px 10px 0;
+  margin: 10px; }
+  .prompt .title {
+    text-align: center;
+    position: relative;
+    color: #d32230; }
+
+.user-groups {
+  background-color: #F6F5EF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+  .user-groups li {
+    width: 50%;
+    float: left;
+    margin: 10px 0; }
 
 .slideInPage {
   position: fixed;

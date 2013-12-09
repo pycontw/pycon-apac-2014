@@ -14,12 +14,12 @@
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 
     {% ifinstalled mezzanine.blog %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+    <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">-->
+    <!--<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">-->
     {% endifinstalled %}
 
     {% compress css %}
-    <link rel="stylesheet" href="{% static "vendor/bootstrap-3.0.2/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "vendor/bootstrap-3.0.3/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "vendor/mezzanine/mezzanine.css" %}">
     <link rel="stylesheet" href="{% static "all.css" %}">
     {% block extra_css %}{% endblock %}
@@ -27,7 +27,7 @@
 
     {% compress js %}
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-    <script src="{% static "vendor/bootstrap-3.0.2/js/bootstrap.js" %}"></script>
+    <script src="{% static "vendor/bootstrap-3.0.3/js/bootstrap.js" %}"></script>
     <script src="{% static "vendor/angular-1.2.3/angular.min.js" %}"></script>
     <script src="{% static "vendor/angular-1.2.3/angular-animate.min.js" %}"></script>
     <script src="{% static "all.js" %}"></script>
@@ -43,16 +43,34 @@
 </head>
 <body id="{% block body_id %}body{% endblock %}" ng-controller="base">
 <div id="nav" ng-class="{show: showNav}">
-    <a href="#" class="btn btn-default btn-nav" ng-click="showNav=!showNav">MENU</a>
+    <a href="#" class="btn btn-default btn-nav reversed"
+      ng-click="showNav=!showNav"
+    >MENU</a>
     <div class="inner">
         <div id="logo">
             <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
         </div>
         {% block left_panel %}
         {% page_menu "pages/menus/tree.html" %}
+        <ul class="hide nav nav-list navlist-menu-level-1">
+          <li id="tree-menu-blog">
+            <a href="{% url "blog" %}">{% trans "Blog" %}</a>
+          </li>
+        </ul>
         {% endblock %}
+        <ul class="nav nav-list navlist-menu-level-1">
+        {% if request.user.is_authenticated %}
+          <li id="tree-menu-account">
+            <a href="{% url "logout" %}">{% trans "Log out" %}</a>
+          </li>
+        {% else %}
+          <li id="tree-menu-account">
+            <a href="{% url "login" %}">{% trans "Log in" %}</a>
+          </li>
+        {% endif %}
+        </ul>
 
-        <div class="lang-select">
+        <div class="lang-select hide">
             {% for lang_code, lang_name in LANGUAGES %}
                 <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
             {% endfor %}
@@ -93,13 +111,7 @@
     </div>
     {% block sider %}
       <div id="sider" class="col-right">
-          <div class="sponsers">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
-              <img src="http://placehold.it/200x80" alt="">
+          <div class="sponsers hide">
               <img src="http://placehold.it/200x80" alt="">
           </div>
       </div>
