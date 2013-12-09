@@ -60,11 +60,11 @@
         {% endblock %}
         <ul class="nav nav-list navlist-menu-level-1">
         {% if request.user.is_authenticated %}
-          <li id="tree-menu-account">
+          <li id="tree-menu-logout">
             <a href="{% url "logout" %}">{% trans "Log out" %}</a>
           </li>
         {% else %}
-          <li id="tree-menu-account">
+          <li id="tree-menu-login">
             <a href="{% url "login" %}">{% trans "Log in" %}</a>
           </li>
         {% endif %}
