@@ -12,17 +12,18 @@ admin.autodiscover()
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 
-urlpatterns = patterns("",
+urlpatterns = patterns(
+    "",
 
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
 
     # I18n locale URL
-    # Using confweb.views.i18n isntead
+    # Using conweb.views.i18n isntead
     #(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^setlang/$', 'confweb.views.i18n.set_language', name='set_language'),
-    url(r'^demo/(?P<page>\w+)/$', 'confweb.views.demo.show', name='demo'),
+    url(r'^setlang/$', 'conweb.views.i18n.set_language', name='set_language'),
+    url(r'^demo/(?P<page>\w+)/$', 'conweb.views.demo.show', name='demo'),
 
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
@@ -36,7 +37,8 @@ urlpatterns = patterns("",
 
 )
 
-urlpatterns += i18n_patterns("",
+urlpatterns += i18n_patterns(
+    "",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 

@@ -15,6 +15,9 @@
 
   a {
     color: #FCFBF5;
+    &.reversed {
+      color: #1C1B15;
+    }
   }
   ul {
     border-top: 1px solid #DC4F55;
@@ -128,7 +131,7 @@
 }
 
 .content {
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 
 .slideInPage {

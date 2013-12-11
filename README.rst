@@ -67,7 +67,7 @@ server in a specific port and/or host, consider these examples::
 
 Compile static
 --------------
-Under /static::
+Under conweb/static::
 
     $ sass --watch scss/all.scss:all.css
     $ coffee --join all.js -cw coffees/*.coffee

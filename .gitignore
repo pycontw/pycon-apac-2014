@@ -42,5 +42,5 @@ nosetests.xml
 
 # Vim
 *.sw[po]
-confweb/static/.sass-cache/
+.sass-cache
 venv_prefix
