@@ -111,27 +111,6 @@ a:hover {
 .content {
   padding: 0 30px 30px; }
 
-.prompt {
-  float: right;
-  width: 328px;
-  border: 3px solid #F6F5EF;
-  border-radius: 6px;
-  padding: 0 10px 10px 0;
-  margin: 10px; }
-  .prompt .title {
-    text-align: center;
-    position: relative;
-    color: #d32230; }
-
-.user-groups {
-  background-color: #F6F5EF;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .user-groups li {
-    width: 50%;
-    float: left;
-    margin: 10px 0; }
-
 .slideInPage {
   position: fixed;
   left: 0;
@@ -178,6 +157,27 @@ a:hover {
   cursor: pointer; }
   .close-btn:hover {
     color: #c00; }
+
+.prompt {
+  float: right;
+  width: 328px;
+  border: 3px solid #F6F5EF;
+  border-radius: 6px;
+  padding: 0 10px 10px 0;
+  margin: 10px; }
+  .prompt .title {
+    text-align: center;
+    position: relative;
+    color: #d32230; }
+
+.user-groups {
+  background-color: #F6F5EF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+  .user-groups li {
+    width: 50%;
+    float: left;
+    margin: 10px 0; }
 
 .lang-select {
   margin: 10px;
@@ -278,3 +278,22 @@ a:hover {
   border-bottom: 3px solid #D3202E;
   padding: 0 0 4px;
   margin-bottom: 20px; }
+
+hr {
+  border-color: #e6e3d4; }
+
+.talk-meta dt {
+  color: #999;
+  font-weight: normal;
+  margin: 15px 0 0; }
+.talk-meta dd {
+  font-size: 28px; }
+
+.small-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999; }
+
+.square-list {
+  list-style-type: square;
+  padding-left: 1em; }
