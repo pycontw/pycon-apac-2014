@@ -17,3 +17,25 @@
   list-style-type: square;
   padding-left: 1em;
 }
+
+.schedule-table {
+  font-size: 16px;
+  thead {
+    th {
+      color: #999;
+
+    }
+  }
+  th {
+    color: #04556A;
+    font-weight: normal;
+  }
+}
+
+.speaker-link {
+  margin: 0;
+  a {
+    color: #04556A;
+    font-size: 0.8em;
+  }
+}

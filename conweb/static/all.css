@@ -128,8 +128,8 @@ a:hover {
     top: 0; }
 
 .ng-trans.ng-enter, .ng-trans.ng-leave {
-  -webkit-transition: 600ms all;
-  transition: 600ms all; }
+  -webkit-transition: 400ms all;
+  transition: 400ms all; }
 
 .ng-trans-slide.ng-enter {
   opacity: 0.3;
@@ -297,3 +297,17 @@ hr {
 .square-list {
   list-style-type: square;
   padding-left: 1em; }
+
+.schedule-table {
+  font-size: 16px; }
+  .schedule-table thead th {
+    color: #999; }
+  .schedule-table th {
+    color: #04556A;
+    font-weight: normal; }
+
+.speaker-link {
+  margin: 0; }
+  .speaker-link a {
+    color: #04556A;
+    font-size: 0.8em; }

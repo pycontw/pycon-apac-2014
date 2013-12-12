@@ -103,10 +103,7 @@
       <div class="inner">
         {% block main %}{% endblock %}
         <div class="slide"></div>
-        <div class="slideInPage ng-trans ng-trans-slide" ng-if="slidePageUrl">
-          <div class="close-btn" ng-click=" closePage() ">&times</div>
-          <div ng-include src="slidePageUrl"></div>
-        </div>
+
       </div>
     </div>
     {% block sider %}
@@ -119,7 +116,10 @@
 
 
     {% endblock %}
-
+        <div class="slideInPage ng-trans ng-trans-slide" ng-if="slidePageUrl">
+          <div class="close-btn" ng-click=" closePage() ">&times</div>
+          <div ng-include src="slidePageUrl"></div>
+        </div>
 
 </div>
 
