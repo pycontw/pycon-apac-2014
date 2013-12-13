@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext as _
 
 
-class Proposal(models.Model):
+class ProposalModel(models.Model):
 
     LANGUAGE_CHOICES = (
         (0, "English"),
@@ -34,6 +34,7 @@ class Proposal(models.Model):
     )
 
     title = models.CharField(verbose_name=_("Title"), max_length=100)
+    author = models.ForeignKey("auth.User")
     speech_type = models.IntegerField(verbose_name=_("Type of the proposal"),
                                       choices=SPEECH_TYPE_CHOICES)
     language = models.IntegerField(verbose_name=_("Language"),

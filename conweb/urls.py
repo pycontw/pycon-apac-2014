@@ -41,7 +41,7 @@ urlpatterns += i18n_patterns(
     "",
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
-
+    url("^proposal/", include("proposal.urls", namespace="proposal")),
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
     # This pattern gives us a normal ``Page`` object, so that your
@@ -96,7 +96,7 @@ urlpatterns += i18n_patterns(
     # need to use the ``SITE_PREFIX`` setting as well.
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
-    url("^proposal/", include("proposal.urls", namespace="proposal")),
+
 )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
