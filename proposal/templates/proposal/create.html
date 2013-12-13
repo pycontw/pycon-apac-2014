@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title_block %}PyCon APAC 2014{% endblock %}
+
+{% block #title %}{% endblock %}
+
+{% block .breadcrumb %}{% endblock %}
+
+{% block content %}
+
+<form method="post" action=".">
+{% csrf_token %}
+<table>
+{{proposal_form}}
+</table>
+<input type="submit" value="Submit Form"/>
+</form>
+
+{% endblock %}
+
+{% block sider %}{% endblock %}
