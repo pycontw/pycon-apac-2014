@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title_block %}PyCon APAC 2014{% endblock %}
+
+{% block #title %}
+<h1>Proposal</h1>
+{% endblock %}
+
+{% block .breadcrumb %}{% endblock %}
+
+{% block content %}
+
+<div>
+<a class="btn btn-primary" href="/proposal/create">Create</a>
+
+<table class="table table-strip">
+    <thead>
+        <tr>
+            <th>{% trans "Title" %}</th>
+            <th>{% trans "Speech Type" %}</th>
+            <th>{% trans "Abstract" %}</th>
+            <th>{% trans "Action" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for proposal in my_proposal %}
+        <tr>
+            <td>{{proposal.title}}</td>
+            <td>{{proposal.get_speech_type_display}}</td>
+            <td>{{proposal.abstract}}</td>
+            <td>
+                <button class="btn btn-info">{% trans "Update" %}</button>
+                <button class="btn btn-danger">{% trans "Delete" %}</button>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">{% trans "No Proposal" %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
+
+{% block sider %}{% endblock %}

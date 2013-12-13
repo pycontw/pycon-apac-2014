@@ -1,20 +1,25 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load bootstrap3 %}
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
-{% block #title %}{% endblock %}
+{% block #title %}
+<h1>Create Proposal</h1>
+{% endblock %}
 
 {% block .breadcrumb %}{% endblock %}
 
 {% block content %}
 
-<form method="post" action=".">
-{% csrf_token %}
-<table>
-{{proposal_form}}
-</table>
-<input type="submit" value="Submit Form"/>
+<form class="form" method="post" action=".">
+    {% csrf_token %}
+    {% bootstrap_form proposal_form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            {% bootstrap_icon "star" %} Submit
+        </button>
+    {% endbuttons %}
 </form>
 
 {% endblock %}
