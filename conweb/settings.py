@@ -261,6 +261,7 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     #"mezzanine.mobile",
     "conweb",
+    "proposal"
 )
 
 AUTH_PROFILE_MODULE = "conweb.UserProfile"

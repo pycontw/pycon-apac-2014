@@ -96,6 +96,7 @@ urlpatterns += i18n_patterns(
     # need to use the ``SITE_PREFIX`` setting as well.
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
+    url("^proposal/", include("proposal.urls", namespace="proposal")),
 )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
