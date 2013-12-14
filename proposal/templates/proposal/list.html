@@ -11,8 +11,23 @@
 
 {% block content %}
 
+<script>
+    $(function(){
+        $(".btn.delete-proposal").on("click", function(event){
+            var $target = $(event.target)
+            var action = $target.attr("data-href");
+            var $modal = $("#proposal-delete-modal");
+            $modal.find("form").attr("action", action);
+            $modal.modal({
+                "backdrop": "static",
+                "show": true
+            });
+        });
+    });
+</script>
+
 <div>
-<a class="btn btn-primary" href="/proposal/create">Create</a>
+<a class="btn btn-primary" href="{% url "proposal:create" %}">{% trans "Create" %}</a>
 
 <table class="table table-strip">
     <thead>
@@ -30,8 +45,8 @@
             <td>{{proposal.get_speech_type_display}}</td>
             <td>{{proposal.abstract}}</td>
             <td>
-                <button class="btn btn-info">{% trans "Update" %}</button>
-                <button class="btn btn-danger">{% trans "Delete" %}</button>
+                <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
+                <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
             </td>
         </tr>
         {% empty %}
@@ -41,6 +56,27 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
+
+<div id="proposal-delete-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>{% trans "Delete Proposal" %}</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure to <strong>delete</strong> this proposal?
+            </div>
+            <div class="modal-footer">
+                <form class="form-inline" method="post" action=".">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Close" %}</button>
+                    <button type="submit" class="btn btn-danger">{% trans "Delete" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 

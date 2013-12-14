@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
+from django.core.files.uploadedfile import UploadedFile
 
 from .models import ProposalModel
 
@@ -12,12 +13,14 @@ class ProposalForm(forms.ModelForm):
         model = ProposalModel
         exclude = ("create_on", "last_modified", "author",)
 
-
     def clean_abstract(self):
-        abstract_file = self.cleaned_data.get('work_file', False)
+        abstract_file = self.cleaned_data.get('abstract')
         if abstract_file:
-            if abstract_file.content_type != "application/pdf":
-                raise ValidationError(_("The file should be a PDF."))
+            # If it is a newly file, it will be an instance of "UploadedFile".
+            if isinstance(abstract_file, UploadedFile):
+                # Check its file format.
+                if abstract_file.content_type != "application/pdf":
+                    raise ValidationError(_("This file format should be PDF."))
             return abstract_file
         else:
             raise ValidationError(_("Upload Failure."))

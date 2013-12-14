@@ -12,7 +12,7 @@
 
 {% block content %}
 
-<form class="form" method="post" action=".">
+<form class="form" method="post" action="." enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form proposal_form %}
     {% buttons %}
