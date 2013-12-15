@@ -14,9 +14,20 @@
 <script>
     $(function(){
         $(".btn.delete-proposal").on("click", function(event){
-            var $target = $(event.target)
+            var $target = $(event.target);
             var action = $target.attr("data-href");
             var $modal = $("#proposal-delete-modal");
+            $modal.find("form").attr("action", action);
+            $modal.modal({
+                "backdrop": "static",
+                "show": true
+            });
+        });
+
+        $(".btn.upload-abstract").on("click", function(event){
+            var $target = $(event.target);
+            var action = $target.attr("data-href");
+            var $modal = $("#upload-abstract-modal");
             $modal.find("form").attr("action", action);
             $modal.modal({
                 "backdrop": "static",
@@ -43,7 +54,9 @@
         <tr>
             <td>{{proposal.title}}</td>
             <td>{{proposal.get_speech_type_display}}</td>
-            <td>{{proposal.abstract}}</td>
+            <td>{{proposal.abstractfile}}
+            <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>
+            </td>
             <td>
                 <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
                 <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
@@ -56,6 +69,28 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
+
+
+<div id="upload-abstract-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>{% trans "Upload Abstract" %}</h4>
+            </div>
+            <form class="form-inline" method="post" action="." enctype="multipart/form-data">
+            <div class="modal-body">
+                {% csrf_token %}
+                {{ upload_abstract_form.as_p }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Close" %}</button>
+                <button type="submit" class="btn btn-danger">{% trans "Upload" %}</button>
+            </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div id="proposal-delete-modal" class="modal fade">

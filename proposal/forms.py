@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import UploadedFile
 
-from .models import ProposalModel
+from .models import ProposalModel, AbstractFile
 
 
 
@@ -14,6 +14,14 @@ class ProposalForm(forms.ModelForm):
     class Meta:
         model = ProposalModel
         exclude = ("create_on", "last_modified", "author",)
+
+
+
+class AbstractFileForm(forms.ModelForm):
+
+    class Meta:
+        model = AbstractFile
+        fields = ("abstract",)
 
     def clean_abstract(self):
         abstract_file = self.cleaned_data.get('abstract')

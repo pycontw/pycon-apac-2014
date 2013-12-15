@@ -1,10 +1,12 @@
+import json
+
 from django.shortcuts import HttpResponse, render, redirect
 from django.http import HttpResponseNotAllowed, HttpResponseForbidden
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 
-from .forms import ProposalForm
-from .models import ProposalModel
+from .forms import ProposalForm, AbstractFileForm
+from .models import ProposalModel, AbstractFile
 
 
 @login_required
@@ -34,7 +36,9 @@ def create_proposal(request):
 def list_proposal(request):
 
     my_proposal = ProposalModel.objects.filter(author=request.user)
-    return render(request, "proposal/list.html", {"my_proposal": my_proposal})
+    return render(request, "proposal/list.html",
+                  {"my_proposal": my_proposal,
+                   "upload_abstract_form": AbstractFileForm})
 
 
 @login_required
@@ -72,5 +76,23 @@ def delete_proposal(request, proposal_id):
         proposal.delete()
         return redirect(reverse("proposal:list"))
 
+    else:
+        return HttpResponseNotAllowed("")
+
+
+@login_required
+def upload_abstract(request, proposal_id):
+
+    if request.method == "POST":
+
+        abstract_file, success = AbstractFile.objects.get_or_create(proposal_id=proposal_id)
+
+        abstract_file_form = AbstractFileForm(request.POST, request.FILES,
+                                              instance=abstract_file)
+
+        if abstract_file_form.is_valid():
+            abstract_file_form.save()
+
+        return redirect(reverse("proposal:list"))
     else:
         return HttpResponseNotAllowed("")
