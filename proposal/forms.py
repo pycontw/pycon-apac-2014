@@ -1,3 +1,5 @@
+from os.path import splitext
+
 from django import forms
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
@@ -19,7 +21,8 @@ class ProposalForm(forms.ModelForm):
             # If it is a newly file, it will be an instance of "UploadedFile".
             if isinstance(abstract_file, UploadedFile):
                 # Check its file format.
-                if abstract_file.content_type != "application/pdf":
+                discarded, file_extension = splitext(abstract_file.name)
+                if file_extension != ".pdf":
                     raise ValidationError(_("This file format should be PDF."))
             return abstract_file
         else:
