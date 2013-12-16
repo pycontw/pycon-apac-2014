@@ -3,14 +3,7 @@
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
-{% block #title %}
-<h1>Proposal</h1>
-{% endblock %}
-
-{% block .breadcrumb %}{% endblock %}
-
-{% block content %}
-
+{% block extra_head %}
 <script>
     $(function(){
         $(".btn.delete-proposal").on("click", function(event){
@@ -36,39 +29,50 @@
         });
     });
 </script>
+{% endblock %}
 
-<div>
-<a class="btn btn-primary" href="{% url "proposal:create" %}">{% trans "Create" %}</a>
 
-<table class="table table-strip">
-    <thead>
-        <tr>
-            <th>{% trans "Title" %}</th>
-            <th>{% trans "Speech Type" %}</th>
-            <th>{% trans "Abstract" %} <span class="note">(PDF file)</span></th>
-            <th>{% trans "Action" %}</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for proposal in my_proposal %}
-        <tr>
-            <td>{{proposal.title}}</td>
-            <td>{{proposal.get_speech_type_display}}</td>
-            <td>{{proposal.abstractfile}}
-            <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>
-            </td>
-            <td>
-                <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
-                <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
-            </td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="4">{% trans "No Proposal" %}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+{% block title %}Proposal{% endblock %}
+
+{% block .breadcrumb %}{% endblock %}
+
+{% block content %}
+
+
+<div class="content">
+    <p class="action-btn-block">
+        <a class="btn btn-default btn-lg" href="{% url "proposal:create" %}">{% trans "Create a Proposal" %}</a>
+    </p>
+
+    <table class="table table-strip">
+        <thead>
+            <tr>
+                <th>{% trans "Title" %}</th>
+                <th>{% trans "Speech Type" %}</th>
+                <th>{% trans "Abstract" %} <span class="note">(PDF file)</span></th>
+                <th>{% trans "Action" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proposal in my_proposal %}
+            <tr>
+                <td>{{proposal.title}}</td>
+                <td>{{proposal.get_speech_type_display}}</td>
+                <td>{{proposal.abstractfile}}
+                <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>
+                </td>
+                <td>
+                    <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
+                    <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">{% trans "No Proposal" %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 
@@ -113,6 +117,7 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block sider %}{% endblock %}

@@ -163,7 +163,7 @@ a:hover {
   width: 328px;
   border: 3px solid #F6F5EF;
   border-radius: 6px;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 10px; }
   .prompt .title {
     position: relative;
@@ -292,6 +292,30 @@ a:hover {
 hr {
   border-color: #e6e3d4; }
 
+.alert {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0 -1px 0; }
+
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1; }
+
+.home-condate {
+  margin: 1em;
+  color: #6E6F72;
+  font-size: 24px; }
+  .home-condate b {
+    color: #D0272B; }
+  .home-condate strong {
+    color: #04556A; }
+
+.side-condate {
+  font-size: 13px;
+  text-align: center;
+  margin: -40px 0 20px; }
+
 .talk-meta dt {
   color: #999;
   font-weight: normal;
@@ -321,3 +345,7 @@ hr {
   .speaker-link a {
     color: #04556A;
     font-size: 0.8em; }
+
+.action-btn-block {
+  text-align: center;
+  margin: 2em 0 1em; }
