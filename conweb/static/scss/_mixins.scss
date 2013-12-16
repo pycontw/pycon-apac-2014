@@ -10,10 +10,6 @@ $wide-screen-width: 1300px;
   @else if $media == ipad {
     @media only screen and (min-device-width: $iphone-width + 1) and (max-device-width: $ipad-width) { @content; }
   }
-  @else if $media == mobile {
-    @media only screen and (max-width: $ipad-width) { @content; }
-  }
-
   @else if $media == screen {
     @media only screen and (min-width: $ipad-width + 1) and (max-width: $screen-width) { @content; }
   }
@@ -21,6 +17,9 @@ $wide-screen-width: 1300px;
     @media only screen and (min-width: $wide-screen-width + 1) { @content; }
   }
 
+  @else if $media == mobile {
+    @media only screen and (max-width: $ipad-width) { @content; }
+  }
   @else if $media == desktop {
     @media only screen and (min-width: $ipad-width + 1) { @content; }
   }

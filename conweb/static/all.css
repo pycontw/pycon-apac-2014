@@ -163,12 +163,17 @@ a:hover {
   width: 328px;
   border: 3px solid #F6F5EF;
   border-radius: 6px;
-  padding: 0 10px 10px 0;
+  padding: 10px;
   margin: 10px; }
   .prompt .title {
-    text-align: center;
     position: relative;
     color: #d32230; }
+  @media only screen and (max-width: 1000px) {
+    .prompt {
+      width: 100%;
+      float: none; }
+      .prompt .title {
+        text-align: left; } }
 
 .user-groups {
   background-color: #F6F5EF;
@@ -178,6 +183,9 @@ a:hover {
     width: 50%;
     float: left;
     margin: 10px 0; }
+  @media only screen and (max-width: 1000px) {
+    .user-groups li {
+      width: 100%; } }
 
 .lang-select {
   margin: 10px;
@@ -271,8 +279,9 @@ a:hover {
   .doc-content p {
     line-height: 1.5;
     color: #555; }
-  .doc-content li {
-    list-style-type: square; }
+
+.square-list li {
+  list-style-type: square; }
 
 .section-title {
   border-bottom: 3px solid #D3202E;

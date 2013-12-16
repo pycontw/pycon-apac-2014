@@ -3,13 +3,22 @@
   width: 328px;
   border: 3px solid #F6F5EF;
   border-radius: 6px;
-  padding: 0 10px 10px 0;
+  padding: 10px;
   margin: 10px;
   .title {
-    text-align: center;
     position: relative;
     color: #d32230;
   }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    float: none;
+
+    .title {
+      text-align: left;
+    }
+
+  };
 }
 
 .user-groups {
@@ -21,6 +30,12 @@
     float: left;
     margin: 10px 0;
   }
+
+  @include respond-to(mobile) {
+    li {
+      width: 100%;
+    }
+  };
 }
 
 
