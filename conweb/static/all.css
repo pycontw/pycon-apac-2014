@@ -292,6 +292,20 @@ a:hover {
 hr {
   border-color: #e6e3d4; }
 
+.home-condate {
+  margin: 1em;
+  color: #6E6F72;
+  font-size: 24px; }
+  .home-condate b {
+    color: #D0272B; }
+  .home-condate strong {
+    color: #04556A; }
+
+.side-condate {
+  font-size: 13px;
+  text-align: center;
+  margin: -40px 0 20px; }
+
 .talk-meta dt {
   color: #999;
   font-weight: normal;
