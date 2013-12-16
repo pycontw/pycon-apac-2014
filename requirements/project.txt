@@ -1,2 +1,3 @@
 fabric
 Mezzanine==1.4.16
+django-bootstrap3

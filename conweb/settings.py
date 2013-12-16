@@ -260,7 +260,9 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "mezzanine.accounts",
     #"mezzanine.mobile",
+    'bootstrap3',
     "conweb",
+    "proposal"
 )
 
 AUTH_PROFILE_MODULE = "conweb.UserProfile"
