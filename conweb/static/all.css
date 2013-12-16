@@ -178,7 +178,8 @@ a:hover {
 .user-groups {
   background-color: #F6F5EF;
   -webkit-border-radius: 6px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  padding: 10px; }
   .user-groups li {
     width: 50%;
     float: left;
