@@ -36,9 +36,8 @@ class in_virtualenv(object):
 
 
 @in_virtualenv
-def dumpdata(venv_prefix=VENV_PREFIX, output="dumpdata.json"):
-    local("python manage.py dumpdata > {}{}{}".format(
-        os.getcwd(), os.sep, output))
+def setup():
+    local("pip install -r ../requirements/project.txt")
 
 
 @in_virtualenv
@@ -47,14 +46,6 @@ def deploy(role):
         local("python manage.py syncdb --noinput")
     elif role == "deployment":
         local("python manage.py syncdb --noinput")
-
-
-@in_virtualenv
-def shell(interface=""):
-    cmd = "python manage.py shell"
-    if interface:
-        cmd += " -i {}".format(interface)
-    local(cmd)
 
 
 @in_virtualenv
@@ -67,6 +58,20 @@ def serve(host="0.0.0.0", port="8000"):
                          shell=True,
                          cwd='conweb/static/')
     local("python manage.py runserver {}:{}".format(host, port))
+
+
+@in_virtualenv
+def shell(interface=""):
+    cmd = "python manage.py shell"
+    if interface:
+        cmd += " -i {}".format(interface)
+    local(cmd)
+
+
+@in_virtualenv
+def dumpdata(venv_prefix=VENV_PREFIX, output="dumpdata.json"):
+    local("python manage.py dumpdata > {}{}{}".format(
+        os.getcwd(), os.sep, output))
 
 
 def which(program):
