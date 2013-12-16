@@ -1,8 +1,7 @@
-import json
-
-from django.shortcuts import HttpResponse, render, redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponseNotAllowed, HttpResponseForbidden
 from django.core.urlresolvers import reverse
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .forms import ProposalForm, AbstractFileForm
@@ -23,7 +22,7 @@ def create_proposal(request):
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",
-                      {"proposal_form": proposal_form})
+                          {"proposal_form": proposal_form})
     else:
 
         proposal_form = ProposalForm()
@@ -85,13 +84,17 @@ def upload_abstract(request, proposal_id):
 
     if request.method == "POST":
 
-        abstract_file, success = AbstractFile.objects.get_or_create(proposal_id=proposal_id)
+        abstract_file, success = \
+            AbstractFile.objects.get_or_create(proposal_id=proposal_id)
 
         abstract_file_form = AbstractFileForm(request.POST, request.FILES,
                                               instance=abstract_file)
 
         if abstract_file_form.is_valid():
             abstract_file_form.save()
+        else:
+            for field, message in abstract_file_form.errors.items():
+                messages.add_message(request, messages.ERROR, message)
 
         return redirect(reverse("proposal:list"))
     else:

@@ -8,13 +8,11 @@ from django.core.files.uploadedfile import UploadedFile
 from .models import ProposalModel, AbstractFile
 
 
-
 class ProposalForm(forms.ModelForm):
 
     class Meta:
         model = ProposalModel
         exclude = ("create_on", "last_modified", "author",)
-
 
 
 class AbstractFileForm(forms.ModelForm):
@@ -31,7 +29,7 @@ class AbstractFileForm(forms.ModelForm):
                 # Check its file format.
                 discarded, file_extension = splitext(abstract_file.name)
                 if file_extension != ".pdf":
-                    raise ValidationError(_("This file format should be PDF."))
+                    raise ValidationError(_("File format should be PDF."))
             return abstract_file
         else:
             raise ValidationError(_("Upload Failure."))
