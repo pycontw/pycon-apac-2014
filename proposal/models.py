@@ -41,16 +41,16 @@ class ProposalModel(models.Model):
     language = models.IntegerField(verbose_name=_("Language"),
                                    choices=LANGUAGE_CHOICES)
     audience_level = models.IntegerField(verbose_name=_("Audience level"),
-                                choices=LEVEL_CHOICES)
-    talk_perm = models.IntegerField(verbose_name=_("talk_permission"),
-                                          choices=TALK_PERMISSION_CHOICES)
-    slide_perm = models.IntegerField(verbose_name=_("slide_permission"),
-                                           choices=SLIDE_PERMISSION_CHOICES)
+                                         choices=LEVEL_CHOICES)
+    talk_perm = models.IntegerField(verbose_name=_("Talk Permission"),
+                                    choices=TALK_PERMISSION_CHOICES)
+    slide_perm = models.IntegerField(verbose_name=_("Slide Permission"),
+                                     choices=SLIDE_PERMISSION_CHOICES)
     description = models.TextField(verbose_name=_("Description"))
-    additional_info = models.TextField(verbose_name=_("Additional information"))
+    additional_info = models.TextField(
+        verbose_name=_("Additional information"), null=True, blank=True)
     create_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-
 
 
 class AbstractFile(models.Model):
