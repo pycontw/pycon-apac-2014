@@ -1,0 +1,41 @@
+.talk-meta {
+  dt {
+    color: #999;
+    font-weight: normal;
+    margin: 15px 0 0;
+  }
+  dd {
+    font-size: 28px;
+  }
+}
+.small-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+}
+.square-list {
+  list-style-type: square;
+  padding-left: 1em;
+}
+
+.schedule-table {
+  font-size: 16px;
+  thead {
+    th {
+      color: #999;
+
+    }
+  }
+  th {
+    color: #04556A;
+    font-weight: normal;
+  }
+}
+
+.speaker-link {
+  margin: 0;
+  a {
+    color: #04556A;
+    font-size: 0.8em;
+  }
+}

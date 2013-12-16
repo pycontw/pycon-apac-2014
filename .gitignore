@@ -44,3 +44,4 @@ nosetests.xml
 *.sw[po]
 .sass-cache
 venv_prefix
+dev.db

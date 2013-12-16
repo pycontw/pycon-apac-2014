@@ -37,14 +37,21 @@
     line-height: 1.5;
     color: #555;
   }
+
+}
+
+.square-list {
   li {
     list-style-type: square;
   }
-
 }
 
 .section-title {
   border-bottom: 3px solid #D3202E;
   padding: 0 0 4px;
   margin-bottom: 20px;
+}
+
+hr {
+  border-color: darken(#F5F4EE, 8%);
 }

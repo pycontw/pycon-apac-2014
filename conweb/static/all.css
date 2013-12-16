@@ -111,27 +111,6 @@ a:hover {
 .content {
   padding: 0 30px 30px; }
 
-.prompt {
-  float: right;
-  width: 328px;
-  border: 3px solid #F6F5EF;
-  border-radius: 6px;
-  padding: 0 10px 10px 0;
-  margin: 10px; }
-  .prompt .title {
-    text-align: center;
-    position: relative;
-    color: #d32230; }
-
-.user-groups {
-  background-color: #F6F5EF;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .user-groups li {
-    width: 50%;
-    float: left;
-    margin: 10px 0; }
-
 .slideInPage {
   position: fixed;
   left: 0;
@@ -149,8 +128,8 @@ a:hover {
     top: 0; }
 
 .ng-trans.ng-enter, .ng-trans.ng-leave {
-  -webkit-transition: 600ms all;
-  transition: 600ms all; }
+  -webkit-transition: 400ms all;
+  transition: 400ms all; }
 
 .ng-trans-slide.ng-enter {
   opacity: 0.3;
@@ -178,6 +157,36 @@ a:hover {
   cursor: pointer; }
   .close-btn:hover {
     color: #c00; }
+
+.prompt {
+  float: right;
+  width: 328px;
+  border: 3px solid #F6F5EF;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px; }
+  .prompt .title {
+    position: relative;
+    color: #d32230; }
+  @media only screen and (max-width: 1000px) {
+    .prompt {
+      width: 100%;
+      float: none; }
+      .prompt .title {
+        text-align: left; } }
+
+.user-groups {
+  background-color: #F6F5EF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px; }
+  .user-groups li {
+    width: 50%;
+    float: left;
+    margin: 10px 0; }
+  @media only screen and (max-width: 1000px) {
+    .user-groups li {
+      width: 100%; } }
 
 .lang-select {
   margin: 10px;
@@ -271,10 +280,44 @@ a:hover {
   .doc-content p {
     line-height: 1.5;
     color: #555; }
-  .doc-content li {
-    list-style-type: square; }
+
+.square-list li {
+  list-style-type: square; }
 
 .section-title {
   border-bottom: 3px solid #D3202E;
   padding: 0 0 4px;
   margin-bottom: 20px; }
+
+hr {
+  border-color: #e6e3d4; }
+
+.talk-meta dt {
+  color: #999;
+  font-weight: normal;
+  margin: 15px 0 0; }
+.talk-meta dd {
+  font-size: 28px; }
+
+.small-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999; }
+
+.square-list {
+  list-style-type: square;
+  padding-left: 1em; }
+
+.schedule-table {
+  font-size: 16px; }
+  .schedule-table thead th {
+    color: #999; }
+  .schedule-table th {
+    color: #04556A;
+    font-weight: normal; }
+
+.speaker-link {
+  margin: 0; }
+  .speaker-link a {
+    color: #04556A;
+    font-size: 0.8em; }
