@@ -12,6 +12,7 @@
   <div class="content">
     <br>
     <form class="form" method="post" action="." enctype="multipart/form-data">
+      <div class="col-md-6">
         {% csrf_token %}
         {% bootstrap_form proposal_form %}
         {% buttons %}
@@ -19,8 +20,12 @@
                 {% bootstrap_icon "star" %} Submit
             </button>
         {% endbuttons %}
+      </div>
+      <div class="clearfix">
+      </div>
     </form>
   </div>
+  <div class="row" style="margin-bottom: 20px;"></div>
 
 
 {% endblock %}
