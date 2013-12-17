@@ -58,7 +58,13 @@
             <tr>
                 <td>{{proposal.title}}</td>
                 <td>{{proposal.get_speech_type_display}}</td>
-                <td>{{proposal.abstractfile}}
+                <td>
+                  {% if proposal.abstractfile %}
+                  <a href="{{proposal.abstractfile.abstract.url}}" target="_blank">
+                  {{proposal.abstractfile}}
+                  </a>
+                  {% endif %}
+                &nbsp;
                 <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>
                 </td>
                 <td>
