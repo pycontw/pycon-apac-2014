@@ -42,7 +42,7 @@ class ProposalModel(models.Model):
     language = models.IntegerField(
         verbose_name=_("Language"),
         choices=LANGUAGE_CHOICES,
-        help_text=_("SciPy track accepts only English")
+        help_text=_("SciPy Talk accepts only English")
     )
     audience_level = models.IntegerField(verbose_name=_("Audience level"),
                                          choices=LEVEL_CHOICES)
