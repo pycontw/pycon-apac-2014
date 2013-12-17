@@ -29,6 +29,9 @@ a:hover {
     color: #FCFBF5; }
     #nav a.reversed {
       color: #1C1B15; }
+    #nav a.btn {
+      color: #D3202E;
+      margin: 20px; }
   #nav ul {
     border-top: 1px solid #DC4F55; }
     #nav ul a {

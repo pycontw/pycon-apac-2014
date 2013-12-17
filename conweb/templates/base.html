@@ -61,20 +61,19 @@
           </li>
         </ul>
         {% endblock %}
-        <ul class="nav nav-list navlist-menu-level-1">
         {% if request.user.is_authenticated %}
+        <ul class="nav nav-list navlist-menu-level-1">
           <li id="proposal">
-            <a href="{% url "proposal:list" %}">{% trans "Proposal" %}</a>
+            <a href="{% url "proposal:list" %}">{% trans "My Proposals" %}</a>
           </li>
-          <li id="tree-menu-logout">
-            <a href="{% url "logout" %}">{% trans "Log out" %}</a>
-          </li>
-        {% else %}
-          <li id="tree-menu-login">
-            <a href="{% url "login" %}">{% trans "Log in" %}</a>
-          </li>
-        {% endif %}
         </ul>
+        <div class="text-center">
+          <a class="btn btn-default btn-sm" href="{% url "logout" %}">{% trans "LOG OUT" %}</a>
+        {% else %}
+        <div class="text-center">
+          <a class="btn btn-default btn-sm" href="{% url "login" %}">{% trans "SPEAKER LOG IN" %}</a>
+        {% endif %}
+        </div>
 
         <div class="lang-select hide">
             {% for lang_code, lang_name in LANGUAGES %}
