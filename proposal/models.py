@@ -78,6 +78,6 @@ class AbstractFile(models.Model):
 
     def __unicode__(self):
         if self.abstract:
-            return self.abstract.name
+            return self.abstract.name.split('/')[-1]
         else:
             return ""
