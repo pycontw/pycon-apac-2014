@@ -39,15 +39,14 @@ Setting up the database
 -----------------------
 
 This will vary for production and development. By default the project is set
-up to run on a SQLite database. If you are setting up a production database
-see the Configuration section below for where to place settings and get the
-database running. Now you can run::
+up to run on a SQLite database.  For deployment of testing or production::
 
-    $ .venv/bin/fab deploy:developer
+    $ .venv/bin/fab deploy
 
-For deployment of testing or production::
+If you are setting up a production database see the Configuration section below
+for where to place settings and get the database running. Now you can run::
 
-    $ .venv/bin/fab deploy:deployment
+    $ .venv/bin/fab deploy:production
 
 Running a web server
 --------------------

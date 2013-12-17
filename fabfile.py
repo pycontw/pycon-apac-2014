@@ -2,19 +2,39 @@ import os
 import subprocess
 from fabric.api import (
     local,
-    #run,
-    #env,
+    run,
+    env,
+    roles,
     #put,
     #sudo,
-    #cd,
+    cd,
     lcd,
     #settings,
-    prefix
+    prefix,
+    execute
 )
 
 from scripts.make_virtualenv import get_venv_prefix
 
 
+def config_fabric(local_settings={}):
+    env.roledefs['web'] = []
+    roledefs = local_settings.get('roledefs', {})
+    for role, hostlist in roledefs.items():
+        print("Setting hosts role '{}': {}".format(role, hostlist))
+        env.roledefs[role] = hostlist
+
+
+def load_fabric_settings(settings_module='local_fabric'):
+    if not os.path.exists(settings_module + ".py"):
+        local_settings = {}
+    else:
+        local_fabric = __import__(settings_module)
+        local_settings = local_fabric.settings
+    config_fabric(local_settings)
+
+
+load_fabric_settings()
 # env.hosts = ["127.0.0.1"]
 # env.user = "test"
 # env.password = "qwerty"
@@ -41,20 +61,34 @@ def setup():
 
 
 @in_virtualenv
-def deploy(role):
-    if role == "developer":
-        local("python manage.py syncdb --noinput")
-    elif role == "deployment":
-        local("python manage.py syncdb --noinput")
+def local_deploy():
+    local("python manage.py syncdb --noinput")
+
+
+@roles('web')
+def remote_deploy():
+    repo_path = '/var/www/pycon-2014apac-mezzanine'
+    with cd(repo_path):
+        run('git pull')
+        run('supervisorctl restart pycon')
+
+
+def deploy(target=""):
+    if target in ("", "developer"):
+        execute(local_deploy)
+    elif target == "production":
+        execute(remote_deploy)
 
 
 @in_virtualenv
 def serve(host="0.0.0.0", port="8000"):
     if which('sass'):
-        subprocess.Popen("sass --watch scss/all.scss:all.css".split(),
+        subprocess.Popen("sass --watch scss/all.scss:all.css",
+                         shell=True,
                          cwd='conweb/static/')
     if which('coffee'):
-        subprocess.Popen("coffee --join all.js --watch --compile coffees/app.coffee",
+        subprocess.Popen("coffee --join all.js --watch"
+                         " --compile coffees/app.coffee",
                          shell=True,
                          cwd='conweb/static/')
     local("python manage.py runserver {}:{}".format(host, port))
