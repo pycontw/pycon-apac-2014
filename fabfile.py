@@ -25,10 +25,12 @@ def config_fabric(local_settings={}):
         env.roledefs[role] = hostlist
 
 
+local_settings = {}
+
+
 def load_fabric_settings(settings_module='local_fabric'):
-    if not os.path.exists(settings_module + ".py"):
-        local_settings = {}
-    else:
+    global local_settings
+    if os.path.exists(settings_module + ".py"):
         local_fabric = __import__(settings_module)
         local_settings = local_fabric.settings
     config_fabric(local_settings)
@@ -67,7 +69,7 @@ def local_deploy():
 
 @roles('web')
 def remote_deploy():
-    repo_path = '/var/www/pycon-2014apac-mezzanine'
+    repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
         run('supervisorctl restart pycon')
