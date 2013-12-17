@@ -9,7 +9,7 @@ class UserProfile(models.Model):
         null=True, blank=True)
     tagline = models.CharField(
         max_length=64,
-        verbose_name=_("Split by comma. E.g. pycontw, IPython, pep8"),
+        verbose_name=_("Tagline: split by comma. E.g. pycontw, IPython, pep8"),
         null=True, blank=True)
     location = models.CharField(
         max_length=128,
