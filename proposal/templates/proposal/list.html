@@ -59,10 +59,12 @@
                 <td>{{proposal.title}}</td>
                 <td>{{proposal.get_speech_type_display}}</td>
                 <td>
-                  {% if proposal.abstractfile %}
-                  <a href="{{proposal.abstractfile.abstract.url}}" target="_blank">
+                  {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                  <a href="{{proposal.abstractfile.url}}" target="_blank">
                   {{proposal.abstractfile}}
                   </a>
+                  {% else %}
+                  <span>{% trans "No abstract file." %}</span>
                   {% endif %}
                 &nbsp;
                 <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>

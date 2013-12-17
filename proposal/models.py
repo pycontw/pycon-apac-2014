@@ -76,8 +76,14 @@ class AbstractFile(models.Model):
     abstract = models.FileField(verbose_name=_("Abstract"),
                                 upload_to="abstract", null=True, blank=True)
 
+
+    @property
+    def has_file(self):
+        return bool(self.abstract)
+
+    def url(self):
+        # Shortcuts of file url.
+        return self.abstract.url if self.has_file else ""
+
     def __unicode__(self):
-        if self.abstract:
-            return self.abstract.name.split('/')[-1]
-        else:
-            return ""
+        return self.abstract.name.split('/')[-1] if self.has_file else ""
