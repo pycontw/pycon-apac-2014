@@ -4,26 +4,63 @@
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
-{% block title %}Create Proposal{% endblock %}
+{% block title %}{% trans "Create Proposal" %}{% endblock %}
 
 {% block .breadcrumb %}{% endblock %}
 
 {% block content %}
   <div class="content">
-    <br>
+    <p>
+      {% blocktrans %}
+      PyCon APAC 2014 is now accepting all types of proposals. 
+      {% endblocktrans %}
+    </p>
+    <div class="col-md-6">
     <form class="form" method="post" action="." enctype="multipart/form-data">
-      <div class="col-md-6">
         {% csrf_token %}
         {% bootstrap_form proposal_form %}
         {% buttons %}
             <button type="submit" class="btn btn-primary">
-                {% bootstrap_icon "star" %} Submit
+                {% bootstrap_icon "star" %} {% trans "Submit" %}
             </button>
         {% endbuttons %}
-      </div>
-      <div class="clearfix">
-      </div>
     </form>
+    </div>
+    <div class="col-md-4">
+      {% blocktrans %}
+      <h4>NOTE:</h4>
+      <ul>
+        <li>
+          You can submit your abstract in PDF after filling this form. 
+        </li>
+        <li>
+          For SciPy track, an extended abstract of 2 to 3 A4 pages is acceptable.
+        </li>
+      </ul>
+      {% endblocktrans %}
+      {% blocktrans %}
+      <h4>Important Dates</h4>
+      <ul>
+        <li>
+        Dec 15, 2013 : Opening of Call for Proposals
+        </li>
+        <li>
+        Mar 01, 2014 : Deadline for Proposal Submissions
+        </li>
+        <li>
+        Mar 11, 2014 : Notification of Proposal Acceptance
+        </li>
+        <li>
+        May 16 : Tutorial Day
+        </li>
+        <li>
+        May 17 - 18, 2014 : PyCon APAC Conference Days
+        </li>
+      </ul>
+      {% endblocktrans %}
+    </div>
+    <div class="clearfix">
+    </div>
   </div>
   <div class="row" style="margin-bottom: 20px;"></div>
 

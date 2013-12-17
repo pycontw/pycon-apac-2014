@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseNotAllowed, HttpResponseForbidden
 from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -19,6 +20,8 @@ def create_proposal(request):
             proposal = proposal_form.save(commit=False)
             proposal.author = request.user
             proposal.save()
+            message = _("Thanks for your submission!")
+            messages.add_message(request, messages.SUCCESS, message)
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",
@@ -53,6 +56,8 @@ def update_proposal(request, proposal_id):
                                      instance=proposal)
         if proposal_form.is_valid():
             proposal_form.save()
+            message = _("Proposal updated")
+            messages.add_message(request, messages.SUCCESS, message)
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",

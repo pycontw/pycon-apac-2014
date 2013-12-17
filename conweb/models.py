@@ -25,7 +25,7 @@ class UserProfile(models.Model):
         max_length=128,
         verbose_name=_("Organization/Company"),
         null=True, blank=True)
-    org_url = models.URLField(verbose_name=_("Link of Organization/Companyk"),
+    org_url = models.URLField(verbose_name=_("Link of Organization/Company"),
                               null=True, blank=True)
     title = models.CharField(
         max_length=128,
