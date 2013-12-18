@@ -53,7 +53,7 @@ class ProposalModel(models.Model):
             "and released on the conference website"),
     )
     slide_perm = models.IntegerField(
-        choices=SLIDE_PERMISSION_CHOICES,
+        choices=SLIDE_PERMISSION_CHOICES, null=True, blank=True,
         verbose_name=_(
             "Permission for your presentation slide to"
             " be downloaded from the conference website"),
@@ -75,7 +75,6 @@ class AbstractFile(models.Model):
     proposal = models.OneToOneField(ProposalModel)
     abstract = models.FileField(verbose_name=_("Abstract"),
                                 upload_to="abstract", null=True, blank=True)
-
 
     @property
     def has_file(self):
