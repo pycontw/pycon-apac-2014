@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-20 15:40+0800\n"
+"POT-Creation-Date: 2013-12-18 23:42+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,133 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/base.html:84 templates/index.html:20
+#: models.py:8
+msgid "Speaker Brief"
+msgstr ""
+
+#: models.py:12
+msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
+msgstr ""
+
+#: models.py:16
+msgid "Location"
+msgstr ""
+
+#: models.py:18
+msgid "Personal Link"
+msgstr ""
+
+#: models.py:22
+msgid "Twitter Username"
+msgstr ""
+
+#: models.py:26
+msgid "Organization/Company"
+msgstr ""
+
+#: models.py:28
+msgid "Link of Organization/Company"
+msgstr ""
+
+#: models.py:32
+msgid "Title"
+msgstr ""
+
+#: models.py:34
+msgid "Picture"
+msgstr ""
+
+#: templates/base.html:60 templates/blog/blog_post_list.html:4
+#: templates/blog/blog_post_list.html:22
+msgid "Blog"
+msgstr ""
+
+#: templates/base.html:67
+msgid "My Proposals"
+msgstr ""
+
+#: templates/base.html:71
+msgid "LOG OUT"
+msgstr ""
+
+#: templates/base.html:74
+msgid "SPEAKER LOG IN"
+msgstr ""
+
+#: templates/index.html:22
 msgid "Sponsers"
 msgstr "スポンサー"
 
-#: templates/index.html:4 templates/search_results.html:10
-#: templates/pages/menus/breadcrumb.html:4
+#: templates/index.html:28
+msgid "Show me all"
+msgstr ""
+
+#: templates/index.html:33
+msgid "What is PyCon and PyCon Taiwan"
+msgstr ""
+
+#: templates/index.html:36
+msgid "Sponsorship available!"
+msgstr ""
+
+#: templates/index.html:38
+msgid ""
+"\n"
+"      <li>Prospectus in\n"
+"        <a href=\"https://drive.google.com/file/"
+"d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
+"        and\n"
+"        <a href=\"https://drive.google.com/file/"
+"d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
+"      </li>\n"
+"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
+"JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+"        Application Form\n"
+"      </a></li>\n"
+"      "
+msgstr ""
+
+#: templates/index.html:53
+msgid ""
+"\n"
+"    PyCon is a conference by the Python community for the community.\n"
+"    It is for Python enthusiasts of all experience levels, from new users to "
+"core developers.\n"
+"    The original PyCon was formed in North America in 2003,\n"
+"    but there are now a number of other conferences being run in the\n"
+"    PyCon spirit around the world. -- PyCon: Community-Run Python "
+"Conference\n"
+"    "
+msgstr ""
+
+#: templates/index.html:61
+msgid ""
+"\n"
+"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
+"Taiwan.\n"
+"    It will be hosted in Taipei, and we would like to invite you to join "
+"this big event,\n"
+"    being a part of it by sponsoring, promoting your brand and product,\n"
+"    and even making your company succeed through it.\n"
+"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/"
+"\">2013</a>)\n"
+"    was formed with support of the following, but not limited to, active "
+"user groups:\n"
+"    "
+msgstr ""
+
+#: templates/search_results.html:5 templates/search_results.html.py:6
+#: templates/search_results.html:12
+msgid "Search Results"
+msgstr ""
+
+#: templates/search_results.html:10 templates/pages/menus/breadcrumb.html:4
 #: templates/pages/menus/breadcrumb.html:10
 #: templates/pages/menus/dropdown.html:10
 #: templates/pages/menus/footer_tree.html:11
 #: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
 #: templates/pages/menus/tree.html:9
 msgid "Home"
-msgstr ""
-
-#: templates/index.html:29
-msgid "Show me all"
-msgstr ""
-
-#: templates/index.html:35
-msgid ""
-"PyCon Taiwan is organized by the Taiwan Python community for the community. "
-"PyCon Taiwan is intended to provide a professional venue to exchange "
-"technical information of Python. We want to clone the experience of PyCon "
-"(US), the largest annual gathering of Python programmers, in Taiwan, and "
-"bring the joy to more people."
-msgstr ""
-
-#: templates/index.html:37
-msgid ""
-"PyCon Taiwan 2012 will also stress on industrial applications of Python. We "
-"hope to connect the community, including the business members, and further "
-"develop the technology in Taiwan."
-msgstr ""
-
-#: templates/search_results.html:5 templates/search_results.html.py:6
-#: templates/search_results.html:12
-msgid "Search Results"
 msgstr ""
 
 #: templates/search_results.html:19
@@ -76,6 +166,75 @@ msgstr ""
 msgid "read more"
 msgstr ""
 
+#: templates/accounts/account_login.html:7
+msgid "You're already logged in."
+msgstr ""
+
+#: templates/accounts/account_login.html:11
+#, python-format
+msgid ""
+"If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
+"\">sign up</a> for one now."
+msgstr ""
+
+#: templates/accounts/account_login.html:14
+#, python-format
+msgid ""
+"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">reset your password</a> if you've forgotten it.</p>"
+msgstr ""
+
+#: templates/accounts/account_password_reset.html:6
+msgid ""
+"Enter your username or email address and you'll receive an email with a link "
+"you need to click, in order to log in and change your password."
+msgstr ""
+
+#: templates/accounts/account_profile.html:17
+#: templates/accounts/includes/user_panel.html:10
+msgid "Update profile"
+msgstr ""
+
+#: templates/accounts/account_signup.html:7
+msgid ""
+"You're already logged in. If you'd like to create a new account, you'll need "
+"to log out first."
+msgstr ""
+
+#: templates/accounts/account_signup.html:11
+msgid ""
+"After signing up, you'll receive an email with a link you need to click, in "
+"order to activate your account."
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:4
+msgid "Logged in as: "
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:15
+#: templates/accounts/includes/user_panel_nav.html:8
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:18
+#: templates/accounts/includes/user_panel_nav.html:11
+msgid "Log in"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:19
+msgid "or"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:21
+#: templates/accounts/includes/user_panel_nav.html:13
+msgid "Sign up"
+msgstr ""
+
+#: templates/admin/profile_inline.html:10
+msgid "Profile information"
+msgstr ""
+
 #: templates/blog/blog_post_detail.html:29
 #: templates/blog/blog_post_list.html:83
 msgid "Posted by"
@@ -90,40 +249,36 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:43
-#: templates/blog/blog_post_list.html:133
+#: templates/blog/blog_post_detail.html:44
+#: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
 msgid "Comments"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:46
-#: templates/blog/blog_post_list.html:137
+#: templates/blog/blog_post_detail.html:47
+#: templates/blog/blog_post_list.html:138
 #, python-format
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/blog/blog_post_detail.html:74
+#: templates/blog/blog_post_detail.html:76
 #: templates/blog/blog_post_list.html:119
 #: templates/blog/includes/filter_panel.html:48
 msgid "Tags"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:87
+#: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:88
+#: templates/blog/blog_post_detail.html:92
 msgid "Share on Facebook"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:113
+#: templates/blog/blog_post_detail.html:117
 msgid "Related posts"
-msgstr ""
-
-#: templates/blog/blog_post_list.html:4 templates/blog/blog_post_list.html:22
-msgid "Blog"
 msgstr ""
 
 #: templates/blog/blog_post_list.html:31
@@ -192,6 +347,45 @@ msgstr ""
 msgid "Atom"
 msgstr ""
 
+#: templates/email/account_approve.html:3
+#: templates/email/account_approve.txt:3
+msgid "Hey there, a new account has been created and requires activation."
+msgstr ""
+
+#: templates/email/account_approve.html:5
+#: templates/email/account_approve.txt:5
+msgid "Name"
+msgstr ""
+
+#: templates/email/account_approve.html:6
+#: templates/email/account_approve.txt:6
+msgid "Email"
+msgstr ""
+
+#: templates/email/account_approve.html:11
+#: templates/email/account_approve.txt:9 templates/email/signup_verify.html:4
+#: templates/email/signup_verify.txt:4
+msgid "Please use the link below to activate it."
+msgstr ""
+
+#: templates/email/account_approve_subject.txt:2
+msgid "An account requires activation"
+msgstr ""
+
+#: templates/email/account_approved.html:3
+#: templates/email/account_approved.txt:3
+msgid "Hey there, your account has been activated."
+msgstr ""
+
+#: templates/email/account_approved.html:4
+#: templates/email/account_approved.txt:4
+msgid "Please use the link below to log in."
+msgstr ""
+
+#: templates/email/account_approved_subject.txt:2
+msgid "Your account has been activated"
+msgstr ""
+
 #: templates/email/comment_notification.html:6
 msgid "A new comment has been posted on"
 msgstr ""
@@ -209,6 +403,35 @@ msgstr ""
 msgid ""
 "\n"
 "At %(submit_date)s %(user_name)s wrote:\n"
+msgstr ""
+
+#: templates/email/password_reset_verify.html:3
+#: templates/email/password_reset_verify.txt:3
+msgid "Hey there, the password reset form was used for your account."
+msgstr ""
+
+#: templates/email/password_reset_verify.html:4
+#: templates/email/password_reset_verify.txt:4
+msgid "Please use the link below to log in and update your password."
+msgstr ""
+
+#: templates/email/password_reset_verify.html:6
+#: templates/email/password_reset_verify.txt:6
+msgid ""
+"If you didn't request for your password to be reset, please ignore this "
+"email."
+msgstr ""
+
+#: templates/email/password_reset_verify_subject.txt:2
+msgid "Reset your password"
+msgstr ""
+
+#: templates/email/signup_verify.html:3 templates/email/signup_verify.txt:3
+msgid "Hey there, thanks for creating your account."
+msgstr ""
+
+#: templates/email/signup_verify_subject.txt:2
+msgid "Activate your account"
 msgstr ""
 
 #: templates/errors/404.html:6 templates/errors/404.html.py:10
@@ -285,10 +508,6 @@ msgstr ""
 #: templates/includes/editable_toolbar.html:7
 #: templates/includes/editable_toolbar.html:9
 msgid "Admin"
-msgstr ""
-
-#: templates/includes/editable_toolbar.html:11
-msgid "Log out"
 msgstr ""
 
 #: templates/includes/pagination.html:7
