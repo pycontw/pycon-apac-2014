@@ -163,7 +163,7 @@ a:hover {
 
 .prompt {
   float: right;
-  width: 328px;
+  width: 340px;
   border: 3px solid #F6F5EF;
   border-radius: 6px;
   padding: 10px 20px;
@@ -178,18 +178,20 @@ a:hover {
       .prompt .title {
         text-align: left; } }
 
-.user-groups {
+.well {
   background-color: #F6F5EF;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  padding: 10px; }
+  padding: 10px;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.user-groups li {
+  width: 50%;
+  float: left;
+  margin: 10px 0; }
+@media only screen and (max-width: 1000px) {
   .user-groups li {
-    width: 50%;
-    float: left;
-    margin: 10px 0; }
-  @media only screen and (max-width: 1000px) {
-    .user-groups li {
-      width: 100%; } }
+    width: 100%; } }
 
 .lang-select {
   margin: 10px;
@@ -284,8 +286,16 @@ a:hover {
     line-height: 1.5;
     color: #555; }
 
-.square-list li {
+.square-list {
+  padding-left: 1.5em;
   list-style-type: square; }
+  .square-list li {
+    line-height: 1.2;
+    margin-bottom: 0.9em; }
+
+.note {
+  font-size: 0.8em;
+  color: #555; }
 
 .section-title {
   border-bottom: 3px solid #D3202E;
@@ -330,10 +340,6 @@ hr {
   font-size: 16px;
   font-weight: normal;
   color: #999; }
-
-.square-list {
-  list-style-type: square;
-  padding-left: 1em; }
 
 .schedule-table {
   font-size: 16px; }

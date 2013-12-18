@@ -1,6 +1,6 @@
 .prompt {
   float: right;
-  width: 328px;
+  width: 340px;
   border: 3px solid #F6F5EF;
   border-radius: 6px;
   padding: 10px 20px;
@@ -21,12 +21,16 @@
 
   };
 }
+.well {
+  background-color: #F6F5EF;
+  padding: 10px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+
+}
 
 .user-groups {
-  background-color: #F6F5EF;
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
-  padding: 10px;
   li{
     width: 50%;
     float: left;

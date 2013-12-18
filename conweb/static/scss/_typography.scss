@@ -41,9 +41,17 @@
 }
 
 .square-list {
+  padding-left: 1.5em;
+  list-style-type: square;
+
   li {
-    list-style-type: square;
+    line-height: 1.2;
+    margin-bottom: 0.9em;
   }
+}
+.note {
+  font-size: 0.8em;
+  color: #555;
 }
 
 .section-title {
