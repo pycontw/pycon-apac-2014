@@ -12,7 +12,7 @@ class ProposalForm(forms.ModelForm):
 
     class Meta:
         model = ProposalModel
-        exclude = ("create_on", "last_modified", "author",)
+        exclude = ("create_on", "last_modified", "author", "slide_perm")
 
 
 class AbstractFileForm(forms.ModelForm):
