@@ -1,9 +1,3 @@
-'''
-Created on Dec 20, 2013
-
-@author: c3h3
-'''
-
 
 from django.contrib import admin
 from models import ProposalModel
