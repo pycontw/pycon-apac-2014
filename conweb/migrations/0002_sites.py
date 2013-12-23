@@ -49,8 +49,6 @@ class Migration(DataMigration):
         for domain_name in DOMAIN_NAMES:
             Site.objects.create(domain=domain_name)
 
-        setup_local_django_admin()
-
         setup_local_pages()
 
     def backwards(self, orm):
