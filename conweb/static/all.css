@@ -55,6 +55,10 @@ a:hover {
     @media only screen and (min-width: 1001px) {
       #nav .btn-nav {
         visibility: hidden; } }
+    #nav .btn-nav.opened {
+      left: auto;
+      right: 0;
+      top: 0; }
   #nav.show {
     width: 250px !important; }
   #nav .lang-select {
@@ -160,6 +164,20 @@ a:hover {
   cursor: pointer; }
   .close-btn:hover {
     color: #c00; }
+
+.menu-button {
+  display: block;
+  font-size: 24px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #D0272B;
+  color: white !important;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; }
+  .menu-button:hover {
+    text-decoration: none; }
 
 .prompt {
   float: right;

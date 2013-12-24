@@ -43,9 +43,9 @@
 </head>
 <body id="{% block body_id %}body{% endblock %}" ng-controller="base">
 <div id="nav" ng-class="{show: showNav}">
-    <a href="#" class="btn btn-default btn-nav reversed"
-      ng-click="showNav=!showNav"
-    >MENU</a>
+    <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}"
+      ng-click="showNav=!showNav" ng-bind="btnNavText()"
+    >N</a>
     <div class="inner">
         <div id="logo">
             <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>

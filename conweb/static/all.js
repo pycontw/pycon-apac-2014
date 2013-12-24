@@ -8,10 +8,17 @@
     return $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   });
 
-  App.controller('base', function($rootScope) {
+  App.controller('base', function($rootScope, $scope) {
     $rootScope.slidePageUrl = '';
-    return $rootScope.closePage = function() {
+    $rootScope.closePage = function() {
       return $rootScope.slidePageUrl = '';
+    };
+    return $scope.btnNavText = function() {
+      if ($scope.showNav) {
+        return '✕';
+      } else {
+        return 'N';
+      }
     };
   });
 
