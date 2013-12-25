@@ -3,9 +3,9 @@
 {% editable_loader %}
 
 <script>
-{% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff %}
+{% if not settings.DEBUG and not request.user.is_staff %}
 var _gaq = _gaq || [['_trackPageview']];
-_gaq.unshift(['_setAccount', '{{ settings.GOOGLE_ANALYTICS_ID }}']);
+_gaq.unshift(['_setAccount', 'UA-28961467-1']);
 (function(d, t) {
     var g = d.createElement(t),
         s = d.getElementsByTagName(t)[0];
