@@ -61,7 +61,7 @@ a:hover {
       top: 0; }
   #nav.show {
     width: 250px !important; }
-  #nav .lang-select {
+  #nav .fixed-bottom {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -178,6 +178,34 @@ a:hover {
   text-decoration: none; }
   .menu-button:hover {
     text-decoration: none; }
+
+.social-icons {
+  margin: 0;
+  padding: 5px;
+  text-align: center; }
+
+.social-icon {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #B81C28 no-repeat center center;
+  margin: 2px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.7; }
+  .social-icon:hover {
+    opacity: 1; }
+  .social-icon.icon-facebook {
+    background-image: url(images/social/facebook-48.png); }
+  .social-icon.icon-twitter {
+    background-image: url(images/social/twitter-48.png); }
+  .social-icon.icon-googleplus {
+    background-image: url(images/social/googleplus-48.png); }
+  .social-icon.icon-plurk {
+    background-image: url(images/social/plurk-48.png); }
 
 .prompt {
   float: right;
