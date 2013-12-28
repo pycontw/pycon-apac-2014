@@ -127,7 +127,7 @@ USE_I18N = True
 LANGUAGES = (
     ('en', 'English'),
     ('zh', '中文'),
-    ('ja', '日本語'),
+    #('ja', '日本語'),
 )
 
 # Language code for this installation. All choices can be found here:
