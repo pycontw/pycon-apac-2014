@@ -81,7 +81,7 @@
                     <a class="social-icon icon-googleplus" href="https://plus.google.com/101932655972746759016/" target="_blank">googleplus</a>
                     <a class="social-icon icon-plurk" href="http://www.plurk.com/pycontw" target="_blank">plurk</a>
             </div>
-            <div class="lang-select">
+            <div class="lang-select hide">
                 {% for lang_code, lang_name in LANGUAGES %}
                     <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
                 {% endfor %}
