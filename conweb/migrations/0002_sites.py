@@ -20,7 +20,7 @@ def _info(message):
 
 def setup_local_pages():
     sites = {
-        domain_name: Site.objects.get(domain__exact=domain_name)
+        domain_name: Site.objects.get(name__exact=domain_name)
         for domain_name in DOMAIN_NAMES
     }
     settings.SITE_ID = sites['en'].pk
@@ -47,7 +47,8 @@ class Migration(DataMigration):
 
         Site.objects.all().delete()
         for domain_name in DOMAIN_NAMES:
-            Site.objects.create(domain=domain_name)
+            Site.objects.create(name=domain_name,
+                                domain="/{}/".format(domain_name))
 
         setup_local_pages()
 
