@@ -1,4 +1,4 @@
-
+from django.http import HttpResponse
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
@@ -18,6 +18,11 @@ urlpatterns = patterns(
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
+    (r'^google4ca0214064339b22\.html$',
+     lambda r: HttpResponse(
+         "google-site-verification: google4ca0214064339b22.html",
+         mimetype="text/plain")
+     ),
 
     # I18n locale URL
     # Using conweb.views.i18n isntead
