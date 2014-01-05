@@ -19,10 +19,15 @@ urlpatterns = patterns(
     # admin interface, which would be marginally more secure.
     ("^admin/", include(admin.site.urls)),
     (r'^google4ca0214064339b22\.html$',
-     lambda r: HttpResponse(
-         "google-site-verification: google4ca0214064339b22.html",
-         mimetype="text/plain")
+     lambda r: HttpResponse("google-site-verification: google4ca0214064339b22"
+                            ".html", mimetype="text/plain")
      ),
+    (r'^BingSiteAuth\.xml$',
+     lambda r: HttpResponse("<?xml version=\"1.0\"?><users>"
+                            "<user>613B1BA70DD3462722A8CCA1566C2E23</user>"
+                            "</users>", mimetype="text/plain")
+     ),
+
 
     # I18n locale URL
     # Using conweb.views.i18n isntead
