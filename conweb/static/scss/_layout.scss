@@ -38,12 +38,7 @@
     font-size: 0.8em;
   }
 
-  @include respond-to(mobile) {
-    width: 0;
-    .inner {
-      overflow: hidden;
-    }
-  }
+
 
   .btn-nav {
     position: absolute;
@@ -69,6 +64,24 @@
     left: 0;
     bottom: 0;
     right: 0;
+    overflow: hidden;
+  }
+
+  @include respond-to(mobile) {
+    width: 0;
+    .inner {
+      overflow: hidden;
+    }
+    .side-condate {
+      display: none;
+    }
+    #logo {
+      height: 40px;
+      padding: 0;
+      img {
+        display: none;
+      }
+    }
   }
 }
 
@@ -81,10 +94,14 @@
   bottom: 0;
   top:0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   @include respond-to(mobile) {
     left: 0;
 
+    .inner {
+      padding: 1em;
+    }
   }
 
 
