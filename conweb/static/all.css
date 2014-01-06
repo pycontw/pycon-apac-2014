@@ -42,11 +42,6 @@ a:hover {
   #nav ul ul li > a {
     padding-left: 60px;
     font-size: 0.8em; }
-  @media only screen and (max-width: 1000px) {
-    #nav {
-      width: 0; }
-      #nav .inner {
-        overflow: hidden; } }
   #nav .btn-nav {
     position: absolute;
     left: 100%;
@@ -65,7 +60,20 @@ a:hover {
     position: absolute;
     left: 0;
     bottom: 0;
-    right: 0; }
+    right: 0;
+    overflow: hidden; }
+  @media only screen and (max-width: 1000px) {
+    #nav {
+      width: 0; }
+      #nav .inner {
+        overflow: hidden; }
+      #nav .side-condate {
+        display: none; }
+      #nav #logo {
+        height: 40px;
+        padding: 0; }
+        #nav #logo img {
+          display: none; } }
 
 #main {
   position: absolute;
