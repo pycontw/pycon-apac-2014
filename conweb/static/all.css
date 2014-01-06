@@ -424,7 +424,9 @@ hr {
       box-shadow: none;
       margin: 0;
       padding: 0;
-      background: transparent; } }
+      background: transparent; }
+      .richpage table th, .richpage table td {
+        padding: 2px; } }
 
 .home-condate {
   margin: 1em;
