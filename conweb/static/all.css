@@ -16,6 +16,9 @@ a:hover {
   padding: 50px 0;
   text-align: center; }
 
+#logo-alt {
+  display: none; }
+
 #nav {
   position: absolute;
   left: 0;
@@ -73,7 +76,10 @@ a:hover {
         height: 40px;
         padding: 0; }
         #nav #logo img {
-          display: none; } }
+          display: none; }
+      #nav #logo-alt {
+        padding-top: 0.6em;
+        display: block; } }
 
 #main {
   position: absolute;

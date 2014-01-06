@@ -2,6 +2,9 @@
   padding: 50px 0;
   text-align: center;
 }
+#logo-alt {
+  display: none;
+}
 
 #nav {
   position: absolute;
@@ -81,6 +84,10 @@
       img {
         display: none;
       }
+    }
+    #logo-alt {
+      padding-top: 0.6em;
+      display: block;
     }
   }
 }
