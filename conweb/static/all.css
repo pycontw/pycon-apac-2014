@@ -73,7 +73,8 @@ a:hover {
   right: 0;
   bottom: 0;
   top: 0;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   @media only screen and (max-width: 1000px) {
     #main {
       left: 0; } }
