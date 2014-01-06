@@ -99,6 +99,9 @@
   @include respond-to(mobile) {
     left: 0;
 
+    .inner {
+      padding: 1em;
+    }
   }
 
 

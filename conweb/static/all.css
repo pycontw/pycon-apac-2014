@@ -85,7 +85,9 @@ a:hover {
   -webkit-overflow-scrolling: touch; }
   @media only screen and (max-width: 1000px) {
     #main {
-      left: 0; } }
+      left: 0; }
+      #main .inner {
+        padding: 1em; } }
   #main img {
     max-width: 100%; }
 
@@ -415,6 +417,14 @@ hr {
     .richpage li:before {
       content: '- ';
       color: #B81C28; }
+  @media only screen and (max-width: 1000px) {
+    .richpage {
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      background: transparent; } }
 
 .home-condate {
   margin: 1em;
