@@ -27,7 +27,9 @@ a:hover {
   width: 250px;
   background-color: #D3202E;
   color: #FCFBF5;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transition: 500ms;
+  transition: 500ms; }
   #nav a {
     color: #FCFBF5; }
     #nav a.reversed {
@@ -58,7 +60,8 @@ a:hover {
       right: 0;
       top: 0; }
   #nav.show {
-    width: 250px !important; }
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
   #nav .fixed-bottom {
     position: absolute;
     left: 0;
@@ -67,7 +70,8 @@ a:hover {
     overflow: hidden; }
   @media only screen and (max-width: 1000px) {
     #nav {
-      width: 0; }
+      -webkit-transform: translate(-250px, 0);
+      transform: translate(-250px, 0); }
       #nav .inner {
         overflow: hidden; }
       #nav .side-condate {

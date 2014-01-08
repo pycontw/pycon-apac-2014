@@ -16,6 +16,9 @@
   color: #FCFBF5;
   z-index: 10;
 
+  -webkit-transition: 500ms;
+          transition: 500ms;
+
   a {
     color: #FCFBF5;
     &.reversed {
@@ -60,7 +63,9 @@
     }
   }
   &.show {
-     width: 250px!important;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+
   }
   .fixed-bottom {
     position: absolute;
@@ -71,7 +76,9 @@
   }
 
   @include respond-to(mobile) {
-    width: 0;
+    -webkit-transform: translate(-250px, 0);
+            transform: translate(-250px, 0);
+
     .inner {
       overflow: hidden;
     }
