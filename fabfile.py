@@ -1,5 +1,7 @@
 import os
 import subprocess
+import functools
+
 from fabric.api import (
     local,
     run,
@@ -45,15 +47,13 @@ _load_fabric_settings()
 VENV_PREFIX = _get_venv_prefix()
 
 
-class _in_virtualenv(object):  # Used as decorator
-    def __init__(self, f, venv_prefix=VENV_PREFIX):
-        self.f = f
-        self.venv_prefix = venv_prefix
-
-    def __call__(self, *args, **kwargs):
+def _in_virtualenv(wrapped):
+    @functools.wraps(wrapped)
+    def _wrapper(*args, **kwargs):
         with lcd("conweb"):
-            with prefix('. %s/bin/activate' % self.venv_prefix):
-                self.f(*args, **kwargs)
+            with prefix('. %s/bin/activate' % VENV_PREFIX):
+                return wrapped(*args, **kwargs)
+    return _wrapper
 
 
 def _print_ready_info(next_task=''):
@@ -62,25 +62,29 @@ def _print_ready_info(next_task=''):
 
 @_in_virtualenv
 def setup():
+    "install project requirements"
     local("pip install -r ../requirements/project.txt")
     _print_ready_info('fab deploy')
 
 
 @_in_virtualenv
+def reset_password(username='admin'):
+    "reset Django user password"
+    local("python manage.py changepassword {}".format(username))
+
+
+@_in_virtualenv
 def _local_deploy():
+    "Django syncdb, migrate, and reset admin password"
     local("python manage.py syncdb --noinput")
     local("python manage.py migrate")
     local("python manage.py reset_admin_password")
     _print_ready_info('fab serve')
 
 
-@_in_virtualenv
-def reset_password(username='admin'):
-    local("python manage.py changepassword {}".format(username))
-
-
 @roles('web')
 def _remote_deploy():
+    "update repository and restart web service"
     repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
@@ -88,6 +92,7 @@ def _remote_deploy():
 
 
 def deploy(target=""):
+    "in local: syncdb, migrate, and reset admin password"
     if target in ("", "developer"):
         execute(_local_deploy)
     elif target == "production":
@@ -96,6 +101,7 @@ def deploy(target=""):
 
 @_in_virtualenv
 def serve(host="0.0.0.0", port="8000"):
+    "i.e. start HTTP server default host 0.0.0.0 and port 8000"
     if _which('sass'):
         subprocess.Popen("sass --watch scss/all.scss:all.css",
                          shell=True,
@@ -110,6 +116,8 @@ def serve(host="0.0.0.0", port="8000"):
 
 @_in_virtualenv
 def shell(interface=""):
+    "run Django shell"
+    # NOTE: Ctrl-C will trigger fabric to interrupt shell
     cmd = "python manage.py shell"
     if interface:
         cmd += " -i {}".format(interface)
@@ -117,7 +125,8 @@ def shell(interface=""):
 
 
 @_in_virtualenv
-def dumpdata(venv_prefix=VENV_PREFIX, output="dumpdata.json"):
+def dumpdata(output="dumpdata.json"):
+    "dump Django databse data into JSON file"
     local("python manage.py dumpdata > {}{}{}".format(
         os.getcwd(), os.sep, output))
 
