@@ -9,8 +9,8 @@ import tarfile
 from subprocess import Popen
 
 DEFAULT_VENV_PREFIX = ".venv"
-DEFAULT_VENV_VERSION = '1.10.1'
-DEFAULT_VIRTUALENV_MD5 = '3a04aa2b32c76c83725ed4d9918e362e'
+DEFAULT_VENV_VERSION = '1.11'
+DEFAULT_VIRTUALENV_MD5 = 'd1a7cf95b539a861a8215827f387c4eb'
 
 VENV_PREFIX_FILE = "venv_prefix"
 
@@ -19,6 +19,7 @@ def write_venv_prefix(prefix, venv_prefix_file=VENV_PREFIX_FILE):
     print('Writing virtualenv prefix into file "{}"'.format(venv_prefix_file))
     with open(venv_prefix_file, 'wb') as f:
         f.write(prefix)
+
 
 def get_venv_prefix(venv_prefix_file=VENV_PREFIX_FILE):
     if os.path.exists(venv_prefix_file):
