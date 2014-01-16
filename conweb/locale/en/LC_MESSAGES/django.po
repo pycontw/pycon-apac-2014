@@ -19,7 +19,7 @@ msgstr ""
 
 #: models.py:8
 msgid "Speaker Brief"
-msgstr "講者簡介"
+msgstr ""
 
 #: models.py:12
 msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
@@ -27,19 +27,19 @@ msgstr ""
 
 #: models.py:16
 msgid "Location"
-msgstr "居住地"
+msgstr ""
 
 #: models.py:18
 msgid "Personal Link"
-msgstr "個人連結"
+msgstr ""
 
 #: models.py:22
 msgid "Twitter Username"
-msgstr "Twitter 帳號"
+msgstr ""
 
 #: models.py:26
 msgid "Organization/Company"
-msgstr "組織/公司"
+msgstr ""
 
 #: models.py:28
 msgid "Link of Organization/Company"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: models.py:32
 msgid "Title"
-msgstr "標題"
+msgstr ""
 
 #: models.py:34
 msgid "Picture"
@@ -60,23 +60,23 @@ msgstr ""
 
 #: templates/base.html:75
 msgid "My Proposals"
-msgstr "我的提案"
+msgstr ""
 
 #: templates/base.html:79
 msgid "LOG OUT"
-msgstr "登出"
+msgstr ""
 
 #: templates/base.html:82
 msgid "SPEAKER LOG IN"
-msgstr "講者登入"
+msgstr ""
 
 #: templates/index.html:22
 msgid "Sponsers"
-msgstr "贊助"
+msgstr ""
 
 #: templates/index.html:28
 msgid "Show me all"
-msgstr "顯示全部"
+msgstr ""
 
 #: templates/index.html:33
 msgid "What is PyCon and PyCon Taiwan"
@@ -135,7 +135,7 @@ msgstr ""
 #: templates/search_results.html:5 templates/search_results.html.py:6
 #: templates/search_results.html:12
 msgid "Search Results"
-msgstr "搜尋結果"
+msgstr ""
 
 #: templates/search_results.html:10 templates/pages/menus/breadcrumb.html:4
 #: templates/pages/menus/breadcrumb.html:10
@@ -144,7 +144,7 @@ msgstr "搜尋結果"
 #: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
 #: templates/pages/menus/tree.html:9
 msgid "Home"
-msgstr "首頁"
+msgstr ""
 
 #: templates/search_results.html:19
 #, python-format
@@ -214,21 +214,21 @@ msgstr ""
 #: templates/accounts/includes/user_panel_nav.html:8
 #: templates/includes/editable_toolbar.html:11
 msgid "Log out"
-msgstr "登出"
+msgstr ""
 
 #: templates/accounts/includes/user_panel.html:18
 #: templates/accounts/includes/user_panel_nav.html:11
 msgid "Log in"
-msgstr "登入"
+msgstr ""
 
 #: templates/accounts/includes/user_panel.html:19
 msgid "or"
-msgstr "或"
+msgstr ""
 
 #: templates/accounts/includes/user_panel.html:21
 #: templates/accounts/includes/user_panel_nav.html:13
 msgid "Sign up"
-msgstr "註冊"
+msgstr ""
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
@@ -274,11 +274,11 @@ msgstr ""
 
 #: templates/blog/blog_post_detail.html:92
 msgid "Share on Facebook"
-msgstr "分享至 Facebook"
+msgstr ""
 
 #: templates/blog/blog_post_detail.html:117
 msgid "Related posts"
-msgstr "相關文章"
+msgstr ""
 
 #: templates/blog/blog_post_list.html:31
 msgid "Tag:"
