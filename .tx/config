@@ -1,0 +1,16 @@
+[main]
+host = https://www.transifex.com
+type = PO
+
+[pycon-apac-2014.conweb]
+file_filter = conweb/locale/<lang>/LC_MESSAGES/django.po
+source_file = conweb/locale/en/LC_MESSAGES/django.po
+source_lang = en
+lang_map = zh_TW:zh
+
+
+[pycon-apac-2014.proposal]
+file_filter = proposal/locale/<lang>/LC_MESSAGES/django.po
+source_file = proposal/locale/en/LC_MESSAGES/django.po
+source_lang = en
+lang_map = zh_TW:zh
