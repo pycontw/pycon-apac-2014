@@ -74,6 +74,17 @@ def reset_password(username='admin'):
 
 
 @_in_virtualenv
+def translate():
+    "Django makemeassages"
+    LANGUAGES = ('en', 'zh', 'ja')
+    local("python manage.py makemessages -a")
+    for app_name in ['proposal']:
+        with cd("../" + app_name):
+            for lang in LANGUAGES:
+                local("django-admin.py makemessages -l " + lang)
+
+
+@_in_virtualenv
 def _local_deploy():
     "Django syncdb, migrate, and reset admin password"
     local("python manage.py syncdb --noinput")
