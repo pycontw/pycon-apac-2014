@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: templates/base.html:84 templates/index.html:20
-msgid "Sponsers"
+msgid "Sponsors"
 msgstr "贊助"
 
 #: templates/index.html:4 templates/search_results.html:10

@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: templates/base.html:84 templates/index.html:20
-msgid "Sponsers"
+msgid "Sponsors"
 msgstr "スポンサー"
 
 #: templates/index.html:4 templates/search_results.html:10
