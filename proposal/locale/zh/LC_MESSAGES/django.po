@@ -1,38 +1,39 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
+# Translators:
+# keitheis <keitheis+transifex@gmail.com>, 2014
+# Tzu-ping Chung <uranusjr@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-16 13:09+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-01-17 03:53+0000\n"
+"Last-Translator: Tzu-ping Chung <uranusjr@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: forms.py:32
 msgid "File format should be PDF."
-msgstr "檔案格式必須為 PDF"
+msgstr "檔案格式必須為 PDF。"
 
 #: forms.py:35
 msgid "Upload Failure."
-msgstr "上傳失敗"
+msgstr "上傳失敗。"
 
 #: models.py:8
 msgid "English"
-msgstr ""
+msgstr "英文"
 
 #: models.py:9
 msgid "Mandarin"
-msgstr ""
+msgstr "中文　"
 
 #: models.py:13
 msgid "Regular Talk"
@@ -48,23 +49,23 @@ msgstr ""
 
 #: models.py:16
 msgid "Tutorial"
-msgstr ""
+msgstr "教學"
 
 #: models.py:20
 msgid "Beginner"
-msgstr ""
+msgstr "初學者"
 
 #: models.py:21
 msgid "Advanced"
-msgstr ""
+msgstr "高級"
 
 #: models.py:22
 msgid "Expert"
-msgstr ""
+msgstr "專家"
 
 #: models.py:23
 msgid "Scientific Background"
-msgstr ""
+msgstr "科學背景"
 
 #: models.py:27
 msgid "Don't record my talk"
@@ -76,11 +77,11 @@ msgstr ""
 
 #: models.py:32
 msgid "Don't publish my slide"
-msgstr ""
+msgstr "不要發表我的投影片"
 
 #: models.py:36 templates/proposal/list.html:50
 msgid "Title"
-msgstr ""
+msgstr "標題"
 
 #: models.py:37
 msgid "Title of the talk or tutorial"
@@ -88,7 +89,7 @@ msgstr ""
 
 #: models.py:40
 msgid "Type of the proposal"
-msgstr ""
+msgstr "提案類型"
 
 #: models.py:43
 msgid "Language"
@@ -100,7 +101,7 @@ msgstr ""
 
 #: models.py:47
 msgid "Audience level"
-msgstr "聽眾程度"
+msgstr "聽眾等級"
 
 #: models.py:52
 msgid ""
@@ -116,7 +117,7 @@ msgstr ""
 
 #: models.py:62
 msgid "Description"
-msgstr "敘述"
+msgstr ""
 
 #: models.py:63
 msgid "Abstract or outline of your presentation. "
@@ -124,17 +125,17 @@ msgstr ""
 
 #: models.py:66
 msgid "Additional information"
-msgstr "其他資訊"
+msgstr "額外資訊"
 
 #: models.py:67
 msgid ""
-"Additional information that can help the program committee to make decisions "
-"(e.g., years of experie)"
+"Additional information that can help the program committee to make decisions"
+" (e.g., years of experie)"
 msgstr ""
 
 #: models.py:76 templates/proposal/list.html:52
 msgid "Abstract"
-msgstr ""
+msgstr "摘要"
 
 #: views.py:23
 msgid "Thanks for your submission!"
@@ -157,7 +158,7 @@ msgstr ""
 
 #: templates/proposal/create.html:29
 msgid "Submit"
-msgstr "送出"
+msgstr "提交"
 
 #: templates/proposal/create.html:35
 msgid ""
@@ -169,8 +170,7 @@ msgid ""
 "            You can submit your abstract in PDF after filling this form.\n"
 "          </li>\n"
 "          <li>\n"
-"            For SciPy Talk, an extended abstract of 1 to 3 A4 pages is "
-"required.\n"
+"            For SciPy Talk, an extended abstract of 1 to 3 A4 pages is required.\n"
 "          </li>\n"
 "        </ul>\n"
 "\n"
@@ -207,7 +207,7 @@ msgstr ""
 
 #: templates/proposal/list.html:44
 msgid "Create a Proposal"
-msgstr ""
+msgstr "建立提案"
 
 #: templates/proposal/list.html:51
 msgid "Speech Type"
@@ -219,32 +219,32 @@ msgstr ""
 
 #: templates/proposal/list.html:67
 msgid "No abstract file."
-msgstr ""
+msgstr "沒有摘要檔案。"
 
 #: templates/proposal/list.html:70 templates/proposal/list.html.py:101
 msgid "Upload"
-msgstr ""
+msgstr "上傳"
 
 #: templates/proposal/list.html:73
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: templates/proposal/list.html:74 templates/proposal/list.html.py:122
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: templates/proposal/list.html:79
 msgid "No Proposal"
-msgstr ""
+msgstr "沒有提案"
 
 #: templates/proposal/list.html:92
 msgid "Upload Abstract"
-msgstr ""
+msgstr "上傳摘要"
 
 #: templates/proposal/list.html:100 templates/proposal/list.html.py:121
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: templates/proposal/list.html:113
 msgid "Delete Proposal"
-msgstr ""
+msgstr "刪除提案"

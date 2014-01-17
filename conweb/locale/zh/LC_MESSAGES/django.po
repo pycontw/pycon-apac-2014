@@ -1,37 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+# keitheis <keitheis+transifex@gmail.com>, 2014
+# Tzu-ping Chung <uranusjr@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-17 13:06+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2014-01-17 13:19+0800\n"
+"PO-Revision-Date: 2014-01-17 04:13+0000\n"
+"Last-Translator: Tzu-ping Chung <uranusjr@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
+"apac-2014/language/zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: models.py:8
 msgid "Speaker Brief"
-msgstr "講者簡介"
+msgstr ""
 
 #: models.py:12
 msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
-msgstr ""
+msgstr "標籤列：使用小寫逗號分隔。例如：「pycontw, IPython, pep8」"
 
 #: models.py:16
 msgid "Location"
-msgstr "居住地"
+msgstr "位置"
 
 #: models.py:18
 msgid "Personal Link"
-msgstr "個人連結"
+msgstr "個人鍊結"
 
 #: models.py:22
 msgid "Twitter Username"
@@ -39,11 +42,11 @@ msgstr "Twitter 帳號"
 
 #: models.py:26
 msgid "Organization/Company"
-msgstr "組織/公司"
+msgstr ""
 
 #: models.py:28
 msgid "Link of Organization/Company"
-msgstr ""
+msgstr "組織/公司鍊結"
 
 #: models.py:32
 msgid "Title"
@@ -51,12 +54,12 @@ msgstr "標題"
 
 #: models.py:34
 msgid "Picture"
-msgstr ""
+msgstr "照片"
 
 #: templates/base.html:68 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
-msgstr ""
+msgstr "部落格"
 
 #: templates/base.html:75
 msgid "My Proposals"
@@ -76,7 +79,7 @@ msgstr "贊助"
 
 #: templates/index.html:28
 msgid "Show me all"
-msgstr "顯示全部"
+msgstr "讓我看全部"
 
 #: templates/index.html:33
 msgid "What is PyCon and PyCon Taiwan"
@@ -84,7 +87,7 @@ msgstr ""
 
 #: templates/index.html:36
 msgid "Sponsorship available!"
-msgstr ""
+msgstr "歡迎贊助！"
 
 #: templates/index.html:38
 msgid ""
@@ -152,6 +155,8 @@ msgid ""
 "\n"
 "No results were found in %(search_type)s matching your query: %(query)s\n"
 msgstr ""
+"\n"
+"在 %(search_type)s 中找不到符合 %(query)s 的結果\n"
 
 #: templates/search_results.html:24
 #, python-format
@@ -167,7 +172,7 @@ msgstr ""
 
 #: templates/accounts/account_login.html:7
 msgid "You're already logged in."
-msgstr ""
+msgstr "您已經登入。"
 
 #: templates/accounts/account_login.html:11
 #, python-format
@@ -175,6 +180,8 @@ msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
 msgstr ""
+"若您還沒有帳號，可以馬上<a href=\"%(signup_url)s?next=%(next)s\">註冊</a>一"
+"個。"
 
 #: templates/accounts/account_login.html:14
 #, python-format
@@ -182,6 +189,8 @@ msgid ""
 "<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
 "\">reset your password</a> if you've forgotten it.</p>"
 msgstr ""
+"<p>若您忘記了您的密碼，也可以<a href=\"%(password_reset_url)s?next="
+"%(profile_update_url)s\">重設</a>。</p>"
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
@@ -192,13 +201,13 @@ msgstr ""
 #: templates/accounts/account_profile.html:17
 #: templates/accounts/includes/user_panel.html:10
 msgid "Update profile"
-msgstr ""
+msgstr "更新基本資訊"
 
 #: templates/accounts/account_signup.html:7
 msgid ""
 "You're already logged in. If you'd like to create a new account, you'll need "
 "to log out first."
-msgstr ""
+msgstr "您已經登入。若您想要建立新帳號，必須先登出。"
 
 #: templates/accounts/account_signup.html:11
 msgid ""
@@ -208,7 +217,7 @@ msgstr ""
 
 #: templates/accounts/includes/user_panel.html:4
 msgid "Logged in as: "
-msgstr ""
+msgstr "登入為："
 
 #: templates/accounts/includes/user_panel.html:15
 #: templates/accounts/includes/user_panel_nav.html:8
@@ -232,12 +241,12 @@ msgstr "註冊"
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
-msgstr ""
+msgstr "基本資訊"
 
 #: templates/blog/blog_post_detail.html:29
 #: templates/blog/blog_post_list.html:83
 msgid "Posted by"
-msgstr ""
+msgstr "發表人："
 
 #: templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
@@ -246,31 +255,30 @@ msgstr ""
 #: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
 #, python-format
 msgid "%(sometime)s ago"
-msgstr ""
+msgstr "%(sometime)s前"
 
 #: templates/blog/blog_post_detail.html:44
 #: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
 msgid "Comments"
-msgstr ""
+msgstr "評論"
 
 #: templates/blog/blog_post_detail.html:47
 #: templates/blog/blog_post_list.html:138
 #, python-format
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(comments_count)s 個評論"
 
 #: templates/blog/blog_post_detail.html:76
 #: templates/blog/blog_post_list.html:119
 #: templates/blog/includes/filter_panel.html:48
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
-msgstr ""
+msgstr "分享至 Twitter"
 
 #: templates/blog/blog_post_detail.html:92
 msgid "Share on Facebook"
@@ -282,15 +290,15 @@ msgstr "相關文章"
 
 #: templates/blog/blog_post_list.html:31
 msgid "Tag:"
-msgstr ""
+msgstr "標籤："
 
 #: templates/blog/blog_post_list.html:33
 msgid "Category:"
-msgstr ""
+msgstr "類別："
 
 #: templates/blog/blog_post_list.html:37
 msgid "Author:"
-msgstr ""
+msgstr "作者："
 
 #: templates/blog/blog_post_list.html:50
 msgid "Viewing posts tagged"
@@ -314,7 +322,7 @@ msgstr ""
 
 #: templates/blog/includes/filter_panel.html:6
 msgid "Recent Posts"
-msgstr ""
+msgstr "近期文章"
 
 #: templates/blog/includes/filter_panel.html:19
 msgid "Archive"
@@ -322,11 +330,11 @@ msgstr ""
 
 #: templates/blog/includes/filter_panel.html:35
 msgid "Categories"
-msgstr ""
+msgstr "類別"
 
 #: templates/blog/includes/filter_panel.html:64
 msgid "Authors"
-msgstr ""
+msgstr "作者"
 
 #: templates/blog/includes/filter_panel.html:76
 msgid "Feeds"
@@ -337,14 +345,14 @@ msgstr ""
 #: templates/blog/includes/filter_panel.html:86
 #: templates/blog/includes/filter_panel.html:90
 msgid "RSS"
-msgstr ""
+msgstr "RSS"
 
 #: templates/blog/includes/filter_panel.html:79
 #: templates/blog/includes/filter_panel.html:83
 #: templates/blog/includes/filter_panel.html:87
 #: templates/blog/includes/filter_panel.html:91
 msgid "Atom"
-msgstr ""
+msgstr "Atom"
 
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3
@@ -354,12 +362,12 @@ msgstr ""
 #: templates/email/account_approve.html:5
 #: templates/email/account_approve.txt:5
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: templates/email/account_approve.html:6
 #: templates/email/account_approve.txt:6
 msgid "Email"
-msgstr ""
+msgstr "電子郵件"
 
 #: templates/email/account_approve.html:11
 #: templates/email/account_approve.txt:9 templates/email/signup_verify.html:4
@@ -383,7 +391,7 @@ msgstr ""
 
 #: templates/email/account_approved_subject.txt:2
 msgid "Your account has been activated"
-msgstr ""
+msgstr "你的帳戶已經啟用"
 
 #: templates/email/comment_notification.html:6
 msgid "A new comment has been posted on"
@@ -423,7 +431,7 @@ msgstr ""
 
 #: templates/email/password_reset_verify_subject.txt:2
 msgid "Reset your password"
-msgstr ""
+msgstr "重設你的密碼"
 
 #: templates/email/signup_verify.html:3 templates/email/signup_verify.txt:3
 msgid "Hey there, thanks for creating your account."
@@ -431,87 +439,87 @@ msgstr ""
 
 #: templates/email/signup_verify_subject.txt:2
 msgid "Activate your account"
-msgstr ""
+msgstr "啟用您的帳號"
 
 #: templates/errors/404.html:6 templates/errors/404.html.py:10
 #: templates/errors/404.html:15
 msgid "Page not found"
-msgstr ""
+msgstr "找不到頁面"
 
 #: templates/errors/404.html:16
 msgid "The page you requested does not exist."
-msgstr ""
+msgstr "您要求的頁面不存在"
 
 #: templates/errors/500.html:6 templates/errors/500.html.py:10
 #: templates/errors/500.html:15
 msgid "Error"
-msgstr ""
+msgstr "錯誤"
 
 #: templates/errors/500.html:16
 msgid "Sorry, an error occurred."
-msgstr ""
+msgstr "抱歉，發生錯誤。"
 
 #: templates/generic/includes/comment.html:25
 msgid "Link"
-msgstr ""
+msgstr "鍊結"
 
 #: templates/generic/includes/comment.html:26
 #: templates/generic/includes/comment.html:36
 msgid "Reply"
-msgstr ""
+msgstr "回應"
 
 #: templates/generic/includes/comment.html:59
 msgid "Comment deleted"
-msgstr ""
+msgstr "評論已刪除"
 
 #: templates/generic/includes/comment.html:61
 msgid "Comment awaiting approval"
-msgstr ""
+msgstr "評論待審核"
 
 #: templates/generic/includes/comment.html:75
 msgid "There are currently no comments"
-msgstr ""
+msgstr "尚無評論"
 
 #: templates/generic/includes/comments.html:17
 msgid "New Comment"
-msgstr ""
+msgstr "新評論"
 
 #: templates/generic/includes/comments.html:25
 msgid "Comment"
-msgstr ""
+msgstr "評論"
 
 #: templates/generic/includes/rating.html:8
 msgid "Current rating"
-msgstr ""
+msgstr "目前評比"
 
 #: templates/generic/includes/rating.html:10
 msgid "Currently unrated"
-msgstr ""
+msgstr "尚無評比"
 
 #: templates/generic/includes/rating.html:20
 msgid "Rate"
-msgstr ""
+msgstr "評比"
 
 #: templates/includes/editable_form.html:16
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: templates/includes/editable_form.html:17
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: templates/includes/editable_form.html:25
 msgid "Edit"
-msgstr ""
+msgstr "編輯"
 
 #: templates/includes/editable_toolbar.html:7
 #: templates/includes/editable_toolbar.html:9
 msgid "Admin"
-msgstr ""
+msgstr "管理"
 
 #: templates/includes/pagination.html:7
 msgid "Page"
-msgstr ""
+msgstr "頁面"
 
 #: templates/includes/pagination.html:7
 msgid "of"
@@ -519,20 +527,20 @@ msgstr ""
 
 #: templates/includes/search_form.html:5
 msgid "Search"
-msgstr ""
+msgstr "搜尋"
 
 #: templates/includes/search_form.html:14
 msgid "Everything"
-msgstr ""
+msgstr "全部"
 
 #: templates/includes/search_form.html:26
 msgid "Go"
-msgstr ""
+msgstr "前往"
 
 #: templates/pages/menus/admin.html:31
 msgid "Add"
-msgstr ""
+msgstr "新增"
 
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
-msgstr ""
+msgstr "近期推文"
