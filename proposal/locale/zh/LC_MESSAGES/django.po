@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # keitheis <keitheis+transifex@gmail.com>, 2014
 # keitheis <keitheis+transifex@gmail.com>, 2014
@@ -11,14 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-16 13:09+0800\n"
+"POT-Creation-Date: 2014-01-18 23:53+0800\n"
 "PO-Revision-Date: 2014-01-17 18:22+0000\n"
 "Last-Translator: StarWilly <willystar@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
+"apac-2014/language/zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: forms.py:32
@@ -91,7 +92,7 @@ msgstr "議程主題 / 教學主題"
 
 #: models.py:40
 msgid "Type of the proposal"
-msgstr "提案類型"
+msgstr "講題類型"
 
 #: models.py:43
 msgid "Language"
@@ -131,8 +132,8 @@ msgstr "額外資訊"
 
 #: models.py:67
 msgid ""
-"Additional information that can help the program committee to make decisions"
-" (e.g., years of experie)"
+"Additional information that can help the program committee to make decisions "
+"(e.g., years of experie)"
 msgstr ""
 
 #: models.py:76 templates/proposal/list.html:52
@@ -145,11 +146,11 @@ msgstr ""
 
 #: views.py:59
 msgid "Proposal updated"
-msgstr "提案已更新"
+msgstr "講題已更新"
 
 #: templates/proposal/create.html:7
 msgid "Create Proposal"
-msgstr "建立提案"
+msgstr "建立講題"
 
 #: templates/proposal/create.html:16
 msgid ""
@@ -157,6 +158,9 @@ msgid ""
 "        PyCon APAC 2014 is now accepting all types of proposals.\n"
 "        "
 msgstr ""
+"\n"
+"        PyCon APAC 2014 現在正接受各種講題。\n"
+"        "
 
 #: templates/proposal/create.html:29
 msgid "Submit"
@@ -172,13 +176,28 @@ msgid ""
 "            You can submit your abstract in PDF after filling this form.\n"
 "          </li>\n"
 "          <li>\n"
-"            For SciPy Talk, an extended abstract of 1 to 3 A4 pages is required.\n"
+"            For SciPy Talk, an extended abstract of 1 to 3 A4 pages is "
+"required.\n"
 "          </li>\n"
 "        </ul>\n"
 "\n"
 "      </div>\n"
 "      "
 msgstr ""
+"\n"
+"      <div class=\"well note\">\n"
+"        <h4>註</h4>\n"
+"        <ul class=\"square-list\">\n"
+"          <li>\n"
+"            你可以在填寫完此表格後上傳 PDF 摘要。\n"
+"          </li>\n"
+"          <li>\n"
+"            SciPy 議程的投稿要求 1 到 3 頁的 A4 延伸摘要。\n"
+"          </li>\n"
+"        </ul>\n"
+"\n"
+"      </div>\n"
+"      "
 
 #: templates/proposal/create.html:49
 msgid ""
@@ -207,21 +226,29 @@ msgid ""
 "      "
 msgstr ""
 
+#: templates/proposal/list.html:35
+msgid "My Proposals"
+msgstr "我的講題"
+
 #: templates/proposal/list.html:44
 msgid "Create a Proposal"
-msgstr "建立提案"
+msgstr "建立講題"
 
 #: templates/proposal/list.html:51
 msgid "Speech Type"
-msgstr ""
+msgstr "講題類型"
+
+#: templates/proposal/list.html:52
+msgid "(PDF file)"
+msgstr "（PDF 檔）"
 
 #: templates/proposal/list.html:53
 msgid "Action"
-msgstr ""
+msgstr "動作"
 
 #: templates/proposal/list.html:67
 msgid "No abstract file."
-msgstr "沒有摘要檔案。"
+msgstr "尚無摘要檔案。"
 
 #: templates/proposal/list.html:70 templates/proposal/list.html.py:101
 msgid "Upload"
@@ -231,22 +258,32 @@ msgstr "上傳"
 msgid "Update"
 msgstr "更新"
 
-#: templates/proposal/list.html:74 templates/proposal/list.html.py:122
+#: templates/proposal/list.html:74 templates/proposal/list.html.py:124
 msgid "Delete"
 msgstr "刪除"
 
 #: templates/proposal/list.html:79
 msgid "No Proposal"
-msgstr "沒有提案"
+msgstr "尚無講題"
 
 #: templates/proposal/list.html:92
 msgid "Upload Abstract"
 msgstr "上傳摘要"
 
-#: templates/proposal/list.html:100 templates/proposal/list.html.py:121
+#: templates/proposal/list.html:100 templates/proposal/list.html.py:123
 msgid "Close"
 msgstr "關閉"
 
 #: templates/proposal/list.html:113
 msgid "Delete Proposal"
-msgstr "刪除提案"
+msgstr "刪除講題"
+
+#: templates/proposal/list.html:116
+msgid ""
+"\n"
+"                Are you sure to <strong>delete</strong> this proposal?\n"
+"              "
+msgstr ""
+"\n"
+"                你確定要<strong>刪除</strong>這個講題？\n"
+"              "

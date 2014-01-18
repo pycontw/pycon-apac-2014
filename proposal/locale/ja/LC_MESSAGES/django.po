@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-16 13:09+0800\n"
+"POT-Creation-Date: 2014-01-18 23:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -205,12 +205,20 @@ msgid ""
 "      "
 msgstr ""
 
+#: templates/proposal/list.html:35
+msgid "My Proposals"
+msgstr ""
+
 #: templates/proposal/list.html:44
 msgid "Create a Proposal"
 msgstr ""
 
 #: templates/proposal/list.html:51
 msgid "Speech Type"
+msgstr ""
+
+#: templates/proposal/list.html:52
+msgid "(PDF file)"
 msgstr ""
 
 #: templates/proposal/list.html:53
@@ -229,7 +237,7 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: templates/proposal/list.html:74 templates/proposal/list.html.py:122
+#: templates/proposal/list.html:74 templates/proposal/list.html.py:124
 msgid "Delete"
 msgstr ""
 
@@ -241,10 +249,17 @@ msgstr ""
 msgid "Upload Abstract"
 msgstr ""
 
-#: templates/proposal/list.html:100 templates/proposal/list.html.py:121
+#: templates/proposal/list.html:100 templates/proposal/list.html.py:123
 msgid "Close"
 msgstr ""
 
 #: templates/proposal/list.html:113
 msgid "Delete Proposal"
+msgstr ""
+
+#: templates/proposal/list.html:116
+msgid ""
+"\n"
+"                Are you sure to <strong>delete</strong> this proposal?\n"
+"              "
 msgstr ""
