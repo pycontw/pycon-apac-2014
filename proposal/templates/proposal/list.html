@@ -32,7 +32,7 @@
 {% endblock %}
 
 
-{% block title %}Proposal{% endblock %}
+{% block title %}{% trans "My Proposals" %}{% endblock %}
 
 {% block .breadcrumb %}{% endblock %}
 
@@ -49,7 +49,7 @@
             <tr>
                 <th>{% trans "Title" %}</th>
                 <th>{% trans "Speech Type" %}</th>
-                <th>{% trans "Abstract" %} <span class="note">(PDF file)</span></th>
+                <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
                 <th>{% trans "Action" %}</th>
             </tr>
         </thead>
@@ -113,7 +113,9 @@
                 <h4>{% trans "Delete Proposal" %}</h4>
             </div>
             <div class="modal-body">
+              {% blocktrans %}
                 Are you sure to <strong>delete</strong> this proposal?
+              {% endblocktrans %}
             </div>
             <div class="modal-footer">
                 <form class="form-inline" method="post" action=".">

@@ -126,7 +126,7 @@ USE_I18N = True
 
 LANGUAGES = (
     ('en', 'English'),
-    #('zh', '中文'),
+    ('zh', '中文'),
     #('ja', '日本語'),
 )
 
