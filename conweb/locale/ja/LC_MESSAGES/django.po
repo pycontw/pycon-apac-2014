@@ -1,21 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-17 13:19+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-01-17 05:21+0000\n"
+"Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: models.py:8
@@ -73,7 +72,7 @@ msgstr ""
 
 #: templates/index.html:22
 msgid "Sponsors"
-msgstr "スポンサー"
+msgstr ""
 
 #: templates/index.html:28
 msgid "Show me all"
@@ -91,14 +90,11 @@ msgstr ""
 msgid ""
 "\n"
 "      <li>Prospectus in\n"
-"        <a href=\"https://drive.google.com/file/"
-"d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
+"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
 "        and\n"
-"        <a href=\"https://drive.google.com/file/"
-"d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
+"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
 "      </li>\n"
-"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
-"JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
 "        Application Form\n"
 "      </a></li>\n"
 "      "
@@ -108,28 +104,22 @@ msgstr ""
 msgid ""
 "\n"
 "    PyCon is a conference by the Python community for the community.\n"
-"    It is for Python enthusiasts of all experience levels, from new users to "
-"core developers.\n"
+"    It is for Python enthusiasts of all experience levels, from new users to core developers.\n"
 "    The original PyCon was formed in North America in 2003,\n"
 "    but there are now a number of other conferences being run in the\n"
-"    PyCon spirit around the world. -- PyCon: Community-Run Python "
-"Conference\n"
+"    PyCon spirit around the world. -- PyCon: Community-Run Python Conference\n"
 "    "
 msgstr ""
 
 #: templates/index.html:61
 msgid ""
 "\n"
-"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
-"Taiwan.\n"
-"    It will be hosted in Taipei, and we would like to invite you to join "
-"this big event,\n"
+"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.\n"
+"    It will be hosted in Taipei, and we would like to invite you to join this big event,\n"
 "    being a part of it by sponsoring, promoting your brand and product,\n"
 "    and even making your company succeed through it.\n"
-"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/"
-"\">2013</a>)\n"
-"    was formed with support of the following, but not limited to, active "
-"user groups:\n"
+"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/\">2013</a>)\n"
+"    was formed with support of the following, but not limited to, active user groups:\n"
 "    "
 msgstr ""
 
@@ -158,8 +148,7 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
-"matching your query: %(query)s\n"
+"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s matching your query: %(query)s\n"
 msgstr ""
 
 #: templates/search_results.html:35 templates/blog/blog_post_list.html:128
@@ -173,21 +162,22 @@ msgstr ""
 #: templates/accounts/account_login.html:11
 #, python-format
 msgid ""
-"If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
-"\">sign up</a> for one now."
+"If you don't have an account you can <a "
+"href=\"%(signup_url)s?next=%(next)s\">sign up</a> for one now."
 msgstr ""
 
 #: templates/accounts/account_login.html:14
 #, python-format
 msgid ""
-"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
-"\">reset your password</a> if you've forgotten it.</p>"
+"<p>You can also <a "
+"href=\"%(password_reset_url)s?next=%(profile_update_url)s\">reset your "
+"password</a> if you've forgotten it.</p>"
 msgstr ""
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
-"Enter your username or email address and you'll receive an email with a link "
-"you need to click, in order to log in and change your password."
+"Enter your username or email address and you'll receive an email with a link"
+" you need to click, in order to log in and change your password."
 msgstr ""
 
 #: templates/accounts/account_profile.html:17
@@ -197,8 +187,8 @@ msgstr ""
 
 #: templates/accounts/account_signup.html:7
 msgid ""
-"You're already logged in. If you'd like to create a new account, you'll need "
-"to log out first."
+"You're already logged in. If you'd like to create a new account, you'll need"
+" to log out first."
 msgstr ""
 
 #: templates/accounts/account_signup.html:11
@@ -261,7 +251,6 @@ msgstr ""
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] ""
-msgstr[1] ""
 
 #: templates/blog/blog_post_detail.html:76
 #: templates/blog/blog_post_list.html:119

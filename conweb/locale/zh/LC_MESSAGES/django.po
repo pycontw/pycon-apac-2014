@@ -1,28 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # keitheis <keitheis+transifex@gmail.com>, 2014
+# keitheis <keitheis+transifex@gmail.com>, 2014
+# Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Tzu-ping Chung <uranusjr@gmail.com>, 2014
+# StarWilly <willystar@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-17 13:19+0800\n"
-"PO-Revision-Date: 2014-01-17 04:13+0000\n"
-"Last-Translator: Tzu-ping Chung <uranusjr@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
-"apac-2014/language/zh_TW/)\n"
-"Language: zh_TW\n"
+"PO-Revision-Date: 2014-01-18 02:35+0000\n"
+"Last-Translator: Chien-Hsun Chen <lucemia@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: models.py:8
 msgid "Speaker Brief"
-msgstr ""
+msgstr "講者簡介"
 
 #: models.py:12
 msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
@@ -42,7 +44,7 @@ msgstr "Twitter 帳號"
 
 #: models.py:26
 msgid "Organization/Company"
-msgstr ""
+msgstr "組織/公司"
 
 #: models.py:28
 msgid "Link of Organization/Company"
@@ -75,7 +77,7 @@ msgstr "講者登入"
 
 #: templates/index.html:22
 msgid "Sponsors"
-msgstr "贊助"
+msgstr "贊助者"
 
 #: templates/index.html:28
 msgid "Show me all"
@@ -83,7 +85,7 @@ msgstr "讓我看全部"
 
 #: templates/index.html:33
 msgid "What is PyCon and PyCon Taiwan"
-msgstr ""
+msgstr "什麼是PyCon Taiwan"
 
 #: templates/index.html:36
 msgid "Sponsorship available!"
@@ -93,14 +95,11 @@ msgstr "歡迎贊助！"
 msgid ""
 "\n"
 "      <li>Prospectus in\n"
-"        <a href=\"https://drive.google.com/file/"
-"d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
+"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
 "        and\n"
-"        <a href=\"https://drive.google.com/file/"
-"d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
+"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
 "      </li>\n"
-"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
-"JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
 "        Application Form\n"
 "      </a></li>\n"
 "      "
@@ -110,28 +109,22 @@ msgstr ""
 msgid ""
 "\n"
 "    PyCon is a conference by the Python community for the community.\n"
-"    It is for Python enthusiasts of all experience levels, from new users to "
-"core developers.\n"
+"    It is for Python enthusiasts of all experience levels, from new users to core developers.\n"
 "    The original PyCon was formed in North America in 2003,\n"
 "    but there are now a number of other conferences being run in the\n"
-"    PyCon spirit around the world. -- PyCon: Community-Run Python "
-"Conference\n"
+"    PyCon spirit around the world. -- PyCon: Community-Run Python Conference\n"
 "    "
-msgstr ""
+msgstr "\nPyCon 是Python 社群為社群舉辦的研討會. 這個研討會開放給所有Python 愛好者, 無論是新手或是核心開發者. \n\n最早的PyCon 在2003年北美開始, 現在已經有無數的PyCon 由全世界PyCon Spirit 在各地舉辦, -- PyCon: Python社群研討會"
 
 #: templates/index.html:61
 msgid ""
 "\n"
-"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
-"Taiwan.\n"
-"    It will be hosted in Taipei, and we would like to invite you to join "
-"this big event,\n"
+"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.\n"
+"    It will be hosted in Taipei, and we would like to invite you to join this big event,\n"
 "    being a part of it by sponsoring, promoting your brand and product,\n"
 "    and even making your company succeed through it.\n"
-"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/"
-"\">2013</a>)\n"
-"    was formed with support of the following, but not limited to, active "
-"user groups:\n"
+"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/\">2013</a>)\n"
+"    was formed with support of the following, but not limited to, active user groups:\n"
 "    "
 msgstr ""
 
@@ -154,21 +147,18 @@ msgstr "首頁"
 msgid ""
 "\n"
 "No results were found in %(search_type)s matching your query: %(query)s\n"
-msgstr ""
-"\n"
-"在 %(search_type)s 中找不到符合 %(query)s 的結果\n"
+msgstr "\n在 %(search_type)s 中找不到符合 %(query)s 的結果\n"
 
 #: templates/search_results.html:24
 #, python-format
 msgid ""
 "\n"
-"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
-"matching your query: %(query)s\n"
+"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s matching your query: %(query)s\n"
 msgstr ""
 
 #: templates/search_results.html:35 templates/blog/blog_post_list.html:128
 msgid "read more"
-msgstr ""
+msgstr "更多"
 
 #: templates/accounts/account_login.html:7
 msgid "You're already logged in."
@@ -177,26 +167,23 @@ msgstr "您已經登入。"
 #: templates/accounts/account_login.html:11
 #, python-format
 msgid ""
-"If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
-"\">sign up</a> for one now."
-msgstr ""
-"若您還沒有帳號，可以馬上<a href=\"%(signup_url)s?next=%(next)s\">註冊</a>一"
-"個。"
+"If you don't have an account you can <a "
+"href=\"%(signup_url)s?next=%(next)s\">sign up</a> for one now."
+msgstr "若您還沒有帳號，可以馬上<a href=\"%(signup_url)s?next=%(next)s\">註冊</a>一個。"
 
 #: templates/accounts/account_login.html:14
 #, python-format
 msgid ""
-"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
-"\">reset your password</a> if you've forgotten it.</p>"
-msgstr ""
-"<p>若您忘記了您的密碼，也可以<a href=\"%(password_reset_url)s?next="
-"%(profile_update_url)s\">重設</a>。</p>"
+"<p>You can also <a "
+"href=\"%(password_reset_url)s?next=%(profile_update_url)s\">reset your "
+"password</a> if you've forgotten it.</p>"
+msgstr "<p>若您忘記了您的密碼，也可以<a href=\"%(password_reset_url)s?next=%(profile_update_url)s\">重設</a>。</p>"
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
-"Enter your username or email address and you'll receive an email with a link "
-"you need to click, in order to log in and change your password."
-msgstr ""
+"Enter your username or email address and you'll receive an email with a link"
+" you need to click, in order to log in and change your password."
+msgstr "輸入你的帳號, 郵件信箱然後你會收到通知信, 內含確認的聯結. 點擊聯結後你可以登入並且更新密碼"
 
 #: templates/accounts/account_profile.html:17
 #: templates/accounts/includes/user_panel.html:10
@@ -205,15 +192,15 @@ msgstr "更新基本資訊"
 
 #: templates/accounts/account_signup.html:7
 msgid ""
-"You're already logged in. If you'd like to create a new account, you'll need "
-"to log out first."
+"You're already logged in. If you'd like to create a new account, you'll need"
+" to log out first."
 msgstr "您已經登入。若您想要建立新帳號，必須先登出。"
 
 #: templates/accounts/account_signup.html:11
 msgid ""
 "After signing up, you'll receive an email with a link you need to click, in "
 "order to activate your account."
-msgstr ""
+msgstr "註冊以後, 你會收到通知信, 裡頭有個聯結, 點擊後可以起用你的帳號"
 
 #: templates/accounts/includes/user_panel.html:4
 msgid "Logged in as: "
@@ -302,11 +289,11 @@ msgstr "作者："
 
 #: templates/blog/blog_post_list.html:50
 msgid "Viewing posts tagged"
-msgstr ""
+msgstr "文章標籤"
 
 #: templates/blog/blog_post_list.html:52
 msgid "Viewing posts for the category"
-msgstr ""
+msgstr "文章分類"
 
 #: templates/blog/blog_post_list.html:54
 msgid "Viewing posts from"
@@ -314,7 +301,7 @@ msgstr ""
 
 #: templates/blog/blog_post_list.html:57
 msgid "Viewing posts by"
-msgstr ""
+msgstr "文章作者"
 
 #: templates/blog/blog_post_list.html:89
 msgid "in"
@@ -357,7 +344,7 @@ msgstr "Atom"
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3
 msgid "Hey there, a new account has been created and requires activation."
-msgstr ""
+msgstr "帳號已經建立，但還需完成啟用步驟。"
 
 #: templates/email/account_approve.html:5
 #: templates/email/account_approve.txt:5
@@ -373,21 +360,21 @@ msgstr "電子郵件"
 #: templates/email/account_approve.txt:9 templates/email/signup_verify.html:4
 #: templates/email/signup_verify.txt:4
 msgid "Please use the link below to activate it."
-msgstr ""
+msgstr "請點以下連結啟用"
 
 #: templates/email/account_approve_subject.txt:2
 msgid "An account requires activation"
-msgstr ""
+msgstr "帳號需要完成啟用步驟"
 
 #: templates/email/account_approved.html:3
 #: templates/email/account_approved.txt:3
 msgid "Hey there, your account has been activated."
-msgstr ""
+msgstr "你的帳戶已經啟用"
 
 #: templates/email/account_approved.html:4
 #: templates/email/account_approved.txt:4
 msgid "Please use the link below to log in."
-msgstr ""
+msgstr "請點以下連結登入"
 
 #: templates/email/account_approved_subject.txt:2
 msgid "Your account has been activated"
@@ -420,14 +407,14 @@ msgstr ""
 #: templates/email/password_reset_verify.html:4
 #: templates/email/password_reset_verify.txt:4
 msgid "Please use the link below to log in and update your password."
-msgstr ""
+msgstr "使用下面的聯結登入以及更新你的密碼"
 
 #: templates/email/password_reset_verify.html:6
 #: templates/email/password_reset_verify.txt:6
 msgid ""
 "If you didn't request for your password to be reset, please ignore this "
 "email."
-msgstr ""
+msgstr "假如你沒有要求重設密碼, 請忽略這封信"
 
 #: templates/email/password_reset_verify_subject.txt:2
 msgid "Reset your password"
