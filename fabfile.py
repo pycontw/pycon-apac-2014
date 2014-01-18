@@ -74,14 +74,18 @@ def reset_password(username='admin'):
 
 
 @_in_virtualenv
-def translate():
-    "Django makemeassages"
+def translate(compile_msg=False):
+    "Django makemeassages. use translate:true to compile"
     LANGUAGES = ('en', 'zh', 'ja')
     local("python manage.py makemessages -a")
+    if compile_msg:
+        local("python manage.py compilemessages")
     for app_name in ['proposal']:
-        with cd("../" + app_name):
+        with lcd("../" + app_name):
             for lang in LANGUAGES:
                 local("django-admin.py makemessages -l " + lang)
+            if compile_msg:
+                local("django-admin.py compilemessages")
 
 
 @_in_virtualenv
