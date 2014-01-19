@@ -45,6 +45,8 @@ _load_fabric_settings()
 
 
 VENV_PREFIX = _get_venv_prefix()
+MY_APPS = ['proposal']
+LANGUAGES = ('en', 'zh', 'ja')
 
 
 def _in_virtualenv(wrapped):
@@ -74,18 +76,32 @@ def reset_password(username='admin'):
 
 
 @_in_virtualenv
-def translate(compile_msg=False):
-    "Django makemeassages. use translate:true to compile"
-    LANGUAGES = ('en', 'zh', 'ja')
+def translate(languages=LANGUAGES, compile_msg=False):
+    "collect messages for translators"
     local("python manage.py makemessages -a")
-    if compile_msg:
-        local("python manage.py compilemessages")
-    for app_name in ['proposal']:
+    for app_name in MY_APPS:
         with lcd("../" + app_name):
-            for lang in LANGUAGES:
+            for lang in languages:
                 local("django-admin.py makemessages -l " + lang)
-            if compile_msg:
-                local("django-admin.py compilemessages")
+    if compile_msg:
+        execute(done_translate)
+
+
+@_in_virtualenv
+def done_translate(languages=LANGUAGES):
+    "compile translated messages to make it show"
+    local("python manage.py compilemessages")
+    for app_name in MY_APPS:
+        with lcd("../" + app_name):
+            local("django-admin.py compilemessages")
+
+
+@roles('web')
+def _remote_copimlemessages(languages):
+    "compile messages"
+    repo_path = local_settings['repo_path']
+    with cd(repo_path):
+        run('fab done_translate')
 
 
 @_in_virtualenv
@@ -103,6 +119,7 @@ def _remote_deploy():
     repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
+        run('fab compilemessages')
         run('supervisorctl restart pycon')
 
 
