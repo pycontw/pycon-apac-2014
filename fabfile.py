@@ -119,7 +119,7 @@ def _remote_deploy():
     repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
-        run('fab compilemessages')
+        run('fab done_translate')
         run('supervisorctl restart pycon')
 
 
