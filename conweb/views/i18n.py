@@ -16,6 +16,11 @@ def set_language(request):
         next = request.META.get('HTTP_REFERER')
         if not is_safe_url(url=next, host=request.get_host()):
             next = url_lang_prefix
+        else:
+            for lang_code, __ in settings.LANGUAGES:
+                if next.find('/{}/'.format(lang_code)) != -1:
+                    url_lang_prefix = '/{}/'.format(lang_code)
+                    break
 
     response = None
     lang_code = request.GET.get('language', None)
