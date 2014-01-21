@@ -18,3 +18,8 @@ Contributors
 
 * Tzu-ping Chung
 * Chia-Chi Chang
+
+Translators
+-----------
+
+See: https://www.transifex.com/projects/p/pycon-apac-2014/
