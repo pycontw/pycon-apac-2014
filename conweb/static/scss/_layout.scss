@@ -15,9 +15,12 @@
   background-color: #D3202E;
   color: #FCFBF5;
   z-index: 10;
+  font-size: 16px;
 
   -webkit-transition: 500ms;
           transition: 500ms;
+
+  border-top: 1px dotted #DC4F55;
 
   a {
     color: #FCFBF5;
@@ -29,10 +32,12 @@
       margin: 20px
     }
   }
+  ul.navlist-menu-level-0 {
+    border-top: 1px dotted #DC4F55;
+  }
   ul {
-    border-top: 1px solid #DC4F55;
     a {
-      border-bottom: 1px solid #DC4F55;
+      border-bottom: 1px dotted #DC4F55;
       padding-left: 40px;
     }
     a:hover, .active > a {
@@ -40,8 +45,12 @@
     }
   }
   ul ul li > a{
-    padding-left: 60px;
+    padding-left: 45px;
     font-size: 0.8em;
+
+    &:before {
+      content: ' - ';
+    }
   }
 
 
