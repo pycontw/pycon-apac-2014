@@ -13,7 +13,7 @@ a:hover {
   color: #a71924; }
 
 #logo {
-  padding: 50px 0;
+  padding: 30px 0 50px;
   text-align: center; }
 
 #logo-alt {
@@ -137,8 +137,14 @@ a:hover {
 
 #title {
   margin: 0;
-  padding: 40px 40px;
   background: url("images/pattern.png"); }
+  #title h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; }
+
+.page-title {
+  padding: 33px 40px 0;
+  height: 135px; }
 
 .content {
   padding: 0 30px 30px; }
@@ -296,7 +302,9 @@ a:hover {
   font-size: 36px;
   line-height: 2;
   font-weight: bold;
-  margin: 0.8em 0; }
+  margin: 0.8em 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
 
 .sponsers img {
   margin: 1px 0 20px; }
@@ -445,7 +453,9 @@ hr {
 .home-condate {
   margin: 1em;
   color: #6E6F72;
-  font-size: 24px; }
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
   .home-condate b {
     color: #D0272B; }
   .home-condate strong {
