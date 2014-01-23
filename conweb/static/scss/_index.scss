@@ -12,8 +12,87 @@
   }
 }
 
+
+
 .side-condate {
   font-size: 13px;
   text-align: center;
   margin: -40px 0 20px;
+}
+
+.index-title {
+  height: 75%;
+  position: relative;
+
+  @include respond-to(mobile) {
+    height: auto;
+  }
+}
+
+.welcome-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 500px;
+  height: 350px;
+
+  @include respond-to(mobile) {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+  }
+
+}
+
+.home-sponsers {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  background: #fff;
+  background: rgba(#fff, 0.4);
+  color: #666;
+  margin: -20px 0 0;
+  padding: 30px 0 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 2px rgba(#666, 0.1);
+          box-shadow: 0 1px 2px rgba(#666, 0.1);
+
+  h3, h4 {
+    color: darken(#F6F5EF, 30%);
+    margin: 5 0 15px;
+  }
+  p.apply {
+    margin: 1.5em 0 1em;
+
+    span.div-line {
+      display: inline-block;
+      height: 35px;
+      line-height: 35px;
+      border-right: 1px solid #ddd;
+      margin: 0 15px 0 10px;
+    }
+  }
+  .sponser-logos {
+    margin: 5px;
+    img {
+      margin: 10px 5px;
+    }
+  }
+  .sponser-more {
+    margin: -3px 0 0;
+    height: 0;
+
+    a.btn {
+      padding: 10px 20px;
+      background-color: #F6F5EF;
+      color: #999;
+      border: none;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
 }

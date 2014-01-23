@@ -8,7 +8,7 @@
 {% block .breadcrumb %}{% endblock %}
 
 {% block content %}
-<div id="title">
+<div id="title" class="index-title">
   <div class="welcome-header">
     <img src="{{ STATIC_URL }}images/logo.svg" alt="">
     <p class="home-condate">
@@ -29,61 +29,65 @@
   </div>
 
 </div>
+<div class="home-sponsers">
+  <h3 class="title">{% trans "Sponsorship available!" %}</h3>
+  <p class="apply">
+    {% blocktrans %}
+    <span>Prospectus in
+      <a href="https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing">English</a>
+      and
+      <a href="https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing">中文</a>
+    </span>
+    <span class="div-line">&nbsp;</span>
+    <span><a href="https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform">
+      Application Form
+    </a></span>
+    {% endblocktrans %}
+  </p>
+</div>
 <div class="content">
-  <h2 class="doc-title">{% trans "What is PyCon and PyCon Taiwan" %}</h2>
+  <div class="">
+    <h2 class="doc-title">{% trans "What is PyCon and PyCon Taiwan" %}</h2>
 
-  <div class="prompt">
-    <h3 class="title">{% trans "Sponsorship available!" %}</h3>
-    <ul class="square-list">
-      {% blocktrans %}
-      <li>Prospectus in
-        <a href="https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing">English</a>
-        and
-        <a href="https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing">中文</a>
-      </li>
-      <li><a href="https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform">
-        Application Form
-      </a></li>
-      {% endblocktrans %}
-    </ul>
-  </div>
 
-  <div class="doc-content">
+    <div class="doc-content">
 
-    <p>{% blocktrans %}
-    PyCon is a conference by the Python community for the community.
-    It is for Python enthusiasts of all experience levels, from new users to core developers.
-    The original PyCon was formed in North America in 2003,
-    but there are now a number of other conferences being run in the
-    PyCon spirit around the world. -- PyCon: Community-Run Python Conference
-    {% endblocktrans %}</p>
+      <p>{% blocktrans %}
+      PyCon is a conference by the Python community for the community.
+      It is for Python enthusiasts of all experience levels, from new users to core developers.
+      The original PyCon was formed in North America in 2003,
+      but there are now a number of other conferences being run in the
+      PyCon spirit around the world. -- PyCon: Community-Run Python Conference
+      {% endblocktrans %}</p>
 
-    <p>{% blocktrans %}
-    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.
-    It will be hosted in Taipei, and we would like to invite you to join this big event,
-    being a part of it by sponsoring, promoting your brand and product,
-    and even making your company succeed through it.
-    Two previous PyCon TW (<a href="/2012/">2012</a> and <a href="/2013/">2013</a>)
-    was formed with support of the following, but not limited to, active user groups:
-    {% endblocktrans %}</p>
-    <div class="user-groups well">
-      <ul class="square-list clearfix">
-        <li><a href="http://www.meetup.com/pythonhug/">
-          PyHUG - Python Hsinchu User Group
-        </a></li>
-        <li><a href="http://taipei.python.org.tw/">
-          Taipei.py - Taipei Python User Group
-        </a></li>
-        <li><a href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">
-          Tainan.py - Python Tainan User Group
-        </a></li>
-        <li><a href="http://tw.pyladies.com/">
-          PyLadies Taiwan
-        </a></li>
-        <li><a href="http://hualien.python.org.tw/">
-          Hualien.py - Hualien Python User Group
-        </a></li>
-      </ul>
+      <p>{% blocktrans %}
+      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.
+      It will be hosted in Taipei, and we would like to invite you to join this big event,
+      being a part of it by sponsoring, promoting your brand and product,
+      and even making your company succeed through it.
+      Two previous PyCon TW (<a href="/2012/">2012</a> and <a href="/2013/">2013</a>)
+      was formed with support of the following, but not limited to, active user groups:
+      {% endblocktrans %}</p>
+      <div class="user-groups">
+        <ul class="well-list clearfix">
+          <li><a href="http://www.meetup.com/pythonhug/">
+            PyHUG - Python Hsinchu User Group
+          </a></li>
+          <li><a href="http://taipei.python.org.tw/">
+            Taipei.py - Taipei Python User Group
+          </a></li>
+          <li><a href="http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/">
+            Tainan.py - Python Tainan User Group
+          </a></li>
+          <li><a href="http://tw.pyladies.com/">
+            PyLadies Taiwan
+          </a></li>
+          <li><a href="http://hualien.python.org.tw/">
+            Hualien.py - Hualien Python User Group
+          </a></li>
+        </ul>
+
+      </div>
 
     </div>
 
