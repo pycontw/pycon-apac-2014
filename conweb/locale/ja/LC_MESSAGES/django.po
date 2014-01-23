@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-17 13:19+0800\n"
-"PO-Revision-Date: 2014-01-17 05:21+0000\n"
+"POT-Creation-Date: 2014-01-23 20:08+0800\n"
+"PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -53,20 +53,20 @@ msgstr ""
 msgid "Picture"
 msgstr ""
 
-#: templates/base.html:68 templates/blog/blog_post_list.html:4
+#: templates/base.html:69 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:75
+#: templates/base.html:76
 msgid "My Proposals"
 msgstr ""
 
-#: templates/base.html:79
+#: templates/base.html:80
 msgid "LOG OUT"
 msgstr ""
 
-#: templates/base.html:82
+#: templates/base.html:83
 msgid "SPEAKER LOG IN"
 msgstr ""
 
@@ -79,48 +79,49 @@ msgid "Show me all"
 msgstr ""
 
 #: templates/index.html:33
-msgid "What is PyCon and PyCon Taiwan"
-msgstr ""
-
-#: templates/index.html:36
 msgid "Sponsorship available!"
 msgstr ""
 
-#: templates/index.html:38
+#: templates/index.html:35
 msgid ""
 "\n"
-"      <li>Prospectus in\n"
-"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
-"        and\n"
-"        <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
-"      </li>\n"
-"      <li><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
-"        Application Form\n"
-"      </a></li>\n"
+"    <span>Prospectus in\n"
+"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
+"      and\n"
+"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文</a>\n"
+"    </span>\n"
+"    <span class=\"div-line\">&nbsp;</span>\n"
+"    <span><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+"      Application Form\n"
+"    </a></span>\n"
+"    "
+msgstr ""
+
+#: templates/index.html:50
+msgid "What is PyCon and PyCon Taiwan"
+msgstr ""
+
+#: templates/index.html:55
+msgid ""
+"\n"
+"      PyCon is a conference by the Python community for the community.\n"
+"      It is for Python enthusiasts of all experience levels, from new users to core developers.\n"
+"      The original PyCon was formed in North America in 2003,\n"
+"      but there are now a number of other conferences being run in the\n"
+"      PyCon spirit around the world. -- PyCon: Community-Run Python Conference\n"
 "      "
 msgstr ""
 
-#: templates/index.html:53
+#: templates/index.html:63
 msgid ""
 "\n"
-"    PyCon is a conference by the Python community for the community.\n"
-"    It is for Python enthusiasts of all experience levels, from new users to core developers.\n"
-"    The original PyCon was formed in North America in 2003,\n"
-"    but there are now a number of other conferences being run in the\n"
-"    PyCon spirit around the world. -- PyCon: Community-Run Python Conference\n"
-"    "
-msgstr ""
-
-#: templates/index.html:61
-msgid ""
-"\n"
-"    PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.\n"
-"    It will be hosted in Taipei, and we would like to invite you to join this big event,\n"
-"    being a part of it by sponsoring, promoting your brand and product,\n"
-"    and even making your company succeed through it.\n"
-"    Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/\">2013</a>)\n"
-"    was formed with support of the following, but not limited to, active user groups:\n"
-"    "
+"      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.\n"
+"      It will be hosted in Taipei, and we would like to invite you to join this big event,\n"
+"      being a part of it by sponsoring, promoting your brand and product,\n"
+"      and even making your company succeed through it.\n"
+"      Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/\">2013</a>)\n"
+"      was formed with support of the following, but not limited to, active user groups:\n"
+"      "
 msgstr ""
 
 #: templates/search_results.html:5 templates/search_results.html.py:6
