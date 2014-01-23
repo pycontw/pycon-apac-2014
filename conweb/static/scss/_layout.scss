@@ -137,7 +137,7 @@
   float: left;
   width: 100%;
   > .inner {
-    padding: 20px 260px 20px 0;
+    padding: 10px 260px 10px 0;
     position: relative;
   }
 
@@ -151,6 +151,12 @@
       padding: 10px;
     }
   }
+  @include respond-to(screen) {
+    float: none;
+    > .inner {
+      padding: 10px 0;
+    }
+  }
 }
 .col-right {
   width: 240px;
@@ -161,6 +167,12 @@
 
   @include respond-to(mobile) {
     display: none;
+  }
+
+  @include respond-to(screen) {
+    float: none;
+    border-left: 0;
+    width: 100%;
   }
 }
 

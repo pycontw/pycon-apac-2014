@@ -110,7 +110,7 @@ a:hover {
   float: left;
   width: 100%; }
   .col-left > .inner {
-    padding: 20px 260px 20px 0;
+    padding: 10px 260px 10px 0;
     position: relative; }
   @media only screen and (max-width: 1000px) {
     .col-left {
@@ -119,6 +119,11 @@ a:hover {
       width: 100%; }
       .col-left > .inner {
         padding: 10px; } }
+  @media only screen and (min-width: 1001px) and (max-width: 1200px) {
+    .col-left {
+      float: none; }
+      .col-left > .inner {
+        padding: 10px 0; } }
 
 .col-right {
   width: 240px;
@@ -129,6 +134,11 @@ a:hover {
   @media only screen and (max-width: 1000px) {
     .col-right {
       display: none; } }
+  @media only screen and (min-width: 1001px) and (max-width: 1200px) {
+    .col-right {
+      float: none;
+      border-left: 0;
+      width: 100%; } }
 
 #sider h3 {
   border-bottom: 1px solid #ccc;
@@ -407,7 +417,7 @@ hr {
 
 .richpage {
   background: rgba(255, 255, 255, 0.8);
-  padding: 3em 4em;
+  padding: 2.5em 3em;
   border: 1px solid #eee;
   color: #555;
   font-size: 16px;

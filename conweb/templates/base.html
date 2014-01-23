@@ -133,8 +133,14 @@
           </div>
         </div>
         {% block sider %}
-          <div id="sider" class="col-right">
+          <div id="sider" class="col-right hide">
               <div class="sponsers">
+                  <img src="http://placehold.it/200x80" alt="">
+                  <img src="http://placehold.it/200x80" alt="">
+                  <img src="http://placehold.it/200x80" alt="">
+                  <img src="http://placehold.it/200x80" alt="">
+                  <img src="http://placehold.it/200x80" alt="">
+                  <img src="http://placehold.it/200x80" alt="">
                   <img src="http://placehold.it/200x80" alt="">
               </div>
           </div>
@@ -142,7 +148,7 @@
 
     </div>
     {% endblock %}
-        <div class="slideInPage ng-trans ng-trans-slide" ng-if="slidePageUrl">
+        <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
           <div class="close-btn" ng-click=" closePage() ">&times</div>
           <div ng-include src="slidePageUrl"></div>
         </div>
