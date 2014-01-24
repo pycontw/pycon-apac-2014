@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 00:39+0800\n"
+"POT-Creation-Date: 2014-01-25 01:01+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -28,6 +28,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: models.py:8 locale/missing.py:11
+msgid "Speaker Brief"
+msgstr "講者簡介"
+
+#: models.py:12
+msgid "Tagline: split by comma."
+msgstr "標籤列：使用小寫逗號分隔。"
+
+#: models.py:13
+msgid "e.g., pycontw, IPython, pep8"
+msgstr "例如：「pycontw, IPython, pep8」"
+
+#: models.py:17
+msgid "Location"
+msgstr "位置"
+
+#: models.py:18
+msgid "i.e. where you from?"
+msgstr "例如，您從哪裡來？"
+
+#: models.py:20
+msgid "Personal Link"
+msgstr "個人網頁連結"
+
+#: models.py:24
+msgid "Twitter Username"
+msgstr "Twitter 帳號"
+
+#: models.py:28
+msgid "Organization/Company"
+msgstr "組織/公司"
+
+#: models.py:30
+msgid "Link of Organization/Company"
+msgstr "組織/公司連結"
+
+#: models.py:34
+msgid "Title"
+msgstr "標題"
+
+#: models.py:36
+msgid "Picture"
+msgstr "照片"
 
 #: locale/missing.py:7
 msgid "Username or email address"
@@ -44,10 +88,6 @@ msgstr "電子郵件位址"
 #: locale/missing.py:10
 msgid "Password (again)"
 msgstr "再次輸入密碼"
-
-#: locale/missing.py:11
-msgid "Speaker Brief"
-msgstr "講者簡介"
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
@@ -486,7 +526,7 @@ msgstr "抱歉，發生錯誤。"
 
 #: templates/generic/includes/comment.html:25
 msgid "Link"
-msgstr "鍊結"
+msgstr "連結"
 
 #: templates/generic/includes/comment.html:26
 #: templates/generic/includes/comment.html:36
@@ -569,27 +609,3 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
-
-#~ msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
-#~ msgstr "標籤列：使用小寫逗號分隔。例如：「pycontw, IPython, pep8」"
-
-#~ msgid "Location"
-#~ msgstr "位置"
-
-#~ msgid "Personal Link"
-#~ msgstr "個人鍊結"
-
-#~ msgid "Twitter Username"
-#~ msgstr "Twitter 帳號"
-
-#~ msgid "Organization/Company"
-#~ msgstr "組織/公司"
-
-#~ msgid "Link of Organization/Company"
-#~ msgstr "組織/公司鍊結"
-
-#~ msgid "Title"
-#~ msgstr "標題"
-
-#~ msgid "Picture"
-#~ msgstr "照片"

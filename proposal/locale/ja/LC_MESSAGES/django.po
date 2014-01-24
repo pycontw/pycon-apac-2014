@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 00:39+0800\n"
+"POT-Creation-Date: 2014-01-25 01:01+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -24,6 +24,116 @@ msgstr ""
 
 #: forms.py:35
 msgid "Upload Failure."
+msgstr ""
+
+#: models.py:8
+msgid "English"
+msgstr ""
+
+#: models.py:9
+msgid "Mandarin"
+msgstr ""
+
+#: models.py:13
+msgid "Regular Talk"
+msgstr ""
+
+#: models.py:14
+msgid "Lightning Talk"
+msgstr ""
+
+#: models.py:15
+msgid "SciPy Talk"
+msgstr ""
+
+#: models.py:16
+msgid "Tutorial"
+msgstr ""
+
+#: models.py:20
+msgid "Beginner"
+msgstr ""
+
+#: models.py:21
+msgid "Advanced"
+msgstr ""
+
+#: models.py:22
+msgid "Expert"
+msgstr ""
+
+#: models.py:23
+msgid "Scientific Background"
+msgstr ""
+
+#: models.py:27
+msgid "Don't record my talk"
+msgstr ""
+
+#: models.py:28 models.py:33
+msgid "CC-BY-NC-SA"
+msgstr ""
+
+#: models.py:32
+msgid "Don't publish my slide"
+msgstr ""
+
+#: models.py:36 templates/proposal/list.html:50
+msgid "Title"
+msgstr ""
+
+#: models.py:37
+msgid "Title of the talk or tutorial"
+msgstr ""
+
+#: models.py:40
+msgid "Type of the proposal"
+msgstr ""
+
+#: models.py:43
+msgid "Language"
+msgstr ""
+
+#: models.py:45
+msgid "SciPy Talk accepts only English"
+msgstr ""
+
+#: models.py:47
+msgid "Audience level"
+msgstr ""
+
+#: models.py:52
+msgid ""
+"Permission for your talk to be recorded and released on the conference "
+"website"
+msgstr ""
+
+#: models.py:58
+msgid ""
+"Permission for your presentation slide to be downloaded from the conference "
+"website"
+msgstr ""
+
+#: models.py:62
+msgid "Description"
+msgstr ""
+
+#: models.py:63
+msgid "Abstract or outline of your presentation. "
+msgstr ""
+
+#: models.py:66
+msgid "Additional information"
+msgstr ""
+
+#: models.py:67
+msgid ""
+"Additional information that can help the program committee to make decisions "
+"(e.g., years of experie)"
+msgstr ""
+
+#: models.py:76 templates/proposal/list.html:52
+msgid "Abstract"
 msgstr ""
 
 #: views.py:23
@@ -103,16 +213,8 @@ msgstr ""
 msgid "Create a Proposal"
 msgstr ""
 
-#: templates/proposal/list.html:50
-msgid "Title"
-msgstr ""
-
 #: templates/proposal/list.html:51
 msgid "Speech Type"
-msgstr ""
-
-#: templates/proposal/list.html:52
-msgid "Abstract"
 msgstr ""
 
 #: templates/proposal/list.html:52

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 00:39+0800\n"
+"POT-Creation-Date: 2014-01-25 01:01+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -33,6 +33,116 @@ msgstr "檔案格式必須為 PDF。"
 #: forms.py:35
 msgid "Upload Failure."
 msgstr "上傳失敗。"
+
+#: models.py:8
+msgid "English"
+msgstr "英文"
+
+#: models.py:9
+msgid "Mandarin"
+msgstr "中文　"
+
+#: models.py:13
+msgid "Regular Talk"
+msgstr "一般議程"
+
+#: models.py:14
+msgid "Lightning Talk"
+msgstr "閃電秀"
+
+#: models.py:15
+msgid "SciPy Talk"
+msgstr "SciPy 講題"
+
+#: models.py:16
+msgid "Tutorial"
+msgstr "教學"
+
+#: models.py:20
+msgid "Beginner"
+msgstr "初學者"
+
+#: models.py:21
+msgid "Advanced"
+msgstr "高級"
+
+#: models.py:22
+msgid "Expert"
+msgstr "專家"
+
+#: models.py:23
+msgid "Scientific Background"
+msgstr "科學背景"
+
+#: models.py:27
+msgid "Don't record my talk"
+msgstr "我的講題請不要錄影"
+
+#: models.py:28 models.py:33
+msgid "CC-BY-NC-SA"
+msgstr "創作﻿共用-姓名標示-非商業性-相同方式分享"
+
+#: models.py:32
+msgid "Don't publish my slide"
+msgstr "不要發表我的投影片"
+
+#: models.py:36 templates/proposal/list.html:50
+msgid "Title"
+msgstr "標題"
+
+#: models.py:37
+msgid "Title of the talk or tutorial"
+msgstr "議程主題 / 教學主題"
+
+#: models.py:40
+msgid "Type of the proposal"
+msgstr "講題類型"
+
+#: models.py:43
+msgid "Language"
+msgstr "語言"
+
+#: models.py:45
+msgid "SciPy Talk accepts only English"
+msgstr "SciPy 講題只接受英文演講"
+
+#: models.py:47
+msgid "Audience level"
+msgstr "聽眾等級"
+
+#: models.py:52
+msgid ""
+"Permission for your talk to be recorded and released on the conference "
+"website"
+msgstr "是否同意演講被錄製，並公開於研討會網站"
+
+#: models.py:58
+msgid ""
+"Permission for your presentation slide to be downloaded from the conference "
+"website"
+msgstr "是否同意公開投影片於研討會網站，並提供下載"
+
+#: models.py:62
+msgid "Description"
+msgstr "描述"
+
+#: models.py:63
+msgid "Abstract or outline of your presentation. "
+msgstr "你的演講摘要 / 大綱"
+
+#: models.py:66
+msgid "Additional information"
+msgstr "額外資訊"
+
+#: models.py:67
+msgid ""
+"Additional information that can help the program committee to make decisions "
+"(e.g., years of experie)"
+msgstr ""
+
+#: models.py:76 templates/proposal/list.html:52
+msgid "Abstract"
+msgstr "摘要"
 
 #: views.py:23
 msgid "Thanks for your submission!"
@@ -151,17 +261,9 @@ msgstr "我的講題"
 msgid "Create a Proposal"
 msgstr "建立講題"
 
-#: templates/proposal/list.html:50
-msgid "Title"
-msgstr "標題"
-
 #: templates/proposal/list.html:51
 msgid "Speech Type"
 msgstr "講題類型"
-
-#: templates/proposal/list.html:52
-msgid "Abstract"
-msgstr "摘要"
 
 #: templates/proposal/list.html:52
 msgid "(PDF file)"
@@ -212,76 +314,3 @@ msgstr ""
 "\n"
 "                你確定要<strong>刪除</strong>這個講題嗎？\n"
 "              "
-
-#~ msgid "English"
-#~ msgstr "英文"
-
-#~ msgid "Mandarin"
-#~ msgstr "中文　"
-
-#~ msgid "Regular Talk"
-#~ msgstr "一般議程"
-
-#~ msgid "Lightning Talk"
-#~ msgstr "閃電秀"
-
-#~ msgid "SciPy Talk"
-#~ msgstr "SciPy 講題"
-
-#~ msgid "Tutorial"
-#~ msgstr "教學"
-
-#~ msgid "Beginner"
-#~ msgstr "初學者"
-
-#~ msgid "Advanced"
-#~ msgstr "高級"
-
-#~ msgid "Expert"
-#~ msgstr "專家"
-
-#~ msgid "Scientific Background"
-#~ msgstr "科學背景"
-
-#~ msgid "Don't record my talk"
-#~ msgstr "我的講題請不要錄影"
-
-#~ msgid "CC-BY-NC-SA"
-#~ msgstr "創作﻿共用-姓名標示-非商業性-相同方式分享"
-
-#~ msgid "Don't publish my slide"
-#~ msgstr "不要發表我的投影片"
-
-#~ msgid "Title of the talk or tutorial"
-#~ msgstr "議程主題 / 教學主題"
-
-#~ msgid "Type of the proposal"
-#~ msgstr "講題類型"
-
-#~ msgid "Language"
-#~ msgstr "語言"
-
-#~ msgid "SciPy Talk accepts only English"
-#~ msgstr "SciPy 講題只接受英文演講"
-
-#~ msgid "Audience level"
-#~ msgstr "聽眾等級"
-
-#~ msgid ""
-#~ "Permission for your talk to be recorded and released on the conference "
-#~ "website"
-#~ msgstr "是否同意演講被錄製，並公開於研討會網站"
-
-#~ msgid ""
-#~ "Permission for your presentation slide to be downloaded from the "
-#~ "conference website"
-#~ msgstr "是否同意公開投影片於研討會網站，並提供下載"
-
-#~ msgid "Description"
-#~ msgstr "描述"
-
-#~ msgid "Abstract or outline of your presentation. "
-#~ msgstr "你的演講摘要 / 大綱"
-
-#~ msgid "Additional information"
-#~ msgstr "額外資訊"
