@@ -1,71 +1,71 @@
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _z
 
 
 class ProposalModel(models.Model):
 
     LANGUAGE_CHOICES = (
-        (0, _("English")),
-        (1, _("Mandarin")),
+        (0, _z("English")),
+        (1, _z("Mandarin")),
     )
 
     SPEECH_TYPE_CHOICES = (
-        (0, _("Regular Talk")),
-        (1, _("Lightning Talk")),
-        (2, _("SciPy Talk")),
-        (3, _("Tutorial")),
+        (0, _z("Regular Talk")),
+        (1, _z("Lightning Talk")),
+        (2, _z("SciPy Talk")),
+        (3, _z("Tutorial")),
     )
 
     LEVEL_CHOICES = (
-        (0, _("Beginner")),
-        (1, _("Advanced")),
-        (2, _("Expert")),
-        (3, _("Scientific Background")),
+        (0, _z("Beginner")),
+        (1, _z("Advanced")),
+        (2, _z("Expert")),
+        (3, _z("Scientific Background")),
     )
 
     TALK_PERMISSION_CHOICES = (
-        (0, _("Don't record my talk")),
-        (1, _("CC-BY-NC-SA")),
+        (0, _z("Don't record my talk")),
+        (1, _z("CC-BY-NC-SA")),
     )
 
     SLIDE_PERMISSION_CHOICES = (
-        (0, _("Don't publish my slide")),
-        (1, _("CC-BY-NC-SA")),
+        (0, _z("Don't publish my slide")),
+        (1, _z("CC-BY-NC-SA")),
     )
 
-    title = models.CharField(verbose_name=_("Title"),
-                             help_text=_("Title of the talk or tutorial"),
+    title = models.CharField(verbose_name=_z("Title"),
+                             help_text=_z("Title of the talk or tutorial"),
                              max_length=100)
     author = models.ForeignKey("auth.User")
-    speech_type = models.IntegerField(verbose_name=_("Type of the proposal"),
+    speech_type = models.IntegerField(verbose_name=_z("Type of the proposal"),
                                       choices=SPEECH_TYPE_CHOICES)
     language = models.IntegerField(
-        verbose_name=_("Language"),
+        verbose_name=_z("Language"),
         choices=LANGUAGE_CHOICES,
-        help_text=_("SciPy Talk accepts only English")
+        help_text=_z("SciPy Talk accepts only English")
     )
-    audience_level = models.IntegerField(verbose_name=_("Audience level"),
+    audience_level = models.IntegerField(verbose_name=_z("Audience level"),
                                          choices=LEVEL_CHOICES)
     talk_perm = models.IntegerField(
         choices=TALK_PERMISSION_CHOICES,
-        verbose_name=_(
+        verbose_name=_z(
             "Permission for your talk to be recorded "
             "and released on the conference website"),
     )
     slide_perm = models.IntegerField(
         choices=SLIDE_PERMISSION_CHOICES, null=True, blank=True,
-        verbose_name=_(
+        verbose_name=_z(
             "Permission for your presentation slide to"
             " be downloaded from the conference website"),
     )
     description = models.TextField(
-        verbose_name=_("Description"),
-        help_text=_("Abstract or outline of your presentation. ")
+        verbose_name=_z("Description"),
+        help_text=_z("Abstract or outline of your presentation. ")
     )
     additional_info = models.TextField(
-        verbose_name=_("Additional information"), null=True, blank=True,
-        help_text=_("Additional information that can help the program"
-                    " committee to make decisions (e.g., years of experie)")
+        verbose_name=_z("Additional information"), null=True, blank=True,
+        help_text=_z("Additional information that can help the program"
+                     " committee to make decisions (e.g., years of experie)")
     )
     create_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
@@ -73,7 +73,7 @@ class ProposalModel(models.Model):
 
 class AbstractFile(models.Model):
     proposal = models.OneToOneField(ProposalModel)
-    abstract = models.FileField(verbose_name=_("Abstract"),
+    abstract = models.FileField(verbose_name=_z("Abstract"),
                                 upload_to="abstract", null=True, blank=True)
 
     @property
@@ -84,5 +84,5 @@ class AbstractFile(models.Model):
         # Shortcuts of file url.
         return self.abstract.url if self.has_file else ""
 
-    def __unicode__(self):
+    def __unicode__z(self):
         return self.abstract.name.split('/')[-1] if self.has_file else ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-23 20:08+0800\n"
+"POT-Creation-Date: 2014-01-25 00:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,56 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models.py:8
+#: locale/missing.py:7
+msgid "Username or email address"
+msgstr ""
+
+#: locale/missing.py:8
+msgid "Password"
+msgstr ""
+
+#: locale/missing.py:9
+msgid "Email address"
+msgstr ""
+
+#: locale/missing.py:10
+msgid "Password (again)"
+msgstr ""
+
+#: locale/missing.py:11
 msgid "Speaker Brief"
 msgstr ""
 
-#: models.py:12
-msgid "Tagline: split by comma. E.g. pycontw, IPython, pep8"
-msgstr ""
-
-#: models.py:16
-msgid "Location"
-msgstr ""
-
-#: models.py:18
-msgid "Personal Link"
-msgstr ""
-
-#: models.py:22
-msgid "Twitter Username"
-msgstr ""
-
-#: models.py:26
-msgid "Organization/Company"
-msgstr ""
-
-#: models.py:28
-msgid "Link of Organization/Company"
-msgstr ""
-
-#: models.py:32
-msgid "Title"
-msgstr ""
-
-#: models.py:34
-msgid "Picture"
-msgstr ""
-
-#: templates/base.html:69 templates/blog/blog_post_list.html:4
+#: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:76
+#: templates/_nav.html:28
 msgid "My Proposals"
 msgstr ""
 
-#: templates/base.html:80
+#: templates/_nav.html:32
 msgid "LOG OUT"
 msgstr ""
 
-#: templates/base.html:83
+#: templates/_nav.html:35
 msgid "SPEAKER LOG IN"
 msgstr ""
 
