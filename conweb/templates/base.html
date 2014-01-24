@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}" ng-app="App">
+<html lang="{{ LANGUAGE_CODE }}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -8,6 +8,8 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta property="og:title" content="{{ settings.SITE_TITLE }}" />
     <meta property="og:image" content="{% static "images/og.png" %}"/>
+    <meta itemprop="name" content="{{ settings.SITE_TITLE }}">
+    <meta itemprop="image" content="{% static "images/og.png" %}">
 
     <title>
       {% block meta_title_block %}
@@ -51,7 +53,6 @@
 </head>
 <body id="{% block body_id %}body{% endblock %}" ng-controller="base">
 
-{% include "_nav.html" %}
 
 <div id="main">
   {% nevercache %}
@@ -64,7 +65,7 @@
   {% endnevercache %}
 
   <div class="mobile-header">
-    <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
+    <h1><a href="{% url "home" %}" class="mobile-title">PyCon 2014 APAC</a></h1>
     <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}" ng-click="showNav=!showNav">N</a>
   </div>
 
@@ -72,7 +73,6 @@
     <div id="title" class="page-title">
         <div class="content">
             <h1>{% block title %}{% endblock %}</h1>
-
         </div>
     </div>
   {% endblock %}
@@ -108,6 +108,9 @@
     <div ng-include src="slidePageUrl"></div>
   </div>
 </div>
+
+{% include "_nav.html" %}
+
 
 {% include "includes/footer_scripts.html" %}
 

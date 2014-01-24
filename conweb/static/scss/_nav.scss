@@ -3,12 +3,24 @@
 }
 .mobile-header {
   background-color: $red;
-  padding: 0.5em;
+  padding: 5px;
   height: 46px;
   text-align: center;
+  h1 {
+    margin: 0;
+  }
   img {
     width: 82px;
     height: 28px;
+  }
+  .mobile-title {
+    @include hide-text();
+    display: inline-block;
+    width: 82px;
+    height: 28px;
+    background: url(images/logo.png) no-repeat;
+    -webkit-background-size: 82px 28px;
+            background-size: 82px 28px;
   }
   .menu-button {
     position: absolute;

@@ -93,12 +93,24 @@ a:hover {
 
 .mobile-header {
   background-color: #d3202e;
-  padding: 0.5em;
+  padding: 5px;
   height: 46px;
   text-align: center; }
+  .mobile-header h1 {
+    margin: 0; }
   .mobile-header img {
     width: 82px;
     height: 28px; }
+  .mobile-header .mobile-title {
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    width: 82px;
+    height: 28px;
+    background: url(images/logo.png) no-repeat;
+    -webkit-background-size: 82px 28px;
+    background-size: 82px 28px; }
   .mobile-header .menu-button {
     position: absolute;
     left: 0;
