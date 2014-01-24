@@ -139,6 +139,8 @@ msgid ""
 "Additional information that can help the program committee to make decisions "
 "(e.g., years of experie)"
 msgstr ""
+"其它可以幫助審稿委員會了解議題的相關資訊"
+"（例如，幾年的經驗）"
 
 #: models.py:76 templates/proposal/list.html:52
 msgid "Abstract"
