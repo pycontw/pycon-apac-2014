@@ -76,24 +76,27 @@ def reset_password(username='admin'):
 
 
 @_in_virtualenv
-def translate(languages=LANGUAGES, compile_msg=False):
+def translate(languages=LANGUAGES):
     "collect messages for translators"
     local("python manage.py makemessages -a")
     for app_name in MY_APPS:
         with lcd("../" + app_name):
             for lang in languages:
                 local("django-admin.py makemessages -l " + lang)
-    if compile_msg:
-        execute(done_translate)
+    print("After translation done. You can run `fab compilemessages`")
 
 
 @_in_virtualenv
-def done_translate(languages=LANGUAGES):
+def compilemessages(languages=LANGUAGES):
     "compile translated messages to make it show"
-    local("python manage.py compilemessages")
+    for lang in languages:
+        if lang != 'en':
+            local("python manage.py compilemessages -l " + lang)
     for app_name in MY_APPS:
         with lcd("../" + app_name):
-            local("django-admin.py compilemessages")
+            for lang in languages:
+                if lang != 'en':
+                    local("django-admin.py compilemessages -l " + lang)
 
 
 @roles('web')
@@ -101,7 +104,7 @@ def _remote_copimlemessages(languages):
     "compile messages"
     repo_path = local_settings['repo_path']
     with cd(repo_path):
-        run('fab done_translate')
+        run('fab compilemessages')
 
 
 @_in_virtualenv
@@ -119,7 +122,7 @@ def _remote_deploy():
     repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
-        run('fab done_translate')
+        run('fab compilemessages')
         run('supervisorctl restart pycon')
 
 
