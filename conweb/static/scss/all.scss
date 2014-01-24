@@ -1,9 +1,14 @@
 @charset "utf-8";
 
+$red: #D3202E;
+$dark-red: #B81C28;
+
 @import 'mixins';
 @import 'config';
 @import 'base';
 @import 'layout';
+@import 'nav';
+@import 'slide';
 @import 'blocks';
 @import 'typography';
 @import 'vendor';

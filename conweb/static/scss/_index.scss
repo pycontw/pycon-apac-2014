@@ -1,24 +1,4 @@
-.home-condate {
-  margin: 1em;
-  color: #6E6F72;
-  font-size: 24px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  b {
-    color: #D0272B;
-  }
-  strong {
-    color: #04556A;
-  }
-}
 
-
-
-.side-condate {
-  font-size: 13px;
-  text-align: center;
-  margin: -40px 0 20px;
-}
 
 .index-title {
   height: 75%;
@@ -26,7 +6,9 @@
 
   @include respond-to(mobile) {
     height: auto;
+    padding-top:2em;
   }
+
 }
 
 .welcome-header {
@@ -42,10 +24,46 @@
   @include respond-to(mobile) {
     position: relative;
     width: 100%;
+    height: auto;
     padding: 10px;
   }
-
 }
+
+.home-condate {
+  margin: 1em;
+  color: #6E6F72;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  b {
+    color: #D0272B;
+  }
+  strong {
+    color: #04556A;
+  }
+
+  @include respond-to(iphone) {
+    font-size: 20px;
+  }
+}
+
+.hero-text {
+  font-size: 36px;
+  line-height: 2;
+  font-weight: bold;
+  margin: 0.8em 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+
+  @include respond-to(mobile) {
+    font-size: 30px;
+
+  }
+  @include respond-to(iphone) {
+    font-size: 20px;
+  }
+}
+
 
 .home-sponsers {
   font-family: 'Lato', sans-serif;
