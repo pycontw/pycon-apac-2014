@@ -9,8 +9,8 @@ body {
 }
 
 a {
-  color: #D3202E;
+  color: $red;
 }
 a:hover {
-  color: darken(#D3202E, 10%);
+  color: darken($red, 10%);
 }

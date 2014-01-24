@@ -13,13 +13,6 @@
     $rootScope.closePage = function() {
       return $rootScope.slidePageUrl = '';
     };
-    return $scope.btnNavText = function() {
-      if ($scope.showNav) {
-        return '✕';
-      } else {
-        return 'N';
-      }
-    };
   });
 
   App.directive('turbolink', function($http, $rootScope) {

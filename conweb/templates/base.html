@@ -50,112 +50,64 @@
 
 </head>
 <body id="{% block body_id %}body{% endblock %}" ng-controller="base">
-<div id="nav" ng-class="{show: showNav}">
-    <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}"
-      ng-click="showNav=!showNav" ng-bind="btnNavText()"
-    >N</a>
-    <div class="inner">
-        <div id="logo">
-            <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
-            <div id="logo-alt">PyCon APAC 2014</div>
-        </div>
-        <p class="side-condate">
-          MAY 17-18 2014 in Taipei
-        </p>
-        {% block left_panel %}
-        {% page_menu "pages/menus/tree.html" %}
-        <ul class="hide nav nav-list navlist-menu-level-1">
-          <li id="tree-menu-blog">
-            <a href="{% url "blog" %}">{% trans "Blog" %}</a>
-          </li>
-        </ul>
-        {% endblock %}
-        {% if request.user.is_authenticated %}
-        <ul class="nav nav-list navlist-menu-level-1">
-          <li id="proposal">
-            <a href="{% url "proposal:list" %}">{% trans "My Proposals" %}</a>
-          </li>
-        </ul>
-        <div class="text-center">
-          <a class="btn btn-default btn-sm" href="{% url "logout" %}">{% trans "LOG OUT" %}</a>
-        {% else %}
-        <div class="text-center">
-          <a class="btn btn-default btn-sm" href="{% url "login" %}">{% trans "SPEAKER LOG IN" %}</a>
-        {% endif %}
-        </div>
-        <div class="fixed-bottom">
-            <div class="social-icons">
-                    <a class="social-icon icon-facebook" title="PyCon Taiwan on Facebook" href="https://www.facebook.com/pycontw" target="_blank">facebook</a>
-                    <a class="social-icon icon-twitter" title="PyCon Taiwan on Twitter" href="https://twitter.com/pycontw" target="_blank">twitter</a>
-                    <a class="social-icon icon-googleplus" title="PyCon Taiwan on Google Plus" href="https://plus.google.com/101932655972746759016/" target="_blank">googleplus</a>
-            </div>
-            <div class="lang-select">
-                {% for lang_code, lang_name in LANGUAGES %}
-                    <a href="{% url 'set_language' %}?language={{ lang_code }}&amp;next={{ redirect_to }}">{{ lang_name }}</a>
-                {% endfor %}
 
-            </div>
-        </div>
-    </div>
-</div>
-
-
+{% include "_nav.html" %}
 
 <div id="main">
-    {% nevercache %}
-    {% for message in messages %}
+  {% nevercache %}
+  {% for message in messages %}
     <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {{ message }}
     </div>
-    {% endfor %}
-    {% endnevercache %}
+  {% endfor %}
+  {% endnevercache %}
 
-    {% block #title %}
+  <div class="mobile-header">
+    <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
+    <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}" ng-click="showNav=!showNav">N</a>
+  </div>
+
+  {% block #title %}
     <div id="title" class="page-title">
         <div class="content">
             <h1>{% block title %}{% endblock %}</h1>
 
         </div>
     </div>
-    {% endblock %}
+  {% endblock %}
 
-    {% block content %}
-
+  {% block content %}
     <div class="content">
+      <div class="col-left">
+        <div class="inner">
+          {% block main %}{% endblock %}
 
+          <div class="slide"></div>
 
-        <div class="col-left">
-          <div class="inner">
-            {% block main %}{% endblock %}
-            <div class="slide"></div>
-
-          </div>
         </div>
-        {% block sider %}
-          <div id="sider" class="col-right hide">
-              <div class="sponsers">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-                  <img src="http://placehold.it/200x80" alt="">
-              </div>
-          </div>
-        {% endblock %}
-
+      </div>
+      {% block sider %}
+        <div id="sider" class="col-right hide">
+            <div class="sponsers">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+                <img src="http://placehold.it/200x80" alt="">
+            </div>
+        </div>
+      {% endblock %}
     </div>
-    {% endblock %}
-        <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
-          <div class="close-btn" ng-click=" closePage() ">&times</div>
-          <div ng-include src="slidePageUrl"></div>
-        </div>
+  {% endblock %}
 
+  <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
+    <div class="close-btn" ng-click=" closePage() ">&times</div>
+    <div ng-include src="slidePageUrl"></div>
+  </div>
 </div>
-
-
 
 {% include "includes/footer_scripts.html" %}
 
