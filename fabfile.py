@@ -28,6 +28,7 @@ def _config_fabric(local_settings={}):
 
 
 local_settings = {}
+here = os.path.dirname(os.path.abspath(__file__))
 
 
 def _load_fabric_settings(settings_module='local_fabric'):
@@ -52,7 +53,7 @@ LANGUAGES = ('en', 'zh', 'ja')
 def _in_virtualenv(wrapped):
     @functools.wraps(wrapped)
     def _wrapper(*args, **kwargs):
-        with lcd("conweb"):
+        with lcd(os.path.join(here, "conweb")):
             with prefix('. %s/bin/activate' % VENV_PREFIX):
                 return wrapped(*args, **kwargs)
     return _wrapper
@@ -87,16 +88,18 @@ def translate(languages=LANGUAGES):
 
 
 @_in_virtualenv
-def compilemessages(languages=LANGUAGES):
+def compilemessages(languages=LANGUAGES, capture=False):
     "compile translated messages to make it show"
     for lang in languages:
         if lang != 'en':
-            local("python manage.py compilemessages -l " + lang)
+            local("python manage.py compilemessages -l " + lang,
+                  capture=capture)
     for app_name in MY_APPS:
         with lcd("../" + app_name):
             for lang in languages:
                 if lang != 'en':
-                    local("django-admin.py compilemessages -l " + lang)
+                    local("django-admin.py compilemessages -l " + lang,
+                          capture=capture)
 
 
 @roles('web')
@@ -137,6 +140,7 @@ def deploy(target=""):
 @_in_virtualenv
 def serve(host="0.0.0.0", port="8000"):
     "i.e. start HTTP server default host 0.0.0.0 and port 8000"
+    execute(compilemessages, capture=True)
     if _which('sass'):
         subprocess.Popen("sass --watch scss/all.scss:all.css",
                          shell=True,

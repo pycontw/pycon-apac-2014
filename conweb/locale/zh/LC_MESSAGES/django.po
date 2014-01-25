@@ -43,11 +43,11 @@ msgstr "例如：「pycontw, IPython, pep8」"
 
 #: models.py:17
 msgid "Location"
-msgstr "位置"
+msgstr "來自"
 
 #: models.py:18
 msgid "i.e. where you from?"
-msgstr "例如，您從哪裡來？"
+msgstr "您從哪裡來？"
 
 #: models.py:20
 msgid "Personal Link"
