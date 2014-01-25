@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 09:55+0800\n"
+"POT-Creation-Date: 2014-01-25 11:20+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: models.py:8 locale/missing.py:11
+#: models.py:8
 msgid "Speaker Brief"
 msgstr "講者簡介"
 
@@ -78,16 +78,24 @@ msgid "Username or email address"
 msgstr "使用者名稱或電子郵件位址"
 
 #: locale/missing.py:8
-msgid "Password"
-msgstr "密碼"
+msgid "username"
+msgstr "帳號"
 
 #: locale/missing.py:9
-msgid "Email address"
+msgid "email address"
 msgstr "電子郵件位址"
 
 #: locale/missing.py:10
+msgid "Password"
+msgstr "密碼"
+
+#: locale/missing.py:11
 msgid "Password (again)"
 msgstr "再次輸入密碼"
+
+#: locale/missing.py:12
+msgid "Only letters, numbers, dashes or underscores please"
+msgstr "只允許英文字母、數字、破折號 '-' 或底線 '_'"
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
@@ -649,3 +657,18 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "email"
+#~ msgstr "電子郵件"
+
+#~ msgid "Email address"
+#~ msgstr "電子郵件位址"
+
+#~ msgid "Username"
+#~ msgstr "帳號"
+
+#~ msgid "Browse..."
+#~ msgstr "瀏覽…"
+
+#~ msgid "No file selected."
+#~ msgstr "尚無選擇檔案"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 09:55+0800\n"
+"POT-Creation-Date: 2014-01-25 11:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models.py:8 locale/missing.py:11
+#: models.py:8
 msgid "Speaker Brief"
 msgstr ""
 
@@ -66,15 +66,23 @@ msgid "Username or email address"
 msgstr ""
 
 #: locale/missing.py:8
-msgid "Password"
+msgid "username"
 msgstr ""
 
 #: locale/missing.py:9
-msgid "Email address"
+msgid "email address"
 msgstr ""
 
 #: locale/missing.py:10
+msgid "Password"
+msgstr ""
+
+#: locale/missing.py:11
 msgid "Password (again)"
+msgstr ""
+
+#: locale/missing.py:12
+msgid "Only letters, numbers, dashes or underscores please"
 msgstr ""
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
