@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ LANGUAGE_CODE }}" ng-app="App" itemscope itemtype="http://schema.org/Event">
+<html lang="{% if LANGUAGE_CODE == 'zh' %}zh-Hant{% else %}{{LANGUAGE_CODE}}{% endif %}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -116,7 +116,6 @@
       href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>.</p>
     {% endblocktrans %}
   </div>
-
   <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
     <div class="close-btn" ng-click=" closePage() ">&times</div>
     <div ng-include src="slidePageUrl"></div>
@@ -127,5 +126,8 @@
 
 {% include "includes/footer_scripts.html" %}
 
+<script>$('html').attr('lang', 'zh-Hant').addClass('han-la han-biaodian-pro-cns')</script>
+<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/han.css'); i.fa, i[class|=fa], i[class^=icon-], i[class*=" icon-"] { font-family: FontAwesome !important }</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/js/han.js"></script>
 </body>
 </html>
