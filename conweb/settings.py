@@ -263,7 +263,8 @@ INSTALLED_APPS = (
     #"mezzanine.mobile",
     'bootstrap3',
     "conweb",
-    "proposal"
+    "proposal",
+    "raven.contrib.django.raven_compat",
 )
 
 AUTH_PROFILE_MODULE = "conweb.UserProfile"
