@@ -102,13 +102,16 @@
   margin: 0 auto;
 }
 
-.foobar {
-  font-size: 0.5em;
+.footnote {
+  font-size: 0.6em;
   color: #999;
   text-align: center;
   padding: 0 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2em 0;
+  p {
+    margin: 0;
+  }
   a {
     color: lighten($red, 15%);
   }

@@ -14,3 +14,7 @@ a {
 a:hover {
   color: darken($red, 10%);
 }
+
+.clear {
+  clear: both;
+}

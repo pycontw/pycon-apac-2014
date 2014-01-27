@@ -12,6 +12,9 @@ a {
 a:hover {
   color: #a71924; }
 
+.clear {
+  clear: both; }
+
 .wobble-vertical {
   display: inline-block;
   -webkit-transform: translateZ(0);
@@ -164,14 +167,16 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto; }
 
-.foobar {
-  font-size: 0.5em;
+.footnote {
+  font-size: 0.6em;
   color: #999;
   text-align: center;
   padding: 0 40px;
   max-width: 1200px;
-  margin: 0 auto; }
-  .foobar a {
+  margin: 2em 0; }
+  .footnote p {
+    margin: 0; }
+  .footnote a {
     color: #e65a65; }
 
 .mobile-header {
