@@ -467,7 +467,8 @@ a:hover {
       font-size: 15px; } }
   .doc-content p {
     line-height: 1.5;
-    color: #555; }
+    color: #555;
+    margin-bottom: 0.9em; }
 
 .square-list {
   padding-left: 1.5em;
@@ -505,6 +506,13 @@ a:hover {
 
 hr {
   border-color: #e6e3d4; }
+
+.single-line {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
 
 .alert {
   -webkit-border-radius: 0;

@@ -37,6 +37,7 @@
   p {
     line-height: 1.5;
     color: #555;
+    margin-bottom: 0.9em;
   }
 
 }
@@ -91,3 +92,10 @@
 hr {
   border-color: darken(#F5F4EE, 8%);
 }
+
+.single-line {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
