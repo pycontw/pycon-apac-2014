@@ -208,7 +208,7 @@ a:hover {
       display: none; } }
 
 .nav-header {
-  background-color: #b81c28;
+  background-color: #000;
   position: relative;
   height: 46px;
   line-height: 45px; }
@@ -247,6 +247,7 @@ a:hover {
   color: #FCFBF5;
   z-index: 10;
   font-size: 16px;
+  overflow: auto;
   -webkit-transition: 200ms;
   transition: 200ms; }
   #nav a {
@@ -271,12 +272,13 @@ a:hover {
   #nav.show {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
-  #nav .fixed-bottom {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden; }
+  #nav .inner {
+    min-height: 100%;
+    margin-bottom: -120px; }
+  #nav .sticky-holder {
+    height: 120px; }
+  #nav .sticky-bottom {
+    height: 120px; }
   @media only screen and (max-width: 1000px) {
     #nav {
       -webkit-transform: translate(-250px, 0);
