@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{% static "vendor/bootstrap-3.0.3/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "vendor/mezzanine/mezzanine.css" %}">
     <link rel="stylesheet" href="{% static "all.css" %}">
+    <link rel="stylesheet" media="all" href="{% static "css/han.css" %}">
     {% block extra_css %}{% endblock %}
     {% endcompress %}
 
@@ -127,7 +128,6 @@
 {% include "includes/footer_scripts.html" %}
 
 <script>$('html').attr('lang', 'zh-Hant').addClass('han-la han-biaodian-pro-cns')</script>
-<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/han.css'); i.fa, i[class|=fa], i[class^=icon-], i[class*=" icon-"] { font-family: FontAwesome !important }</style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/js/han.js"></script>
 </body>
 </html>
