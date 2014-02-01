@@ -5,6 +5,7 @@ PyCon APAC 2014
 This repository serves the website of PyCon APAC 2014.
 This project is open source and the license can be found in LICENSE.
 
+Full documentation can be found on `Read the Docs <http://pycon-apac-2014.readthedocs.org/>`_.
 
 Getting Started
 ---------------
