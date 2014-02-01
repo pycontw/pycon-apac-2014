@@ -12,15 +12,18 @@ Getting Started
 Requirements
 ~~~~~~~~~~~~
 
- * Git 1.8+
- * Python 2.7+
-
-Setting up environment
-~~~~~~~~~~~~~~~~~~~~~~
+* Git 1.8+
+* Python 2.7+
 
 Clone this repository::
 
     $ git clone git@bitbucket.org:pycontw/pycon-apac-2014.git
+
+Setting up environment
+~~~~~~~~~~~~~~~~~~~~~~
+
+Change to cloned directory path::
+
     $ cd pycon-apac-2014
 
 Setup its virtualenv and requirements::
@@ -32,7 +35,7 @@ folder.
 
 Then install the required packages in this virtualenv (.venv)::
 
-    $ .venv/bin/pip install -r requirements/project.txt
+    $ .venv/bin/pip install -r requirements.txt
 
 
 Setting up the database
@@ -129,47 +132,4 @@ You will need to replace above virtualenv prefix ``.venv/bin/*`` with
 How to contribute
 -----------------
 
-Everyone who desires to improve the pycon-apac-2014 website can involve it
-by the following working flow.
-
-Fork on Bitbucket
-~~~~~~~~~~~~~~~~~
-
-First, `fork PyCon APAC 2014 repository on Bitbucket <https://bitbucket.org/pycontw/pycon-apac-2014/fork>`_.
-
-Then, clone the repository which you has forked::
-
-    $ git clone git@bitbucket.org:<your_bitbucket_id>/pycon-apac-2014.git
-
-Follow the steps of getting started on the top of the tutorial to setup
-your environment.
-
-Create a new branch
-~~~~~~~~~~~~~~~~~~~
-
-It is a good practice to generate a new branch for the new feature or
-bugs that you want to fix. The branch name is not restricted but a
-related name is prefered. You can create a branch by::
-
-    $ git checkout master -b <branch_name>
-
-Submit a pull-request
-~~~~~~~~~~~~~~~~~~~~~
-
-After you had finished your patch and committed the new branch onto your
-repository, you could submit a pull-request onto "pycontw/pycon-apac-2014".
-
-You can find the button on the top-left of you repository page on Bitbucket.
-
-Gotcha
-~~~~~~
-
-Q: The master had updated and conflicted with my pull-request?
-==============================================================
-
-You need to rebase your repositary on to the origin/master
-
-    $ git pull --rebase origin/master
-
-After you updated and pushed your commit, you will need to click "Update"
-on the pull-request which you had posted on Bitbucket.
+See CONTRIBUTING.rst.

@@ -1,0 +1,1 @@
+.. include:: ../README.rst:doc:`CONTRIBUTING <contributing>`
