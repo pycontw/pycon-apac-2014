@@ -89,15 +89,16 @@
         </div>
       </div>
       {% block sider %}
-        <div id="sider" class="col-right hide">
+        <div id="sider" class="col-right">
             <div class="sponsers">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
-                <img src="http://placehold.it/200x80" alt="">
+              <h4 class="sponser-title">Golden</h4>
+              <img src="{% static "images/sponsers/hde.png" %}" width=200 height=80 alt="">
+
+              <h4 class="sponser-title silver">Silver</h4>
+              <img src="{% static "images/sponsers/github.png" %}" width=200 height=80 alt="">
+
+              <h4 class="sponser-title bronze">Bronze</h4>
+              <img src="{% static "images/sponsers/mongodb.png" %}" width=200 height=80 alt="">
             </div>
         </div>
       {% endblock %}

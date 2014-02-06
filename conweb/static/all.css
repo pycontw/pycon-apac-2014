@@ -105,7 +105,7 @@ a:hover {
     max-width: 100%; }
 
 .col-left {
-  margin-right: -240px;
+  margin-right: -241px;
   float: left;
   width: 100%; }
   .col-left > .inner {
@@ -125,7 +125,7 @@ a:hover {
         padding: 10px 0; } }
 
 .col-right {
-  width: 240px;
+  width: 241px;
   float: right;
   padding: 0 20px;
   margin: 20px 0;
@@ -139,10 +139,13 @@ a:hover {
       border-left: 0;
       width: 100%; } }
 
-#sider h3 {
-  border-bottom: 1px solid #ccc;
-  padding: 0 0 4px;
-  color: #999; }
+#sider {
+  position: relative;
+  z-index: 3; }
+  #sider h3 {
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 4px;
+    color: #999; }
 
 #title {
   margin: 0;
@@ -437,6 +440,18 @@ a:hover {
   margin: 1px 0 20px; }
 .sponsers img:last-child {
   margin: 0 0 1px; }
+
+.sponser-title {
+  color: #9d8e32;
+  font-size: 18px; }
+
+.silver {
+  color: #999;
+  font-size: 16px; }
+
+.bronze {
+  color: #9b9d32;
+  font-size: 15px; }
 
 .divider:before {
   content: '. . . . . .';

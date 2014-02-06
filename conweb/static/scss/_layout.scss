@@ -21,7 +21,7 @@
   }
 }
 .col-left {
-  margin-right: -240px;
+  margin-right: -241px;
   float: left;
   width: 100%;
   > .inner {
@@ -47,7 +47,7 @@
   }
 }
 .col-right {
-  width: 240px;
+  width: 241px;
   float: right;
   padding: 0 20px;
   margin: 20px 0;
@@ -65,6 +65,9 @@
 }
 
 #sider {
+  position: relative;
+  z-index: 3;
+
   h3{
     border-bottom: 1px solid #ccc;
     padding: 0 0 4px;
