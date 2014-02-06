@@ -173,7 +173,7 @@ a:hover {
   text-align: center;
   padding: 0 40px;
   max-width: 1200px;
-  margin: 2em 0; }
+  margin: 2em auto; }
   .footnote p {
     margin: 0; }
   .footnote a {
