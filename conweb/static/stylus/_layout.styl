@@ -7,7 +7,7 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     left: 0;
 
     .inner {
@@ -29,7 +29,7 @@
     position: relative;
   }
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
 
     margin-right: 0;
     float: none;
@@ -39,7 +39,7 @@
       padding: 10px;
     }
   }
-  @include respond-to(screen) {
+  @media $screen-query {
     float: none;
     > .inner {
       padding: 10px 0;
@@ -53,11 +53,11 @@
   margin: 20px 0;
   border-left: 1px solid #eee;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     display: none;
   }
 
-  @include respond-to(screen) {
+  @media $screen-query {
     float: none;
     border-left: 0;
     width: 100%;
@@ -80,7 +80,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 
-    @include respond-to(mobile) {
+    @media $mobile-query {
       font-size: 24px;
     }
   }
@@ -89,7 +89,7 @@
   padding: 33px 0 0;
   height: 135px;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     padding: 25px 0 10px;
     height: auto;
   }

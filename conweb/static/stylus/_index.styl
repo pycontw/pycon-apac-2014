@@ -4,7 +4,7 @@
   height: 75%;
   position: relative;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     height: auto;
     padding-top:2em;
   }
@@ -21,7 +21,7 @@
   width: 500px;
   height: 350px;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     position: relative;
     width: 100%;
     height: auto;
@@ -42,7 +42,7 @@
     color: #04556A;
   }
 
-  @include respond-to(iphone) {
+  @media $mobile-iphone {
     font-size: 20px;
   }
 }
@@ -55,11 +55,11 @@
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     font-size: 30px;
 
   }
-  @include respond-to(iphone) {
+  @media $mobile-iphone {
     font-size: 20px;
   }
 }

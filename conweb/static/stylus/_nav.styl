@@ -14,7 +14,7 @@
     height: 28px;
   }
   .mobile-title {
-    @include hide-text();
+    hide-text();
     display: inline-block;
     width: 82px;
     height: 28px;
@@ -28,7 +28,7 @@
     top:0;
   }
 
-  @include respond-to(desktop) {
+  @media $desktop-query {
     display: none;
   }
 }
@@ -51,7 +51,7 @@
     top:0;
   }
 
-  @include respond-to(desktop) {
+  @media $desktop-query {
     display: none;
   }
 }
@@ -59,7 +59,7 @@
 #logo {
   padding: 30px 0 50px;
   text-align: center;
-  @include respond-to(mobile) {
+  @media $mobile-query {
     display: none;
   }
 }
@@ -133,7 +133,7 @@
     height: 120px;
   }
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     -webkit-transform: translate(-250px, 0);
             transform: translate(-250px, 0);
 
@@ -150,7 +150,7 @@
 
 
 .menu-button {
-  $size: 45px;
+  $size = 45px;
 
   display: block;
   font-size: 24px;
@@ -175,7 +175,7 @@
   text-align: center;
 }
 .social-icon {
-  @include hide_text;
+  hide-text();
 
   display: inline-block;
   width: 48px;
