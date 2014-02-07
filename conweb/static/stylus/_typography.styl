@@ -1,11 +1,10 @@
-
 .divider {
   &:before {
     content: '. . . . . .';
     width: 100%;
     display: block;
     text-align: center;
-    color: $main-green;
+    color = $main-green;
   }
 }
 .text-center {
@@ -20,17 +19,16 @@
   font-weight: 500;
   color: $main-red;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     font-size: 24px;
   }
-
 }
 
 .doc-content {
   font-size: 18px;
   margin: 0 0 1em;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     font-size: 15px;
   }
 
@@ -98,4 +96,5 @@ hr {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+}

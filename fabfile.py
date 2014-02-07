@@ -141,8 +141,8 @@ def deploy(target=""):
 def serve(host="0.0.0.0", port="8000"):
     "i.e. start HTTP server default host 0.0.0.0 and port 8000"
     execute(compilemessages, capture=True)
-    if _which('sass'):
-        subprocess.Popen("sass --watch scss/all.scss:all.css",
+    if _which('stylus'):
+        subprocess.Popen("stylus -u autoprefixer-stylus -w stylus/all.styl -o ./ ",
                          shell=True,
                          cwd='conweb/static/')
     if _which('coffee'):
