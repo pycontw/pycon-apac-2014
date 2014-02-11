@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-28 12:21+0800\n"
+"POT-Creation-Date: 2014-02-11 10:29+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -94,8 +94,17 @@ msgid "Password (again)"
 msgstr "再次輸入密碼"
 
 #: locale/missing.py:12
+msgid "Password Reset"
+msgstr "重設密碼"
+
+#: locale/missing.py:13
 msgid "Only letters, numbers, dashes or underscores please"
 msgstr "只允許英文字母、數字、破折號 '-' 或底線 '_'"
+
+#: locale/missing.py:14
+msgid ""
+"A verification email has been sent with a link for resetting your password."
+msgstr "含密碼重設連結的 Email 已寄至您的信箱。"
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
@@ -338,21 +347,27 @@ msgstr ""
 "個。"
 
 #: templates/accounts/account_login.html:14
+#, python-format
 msgid ""
-"<p>You can <a href=\"mailto:organizers@pycon.tw\">email us</a> if you've "
-"forgotten your password. Note that You need to sign up for PyCon APAC 2014 "
-"even if you have signed an account in 2013 or before.</p></p>"
+"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">reset your password</a> if you've forgotten it.</p>\n"
+"    <p>Note that you <em>do</em> need to sign up for PyCon APAC 2014 even if "
+"you have\n"
+"      signed an account in 2013 or before.</p>\n"
+"    "
 msgstr ""
-"<p>如果您忘記了密碼，請<a href=\"mailto:organizers@pycon.tw\">聯絡我們</a>，"
-"如果您於 2013 或之前註冊過本網站，您仍<em>需要</em>註冊新的 2014 帳戶。"
+"<p>假如忘記密碼，請 <a href=\"%(password_reset_url)s?next="
+"%(profile_update_url)s\">重設您的密碼</a>。</p>\n"
+"<p>如果您於 2013 或之前註冊過本網站，您仍<em>需要</em>註冊新的 2014 帳戶。</"
+"p>"
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
 "Enter your username or email address and you'll receive an email with a link "
 "you need to click, in order to log in and change your password."
 msgstr ""
-"輸入你的帳號, 郵件信箱然後你會收到通知信, 內含確認的聯結. 點擊聯結後你可以登"
-"入並且更新密碼"
+"輸入你的帳號以及郵件信箱，然後你會收到通知信，內含確認的連結。點擊連結後你可"
+"以登入並且更新密碼。"
 
 #: templates/accounts/account_profile.html:17
 #: templates/accounts/includes/user_panel.html:10
@@ -394,6 +409,10 @@ msgstr "或"
 #: templates/accounts/includes/user_panel_nav.html:13
 msgid "Sign up"
 msgstr "註冊"
+
+#: templates/admin/base_site.html:35
+msgid "View site"
+msgstr ""
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
@@ -576,7 +595,7 @@ msgstr ""
 #: templates/email/password_reset_verify.html:4
 #: templates/email/password_reset_verify.txt:4
 msgid "Please use the link below to log in and update your password."
-msgstr "使用下面的聯結登入以及更新你的密碼"
+msgstr "使用下面的連結登入以及更新你的密碼"
 
 #: templates/email/password_reset_verify.html:6
 #: templates/email/password_reset_verify.txt:6

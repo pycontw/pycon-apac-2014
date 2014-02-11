@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-28 12:21+0800\n"
+"POT-Creation-Date: 2014-02-11 10:29+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -83,7 +83,16 @@ msgid "Password (again)"
 msgstr ""
 
 #: locale/missing.py:12
+msgid "Password Reset"
+msgstr ""
+
+#: locale/missing.py:13
 msgid "Only letters, numbers, dashes or underscores please"
+msgstr ""
+
+#: locale/missing.py:14
+msgid ""
+"A verification email has been sent with a link for resetting your password."
 msgstr ""
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
@@ -261,10 +270,14 @@ msgid ""
 msgstr ""
 
 #: templates/accounts/account_login.html:14
+#, python-format
 msgid ""
-"<p>You can <a href=\"mailto:organizers@pycon.tw\">email us</a> if you've "
-"forgotten your password. Note that You need to sign up for PyCon APAC 2014 "
-"even if you have signed an account in 2013 or before.</p></p>"
+"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">reset your password</a> if you've forgotten it.</p>\n"
+"    <p>Note that you <em>do</em> need to sign up for PyCon APAC 2014 even if "
+"you have\n"
+"      signed an account in 2013 or before.</p>\n"
+"    "
 msgstr ""
 
 #: templates/accounts/account_password_reset.html:6
@@ -312,6 +325,10 @@ msgstr ""
 #: templates/accounts/includes/user_panel.html:21
 #: templates/accounts/includes/user_panel_nav.html:13
 msgid "Sign up"
+msgstr ""
+
+#: templates/admin/base_site.html:35
+msgid "View site"
 msgstr ""
 
 #: templates/admin/profile_inline.html:10
