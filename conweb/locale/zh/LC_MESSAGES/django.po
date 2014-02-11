@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 23:50+0800\n"
+"POT-Creation-Date: 2014-02-12 00:00+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -106,26 +106,51 @@ msgid ""
 "A verification email has been sent with a link for resetting your password."
 msgstr "含密碼重設連結的 Email 已寄至您的信箱。"
 
-#: locale/missing.py:15
+#: locale/missing.py:16
 msgid "Update Profile"
 msgstr "更新個人帳戶"
 
-#: locale/missing.py:16
+#: locale/missing.py:17
 msgid "Invalid username/email and password"
 msgstr "無效的使用者帳號／Email 以及密碼"
 
-#: locale/missing.py:17
+#: locale/missing.py:18
 msgid "This field is required."
 msgstr "請填寫此欄位"
 
-#: locale/missing.py:18
+#: locale/missing.py:19
 msgid "Passwords do not match"
 msgstr "輸入的密碼不一致"
 
-#: locale/missing.py:19
+#: locale/missing.py:20
 #, python-format
 msgid "Password must be at least %s characters"
 msgstr "密碼至少需要 %s 個字元"
+
+#: locale/missing.py:21
+msgid "Successfully logged in"
+msgstr "成功登入"
+
+#: locale/missing.py:22
+msgid "Leave blank unless you want to change your password"
+msgstr ""
+
+#: locale/missing.py:23
+msgid "This username is already registered"
+msgstr ""
+
+#: locale/missing.py:24
+msgid "Successfully logged out"
+msgstr "成功登出"
+
+#: locale/missing.py:27
+msgid ""
+"A verification email has been sent with a link for activating your account."
+msgstr "含認證連結的 Email 已寄至您的信箱。"
+
+#: locale/missing.py:29
+msgid "Successfully signed up"
+msgstr "成功註冊"
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22

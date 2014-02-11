@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 23:50+0800\n"
+"POT-Creation-Date: 2014-02-12 00:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,25 +94,56 @@ msgid ""
 "A verification email has been sent with a link for resetting your password."
 msgstr ""
 
-#: locale/missing.py:15
+#: locale/missing.py:16
 msgid "Update Profile"
 msgstr ""
 
-#: locale/missing.py:16
+#: locale/missing.py:17
 msgid "Invalid username/email and password"
 msgstr ""
 
-#: locale/missing.py:17
+#: locale/missing.py:18
 msgid "This field is required."
 msgstr ""
 
-#: locale/missing.py:18
+#: locale/missing.py:19
 msgid "Passwords do not match"
 msgstr ""
 
-#: locale/missing.py:19
+#: locale/missing.py:20
 #, python-format
 msgid "Password must be at least %s characters"
+msgstr ""
+
+#: locale/missing.py:21
+msgid "Successfully logged in"
+msgstr ""
+
+#: locale/missing.py:22
+msgid "Leave blank unless you want to change your password"
+msgstr ""
+
+#: locale/missing.py:23
+msgid "This username is already registered"
+msgstr ""
+
+#: locale/missing.py:24
+msgid "Successfully logged out"
+msgstr ""
+
+#: locale/missing.py:25
+msgid ""
+"Thanks for signing up! You'll receive an email when your account is "
+"activated."
+msgstr ""
+
+#: locale/missing.py:27
+msgid ""
+"A verification email has been sent with a link for activating your account."
+msgstr ""
+
+#: locale/missing.py:29
+msgid "Successfully signed up"
 msgstr ""
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
