@@ -12,3 +12,4 @@ if 0:  # Let Python discard this block
     _("Password Reset")
     _("Only letters, numbers, dashes or underscores please")
     _("A verification email has been sent with a link for resetting your password.")
+    _("Update Profile")

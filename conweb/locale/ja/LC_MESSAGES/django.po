@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 10:29+0800\n"
+"POT-Creation-Date: 2014-02-11 23:31+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -95,6 +95,10 @@ msgid ""
 "A verification email has been sent with a link for resetting your password."
 msgstr ""
 
+#: locale/missing.py:15
+msgid "Update Profile"
+msgstr ""
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -104,11 +108,15 @@ msgstr ""
 msgid "My Proposals"
 msgstr ""
 
-#: templates/_nav.html:32
-msgid "LOG OUT"
+#: templates/_nav.html:31
+msgid "My Profile"
 msgstr ""
 
 #: templates/_nav.html:35
+msgid "LOG OUT"
+msgstr ""
+
+#: templates/_nav.html:38
 msgid "SPEAKER LOG IN"
 msgstr ""
 

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 10:29+0800\n"
+"POT-Creation-Date: 2014-02-11 23:31+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -106,6 +106,10 @@ msgid ""
 "A verification email has been sent with a link for resetting your password."
 msgstr "含密碼重設連結的 Email 已寄至您的信箱。"
 
+#: locale/missing.py:15
+msgid "Update Profile"
+msgstr "更新個人帳戶"
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -115,11 +119,15 @@ msgstr "部落格"
 msgid "My Proposals"
 msgstr "我的講題"
 
-#: templates/_nav.html:32
+#: templates/_nav.html:31
+msgid "My Profile"
+msgstr "我的個人帳戶"
+
+#: templates/_nav.html:35
 msgid "LOG OUT"
 msgstr "登出"
 
-#: templates/_nav.html:35
+#: templates/_nav.html:38
 msgid "SPEAKER LOG IN"
 msgstr "講者登入"
 
@@ -138,6 +146,18 @@ msgid ""
 "      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>.</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>\n"
+"    Built with <a href=\"https://www.djangoproject.com/\">Django</a> and\n"
+"    <a href=\"http://mezzanine.jupo.org/\">Mezzanine</a>\n"
+"    by PyCon Taiwan web team.</p>\n"
+"    <p>\n"
+"    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
+"a>.\n"
+"    </p>\n"
+"    <p>有問題或建議，請聯絡 <a\n"
+"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>.</p>\n"
+"    "
 
 #: templates/index.html:22
 msgid "Sponsors"
@@ -372,7 +392,7 @@ msgstr ""
 #: templates/accounts/account_profile.html:17
 #: templates/accounts/includes/user_panel.html:10
 msgid "Update profile"
-msgstr "更新基本資訊"
+msgstr "更新個人帳戶"
 
 #: templates/accounts/account_signup.html:7
 msgid ""
