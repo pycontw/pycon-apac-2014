@@ -133,11 +133,11 @@ msgstr "成功登入"
 
 #: locale/missing.py:22
 msgid "Leave blank unless you want to change your password"
-msgstr ""
+msgstr "假如沒有要更新密碼則留空"
 
 #: locale/missing.py:23
 msgid "This username is already registered"
-msgstr ""
+msgstr "這個帳戶名稱已經註冊過"
 
 #: locale/missing.py:24
 msgid "Successfully logged out"
