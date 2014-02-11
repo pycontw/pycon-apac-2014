@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 23:31+0800\n"
+"POT-Creation-Date: 2014-02-11 23:50+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -97,6 +97,23 @@ msgstr ""
 
 #: locale/missing.py:15
 msgid "Update Profile"
+msgstr ""
+
+#: locale/missing.py:16
+msgid "Invalid username/email and password"
+msgstr ""
+
+#: locale/missing.py:17
+msgid "This field is required."
+msgstr ""
+
+#: locale/missing.py:18
+msgid "Passwords do not match"
+msgstr ""
+
+#: locale/missing.py:19
+#, python-format
+msgid "Password must be at least %s characters"
 msgstr ""
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4

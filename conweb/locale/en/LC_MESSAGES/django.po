@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 23:31+0800\n"
+"POT-Creation-Date: 2014-02-11 23:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,6 +96,23 @@ msgstr ""
 
 #: locale/missing.py:15
 msgid "Update Profile"
+msgstr ""
+
+#: locale/missing.py:16
+msgid "Invalid username/email and password"
+msgstr ""
+
+#: locale/missing.py:17
+msgid "This field is required."
+msgstr ""
+
+#: locale/missing.py:18
+msgid "Passwords do not match"
+msgstr ""
+
+#: locale/missing.py:19
+#, python-format
+msgid "Password must be at least %s characters"
 msgstr ""
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4

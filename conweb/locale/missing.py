@@ -13,3 +13,7 @@ if 0:  # Let Python discard this block
     _("Only letters, numbers, dashes or underscores please")
     _("A verification email has been sent with a link for resetting your password.")
     _("Update Profile")
+    _("Invalid username/email and password")
+    _("This field is required.")
+    _("Passwords do not match")
+    _("Password must be at least %s characters")

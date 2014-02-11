@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 23:31+0800\n"
+"POT-Creation-Date: 2014-02-11 23:50+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -110,6 +110,23 @@ msgstr "含密碼重設連結的 Email 已寄至您的信箱。"
 msgid "Update Profile"
 msgstr "更新個人帳戶"
 
+#: locale/missing.py:16
+msgid "Invalid username/email and password"
+msgstr "無效的使用者帳號／Email 以及密碼"
+
+#: locale/missing.py:17
+msgid "This field is required."
+msgstr "請填寫此欄位"
+
+#: locale/missing.py:18
+msgid "Passwords do not match"
+msgstr "輸入的密碼不一致"
+
+#: locale/missing.py:19
+#, python-format
+msgid "Password must be at least %s characters"
+msgstr "密碼至少需要 %s 個字元"
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -156,7 +173,7 @@ msgstr ""
 "a>.\n"
 "    </p>\n"
 "    <p>有問題或建議，請聯絡 <a\n"
-"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>.</p>\n"
+"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>。</p>\n"
 "    "
 
 #: templates/index.html:22
