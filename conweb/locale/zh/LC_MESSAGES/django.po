@@ -532,7 +532,7 @@ msgstr "Atom"
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3
 msgid "Hey there, a new account has been created and requires activation."
-msgstr "帳號已經建立，但還需完成啟用步驟。"
+msgstr "您好，您的帳號已經建立，但還需完成啟用步驟。"
 
 #: templates/email/account_approve.html:5
 #: templates/email/account_approve.txt:5
@@ -557,7 +557,7 @@ msgstr "帳號需要完成啟用步驟"
 #: templates/email/account_approved.html:3
 #: templates/email/account_approved.txt:3
 msgid "Hey there, your account has been activated."
-msgstr "你的帳戶已經啟用"
+msgstr "您好，你的帳戶已經啟用。"
 
 #: templates/email/account_approved.html:4
 #: templates/email/account_approved.txt:4
@@ -590,12 +590,12 @@ msgstr ""
 #: templates/email/password_reset_verify.html:3
 #: templates/email/password_reset_verify.txt:3
 msgid "Hey there, the password reset form was used for your account."
-msgstr ""
+msgstr "您好，我們收到重設您密碼的請求。"
 
 #: templates/email/password_reset_verify.html:4
 #: templates/email/password_reset_verify.txt:4
 msgid "Please use the link below to log in and update your password."
-msgstr "使用下面的連結登入以及更新你的密碼"
+msgstr "使用下面的連結登入以及更新你的密碼："
 
 #: templates/email/password_reset_verify.html:6
 #: templates/email/password_reset_verify.txt:6
