@@ -126,8 +126,9 @@
 {% include "_nav.html" %}
 
 {% include "includes/footer_scripts.html" %}
-
+{% if LANGUAGE_CODE == 'zh' %}
 <script>$('html').attr('lang', 'zh-Hant').addClass('han-la han-biaodian-pro-cns')</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/js/han.js"></script>
+{% endif %}
 </body>
 </html>
