@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-12 00:00+0800\n"
+"POT-Creation-Date: 2014-02-12 23:59+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -134,16 +134,10 @@ msgstr ""
 
 #: locale/missing.py:25
 msgid ""
-"Thanks for signing up! You'll receive an email when your account is "
-"activated."
-msgstr ""
-
-#: locale/missing.py:27
-msgid ""
 "A verification email has been sent with a link for activating your account."
 msgstr ""
 
-#: locale/missing.py:29
+#: locale/missing.py:27
 msgid "Successfully signed up"
 msgstr ""
 
@@ -312,6 +306,10 @@ msgstr ""
 
 #: templates/search_results.html:35 templates/blog/blog_post_list.html:128
 msgid "read more"
+msgstr ""
+
+#: templates/accounts/account_form.html:20
+msgid "Update"
 msgstr ""
 
 #: templates/accounts/account_login.html:7

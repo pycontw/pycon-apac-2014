@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-12 00:00+0800\n"
+"POT-Creation-Date: 2014-02-12 23:59+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -143,12 +143,12 @@ msgstr "這個帳戶名稱已經註冊過"
 msgid "Successfully logged out"
 msgstr "成功登出"
 
-#: locale/missing.py:27
+#: locale/missing.py:25
 msgid ""
 "A verification email has been sent with a link for activating your account."
 msgstr "含認證連結的 Email 已寄至您的信箱。"
 
-#: locale/missing.py:29
+#: locale/missing.py:27
 msgid "Successfully signed up"
 msgstr "成功註冊"
 
@@ -394,6 +394,10 @@ msgstr ""
 #: templates/search_results.html:35 templates/blog/blog_post_list.html:128
 msgid "read more"
 msgstr "更多"
+
+#: templates/accounts/account_form.html:20
+msgid "Update"
+msgstr "更新"
 
 #: templates/accounts/account_login.html:7
 msgid "You're already logged in."
@@ -781,6 +785,9 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Submit"
+#~ msgstr "提交"
 
 #~ msgid ""
 #~ "<p>You can also <a href=\"%(password_reset_url)s?next="
