@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-12 23:59+0800\n"
+"POT-Creation-Date: 2014-02-13 00:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -308,7 +308,7 @@ msgid "read more"
 msgstr ""
 
 #: templates/accounts/account_form.html:20
-msgid "Update"
+msgid "Submit"
 msgstr ""
 
 #: templates/accounts/account_login.html:7
