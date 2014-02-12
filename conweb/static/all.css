@@ -776,6 +776,11 @@ a:hover {
   color: #555;
 }
 
+.note big {
+  color: #d3202e;
+  font-size: 1.2em;
+}
+
 .section-title {
   border-bottom: 3px solid #d3202e;
   padding: 0 0 4px;

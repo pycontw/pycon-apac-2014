@@ -26,7 +26,8 @@
           {% csrf_token %}
           {% bootstrap_form proposal_form %}
           {% buttons %}
-              <button type="submit" class="btn btn-primary">
+              <hr>
+              <button type="submit" class="btn btn-primary btn-lg">
                   {% bootstrap_icon "star" %} {% trans "Submit" %}
               </button>
           {% endbuttons %}
@@ -53,19 +54,19 @@
           <h4>Important Dates</h4>
           <ul class="square-list">
             <li>
-            Dec 15, 2013 : Opening of Call for Proposals
+            <span>Dec 15, 2013</span> <br> Opening of Call for Proposals
             </li>
             <li>
-            Mar 01, 2014 : Deadline for Proposal Submissions
+            <big>Mar 01, 2014</big> <br> Deadline for Proposal Submissions
             </li>
             <li>
-            Mar 11, 2014 : Notification of Proposal Acceptance
+            <big>Mar 11, 2014</big> <br> Notification of Proposal Acceptance
             </li>
             <li>
-            May 16 : Tutorial Day
+            May 16, 2014 <br> Tutorial Day
             </li>
             <li>
-            May 17 - 18, 2014 : PyCon APAC Conference Days
+            May 17 - 18, 2014 <br> PyCon APAC Conference Days
             </li>
           </ul>
         </div>

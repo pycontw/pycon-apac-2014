@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n mezzanine_tags %}
+{% load bootstrap3 %}
 
 {% block meta_title %}{{ title }}{% endblock %}
 {% block title %}{{ title }}{% endblock %}
@@ -12,12 +13,13 @@
 
 {% block main %}
 <fieldset>
-    <form action="{{ request.get_full_path }}" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-    {% fields_for form %}
-    <div class="form-actions">
-        <input class="btn btn-primary btn-large" type="submit" value="{{ title }}">
-    </div>
-    </form>
+  <form action="{{ request.get_full_path }}" method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+  {% fields_for form %}
+    <hr>
+    <button type="submit" class="btn btn-primary btn-lg">
+        {% bootstrap_icon "star" %} {% trans "Submit" %}
+    </button>
+  </form>
 </fieldset>
 {% endblock %}
 
