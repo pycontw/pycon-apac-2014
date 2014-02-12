@@ -10,70 +10,72 @@
 
 {% block content %}
   <div class="content">
-    <div class="col-md-12">
-      <br>
-      <p>
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col-md-12">
+        <br>
+        <p>
+          {% blocktrans %}
+          PyCon APAC 2014 is now accepting all types of proposals.
+          {% endblocktrans %}
+        </p>
+        <hr>
+
+      </div>
+      <div class="col-md-7">
+      <form class="form" method="post" action="." enctype="multipart/form-data">
+          {% csrf_token %}
+          {% bootstrap_form proposal_form %}
+          {% buttons %}
+              <button type="submit" class="btn btn-primary">
+                  {% bootstrap_icon "star" %} {% trans "Submit" %}
+              </button>
+          {% endbuttons %}
+      </form>
+      </div>
+      <div class="col-md-5">
         {% blocktrans %}
-        PyCon APAC 2014 is now accepting all types of proposals.
+        <div class="well note">
+          <h4>Note</h4>
+          <ul class="square-list">
+            <li>
+              You can submit your abstract in PDF after filling this form.
+            </li>
+            <li>
+              For SciPy Talk, an extended abstract of 1 to 3 A4 pages is required.
+            </li>
+          </ul>
+
+        </div>
         {% endblocktrans %}
-      </p>
-      <hr>
+        {% blocktrans %}
+        <div class="well note">
 
-    </div>
-    <div class="col-md-7">
-    <form class="form" method="post" action="." enctype="multipart/form-data">
-        {% csrf_token %}
-        {% bootstrap_form proposal_form %}
-        {% buttons %}
-            <button type="submit" class="btn btn-primary">
-                {% bootstrap_icon "star" %} {% trans "Submit" %}
-            </button>
-        {% endbuttons %}
-    </form>
-    </div>
-    <div class="col-md-5">
-      {% blocktrans %}
-      <div class="well note">
-        <h4>Note</h4>
-        <ul class="square-list">
-          <li>
-            You can submit your abstract in PDF after filling this form.
-          </li>
-          <li>
-            For SciPy Talk, an extended abstract of 1 to 3 A4 pages is required.
-          </li>
-        </ul>
-
+          <h4>Important Dates</h4>
+          <ul class="square-list">
+            <li>
+            Dec 15, 2013 : Opening of Call for Proposals
+            </li>
+            <li>
+            Mar 01, 2014 : Deadline for Proposal Submissions
+            </li>
+            <li>
+            Mar 11, 2014 : Notification of Proposal Acceptance
+            </li>
+            <li>
+            May 16 : Tutorial Day
+            </li>
+            <li>
+            May 17 - 18, 2014 : PyCon APAC Conference Days
+            </li>
+          </ul>
+        </div>
+        {% endblocktrans %}
       </div>
-      {% endblocktrans %}
-      {% blocktrans %}
-      <div class="well note">
-
-        <h4>Important Dates</h4>
-        <ul class="square-list">
-          <li>
-          Dec 15, 2013 : Opening of Call for Proposals
-          </li>
-          <li>
-          Mar 01, 2014 : Deadline for Proposal Submissions
-          </li>
-          <li>
-          Mar 11, 2014 : Notification of Proposal Acceptance
-          </li>
-          <li>
-          May 16 : Tutorial Day
-          </li>
-          <li>
-          May 17 - 18, 2014 : PyCon APAC Conference Days
-          </li>
-        </ul>
+      <div class="clearfix">
       </div>
-      {% endblocktrans %}
     </div>
-    <div class="clearfix">
-    </div>
+
   </div>
-  <div class="row" style="margin-bottom: 20px;"></div>
 
 
 {% endblock %}
