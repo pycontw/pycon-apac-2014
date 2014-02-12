@@ -995,7 +995,14 @@ hr {
 }
 
 .home-sponsers p.apply {
-  margin: 1.5em 0 1em;
+  margin: 1.5em 1em 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-sponsers p.apply span {
+    display: block;
+    margin: 4px 0;
+  }
 }
 
 .home-sponsers p.apply span.div-line {
@@ -1004,6 +1011,12 @@ hr {
   line-height: 35px;
   border-right: 1px solid #ddd;
   margin: 0 15px 0 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-sponsers p.apply span.div-line {
+    display: none;
+  }
 }
 
 .home-sponsers .sponser-logos {
