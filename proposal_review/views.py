@@ -14,22 +14,22 @@ def list_proposals(request):
     return render(request, "list_proposals.html", {'proposals': proposals})
 
 
-def create_review(request, proposal_id):
+def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
 
+    review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
+                                                             reviewer=request.user)
+
     if request.method == "POST":
-        review_form = ReviewForm(request.POST)
+        review_form = ReviewForm(request.POST, instance=review)
         if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.proposal = proposal
-            review.reviewer = request.user
             review.save()
             message = _("Thanks for your review!")
             messages.add_message(request, messages.SUCCESS, message)
             return redirect(reverse("proposal_review:list_proposals"))
     else:
-        review_form = ReviewForm()
+        review_form = ReviewForm(instance=review)
     return render(request, "create_review.html",
                   {"proposal": proposal, "review_form": review_form})
 
