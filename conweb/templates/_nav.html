@@ -27,7 +27,10 @@
           <li id="proposal">
             <a href="{% url "proposal:list" %}">{% trans "My Proposals" %}</a>
           </li>
-          <li id="proposal">
+          <li id="review">
+            <a href="{% url "proposal_review:list_proposals" %}">{% trans "Review" %}</a>
+          </li>
+          <li id="profile">
             <a href="{% url "profile_update" %}">{% trans "My Profile" %}</a>
           </li>
         </ul>

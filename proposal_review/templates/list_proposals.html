@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}Proposal Review{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+
+    <p class="action-btn-block">
+    </p>
+
+    <table class="table table-strip">
+        <thead>
+            <tr>
+                <th>{% trans "Title" %}</th>
+                <th>{% trans "Speech Type" %}</th>
+                <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
+                <th>{% trans "Action" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proposal in proposals %}
+            <tr>
+                <td>{{proposal.title}}</td>
+                <td>{{proposal.get_speech_type_display}}</td>
+                <td>
+                  {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                  <a href="{{proposal.abstractfile.url}}" target="_blank">
+                  {{proposal.abstractfile}}
+                  </a>
+                  {% else %}
+                  <span>{% trans "No abstract file." %}</span>
+                  {% endif %}
+                </td>
+                <td>
+                    <a href="{% url "proposal_review:create_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">{% trans "No Proposal" %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
