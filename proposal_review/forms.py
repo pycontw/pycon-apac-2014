@@ -3,7 +3,7 @@ from django import forms
 from models import ReviewRecordModel
 
 
-class ProposalForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = ReviewRecordModel
