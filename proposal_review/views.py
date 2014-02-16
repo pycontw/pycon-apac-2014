@@ -34,6 +34,9 @@ def do_review(request, proposal_id):
                   {"proposal": proposal, "review_form": review_form})
 
 
-def list_reviews(request):
-    reviews = ReviewRecordModel.objects.all()
-    return render(request, "list_review.html", {"reviews": reviews})
+def list_reviews(request, me=False):
+    if me:
+        reviews = ReviewRecordModel.objects.filter(reviewer=request.user)
+    else:
+        reviews = ReviewRecordModel.objects.all()
+    return render(request, "list_reviews.html", {"reviews": reviews})
