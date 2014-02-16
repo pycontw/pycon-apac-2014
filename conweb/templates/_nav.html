@@ -27,6 +27,7 @@
           <li id="proposal">
             <a href="{% url "proposal:list" %}">{% trans "My Proposals" %}</a>
           </li>
+          {% if request.user.is_superuser or request.user.get_profile.is_reviewer %}
           <li id="tree-menu-review">
             <a href="{% url "proposal_review:list_proposals" %}">{% trans "Review" %}</a>
             <ul class="nav nav-list navlist-menu-level-2">
@@ -38,6 +39,7 @@
               </li>
             </ul>
           </li>
+          {% endif %}
           <li id="profile">
             <a href="{% url "profile_update" %}">{% trans "My Profile" %}</a>
           </li>

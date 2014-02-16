@@ -1,19 +1,30 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+from django.contrib.auth.decorators import login_required
 
 from proposal.models import ProposalModel
+
+from conweb.utils import require_group
 from .forms import ReviewForm
 from .models import ReviewRecordModel
 
 
+REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
+
+
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
     proposals = ProposalModel.objects.all()
     return render(request, "list_proposals.html", {'proposals': proposals})
 
 
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
 def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
@@ -34,6 +45,8 @@ def do_review(request, proposal_id):
                   {"proposal": proposal, "review_form": review_form})
 
 
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
 def list_reviews(request, me=False):
     if me:
         reviews = ReviewRecordModel.objects.filter(reviewer=request.user)
