@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 
 from proposal.models import ProposalModel
 
@@ -19,7 +20,8 @@ REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
-    proposals = ProposalModel.objects.all()
+    proposals = ProposalModel.objects.annotate(Avg('reviewrecordmodel__rank'))
+
     return render(request, "list_proposals.html", {'proposals': proposals})
 
 
@@ -29,10 +31,15 @@ def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
 
-    review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
-                                                             reviewer=request.user)
+    reviews = ReviewRecordModel.objects.filter(proposal=proposal).exclude(reviewer=request.user)
+
+    average_rank = ReviewRecordModel.objects.filter(proposal=proposal).aggregate(Avg('rank')).get("rank__avg", None)
 
     if request.method == "POST":
+
+        review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
+                                                                 reviewer=request.user)
+
         review_form = ReviewForm(request.POST, instance=review)
         if review_form.is_valid():
             review.save()
@@ -40,9 +47,14 @@ def do_review(request, proposal_id):
             messages.add_message(request, messages.SUCCESS, message)
             return redirect(reverse("proposal_review:list_proposals"))
     else:
+        try:
+            review = ReviewRecordModel.objects.get(proposal=proposal, reviewer=request.user)
+        except:
+            review = None
         review_form = ReviewForm(instance=review)
     return render(request, "create_review.html",
-                  {"proposal": proposal, "review_form": review_form})
+                  {"proposal": proposal, "review_form": review_form,
+                   "reviews": reviews, "average_rank": average_rank})
 
 
 @login_required

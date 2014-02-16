@@ -17,6 +17,7 @@
                 <th>{% trans "Title" %}</th>
                 <th>{% trans "Speech Type" %}</th>
                 <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
+                <th>{% trans "Avg. Rank" %}</th>
                 <th>{% trans "Action" %}</th>
             </tr>
         </thead>
@@ -34,6 +35,7 @@
                   <span>{% trans "No abstract file." %}</span>
                   {% endif %}
                 </td>
+                <td>{{proposal.reviewrecordmodel__rank__avg}}</td>
                 <td>
                     <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
                 </td>

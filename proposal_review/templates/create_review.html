@@ -4,7 +4,7 @@
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
-{% block title %}{% trans "Create a Proposal" %}{% endblock %}
+{% block title %}{% trans "Create/Update a Proposal" %}{% endblock %}
 
 {% block .breadcrumb %}{% endblock %}
 
@@ -15,12 +15,35 @@
         <br>
         <p>
           {% blocktrans %}
-          PyCon APAC 2014 is now accepting all types of proposals.
+          Other Reviews:
           {% endblocktrans %}
+          <table class="table table-strip">
+            <thead>
+                <tr>
+                    <th>{% trans "Rank" %}</th>
+                    <th>{% trans "Comment" %}</th>
+                    <th>{% trans "Reviewer" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for review in reviews %}
+                <tr>
+                    <td>{{review.rank}}</td>
+                    <td>{{review.comment}}</td>
+                    <td>{{review.reviewer.username}}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">{% trans "No Review" %}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
         </p>
         <hr>
-
       </div>
+
+
       <div class="col-md-7">
       <dl class="dl-horizontal">
         <dt>{% trans "Title" %}</dt>
@@ -37,6 +60,8 @@
           <span>{% trans "No abstract file." %}</span>
           {% endif %}
         </dd>
+        <dt>{% trans "Average Rank" %}</dt>
+        <dd>{{ average_rank }}</dd>
       </dl>
 
       <form class="form" method="post" action="." enctype="multipart/form-data">
