@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-13 00:03+0800\n"
+"POT-Creation-Date: 2014-02-16 11:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,11 @@ msgstr ""
 msgid "SPEAKER LOG IN"
 msgstr ""
 
-#: templates/base.html:108
+#: templates/base.html:12
+msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
+msgstr ""
+
+#: templates/base.html:112
 msgid ""
 "\n"
 "    <p>\n"
@@ -181,15 +185,15 @@ msgstr ""
 msgid "Sponsors"
 msgstr ""
 
-#: templates/index.html:28
+#: templates/index.html:27
 msgid "Show me all"
 msgstr ""
 
-#: templates/index.html:33
+#: templates/index.html:32
 msgid "Sponsorship available!"
 msgstr ""
 
-#: templates/index.html:35
+#: templates/index.html:34
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -207,11 +211,11 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:50
+#: templates/index.html:49
 msgid "What is PyCon and PyCon APAC"
 msgstr ""
 
-#: templates/index.html:55
+#: templates/index.html:54
 msgid ""
 "\n"
 "      PyCon is a conference by the Python community for the community.\n"
@@ -224,7 +228,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:64
+#: templates/index.html:63
 msgid ""
 "\n"
 "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
@@ -240,7 +244,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:74
+#: templates/index.html:73
 msgid ""
 "\n"
 "          <li>\n"
