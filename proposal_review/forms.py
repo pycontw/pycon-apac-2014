@@ -9,6 +9,7 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = ReviewRecordModel
         exclude = ("proposal", "reviewer")
+        widgets = {'rank': forms.RadioSelect}
 
     def clean_rank(self):
         data = self.cleaned_data['rank']

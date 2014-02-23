@@ -37,11 +37,11 @@ def do_review(request, proposal_id):
 
     if request.method == "POST":
 
-        review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
-                                                                 reviewer=request.user)
-
-        review_form = ReviewForm(request.POST, instance=review)
+        review_form = ReviewForm(request.POST)
         if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.proposal = proposal
+            review.reviewer = request.user
             review.save()
             message = _("Thanks for your review!")
             messages.add_message(request, messages.SUCCESS, message)
