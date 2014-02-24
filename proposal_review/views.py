@@ -35,13 +35,15 @@ def do_review(request, proposal_id):
     reviews = ReviewRecordModel.objects.filter(proposal=proposal) \
         .exclude(reviewer=request.user)
 
-    review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
-                                                             reviewer=request.user)
     average_rank = ReviewRecordModel.objects.filter(proposal=proposal) \
         .aggregate(Avg('rank')).get("rank__avg", None)
 
     if request.method == "POST":
 
+        review, create = ReviewRecordModel.objects.get_or_create(
+            proposal=proposal,
+            reviewer=request.user
+        )
         review_form = ReviewForm(request.POST, instance=review)
 
         if review_form.is_valid():
