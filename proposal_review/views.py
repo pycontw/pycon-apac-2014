@@ -32,12 +32,13 @@ def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
 
-    reviews = ReviewRecordModel.objects.filter(proposal=proposal).exclude(reviewer=request.user)
-
-    average_rank = ReviewRecordModel.objects.filter(proposal=proposal).aggregate(Avg('rank')).get("rank__avg", None)
+    reviews = ReviewRecordModel.objects.filter(proposal=proposal) \
+        .exclude(reviewer=request.user)
 
     review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
                                                              reviewer=request.user)
+    average_rank = ReviewRecordModel.objects.filter(proposal=proposal) \
+        .aggregate(Avg('rank')).get("rank__avg", None)
 
     if request.method == "POST":
 
@@ -50,8 +51,9 @@ def do_review(request, proposal_id):
             return redirect(reverse("proposal_review:list_proposals"))
     else:
         try:
-            review = ReviewRecordModel.objects.get(proposal=proposal, reviewer=request.user)
-        except:
+            review = ReviewRecordModel.objects \
+                .get(proposal=proposal, reviewer=request.user)
+        except ReviewRecordModel.DoesNotExist:
             review = None
         review_form = ReviewForm(instance=review)
     return render(request, "create_review.html",
