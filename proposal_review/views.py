@@ -21,6 +21,7 @@ REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
 def list_proposals(request):
 
     proposals = ProposalModel.objects.annotate(Avg('reviewrecordmodel__rank'))
+    proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
 
     return render(request, "list_proposals.html", {'proposals': proposals})
 
