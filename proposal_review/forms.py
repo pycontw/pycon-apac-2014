@@ -13,6 +13,6 @@ class ReviewForm(forms.ModelForm):
 
     def clean_rank(self):
         data = self.cleaned_data['rank']
-        if data > 5 or data < 0:
-            raise forms.ValidationError(_("The value of rank should be between zero and five."))
+        if data > 3 or data < -3:
+            raise forms.ValidationError(_("The value of rank should be between 3 and -3."))
         return data

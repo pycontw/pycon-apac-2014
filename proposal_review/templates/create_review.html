@@ -61,7 +61,7 @@
           {% endif %}
         </dd>
         <dt>{% trans "Average Rank" %}</dt>
-        <dd>{{ average_rank }}</dd>
+        <dd>{{ average_rank|floatformat:1 }}</dd>
       </dl>
 
       <form class="form" method="post" action="." enctype="multipart/form-data">

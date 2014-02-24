@@ -35,13 +35,14 @@ def do_review(request, proposal_id):
 
     average_rank = ReviewRecordModel.objects.filter(proposal=proposal).aggregate(Avg('rank')).get("rank__avg", None)
 
+    review, create = ReviewRecordModel.objects.get_or_create(proposal=proposal,
+                                                             reviewer=request.user)
+
     if request.method == "POST":
 
-        review_form = ReviewForm(request.POST)
+        review_form = ReviewForm(request.POST, instance=review)
+
         if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.proposal = proposal
-            review.reviewer = request.user
             review.save()
             message = _("Thanks for your review!")
             messages.add_message(request, messages.SUCCESS, message)
