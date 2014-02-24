@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -37,3 +38,8 @@ class UserProfile(models.Model):
                                 upload_to="picture", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+    @property
+    def is_reviewer(self):
+        group_name = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
+        return self.user.groups.filter(name=group_name).count()

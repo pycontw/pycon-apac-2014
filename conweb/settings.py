@@ -264,6 +264,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     "conweb",
     "proposal",
+    "proposal_review",
     "raven.contrib.django.raven_compat",
 )
 
