@@ -23,7 +23,16 @@ def list_proposals(request):
     proposals = ProposalModel.objects.annotate(Avg('reviewrecordmodel__rank'))
     proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
 
-    return render(request, "list_proposals.html", {'proposals': proposals})
+    type_counts = {
+        type_name: len([p for p in proposals if p.speech_type == speech_type])
+        for speech_type, type_name in ProposalModel.SPEECH_TYPE_CHOICES
+    }
+    statistic = {
+        "total": len(proposals),
+        "type_counts": type_counts
+    }
+    return render(request, "list_proposals.html",
+                  {'proposals': proposals, 'statistic': statistic})
 
 
 @login_required
