@@ -114,27 +114,34 @@ def _remote_copimlemessages(languages):
 def _local_deploy():
     "Django syncdb, migrate, and reset admin password"
     local("python manage.py syncdb --noinput")
-    local("python manage.py migrate")
+    execute(db_migrate)
     local("python manage.py reset_admin_password")
     _print_ready_info('fab serve')
 
 
+@_in_virtualenv
+def db_migrate():
+    local("python manage.py migrate")
+
+
 @roles('web')
-def _remote_deploy():
+def _remote_deploy(migrate=False):
     "update repository and restart web service"
     repo_path = local_settings['repo_path']
     with cd(repo_path):
         run('git pull')
+        if migrate:
+            run('fab db_migrate')
         run('fab compilemessages')
         run('supervisorctl restart pycon')
 
 
-def deploy(target=""):
+def deploy(target="", remote_migrate=False):
     "in local: syncdb, migrate, and reset admin password"
     if target in ("", "developer"):
         execute(_local_deploy)
     elif target == "production":
-        execute(_remote_deploy)
+        execute(_remote_deploy, migrate=remote_migrate)
 
 
 @_in_virtualenv
