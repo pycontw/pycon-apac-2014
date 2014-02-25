@@ -4,6 +4,9 @@
 
 {% block title %}Proposal Review{% endblock title %}
 
+{% block meta_title %}Proposal Review{% endblock %}
+
+
 {% block content %}
 
 <div class="content">
@@ -53,9 +56,19 @@
                   <span>{% trans "No abstract file." %}</span>
                   {% endif %}
                 </td>
-                <td>{{proposal.reviewrecordmodel__rank__avg|floatformat:1}}</td>
                 <td>
-                    <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                    {% if proposal.author != request.user %}
+                        {{proposal.reviewrecordmodel__rank__avg|floatformat:1}}
+                    {% else %}
+                        <span class="note">{% trans "國防布" %}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if proposal.author != request.user %}
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                    {% else %}
+                        <span class="note">{% trans "No" %}</span>
+                    {% endif %}
                 </td>
             </tr>
             {% empty %}

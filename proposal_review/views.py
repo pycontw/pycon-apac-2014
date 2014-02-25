@@ -40,6 +40,10 @@ def list_proposals(request):
 def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
+    if proposal.author == request.user:
+        message = _("Thanks for your curiosity!")
+        messages.add_message(request, messages.WARNING, message)
+        return redirect(reverse("proposal_review:list_proposals"))
 
     reviews = ReviewRecordModel.objects.filter(proposal=proposal) \
         .exclude(reviewer=request.user)
