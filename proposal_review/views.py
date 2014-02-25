@@ -16,6 +16,10 @@ from .models import ReviewRecordModel
 REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
 
 
+def _is_review_admin(request):
+    return request.user.username in ('admin', 'tjw')
+
+
 @login_required
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
@@ -31,8 +35,10 @@ def list_proposals(request):
         "total": len(proposals),
         "type_counts": type_counts
     }
+    is_reviewer_admin = _is_review_admin(request)
     return render(request, "list_proposals.html",
-                  {'proposals': proposals, 'statistic': statistic})
+                  {'proposals': proposals, 'statistic': statistic,
+                   'is_reviewer_admin': is_reviewer_admin})
 
 
 @login_required
@@ -40,7 +46,8 @@ def list_proposals(request):
 def do_review(request, proposal_id):
 
     proposal = ProposalModel.objects.get(id=proposal_id)
-    if proposal.author == request.user:
+    is_reviewer_admin = _is_review_admin(request)
+    if proposal.author == request.user and not is_reviewer_admin:
         message = _("Thanks for your curiosity!")
         messages.add_message(request, messages.WARNING, message)
         return redirect(reverse("proposal_review:list_proposals"))

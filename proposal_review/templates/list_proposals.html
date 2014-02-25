@@ -66,6 +66,8 @@
                 <td>
                     {% if proposal.author != request.user %}
                         <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                    {% elif is_reviewer_admin %}
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
                     {% else %}
                         <span class="note">{% trans "No" %}</span>
                     {% endif %}
