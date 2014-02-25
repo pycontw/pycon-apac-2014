@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-16 11:06+0800\n"
+"POT-Creation-Date: 2014-02-25 08:17+0800\n"
 "PO-Revision-Date: 2014-01-23 12:20+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -29,47 +29,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: models.py:8
+#: models.py:9
 msgid "Speaker Brief"
 msgstr "講者簡介"
 
-#: models.py:12
+#: models.py:13
 msgid "Tagline: split by comma."
 msgstr "標籤列：使用小寫逗號分隔。"
 
-#: models.py:13
+#: models.py:14
 msgid "e.g., pycontw, IPython, pep8"
 msgstr "例如：「pycontw, IPython, pep8」"
 
-#: models.py:17
+#: models.py:18
 msgid "Location"
 msgstr "來自"
 
-#: models.py:18
+#: models.py:19
 msgid "i.e. where you from?"
 msgstr "您從哪裡來？"
 
-#: models.py:20
+#: models.py:21
 msgid "Personal Link"
 msgstr "個人網頁連結"
 
-#: models.py:24
+#: models.py:25
 msgid "Twitter Username"
 msgstr "Twitter 帳號"
 
-#: models.py:28
+#: models.py:29
 msgid "Organization/Company"
 msgstr "組織/公司"
 
-#: models.py:30
+#: models.py:31
 msgid "Link of Organization/Company"
 msgstr "組織/公司連結"
 
-#: models.py:34
+#: models.py:35
 msgid "Title"
 msgstr "標題"
 
-#: models.py:36
+#: models.py:37
 msgid "Picture"
 msgstr "照片"
 
@@ -152,6 +152,10 @@ msgstr "含認證連結的 Email 已寄至您的信箱。"
 msgid "Successfully signed up"
 msgstr "成功註冊"
 
+#: locale/missing.py:28
+msgid "Profile updated"
+msgstr "個人帳戶已更新"
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -161,15 +165,27 @@ msgstr "部落格"
 msgid "My Proposals"
 msgstr "我的講題"
 
-#: templates/_nav.html:31
+#: templates/_nav.html:32
+msgid "Review"
+msgstr "審件"
+
+#: templates/_nav.html:35
+msgid "All Proposals"
+msgstr "講題列表"
+
+#: templates/_nav.html:38
+msgid "My Review"
+msgstr "我的審件"
+
+#: templates/_nav.html:44
 msgid "My Profile"
 msgstr "我的個人帳戶"
 
-#: templates/_nav.html:35
+#: templates/_nav.html:48
 msgid "LOG OUT"
 msgstr "登出"
 
-#: templates/_nav.html:38
+#: templates/_nav.html:51
 msgid "SPEAKER LOG IN"
 msgstr "講者登入"
 

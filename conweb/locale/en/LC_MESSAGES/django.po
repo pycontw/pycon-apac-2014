@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-16 11:06+0800\n"
+"POT-Creation-Date: 2014-02-25 08:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models.py:8
+#: models.py:9
 msgid "Speaker Brief"
 msgstr ""
 
-#: models.py:12
+#: models.py:13
 msgid "Tagline: split by comma."
 msgstr ""
 
-#: models.py:13
+#: models.py:14
 msgid "e.g., pycontw, IPython, pep8"
 msgstr ""
 
-#: models.py:17
+#: models.py:18
 msgid "Location"
 msgstr ""
 
-#: models.py:18
+#: models.py:19
 msgid "i.e. where you from?"
 msgstr ""
 
-#: models.py:20
+#: models.py:21
 msgid "Personal Link"
 msgstr ""
 
-#: models.py:24
+#: models.py:25
 msgid "Twitter Username"
 msgstr ""
 
-#: models.py:28
+#: models.py:29
 msgid "Organization/Company"
 msgstr ""
 
-#: models.py:30
+#: models.py:31
 msgid "Link of Organization/Company"
 msgstr ""
 
-#: models.py:34
+#: models.py:35
 msgid "Title"
 msgstr ""
 
-#: models.py:36
+#: models.py:37
 msgid "Picture"
 msgstr ""
 
@@ -140,6 +140,10 @@ msgstr ""
 msgid "Successfully signed up"
 msgstr ""
 
+#: locale/missing.py:28
+msgid "Profile updated"
+msgstr ""
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -149,15 +153,27 @@ msgstr ""
 msgid "My Proposals"
 msgstr ""
 
-#: templates/_nav.html:31
-msgid "My Profile"
+#: templates/_nav.html:32
+msgid "Review"
 msgstr ""
 
 #: templates/_nav.html:35
-msgid "LOG OUT"
+msgid "All Proposals"
 msgstr ""
 
 #: templates/_nav.html:38
+msgid "My Review"
+msgstr ""
+
+#: templates/_nav.html:44
+msgid "My Profile"
+msgstr ""
+
+#: templates/_nav.html:48
+msgid "LOG OUT"
+msgstr ""
+
+#: templates/_nav.html:51
 msgid "SPEAKER LOG IN"
 msgstr ""
 
