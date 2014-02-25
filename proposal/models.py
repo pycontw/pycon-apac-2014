@@ -24,13 +24,13 @@ class ProposalModel(models.Model):
     )
 
     TALK_PERMISSION_CHOICES = (
-        (0, _("Don't record my talk")),
         (1, _("CC-BY-NC-SA")),
+        (0, _("Don't record my talk")),
     )
 
     SLIDE_PERMISSION_CHOICES = (
-        (0, _("Don't publish my slide")),
         (1, _("CC-BY-NC-SA")),
+        (0, _("Don't publish my slide")),
     )
 
     title = models.CharField(verbose_name=_("Title"),
