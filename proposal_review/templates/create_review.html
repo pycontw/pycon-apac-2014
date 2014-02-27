@@ -10,88 +10,101 @@
 
 {% block content %}
   <div class="content">
-    <div class="row" style="margin-bottom: 20px;">
-      <div class="col-md-7">
-        <dl class="dl-horizontal">
-          <dt>{% trans "Title" %}</dt>
-          <dd>{{proposal.title}}</dd>
-          <dt>{% trans "Author" %}</dt>
-          <dd>{{proposal.author.get_full_name}}</dd>
-          <dt>{% trans "Speech Type" %}</dt>
-          <dd>{{proposal.get_speech_type_display}}</dd>
-          <dt>{% trans "Language" %}</dt>
-          <dd>{{proposal.get_language_display}}</dd>
-          <dt>{% trans "Audience level" %}</dt>
-          <dd>{{proposal.get_audience_level_display}}</dd>
-          <dt>{% trans "Recording Perm." %}</dt>
-          <dd>{{proposal.get_talk_perm_display}}</dd>
+    <h2 class="doc-title">Proposal Info</h2>
+      <div class="paper">
+        <h3 class="paper-title">
+          {{proposal.title}}
+          <small>by</small>
+          {{proposal.author.get_full_name}}
+        </h3>
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Speech Type" %}</dt>
+              <dd>{{proposal.get_speech_type_display}}</dd>
+              <dt>{% trans "Audience level" %}</dt>
+              <dd>{{proposal.get_audience_level_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Language" %}</dt>
+              <dd>{{proposal.get_language_display}}</dd>
+              <dt>{% trans "Recording Perm." %}</dt>
+              <dd>{{proposal.get_talk_perm_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></dt>
+              <dd>
+                {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                <a href="{{proposal.abstractfile.url}}" target="_blank">
+                {{proposal.abstractfile}}
+                </a>
+                {% else %}
+                <span>{% trans "No abstract file." %}</span>
+                {% endif %}
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <dl class="dl-info">
           <dt>{% trans "Description" %}</dt>
           <dd>{{proposal.description}}</dd>
           <dt>{% trans "Additional information" %}</dt>
           <dd>{{proposal.additional_info}}</dd>
-          <dt>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></dt>
-          <dd>
-            {% if proposal.abstractfile and proposal.abstractfile.has_file %}
-            <a href="{{proposal.abstractfile.url}}" target="_blank">
-            {{proposal.abstractfile}}
-            </a>
-            {% else %}
-            <span>{% trans "No abstract file." %}</span>
-            {% endif %}
-          </dd>
         </dl>
+        <div class="clear"></div>
 
-        <form class="form" method="post" action="." enctype="multipart/form-data">
-            {% csrf_token %}
-            {% bootstrap_form review_form %}
-            {% buttons %}
-                <hr>
-                <button type="submit" class="btn btn-primary btn-lg">
-                    {% bootstrap_icon "star" %} {% trans "Submit" %}
-                </button>
-            {% endbuttons %}
-        </form>
       </div>
-
-      <div class="col-md-5">
-      </div>
-
-      <div class="clearfix"></div>
-
-      <div class="col-md-12">
-        <br>
-        <p>
-          {% blocktrans %}
-          Other Reviews:
-          {% endblocktrans %}
-          ({% trans "Average Rank" %}:
-          {{ average_rank|floatformat:1 }})
-          <table class="table table-strip">
-            <thead>
-                <tr>
-                    <th>{% trans "Rank" %}</th>
-                    <th>{% trans "Comment" %}</th>
-                    <th>{% trans "Reviewer" %}</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for review in reviews %}
-                <tr>
-                    <td>{{review.rank}}</td>
-                    <td>{{review.comment}}</td>
-                    <td>{{review.reviewer.username}}</td>
-                </tr>
-                {% empty %}
-                <tr>
-                    <td colspan="4">{% trans "No Review" %}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-          </table>
-        </p>
-        <hr>
-      </div>
+    <h2 class="doc-title">Proposal Review</h2>
+    <div class="paper">
+      <form class="form" method="post" action="." enctype="multipart/form-data">
+          {% csrf_token %}
+          {% bootstrap_form review_form %}
+          {% buttons %}
+            <hr>
+            <button type="submit" class="btn btn-primary btn-lg">
+                {% bootstrap_icon "star" %} {% trans "Submit" %}
+            </button>
+          {% endbuttons %}
+      </form>
     </div>
+    <div class="clearfix"></div>
+
+    <br>
+    <p>
+      {% blocktrans %}
+      Other Reviews:
+      {% endblocktrans %}
+      ({% trans "Average Rank" %}:
+      {{ average_rank|floatformat:1 }})
+    <table class="table table-strip">
+      <thead>
+          <tr>
+              <th>{% trans "Rank" %}</th>
+              <th>{% trans "Comment" %}</th>
+              <th>{% trans "Reviewer" %}</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for review in reviews %}
+          <tr>
+              <td>{{review.rank}}</td>
+              <td>{{review.comment}}</td>
+              <td>{{review.reviewer.username}}</td>
+          </tr>
+          {% empty %}
+          <tr>
+              <td colspan="4">{% trans "No Review" %}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
   </div>
 
 

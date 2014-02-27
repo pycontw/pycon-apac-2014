@@ -731,9 +731,23 @@ hr {
   font-family: Lato;
   text-shadow: 0 0 2px rgba(0,0,0,0.1);
 }
+.form-group label {
+  display: block;
+}
+.form-group .radio {
+  display: inline-block;
+  margin: 0 20px 0 0 !important;
+}
+.paper,
 .richpage {
   background: rgba(255,255,255,0.8);
   padding: 2.5em 3em;
+}
+.paper-title {
+  padding-bottom: 0.3em;
+  margin: 0 0 1em;
+}
+.richpage {
   border: 1px solid #eee;
   color: #555;
   font-size: 16px;
@@ -805,6 +819,20 @@ hr {
   .richpage table td {
     padding: 2px;
   }
+}
+.dl-info {
+  margin: 0;
+}
+.dl-info dt {
+  font-size: 15px;
+  color: #999;
+  font-weight: normal;
+}
+.dl-info dd {
+  margin-bottom: 1em;
+}
+.dl-info dd:last-child {
+  margin-bottom: 0;
 }
 .index-title {
   height: 75%;
