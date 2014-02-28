@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-12 23:59+0800\n"
+"POT-Creation-Date: 2014-03-01 01:21+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -66,15 +66,15 @@ msgstr ""
 msgid "Scientific Background"
 msgstr ""
 
-#: models.py:27
-msgid "Don't record my talk"
-msgstr ""
-
-#: models.py:28 models.py:33
+#: models.py:27 models.py:32
 msgid "CC-BY-NC-SA"
 msgstr ""
 
-#: models.py:32
+#: models.py:28
+msgid "Don't record my talk"
+msgstr ""
+
+#: models.py:33
 msgid "Don't publish my slide"
 msgstr ""
 
@@ -189,10 +189,10 @@ msgid ""
 "            <span>Dec 15, 2013</span> <br> Opening of Call for Proposals\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>Mar 01, 2014</big> <br> Deadline for Proposal Submissions\n"
+"            <big>Mar 10, 2014</big> <br> Deadline for Proposal Submissions\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>Mar 11, 2014</big> <br> Notification of Proposal "
+"            <big>Mar 24, 2014</big> <br> Notification of Proposal "
 "Acceptance\n"
 "            </li>\n"
 "            <li>\n"

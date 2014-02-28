@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-12 23:59+0800\n"
+"POT-Creation-Date: 2014-03-01 01:21+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -74,15 +74,15 @@ msgstr "專家"
 msgid "Scientific Background"
 msgstr "科學背景"
 
-#: models.py:27
-msgid "Don't record my talk"
-msgstr "我的講題請不要錄影"
-
-#: models.py:28 models.py:33
+#: models.py:27 models.py:32
 msgid "CC-BY-NC-SA"
 msgstr "創作﻿共用-姓名標示-非商業性-相同方式分享"
 
-#: models.py:32
+#: models.py:28
+msgid "Don't record my talk"
+msgstr "我的講題請不要錄影"
+
+#: models.py:33
 msgid "Don't publish my slide"
 msgstr "不要發表我的投影片"
 
@@ -214,10 +214,10 @@ msgid ""
 "            <span>Dec 15, 2013</span> <br> Opening of Call for Proposals\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>Mar 01, 2014</big> <br> Deadline for Proposal Submissions\n"
+"            <big>Mar 10, 2014</big> <br> Deadline for Proposal Submissions\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>Mar 11, 2014</big> <br> Notification of Proposal "
+"            <big>Mar 24, 2014</big> <br> Notification of Proposal "
 "Acceptance\n"
 "            </li>\n"
 "            <li>\n"
@@ -239,10 +239,10 @@ msgstr ""
 "            <span>2014 年 十二月 15 日</span> <br> 開始徵求講題\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>2014 年 三月  1 日</big> <br> 徵求講題截止\n"
+"            <big>2014 年 三月 10 日</big> <br> 徵求講題截止\n"
 "            </li>\n"
 "            <li>\n"
-"            <big>2014 年 三月 11 日</big> <br> 講題錄取通知 \n"
+"            <big>2014 年 三月 24 日</big> <br> 講題錄取通知 \n"
 "            </li>\n"
 "            <li>\n"
 "            2014 年 五月 16 日<br> 先修課程\n"
