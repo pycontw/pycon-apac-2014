@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Michelle <flywindy2002@gmail.com>, 2014
@@ -18,14 +18,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-25 08:17+0800\n"
+"POT-Creation-Date: 2014-03-01 01:10+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
+"apac-2014/language/zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: models.py:9
@@ -65,8 +66,8 @@ msgid "Link of Organization/Company"
 msgstr "組織/公司連結"
 
 #: models.py:35
-msgid "Title"
-msgstr "標題"
+msgid "Title or job"
+msgstr "頭銜或職稱"
 
 #: models.py:37
 msgid "Picture"
@@ -395,7 +396,9 @@ msgstr "首頁"
 msgid ""
 "\n"
 "No results were found in %(search_type)s matching your query: %(query)s\n"
-msgstr "\n在 %(search_type)s 中找不到符合 %(query)s 的結果\n"
+msgstr ""
+"\n"
+"在 %(search_type)s 中找不到符合 %(query)s 的結果\n"
 
 #: templates/search_results.html:24
 #, python-format
@@ -421,13 +424,13 @@ msgid "You're already logged in."
 msgstr "您已經登入。"
 
 #: templates/accounts/account_login.html:11
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
-"If you don't have an account you can <a "
-"href=\"%(signup_url)s?next=%(next)s\">sign up</a> for one now."
-msgstr "若您還沒有帳號，可以馬上<a href=\"%(signup_url)s?next=%(next)s\">註冊</a>一個。"
+msgstr ""
+"若您還沒有帳號，可以馬上<a href=\"%(signup_url)s?next=%(next)s\">註冊</a>一"
+"個。"
 
 #: templates/accounts/account_login.html:14
 #, python-format
@@ -459,8 +462,8 @@ msgstr "更新個人帳戶"
 
 #: templates/accounts/account_signup.html:7
 msgid ""
-"You're already logged in. If you'd like to create a new account, you'll need"
-" to log out first."
+"You're already logged in. If you'd like to create a new account, you'll need "
+"to log out first."
 msgstr "您已經登入。若您想要建立新帳號，必須先登出。"
 
 #: templates/accounts/account_signup.html:11
@@ -802,3 +805,10 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#, fuzzy
+#~ msgid "Occupation"
+#~ msgstr "來自"
+
+#~ msgid "Title"
+#~ msgstr "標題"
