@@ -4,7 +4,7 @@
   height: 75%;
   position: relative;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     height: auto;
     padding-top:2em;
   }
@@ -21,7 +21,7 @@
   width: 500px;
   height: 350px;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     position: relative;
     width: 100%;
     height: auto;
@@ -42,7 +42,7 @@
     color: #04556A;
   }
 
-  @include respond-to(iphone) {
+  @media $mobile-iphone {
     font-size: 20px;
   }
 }
@@ -55,11 +55,11 @@
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 
-  @include respond-to(mobile) {
+  @media $mobile-query {
     font-size: 30px;
 
   }
-  @include respond-to(iphone) {
+  @media $mobile-iphone {
     font-size: 20px;
   }
 }
@@ -82,14 +82,24 @@
     margin: 5 0 15px;
   }
   p.apply {
-    margin: 1.5em 0 1em;
+    margin: 1.5em 1em 1em;
 
+    span {
+      @media $mobile-query {
+        display: block;
+        margin: 4px 0;
+      }
+    }
     span.div-line {
       display: inline-block;
       height: 35px;
       line-height: 35px;
       border-right: 1px solid #ddd;
       margin: 0 15px 0 10px;
+
+      @media $mobile-query {
+        display: none;
+      }
     }
   }
   .sponser-logos {

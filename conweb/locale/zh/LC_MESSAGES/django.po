@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Keith Yang <yang@keitheis.org>, 2014
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Michelle <flywindy2002@gmail.com>, 2014
-# Keith Yang <yang@keitheis.org>, 2014
+# keitheis <keitheis+transifex@gmail.com>, 2014
+# keitheis <keitheis+transifex@gmail.com>, 2014
 # Keith Yang <yang@keitheis.org>, 2014
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Michelle <flywindy2002@gmail.com>, 2014
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-28 12:21+0800\n"
-"PO-Revision-Date: 2014-01-23 12:20+0000\n"
-"Last-Translator: Keith Yang <yang@keitheis.org>\n"
+"POT-Creation-Date: 2014-03-01 12:57+0800\n"
+"PO-Revision-Date: 2014-02-25 04:10+0000\n"
+"Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
 "apac-2014/language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -29,47 +29,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: models.py:8
+#: models.py:9
 msgid "Speaker Brief"
 msgstr "講者簡介"
 
-#: models.py:12
+#: models.py:13
 msgid "Tagline: split by comma."
 msgstr "標籤列：使用小寫逗號分隔。"
 
-#: models.py:13
+#: models.py:14
 msgid "e.g., pycontw, IPython, pep8"
 msgstr "例如：「pycontw, IPython, pep8」"
 
-#: models.py:17
+#: models.py:18
 msgid "Location"
 msgstr "來自"
 
-#: models.py:18
+#: models.py:19
 msgid "i.e. where you from?"
 msgstr "您從哪裡來？"
 
-#: models.py:20
+#: models.py:21
 msgid "Personal Link"
 msgstr "個人網頁連結"
 
-#: models.py:24
+#: models.py:25
 msgid "Twitter Username"
 msgstr "Twitter 帳號"
 
-#: models.py:28
+#: models.py:29
 msgid "Organization/Company"
 msgstr "組織/公司"
 
-#: models.py:30
+#: models.py:31
 msgid "Link of Organization/Company"
 msgstr "組織/公司連結"
 
-#: models.py:34
-msgid "Title"
-msgstr "標題"
+#: models.py:35
+msgid "Job title"
+msgstr "頭銜"
 
-#: models.py:36
+#: models.py:37
 msgid "Picture"
 msgstr "照片"
 
@@ -94,8 +94,67 @@ msgid "Password (again)"
 msgstr "再次輸入密碼"
 
 #: locale/missing.py:12
+msgid "Password Reset"
+msgstr "重設密碼"
+
+#: locale/missing.py:13
 msgid "Only letters, numbers, dashes or underscores please"
 msgstr "只允許英文字母、數字、破折號 '-' 或底線 '_'"
+
+#: locale/missing.py:14
+msgid ""
+"A verification email has been sent with a link for resetting your password."
+msgstr "含密碼重設連結的 Email 已寄至您的信箱。"
+
+#: locale/missing.py:16
+msgid "Update Profile"
+msgstr "更新個人帳戶"
+
+#: locale/missing.py:17
+msgid "Invalid username/email and password"
+msgstr "無效的使用者帳號／Email 以及密碼"
+
+#: locale/missing.py:18
+msgid "This field is required."
+msgstr "請填寫此欄位"
+
+#: locale/missing.py:19
+msgid "Passwords do not match"
+msgstr "輸入的密碼不一致"
+
+#: locale/missing.py:20
+#, python-format
+msgid "Password must be at least %s characters"
+msgstr "密碼至少需要 %s 個字元"
+
+#: locale/missing.py:21
+msgid "Successfully logged in"
+msgstr "成功登入"
+
+#: locale/missing.py:22
+msgid "Leave blank unless you want to change your password"
+msgstr "假如沒有要更新密碼則留空"
+
+#: locale/missing.py:23
+msgid "This username is already registered"
+msgstr "這個帳戶名稱已經註冊過"
+
+#: locale/missing.py:24
+msgid "Successfully logged out"
+msgstr "成功登出"
+
+#: locale/missing.py:25
+msgid ""
+"A verification email has been sent with a link for activating your account."
+msgstr "含認證連結的 Email 已寄至您的信箱。"
+
+#: locale/missing.py:27
+msgid "Successfully signed up"
+msgstr "成功註冊"
+
+#: locale/missing.py:28
+msgid "Profile updated"
+msgstr "個人帳戶已更新"
 
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
@@ -107,14 +166,34 @@ msgid "My Proposals"
 msgstr "我的講題"
 
 #: templates/_nav.html:32
+msgid "Review"
+msgstr "審件"
+
+#: templates/_nav.html:35
+msgid "All Proposals"
+msgstr "講題列表"
+
+#: templates/_nav.html:38
+msgid "My Review"
+msgstr "我的審件"
+
+#: templates/_nav.html:44
+msgid "My Profile"
+msgstr "我的個人帳戶"
+
+#: templates/_nav.html:48
 msgid "LOG OUT"
 msgstr "登出"
 
-#: templates/_nav.html:35
+#: templates/_nav.html:51
 msgid "SPEAKER LOG IN"
 msgstr "講者登入"
 
-#: templates/base.html:108
+#: templates/base.html:12
+msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
+msgstr "115 台灣台北市南港區研究院路 2 段 128 號"
+
+#: templates/base.html:112
 msgid ""
 "\n"
 "    <p>\n"
@@ -125,24 +204,42 @@ msgid ""
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
 "    </p>\n"
-"    <p>Questions? Comments? Contact <a\n"
-"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>.</p>\n"
+"    <p>Bugs or wheels? <a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
+"\">Feedback and support</a> here.\n"
+"    </p>\n"
+"    <p>More on contact <a href=\"mailto:organizers@pycon.tw"
+"\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>\n"
+"    Built with <a href=\"https://www.djangoproject.com/\">Django</a> and\n"
+"    <a href=\"http://mezzanine.jupo.org/\">Mezzanine</a>\n"
+"    by PyCon Taiwan web team.</p>\n"
+"    <p>\n"
+"    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
+"a>.\n"
+"    </p>\n"
+"    <p>網站問題或建議請<a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
+"\">回饋給我們</a>\n"
+"    </p>\n"
+"    <p>其它問題可聯絡 <a href=\"mailto:organizers@pycon.tw"
+"\"><i>organizers@pycon.tw</i></a></p>\n"
+"    "
 
 #: templates/index.html:22
 msgid "Sponsors"
 msgstr "贊助者"
 
-#: templates/index.html:28
+#: templates/index.html:27
 msgid "Show me all"
 msgstr "讓我看全部"
 
-#: templates/index.html:33
+#: templates/index.html:32
 msgid "Sponsorship available!"
 msgstr "歡迎贊助！"
 
-#: templates/index.html:35
+#: templates/index.html:34
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -175,11 +272,11 @@ msgstr ""
 "    </a></span>\n"
 "    "
 
-#: templates/index.html:50
+#: templates/index.html:49
 msgid "What is PyCon and PyCon APAC"
-msgstr "關於 PyCon 與 PyCon APAC"
+msgstr ""
 
-#: templates/index.html:55
+#: templates/index.html:54
 msgid ""
 "\n"
 "      PyCon is a conference by the Python community for the community.\n"
@@ -199,7 +296,7 @@ msgstr ""
 "社群的研討會\n"
 "      "
 
-#: templates/index.html:64
+#: templates/index.html:63
 msgid ""
 "\n"
 "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
@@ -222,7 +319,7 @@ msgstr ""
 "年會（<a href=\"/2012/\">2012</a> 與 <a href=\"/2013/\">2013</a>）是主要由下"
 "列的使用者社群來籌劃策辦："
 
-#: templates/index.html:74
+#: templates/index.html:73
 msgid ""
 "\n"
 "          <li>\n"
@@ -324,12 +421,16 @@ msgstr ""
 msgid "read more"
 msgstr "更多"
 
+#: templates/accounts/account_form.html:20
+msgid "Submit"
+msgstr "提交"
+
 #: templates/accounts/account_login.html:7
 msgid "You're already logged in."
 msgstr "您已經登入。"
 
 #: templates/accounts/account_login.html:11
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
@@ -338,26 +439,32 @@ msgstr ""
 "個。"
 
 #: templates/accounts/account_login.html:14
+#, python-format
 msgid ""
-"<p>You can <a href=\"mailto:organizers@pycon.tw\">email us</a> if you've "
-"forgotten your password. Note that You need to sign up for PyCon APAC 2014 "
-"even if you have signed an account in 2013 or before.</p></p>"
+"<p>You can also <a href=\"%(password_reset_url)s?next=%(profile_update_url)s"
+"\">reset your password</a> if you've forgotten it.</p>\n"
+"    <p>Note that you <em>do</em> need to sign up for PyCon APAC 2014 even if "
+"you have\n"
+"      signed an account in 2013 or before.</p>\n"
+"    "
 msgstr ""
-"<p>如果您忘記了密碼，請<a href=\"mailto:organizers@pycon.tw\">聯絡我們</a>，"
-"如果您於 2013 或之前註冊過本網站，您仍<em>需要</em>註冊新的 2014 帳戶。"
+"<p>假如忘記密碼，請 <a href=\"%(password_reset_url)s?next="
+"%(profile_update_url)s\">重設您的密碼</a>。</p>\n"
+"<p>如果您於 2013 或之前註冊過本網站，您仍<em>需要</em>註冊新的 2014 帳戶。</"
+"p>"
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
 "Enter your username or email address and you'll receive an email with a link "
 "you need to click, in order to log in and change your password."
 msgstr ""
-"輸入你的帳號, 郵件信箱然後你會收到通知信, 內含確認的聯結. 點擊聯結後你可以登"
-"入並且更新密碼"
+"輸入你的帳號以及郵件信箱，然後你會收到通知信，內含確認的連結。點擊連結後你可"
+"以登入並且更新密碼。"
 
 #: templates/accounts/account_profile.html:17
 #: templates/accounts/includes/user_panel.html:10
 msgid "Update profile"
-msgstr "更新基本資訊"
+msgstr "更新個人帳戶"
 
 #: templates/accounts/account_signup.html:7
 msgid ""
@@ -394,6 +501,10 @@ msgstr "或"
 #: templates/accounts/includes/user_panel_nav.html:13
 msgid "Sign up"
 msgstr "註冊"
+
+#: templates/admin/base_site.html:35
+msgid "View site"
+msgstr ""
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
@@ -513,7 +624,7 @@ msgstr "Atom"
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3
 msgid "Hey there, a new account has been created and requires activation."
-msgstr "帳號已經建立，但還需完成啟用步驟。"
+msgstr "您好，您的帳號已經建立，但還需完成啟用步驟。"
 
 #: templates/email/account_approve.html:5
 #: templates/email/account_approve.txt:5
@@ -538,7 +649,7 @@ msgstr "帳號需要完成啟用步驟"
 #: templates/email/account_approved.html:3
 #: templates/email/account_approved.txt:3
 msgid "Hey there, your account has been activated."
-msgstr "你的帳戶已經啟用"
+msgstr "您好，你的帳戶已經啟用。"
 
 #: templates/email/account_approved.html:4
 #: templates/email/account_approved.txt:4
@@ -571,12 +682,12 @@ msgstr ""
 #: templates/email/password_reset_verify.html:3
 #: templates/email/password_reset_verify.txt:3
 msgid "Hey there, the password reset form was used for your account."
-msgstr ""
+msgstr "您好，我們收到重設您密碼的請求。"
 
 #: templates/email/password_reset_verify.html:4
 #: templates/email/password_reset_verify.txt:4
 msgid "Please use the link below to log in and update your password."
-msgstr "使用下面的聯結登入以及更新你的密碼"
+msgstr "使用下面的連結登入以及更新你的密碼："
 
 #: templates/email/password_reset_verify.html:6
 #: templates/email/password_reset_verify.txt:6
@@ -701,25 +812,12 @@ msgstr "新增"
 msgid "Recent Tweets"
 msgstr "近期推文"
 
-#~ msgid ""
-#~ "<p>You can also <a href=\"%(password_reset_url)s?next="
-#~ "%(profile_update_url)s\">reset your password</a> if you've forgotten it.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>若您忘記了您的密碼，也可以<a href=\"%(password_reset_url)s?next="
-#~ "%(profile_update_url)s\">重設</a>。</p>"
+#~ msgid "Title or job"
+#~ msgstr "頭銜或職稱"
 
-#~ msgid "email"
-#~ msgstr "電子郵件"
+#, fuzzy
+#~ msgid "Occupation"
+#~ msgstr "來自"
 
-#~ msgid "Email address"
-#~ msgstr "電子郵件位址"
-
-#~ msgid "Username"
-#~ msgstr "帳號"
-
-#~ msgid "Browse..."
-#~ msgstr "瀏覽…"
-
-#~ msgid "No file selected."
-#~ msgstr "尚無選擇檔案"
+#~ msgid "Title"
+#~ msgstr "標題"

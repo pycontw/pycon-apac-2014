@@ -264,6 +264,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     "conweb",
     "proposal",
+    "proposal_review",
     "raven.contrib.django.raven_compat",
 )
 
@@ -352,6 +353,7 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
+RAVEN_CONFIG = {}
 
 
 ##################

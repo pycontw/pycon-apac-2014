@@ -3,7 +3,7 @@
 {% if form_for_fields.non_field_errors %}
 <div class="form-group has-error non-field-errors">
     {% for error in form_for_fields.non_field_errors %}
-    <span class="help-inline">{{ error }}</span>
+    <span class="help-inline alert alert-warning">{{ error }}</span>
     {% endfor %}
 </div>
 {% endif %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}Proposal Review{% endblock title %}
+
+{% block meta_title %}Proposal Review{% endblock %}
+
+
+{% block content %}
+
+<div class="content">
+
+    <table class="overview-table">
+        <caption>Overview</caption>
+        <thead>
+            <tr>
+                <th style="text-align: center;">{% trans "Total" %}</th>
+                {% for type_name in statistic.type_counts %}
+                    <th style="text-align: center;">{{type_name}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td style="text-align: center;">{{statistic.total}}</th>
+                {% for count in statistic.type_counts.values %}
+                    <td style="text-align: center;">{{count}}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+    </table>
+
+    <table class="pycon-table table table-strip">
+        <thead>
+            <tr>
+                <th>{% trans "ID" %}</th>
+                <th>{% trans "Author" %}</th>
+                <th>{% trans "Title" %}</th>
+                <th>{% trans "Speech Type" %}</th>
+                <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
+                <th>{% trans "Avg. Rank" %}</th>
+                <th>{% trans "Action" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proposal in proposals %}
+            <tr>
+                <td>{{proposal.id}}</td>
+                <td title="{{proposal.author.username}}">{{proposal.author.get_full_name}}</td>
+                <td>{{proposal.title}}</td>
+                <td>{{proposal.get_speech_type_display}}</td>
+                <td>
+                  {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                  <a href="{{proposal.abstractfile.url}}" target="_blank">
+                  {{proposal.abstractfile}}
+                  </a>
+                  {% else %}
+                  <span>{% trans "No abstract file." %}</span>
+                  {% endif %}
+                </td>
+                <td>
+                    {% if proposal.author != request.user %}
+                        {{proposal.reviewrecordmodel__rank__avg|floatformat:1}}
+                    {% elif is_reviewer_admin %}
+                        {{proposal.reviewrecordmodel__rank__avg|floatformat:1}}
+                    {% else %}
+                        <span class="note">{% trans "國防布" %}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if proposal.author != request.user %}
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
+                    {% elif is_reviewer_admin %}
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
+                    {% else %}
+                        <span class="note">{% trans "No" %}</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">{% trans "No Proposal" %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

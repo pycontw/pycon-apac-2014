@@ -1,0 +1,93 @@
+from django.conf import settings
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
+
+from proposal.models import ProposalModel
+
+from conweb.utils import require_group
+from .forms import ReviewForm
+from .models import ReviewRecordModel
+
+
+REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
+
+
+def _is_review_admin(request):
+    return request.user.username in ('admin', 'tjw')
+
+
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
+def list_proposals(request):
+
+    proposals = ProposalModel.objects.annotate(Avg('reviewrecordmodel__rank'))
+    proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
+
+    type_counts = {
+        type_name: len([p for p in proposals if p.speech_type == speech_type])
+        for speech_type, type_name in ProposalModel.SPEECH_TYPE_CHOICES
+    }
+    statistic = {
+        "total": len(proposals),
+        "type_counts": type_counts
+    }
+    is_reviewer_admin = _is_review_admin(request)
+    return render(request, "list_proposals.html",
+                  {'proposals': proposals, 'statistic': statistic,
+                   'is_reviewer_admin': is_reviewer_admin})
+
+
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
+def do_review(request, proposal_id):
+
+    proposal = ProposalModel.objects.get(id=proposal_id)
+    is_reviewer_admin = _is_review_admin(request)
+    if proposal.author == request.user and not is_reviewer_admin:
+        message = _("Thanks for your curiosity!")
+        messages.add_message(request, messages.WARNING, message)
+        return redirect(reverse("proposal_review:list_proposals"))
+
+    reviews = ReviewRecordModel.objects.filter(proposal=proposal) \
+        .exclude(reviewer=request.user)
+
+    average_rank = ReviewRecordModel.objects.filter(proposal=proposal) \
+        .aggregate(Avg('rank')).get("rank__avg", None)
+
+    if request.method == "POST":
+
+        review, create = ReviewRecordModel.objects.get_or_create(
+            proposal=proposal,
+            reviewer=request.user
+        )
+        review_form = ReviewForm(request.POST, instance=review)
+
+        if review_form.is_valid():
+            review.save()
+            message = _("Thanks for your review!")
+            messages.add_message(request, messages.SUCCESS, message)
+            return redirect(reverse("proposal_review:list_proposals"))
+    else:
+        try:
+            review = ReviewRecordModel.objects \
+                .get(proposal=proposal, reviewer=request.user)
+        except ReviewRecordModel.DoesNotExist:
+            review = None
+        review_form = ReviewForm(instance=review)
+    return render(request, "create_review.html",
+                  {"proposal": proposal, "review_form": review_form,
+                   "reviews": reviews, "average_rank": average_rank})
+
+
+@login_required
+@require_group(REVIEWER_GROUP_NAME)
+def list_reviews(request, me=False):
+    if me:
+        reviews = ReviewRecordModel.objects.filter(reviewer=request.user)
+    else:
+        reviews = ReviewRecordModel.objects.all()
+    return render(request, "list_reviews.html", {"reviews": reviews})

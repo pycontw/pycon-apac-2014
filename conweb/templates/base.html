@@ -8,6 +8,10 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta property="og:title" content="{{ settings.SITE_TITLE }}" />
     <meta property="og:image" content="{% static "images/og.png" %}"/>
+    <meta property="og:image" content="{% static "images/og.png" %}"/>
+    <meta property="og:location" content="{% trans "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan" %}">
+    <meta property="og:startDate" content="2014-05-17">
+    <meta property="og:endDate" content="2014-05-18">
 
     <title>
       {% block meta_title_block %}
@@ -25,7 +29,7 @@
     <!--<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">-->
     {% endifinstalled %}
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     {% compress css %}
     <link rel="stylesheet" href="{% static "vendor/bootstrap-3.0.3/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "vendor/mezzanine/mezzanine.css" %}">
@@ -114,8 +118,9 @@
     <p>
     Hosting provided by <a href="http://streetvoice.com/">StreetVoice</a>.
     </p>
-    <p>Questions? Comments? Contact <a
-      href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>.</p>
+    <p>Bugs or wheels? <a id="feedback_directly" href="mailto:dev@pycon.tw">Feedback and support</a> here.
+    </p>
+    <p>More on contact <a href="mailto:organizers@pycon.tw"><i>organizers@pycon.tw</i></a></p>
     {% endblocktrans %}
   </div>
   <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
@@ -128,7 +133,5 @@
 
 {% include "includes/footer_scripts.html" %}
 
-<script>$('html').attr('lang', 'zh-Hant').addClass('han-la han-biaodian-pro-cns')</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/js/han.js"></script>
 </body>
 </html>

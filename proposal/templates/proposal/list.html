@@ -44,43 +44,73 @@
         <a class="btn btn-default btn-lg" href="{% url "proposal:create" %}">{% trans "Create a Proposal" %}</a>
     </p>
 
-    <table class="table table-strip">
-        <thead>
-            <tr>
-                <th>{% trans "Title" %}</th>
-                <th>{% trans "Speech Type" %}</th>
-                <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
-                <th>{% trans "Action" %}</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for proposal in my_proposal %}
-            <tr>
-                <td>{{proposal.title}}</td>
-                <td>{{proposal.get_speech_type_display}}</td>
-                <td>
-                  {% if proposal.abstractfile and proposal.abstractfile.has_file %}
-                  <a href="{{proposal.abstractfile.url}}" target="_blank">
-                  {{proposal.abstractfile}}
-                  </a>
-                  {% else %}
-                  <span>{% trans "No abstract file." %}</span>
-                  {% endif %}
+    {% for proposal in my_proposal %}
+
+
+      <div class="paper">
+        <h3 class="d-title">
+          {{proposal.title}}
+          <small>by</small>
+          {{proposal.author.get_full_name}}
+        </h3>
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Speech Type" %}</dt>
+              <dd>{{proposal.get_speech_type_display}}</dd>
+              <dt>{% trans "Audience level" %}</dt>
+              <dd>{{proposal.get_audience_level_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Language" %}</dt>
+              <dd>{{proposal.get_language_display}}</dd>
+              <dt>{% trans "Recording Perm." %}</dt>
+              <dd>{{proposal.get_talk_perm_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></dt>
+              <dd>
+                {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                <a href="{{proposal.abstractfile.url}}" target="_blank">
+                {{proposal.abstractfile}}
+                </a>
+                {% else %}
+                <span>{% trans "No abstract file." %}</span>
+                {% endif %}
                 &nbsp;
                 <button data-href="{% url "proposal:upload_abstract" proposal.id %}" class="btn btn-info upload-abstract">{% trans "Upload" %}</button>
-                </td>
-                <td>
-                    <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
-                    <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="4">{% trans "No Proposal" %}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <dl class="dl-info">
+          <dt>{% trans "Description" %}</dt>
+          <dd>{{proposal.description}}</dd>
+          <dt>{% trans "Additional information" %}</dt>
+          <dd>{{proposal.additional_info}}</dd>
+        </dl>
+        <hr>
+        <p class="text-right">
+          <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
+          <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
+        </p>
+
+
+      </div>
+
+    {% empty %}
+      <hr>
+      <p>{% trans "No Proposal" %}</p>
+    {% endfor %}
+
 </div>
 
 
