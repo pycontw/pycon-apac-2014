@@ -29,7 +29,7 @@
         </thead>
     </table>
 
-    <table class="table table-strip">
+    <table class="pycon-table table table-strip">
         <thead>
             <tr>
                 <th>{% trans "ID" %}</th>
@@ -68,9 +68,9 @@
                 </td>
                 <td>
                     {% if proposal.author != request.user %}
-                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
                     {% elif is_reviewer_admin %}
-                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="btn btn-info">{% trans "Review" %}</a>
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
                     {% else %}
                         <span class="note">{% trans "No" %}</span>
                     {% endif %}

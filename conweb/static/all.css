@@ -731,6 +731,26 @@ hr {
   font-family: Lato;
   text-shadow: 0 0 2px rgba(0,0,0,0.1);
 }
+.pycon-table {
+  width: 100%;
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-top-color: #ddd;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+.pycon-table thead {
+  font-size: 15px;
+  background-color: #f5f4ee;
+}
+.pycon-table thead th {
+  font-weight: normal;
+  color: #666;
+}
+.pycon-table tbody {
+  font-size: 15px;
+}
 .form-group label {
   display: block;
 }
