@@ -117,8 +117,9 @@
     <p>
     Hosting provided by <a href="http://streetvoice.com/">StreetVoice</a>.
     </p>
-    <p>Questions? Comments? Contact <a
-      href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>.</p>
+    <p>Bugs or wheels? <a id="feedback_directly" href="mailto:dev@pycon.tw">Feedback and support</a> here.
+    </p>
+    <p>More on contact <a href="mailto:organizers@pycon.tw"><i>organizers@pycon.tw</i></a></p>
     {% endblocktrans %}
   </div>
   <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
@@ -130,9 +131,6 @@
 {% include "_nav.html" %}
 
 {% include "includes/footer_scripts.html" %}
-{% if LANGUAGE_CODE == 'zh' %}
-<script>$('html').attr('lang', 'zh-Hant').addClass('han-la han-biaodian-pro-cns')</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Han/2.2.3/js/han.js"></script>
-{% endif %}
+
 </body>
 </html>
