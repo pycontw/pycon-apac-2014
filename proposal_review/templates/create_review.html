@@ -12,7 +12,7 @@
   <div class="content">
     <h2 class="doc-title">Proposal Info</h2>
       <div class="paper">
-        <h3 class="paper-title">
+        <h3 class="d-title">
           {{proposal.title}}
           <small>by</small>
           {{proposal.author.get_full_name}}
@@ -76,37 +76,39 @@
     </div>
     <div class="clearfix"></div>
 
-    <br>
-    <p>
+    <h2 class="doc-title">
       {% blocktrans %}
       Other Reviews:
       {% endblocktrans %}
-      ({% trans "Average Rank" %}:
-      {{ average_rank|floatformat:1 }})
-    <table class="table table-strip">
-      <thead>
-          <tr>
-              <th>{% trans "Rank" %}</th>
-              <th>{% trans "Comment" %}</th>
-              <th>{% trans "Reviewer" %}</th>
-          </tr>
-      </thead>
-      <tbody>
-          {% for review in reviews %}
-          <tr>
-              <td>{{review.rank}}</td>
-              <td>{{review.comment}}</td>
-              <td>{{review.reviewer.username}}</td>
-          </tr>
-          {% empty %}
-          <tr>
-              <td colspan="4">{% trans "No Review" %}</td>
-          </tr>
-          {% endfor %}
-      </tbody>
-    </table>
+
+    </h2>
+    <div class="paper">
+        <p>{% trans "Average Rank" %}:{{ average_rank|floatformat:1 }}</p>
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>{% trans "Rank" %}</th>
+                  <th>{% trans "Comment" %}</th>
+                  <th>{% trans "Reviewer" %}</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for review in reviews %}
+              <tr>
+                  <td>{{review.rank}}</td>
+                  <td>{{review.comment}}</td>
+                  <td>{{review.reviewer.username}}</td>
+              </tr>
+              {% empty %}
+              <tr>
+                  <td colspan="3">{% trans "No Review" %}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
   </div>
 
 
 {% endblock %}
-
