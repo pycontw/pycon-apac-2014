@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-01 01:10+0800\n"
+"POT-Creation-Date: 2014-03-01 11:06+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -66,8 +66,8 @@ msgid "Link of Organization/Company"
 msgstr "組織/公司連結"
 
 #: models.py:35
-msgid "Title or job"
-msgstr "頭銜或職稱"
+msgid "Job title"
+msgstr "頭銜"
 
 #: models.py:37
 msgid "Picture"
@@ -805,6 +805,9 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Title or job"
+#~ msgstr "頭銜或職稱"
 
 #, fuzzy
 #~ msgid "Occupation"
