@@ -3,14 +3,15 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.db.models import Avg
 
 from proposal.models import ProposalModel
 
 from conweb.utils import require_group
-from .forms import ReviewForm
-from .models import ReviewRecordModel
+from .forms import ReviewForm, ProposalResultForm
+from .models import ReviewRecordModel, ProposalResultModel
 
 
 REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
@@ -77,10 +78,18 @@ def do_review(request, proposal_id):
                 .get(proposal=proposal, reviewer=request.user)
         except ReviewRecordModel.DoesNotExist:
             review = None
+
+        # Create at first time.
+        proposal_result, create = ProposalResultModel.objects \
+            .get_or_create(proposal=proposal)
+
         review_form = ReviewForm(instance=review)
+        result_form = ProposalResultForm(instance=proposal_result)
     return render(request, "create_review.html",
                   {"proposal": proposal, "review_form": review_form,
-                   "reviews": reviews, "average_rank": average_rank})
+                   "reviews": reviews, "average_rank": average_rank,
+                   "result_form": result_form,
+                   "proposal_result": proposal_result})
 
 
 @login_required
@@ -91,3 +100,21 @@ def list_reviews(request, me=False):
     else:
         reviews = ReviewRecordModel.objects.all()
     return render(request, "list_reviews.html", {"reviews": reviews})
+
+
+@login_required
+@require_POST
+def make_decision(request, proposal_id):
+
+    try:
+        proposal_result = ProposalResultModel.objects \
+            .get(proposal_id=proposal_id)
+    except ReviewRecordModel.DoesNotExist:
+        proposal_result = None
+
+    result_form = ProposalResultForm(request.POST, instance=proposal_result)
+    result = result_form.save(commit=False)
+    result.referee = request.user
+    result.save()
+
+    return redirect(reverse("proposal_review:do_review", args=(proposal_id,)))

@@ -108,6 +108,28 @@
         </table>
 
     </div>
+    <h2 class="doc-title">Proposal Decision</h2>
+    <div class="paper">
+      <p>
+      <dl class="">
+        <dt>{% trans "Decision" %}</dt>
+        <dd>{{ proposal_result.get_decision_display }}</dd>
+        <dt>{% trans "Referee" %}</dt>
+        <dd>{{ proposal_result.referee }}</dd>
+      </dl>
+      </p>
+
+      <form class="form" method="post" action="{% url "proposal_review:make_decision" proposal.id %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% bootstrap_form result_form %}
+          {% buttons %}
+            <hr>
+            <button type="submit" class="btn btn-primary btn-lg">
+                {% bootstrap_icon "star" %} {% trans "Submit" %}
+            </button>
+          {% endbuttons %}
+      </form>
+    </div>
   </div>
 
 
