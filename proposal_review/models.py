@@ -18,4 +18,5 @@ class ReviewRecordModel(models.Model):
     reviewer = models.ForeignKey("auth.User")
     rank = models.IntegerField(verbose_name=_("Rank"), default=0,
                                choices=RANK_CHOICES)
-    comment = models.TextField(verbose_name=_("Comment"), blank=True, null=True)
+    comment = models.TextField(verbose_name=_("Comment"),
+                               blank=False, null=True)

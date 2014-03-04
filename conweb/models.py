@@ -32,7 +32,7 @@ class UserProfile(models.Model):
                               null=True, blank=True)
     title = models.CharField(
         max_length=128,
-        verbose_name=_("Title"),
+        verbose_name=_("Job title"),
         null=True, blank=True)
     picture = models.ImageField(verbose_name=_("Picture"),
                                 upload_to="picture", null=True, blank=True)

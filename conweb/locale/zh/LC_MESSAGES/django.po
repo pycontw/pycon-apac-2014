@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Keith Yang <yang@keitheis.org>, 2014
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Michelle <flywindy2002@gmail.com>, 2014
-# Keith Yang <yang@keitheis.org>, 2014
+# keitheis <keitheis+transifex@gmail.com>, 2014
+# keitheis <keitheis+transifex@gmail.com>, 2014
 # Keith Yang <yang@keitheis.org>, 2014
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
 # Michelle <flywindy2002@gmail.com>, 2014
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-13 00:03+0800\n"
-"PO-Revision-Date: 2014-01-23 12:20+0000\n"
-"Last-Translator: Keith Yang <yang@keitheis.org>\n"
+"POT-Creation-Date: 2014-03-01 12:57+0800\n"
+"PO-Revision-Date: 2014-02-25 04:10+0000\n"
+"Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
 "apac-2014/language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -29,47 +29,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: models.py:8
+#: models.py:9
 msgid "Speaker Brief"
 msgstr "講者簡介"
 
-#: models.py:12
+#: models.py:13
 msgid "Tagline: split by comma."
 msgstr "標籤列：使用小寫逗號分隔。"
 
-#: models.py:13
+#: models.py:14
 msgid "e.g., pycontw, IPython, pep8"
 msgstr "例如：「pycontw, IPython, pep8」"
 
-#: models.py:17
+#: models.py:18
 msgid "Location"
 msgstr "來自"
 
-#: models.py:18
+#: models.py:19
 msgid "i.e. where you from?"
 msgstr "您從哪裡來？"
 
-#: models.py:20
+#: models.py:21
 msgid "Personal Link"
 msgstr "個人網頁連結"
 
-#: models.py:24
+#: models.py:25
 msgid "Twitter Username"
 msgstr "Twitter 帳號"
 
-#: models.py:28
+#: models.py:29
 msgid "Organization/Company"
 msgstr "組織/公司"
 
-#: models.py:30
+#: models.py:31
 msgid "Link of Organization/Company"
 msgstr "組織/公司連結"
 
-#: models.py:34
-msgid "Title"
-msgstr "標題"
+#: models.py:35
+msgid "Job title"
+msgstr "頭銜"
 
-#: models.py:36
+#: models.py:37
 msgid "Picture"
 msgstr "照片"
 
@@ -152,6 +152,10 @@ msgstr "含認證連結的 Email 已寄至您的信箱。"
 msgid "Successfully signed up"
 msgstr "成功註冊"
 
+#: locale/missing.py:28
+msgid "Profile updated"
+msgstr "個人帳戶已更新"
+
 #: templates/_nav.html:21 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -161,19 +165,35 @@ msgstr "部落格"
 msgid "My Proposals"
 msgstr "我的講題"
 
-#: templates/_nav.html:31
+#: templates/_nav.html:32
+msgid "Review"
+msgstr "審件"
+
+#: templates/_nav.html:35
+msgid "All Proposals"
+msgstr "講題列表"
+
+#: templates/_nav.html:38
+msgid "My Review"
+msgstr "我的審件"
+
+#: templates/_nav.html:44
 msgid "My Profile"
 msgstr "我的個人帳戶"
 
-#: templates/_nav.html:35
+#: templates/_nav.html:48
 msgid "LOG OUT"
 msgstr "登出"
 
-#: templates/_nav.html:38
+#: templates/_nav.html:51
 msgid "SPEAKER LOG IN"
 msgstr "講者登入"
 
-#: templates/base.html:108
+#: templates/base.html:12
+msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
+msgstr "115 台灣台北市南港區研究院路 2 段 128 號"
+
+#: templates/base.html:112
 msgid ""
 "\n"
 "    <p>\n"
@@ -184,8 +204,11 @@ msgid ""
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
 "    </p>\n"
-"    <p>Questions? Comments? Contact <a\n"
-"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>.</p>\n"
+"    <p>Bugs or wheels? <a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
+"\">Feedback and support</a> here.\n"
+"    </p>\n"
+"    <p>More on contact <a href=\"mailto:organizers@pycon.tw"
+"\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 msgstr ""
 "\n"
@@ -197,23 +220,26 @@ msgstr ""
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
 "    </p>\n"
-"    <p>有問題或建議，請聯絡 <a\n"
-"      href=\"mailto:organizers@pycon.tw\">organizers@pycon.tw</a>。</p>\n"
+"    <p>網站問題或建議請<a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
+"\">回饋給我們</a>\n"
+"    </p>\n"
+"    <p>其它問題可聯絡 <a href=\"mailto:organizers@pycon.tw"
+"\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 
 #: templates/index.html:22
 msgid "Sponsors"
 msgstr "贊助者"
 
-#: templates/index.html:28
+#: templates/index.html:27
 msgid "Show me all"
 msgstr "讓我看全部"
 
-#: templates/index.html:33
+#: templates/index.html:32
 msgid "Sponsorship available!"
 msgstr "歡迎贊助！"
 
-#: templates/index.html:35
+#: templates/index.html:34
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -246,11 +272,11 @@ msgstr ""
 "    </a></span>\n"
 "    "
 
-#: templates/index.html:50
+#: templates/index.html:49
 msgid "What is PyCon and PyCon APAC"
-msgstr "關於 PyCon 與 PyCon APAC"
+msgstr ""
 
-#: templates/index.html:55
+#: templates/index.html:54
 msgid ""
 "\n"
 "      PyCon is a conference by the Python community for the community.\n"
@@ -270,7 +296,7 @@ msgstr ""
 "社群的研討會\n"
 "      "
 
-#: templates/index.html:64
+#: templates/index.html:63
 msgid ""
 "\n"
 "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
@@ -293,7 +319,7 @@ msgstr ""
 "年會（<a href=\"/2012/\">2012</a> 與 <a href=\"/2013/\">2013</a>）是主要由下"
 "列的使用者社群來籌劃策辦："
 
-#: templates/index.html:74
+#: templates/index.html:73
 msgid ""
 "\n"
 "          <li>\n"
@@ -404,7 +430,6 @@ msgid "You're already logged in."
 msgstr "您已經登入。"
 
 #: templates/accounts/account_login.html:11
-#, python-format
 msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
@@ -786,28 +811,11 @@ msgstr "新增"
 msgid "Recent Tweets"
 msgstr "近期推文"
 
-#~ msgid "Update"
-#~ msgstr "更新"
+#~ msgid "Title or job"
+#~ msgstr "頭銜或職稱"
 
-#~ msgid ""
-#~ "<p>You can also <a href=\"%(password_reset_url)s?next="
-#~ "%(profile_update_url)s\">reset your password</a> if you've forgotten it.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>若您忘記了您的密碼，也可以<a href=\"%(password_reset_url)s?next="
-#~ "%(profile_update_url)s\">重設</a>。</p>"
+#~ msgid "Occupation"
+#~ msgstr "來自"
 
-#~ msgid "email"
-#~ msgstr "電子郵件"
-
-#~ msgid "Email address"
-#~ msgstr "電子郵件位址"
-
-#~ msgid "Username"
-#~ msgstr "帳號"
-
-#~ msgid "Browse..."
-#~ msgstr "瀏覽…"
-
-#~ msgid "No file selected."
-#~ msgstr "尚無選擇檔案"
+#~ msgid "Title"
+#~ msgstr "標題"

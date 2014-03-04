@@ -25,3 +25,4 @@ if 0:  # Let Python discard this block
     _("A verification email has been sent with "
       "a link for activating your account.")
     _("Successfully signed up")
+    _("Profile updated")

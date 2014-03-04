@@ -1,12 +1,23 @@
-.richpage {
+.paper {
   background: rgba(#fff,0.8);
   padding: 2.5em 3em;
+  margin-bottom 1.5em;
+
+}
+.paper-title {
+  padding-bottom: 0.3em;
+  margin: 0 0 1em;
+}
+
+.richpage {
+  @extend .paper;
+
   border: 1px solid #eee;
   color: #555;
   font-size: 16px;
   margin-top: -40px;
-  -webkit-box-shadow: 2px 2px 12px rgba(#666,0.1);
-          box-shadow: 2px 2px 12px rgba(#666,0.1);
+  box-shadow: 2px 2px 12px rgba(#666,0.1);
+
   table {
     width: 100%;
     font-size: 15px;
@@ -76,4 +87,20 @@
     }
   }
 
+}
+
+.dl-info {
+  dt {
+    font-size: 15px;
+    color: #999;
+    font-weight: normal;
+
+  }
+  dd {
+    margin-bottom: 1em;
+  }
+  dd:last-child {
+    margin-bottom: 0;
+  }
+  margin: 0;
 }
