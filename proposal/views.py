@@ -4,6 +4,8 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.core.exceptions import PermissionDenied
 
 from .forms import ProposalForm, AbstractFileForm
 from .models import ProposalModel, AbstractFile
@@ -11,6 +13,9 @@ from .models import ProposalModel, AbstractFile
 
 @login_required
 def create_proposal(request):
+
+    if not settings.CALL_FOR_PROPOSAL:
+        raise PermissionDenied("Time is up.")
 
     if request.method == "POST":
 
@@ -70,6 +75,9 @@ def update_proposal(request, proposal_id):
 
 @login_required
 def delete_proposal(request, proposal_id):
+
+    if not settings.CALL_FOR_PROPOSAL:
+        raise PermissionDenied("Time is up.")
 
     proposal = ProposalModel.objects.get(id=proposal_id, author=request.user)
 

@@ -41,7 +41,9 @@
 
 <div class="content">
     <p class="action-btn-block">
+        {% if CALL_FOR_PROPOSAL %}
         <a class="btn btn-default btn-lg" href="{% url "proposal:create" %}">{% trans "Create a Proposal" %}</a>
+        {% endif %}
     </p>
 
     {% for proposal in my_proposal %}
@@ -100,7 +102,9 @@
         <hr>
         <p class="text-right">
           <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
+          {% if CALL_FOR_PROPOSAL %}
           <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
+          {% endif %}
         </p>
 
 

@@ -120,7 +120,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
 
-CALL_FOR_PROPOSAL = False
+CALL_FOR_PROPOSAL = True
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
