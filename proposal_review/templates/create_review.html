@@ -108,6 +108,7 @@
         </table>
 
     </div>
+    {% if is_reviewer_admin %}
     <h2 class="doc-title">Proposal Decision</h2>
     <div class="paper">
       <p>
@@ -130,6 +131,7 @@
           {% endbuttons %}
       </form>
     </div>
+    {% endif %}
   </div>
 
 

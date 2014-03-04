@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.db.models import Avg
 
 from proposal.models import ProposalModel
@@ -78,17 +79,21 @@ def do_review(request, proposal_id):
                 .get(proposal=proposal, reviewer=request.user)
         except ReviewRecordModel.DoesNotExist:
             review = None
-
-        # Create at first time.
-        proposal_result, create = ProposalResultModel.objects \
-            .get_or_create(proposal=proposal)
-
         review_form = ReviewForm(instance=review)
-        result_form = ProposalResultForm(instance=proposal_result)
+
+        if is_reviewer_admin:
+            # Create at first time.
+            proposal_result, create = ProposalResultModel.objects \
+                .get_or_create(proposal=proposal)
+            result_form = ProposalResultForm(instance=proposal_result)
+        else:
+            proposal_result = None
+            result_form = None
     return render(request, "create_review.html",
                   {"proposal": proposal, "review_form": review_form,
                    "reviews": reviews, "average_rank": average_rank,
                    "result_form": result_form,
+                   "is_reviewer_admin": is_reviewer_admin,
                    "proposal_result": proposal_result})
 
 
@@ -105,6 +110,11 @@ def list_reviews(request, me=False):
 @login_required
 @require_POST
 def make_decision(request, proposal_id):
+
+    is_reviewer_admin = _is_review_admin(request)
+
+    if not is_reviewer_admin:
+        raise PermissionDenied("Invalid user.")
 
     try:
         proposal_result = ProposalResultModel.objects \
