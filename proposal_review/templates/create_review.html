@@ -52,12 +52,16 @@
         </div>
         <div class="clear"></div>
         <hr>
-        <dl class="dl-info">
-          <dt>{% trans "Description" %}</dt>
-          <dd><pre>{{proposal.description}}</pre></dd>
-          <dt>{% trans "Additional information" %}</dt>
-          <dd><pre>{{proposal.additional_info}}</pre></dd>
-        </dl>
+        <div class="row">
+          <div class="col-md-8">
+            <dl class="dl-info">
+              <dt>{% trans "Description" %}</dt>
+              <dd><pre>{{proposal.description}}</pre></dd>
+              <dt>{% trans "Additional information" %}</dt>
+              <dd><pre>{{proposal.additional_info}}</pre></dd>
+            </dl>
+          </div>
+        </div>
         <div class="clear"></div>
 
       </div>
