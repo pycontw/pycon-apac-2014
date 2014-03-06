@@ -20,3 +20,17 @@ class ReviewRecordModel(models.Model):
                                choices=RANK_CHOICES)
     comment = models.TextField(verbose_name=_("Comment"),
                                blank=False, null=True)
+
+
+class ProposalResultModel(models.Model):
+
+    RESULT_CHOICES = (
+        (-1, "Rejected"),
+        (0, "Undecided"),
+        (1, "Accepted")
+    )
+
+    proposal = models.OneToOneField("proposal.ProposalModel", related_name="result")
+    decision = models.IntegerField(verbose_name=_("Decision"), default=0,
+                                   choices=RESULT_CHOICES)
+    referee = models.ForeignKey("auth.User", null=True)
