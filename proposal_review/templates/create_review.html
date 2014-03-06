@@ -53,7 +53,7 @@
         <div class="clear"></div>
         <hr>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <dl class="dl-info">
               <dt>{% trans "Description" %}</dt>
               <dd><pre>{{proposal.description}}</pre></dd>
@@ -67,16 +67,20 @@
       </div>
     <h2 class="doc-title">Proposal Review</h2>
     <div class="paper">
-      <form class="form" method="post" action="." enctype="multipart/form-data">
-          {% csrf_token %}
-          {% bootstrap_form review_form %}
-          {% buttons %}
-            <hr>
-            <button type="submit" class="btn btn-primary btn-lg">
-                {% bootstrap_icon "star" %} {% trans "Submit" %}
-            </button>
-          {% endbuttons %}
-      </form>
+      <div class="row">
+        <div class="col-md-9">
+          <form class="form" method="post" action="." enctype="multipart/form-data">
+              {% csrf_token %}
+              {% bootstrap_form review_form %}
+              {% buttons %}
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    {% bootstrap_icon "star" %} {% trans "Submit" %}
+                </button>
+              {% endbuttons %}
+          </form>
+        </div>
+      </div>
     </div>
     <div class="clearfix"></div>
 
@@ -100,7 +104,7 @@
               {% for review in reviews %}
               <tr>
                   <td>{{review.rank}}</td>
-                  <td>{{review.comment}}</td>
+                  <td><pre>{{review.comment}}</pre></td>
                   <td>{{review.reviewer.username}}</td>
               </tr>
               {% empty %}

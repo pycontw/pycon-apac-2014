@@ -93,19 +93,23 @@
         </div>
         <div class="clear"></div>
         <hr>
-        <dl class="dl-info">
-          <dt>{% trans "Description" %}</dt>
-          <dd>{{proposal.description}}</dd>
-          <dt>{% trans "Additional information" %}</dt>
-          <dd>{{proposal.additional_info}}</dd>
-        </dl>
-        <hr>
-        <p class="text-right">
-          <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
-          {% if CALL_FOR_PROPOSAL %}
-          <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
-          {% endif %}
-        </p>
+        <div class="row">
+          <div class="col-md-9">
+            <dl class="dl-info">
+              <dt>{% trans "Description" %}</dt>
+              <dd><pre>{{proposal.description}}</pre></dd>
+              <dt>{% trans "Additional information" %}</dt>
+              <dd><pre>{{proposal.additional_info}}</pre></dd>
+            </dl>
+            <hr>
+            <p class="text-right">
+              <a href="{% url "proposal:update" proposal.id %}" class="btn btn-info">{% trans "Update" %}</a>
+              {% if CALL_FOR_PROPOSAL %}
+              <button data-href="{% url "proposal:delete" proposal.id %}" class="btn btn-danger delete-proposal">{% trans "Delete" %}</button>
+              {% endif %}
+            </p>
+          </div>
+        </div>
 
 
       </div>
