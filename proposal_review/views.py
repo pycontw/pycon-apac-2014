@@ -16,10 +16,11 @@ from .models import ReviewRecordModel, ProposalResultModel
 
 
 REVIEWER_GROUP_NAME = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
+reviewer_admins = getattr(settings, "REVIEWER_ADMINS", [])
 
 
 def _is_review_admin(request):
-    return request.user.username in ('admin', 'tjw')
+    return request.user.username in ['admin'] + reviewer_admins
 
 
 @login_required
