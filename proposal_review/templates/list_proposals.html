@@ -82,16 +82,18 @@
                     {% endif %}
                 </td>
                 <td>
-                    {% if proposal.author != request.user %}
-                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
-                    {% elif is_reviewer_admin %}
+                    {% if is_reviewer_admin or proposal.author != request.user %}
                         <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
                 </td>
                 <td>
-                    {{proposal.result.get_decision_display}}
+                    {% if is_reviewer_admin or proposal.author != request.user %}
+                        {{proposal.result.get_decision_display}}
+                    {% else %}
+                        <span class="note">{% trans "－－－" %}</span>
+                    {% endif %}
                 </td>
             </tr>
             {% empty %}
