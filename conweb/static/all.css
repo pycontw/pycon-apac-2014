@@ -883,8 +883,7 @@ hr {
 
 .paper,
 .richpage {
-  /* background: rgba(#fff,0.8); */
-  background: none repeat scroll 0% 0% #fdfcf6;
+  background: #fdfcf6;
   padding: 2.5em 3em;
   margin-bottom: 1.5em;
 }
