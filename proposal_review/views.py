@@ -6,7 +6,7 @@ from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from django.db.models import Avg, Sum
+from django.db.models import Avg, Sum, Count
 
 from proposal.models import ProposalModel
 
@@ -28,8 +28,9 @@ def _is_review_admin(request):
 def list_proposals(request):
 
     proposals = (ProposalModel.objects
-                 .annotate(Avg('reviewrecordmodel__rank'))
-                 .annotate(Sum('reviewrecordmodel__rank')))
+                 .annotate(rank_avg=Avg('reviewrecordmodel__rank'))
+                 .annotate(rank_sum=Sum('reviewrecordmodel__rank'))
+                 .annotate(reviewers_amount=Count('reviewrecordmodel__rank')))
     proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
 
     type_counts = {
