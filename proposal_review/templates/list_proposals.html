@@ -37,6 +37,7 @@
                 <th>{% trans "Title" %}</th>
                 <th>{% trans "Speech Type" %}</th>
                 <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
+                <th>{% trans "Sum. Rank" %}</th>
                 <th>{% trans "Avg. Rank" %}</th>
                 <th>{% trans "Action" %}</th>
                 <th>{% trans "Decision" %}</th>
@@ -57,6 +58,15 @@
                   {% else %}
                   <span>{% trans "No abstract file." %}</span>
                   {% endif %}
+                </td>
+                <td>
+                    {% if proposal.author != request.user %}
+                        {{proposal.reviewrecordmodel__rank__sum}}
+                    {% elif is_reviewer_admin %}
+                        {{proposal.reviewrecordmodel__rank__sum}}
+                    {% else %}
+                        <span class="note">{% trans "國防布" %}</span>
+                    {% endif %}
                 </td>
                 <td>
                     {% if proposal.author != request.user %}
