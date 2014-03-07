@@ -29,7 +29,7 @@
         </thead>
     </table>
 
-    <table class="pycon-table table table-strip">
+    <table id="proposal_review_list" class="pycon-table table table-strip">
         <thead>
             <tr>
                 <th>{% trans "ID" %}</th>
@@ -37,6 +37,8 @@
                 <th>{% trans "Title" %}</th>
                 <th>{% trans "Speech Type" %}</th>
                 <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
+                <th>{% trans "Reviews" %}</th>
+                <th>{% trans "Sum. Rank" %}</th>
                 <th>{% trans "Avg. Rank" %}</th>
                 <th>{% trans "Action" %}</th>
                 <th>{% trans "Decision" %}</th>
@@ -58,13 +60,25 @@
                   <span>{% trans "No abstract file." %}</span>
                   {% endif %}
                 </td>
-                <td>
-                    {% if proposal.author != request.user %}
-                        {{proposal.reviewrecordmodel__rank__avg|floatformat:1}}
-                    {% elif is_reviewer_admin %}
-                        {{proposal.reviewrecordmodel__rank__avg|floatformat:1}}
+                <td class="number">
+                    {% if is_reviewer_admin or proposal.author != request.user %}
+                        {{proposal.reviewers_amount}}
                     {% else %}
-                        <span class="note">{% trans "國防布" %}</span>
+                        <span class="note">{% trans "－－－" %}</span>
+                    {% endif %}
+                </td>
+                <td class="number">
+                    {% if is_reviewer_admin or proposal.author != request.user %}
+                        {{proposal.rank_sum}}
+                    {% else %}
+                        <span class="note">{% trans "－－－" %}</span>
+                    {% endif %}
+                </td>
+                <td class="number">
+                    {% if is_reviewer_admin or proposal.author != request.user %}
+                        {{proposal.rank_avg}}
+                    {% else %}
+                        <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
                 </td>
                 <td>
@@ -73,7 +87,7 @@
                     {% elif is_reviewer_admin %}
                         <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
                     {% else %}
-                        <span class="note">{% trans "No" %}</span>
+                        <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
                 </td>
                 <td>
