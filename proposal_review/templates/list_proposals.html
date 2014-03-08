@@ -41,7 +41,9 @@
                 <th>{% trans "Sum. Rank" %}</th>
                 <th>{% trans "Avg. Rank" %}</th>
                 <th>{% trans "Action" %}</th>
+                {% if is_reviewer_admin %}
                 <th>{% trans "Decision" %}</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -88,13 +90,11 @@
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
                 </td>
+                {% if is_reviewer_admin %}
                 <td>
-                    {% if is_reviewer_admin or proposal.author != request.user %}
-                        {{proposal.result.get_decision_display}}
-                    {% else %}
-                        <span class="note">{% trans "－－－" %}</span>
-                    {% endif %}
+                  {{proposal.result.get_decision_display}}
                 </td>
+                {% endif %}
             </tr>
             {% empty %}
             <tr>
