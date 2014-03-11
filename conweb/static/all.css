@@ -598,13 +598,13 @@ a:hover {
   font-size: 40px;
   margin: 0.5em;
 }
-.sponsers img {
+.sponsors img {
   margin: 1px 0 20px;
 }
-.sponsers img:last-child {
+.sponsors img:last-child {
   margin: 0 0 1px;
 }
-.sponser-title {
+.sponsor-title {
   color: #9d8e32;
   font-size: 18px;
 }
@@ -939,7 +939,7 @@ hr {
     font-size: 20px;
   }
 }
-.home-sponsers {
+.home-sponsors {
   font-family: 'Lato', sans-serif;
   text-align: center;
   background: #fff;
@@ -951,21 +951,21 @@ hr {
   -webkit-box-shadow: 0 1px 2px rgba(102,102,102,0.1);
   box-shadow: 0 1px 2px rgba(102,102,102,0.1);
 }
-.home-sponsers h3,
-.home-sponsers h4 {
+.home-sponsors h3,
+.home-sponsors h4 {
   color: #c2bb92;
   margin: 5 0 15px;
 }
-.home-sponsers p.apply {
+.home-sponsors p.apply {
   margin: 1.5em 1em 1em;
 }
 @media only screen and (max-width: 1000px) {
-  .home-sponsers p.apply span {
+  .home-sponsors p.apply span {
     display: block;
     margin: 4px 0;
   }
 }
-.home-sponsers p.apply span.div-line {
+.home-sponsors p.apply span.div-line {
   display: inline-block;
   height: 35px;
   line-height: 35px;
@@ -973,27 +973,27 @@ hr {
   margin: 0 15px 0 10px;
 }
 @media only screen and (max-width: 1000px) {
-  .home-sponsers p.apply span.div-line {
+  .home-sponsors p.apply span.div-line {
     display: none;
   }
 }
-.home-sponsers .sponser-logos {
+.home-sponsors .sponsor-logos {
   margin: 5px;
 }
-.home-sponsers .sponser-logos img {
+.home-sponsors .sponsor-logos img {
   margin: 10px 5px;
 }
-.home-sponsers .sponser-more {
+.home-sponsors .sponsor-more {
   margin: -3px 0 0;
   height: 0;
 }
-.home-sponsers .sponser-more a.btn {
+.home-sponsors .sponsor-more a.btn {
   padding: 10px 20px;
   background-color: #f6f5ef;
   color: #999;
   border: none;
 }
-.home-sponsers .sponser-more a.btn:hover {
+.home-sponsors .sponsor-more a.btn:hover {
   color: #000;
 }
 .talk-meta dt {
