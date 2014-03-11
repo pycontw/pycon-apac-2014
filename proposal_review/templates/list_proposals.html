@@ -78,7 +78,7 @@
                 </td>
                 <td class="number">
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        {{proposal.rank_avg|default:0|floatformat:2}}}}
+                        {{proposal.rank_avg|default:0|floatformat:2}}
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
