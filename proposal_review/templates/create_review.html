@@ -52,27 +52,35 @@
         </div>
         <div class="clear"></div>
         <hr>
-        <dl class="dl-info">
-          <dt>{% trans "Description" %}</dt>
-          <dd>{{proposal.description}}</dd>
-          <dt>{% trans "Additional information" %}</dt>
-          <dd>{{proposal.additional_info}}</dd>
-        </dl>
+        <div class="row">
+          <div class="col-md-9">
+            <dl class="dl-info">
+              <dt>{% trans "Description" %}</dt>
+              <dd><pre>{{proposal.description}}</pre></dd>
+              <dt>{% trans "Additional information" %}</dt>
+              <dd><pre>{{proposal.additional_info}}</pre></dd>
+            </dl>
+          </div>
+        </div>
         <div class="clear"></div>
 
       </div>
     <h2 class="doc-title">Proposal Review</h2>
     <div class="paper">
-      <form class="form" method="post" action="." enctype="multipart/form-data">
-          {% csrf_token %}
-          {% bootstrap_form review_form %}
-          {% buttons %}
-            <hr>
-            <button type="submit" class="btn btn-primary btn-lg">
-                {% bootstrap_icon "star" %} {% trans "Submit" %}
-            </button>
-          {% endbuttons %}
-      </form>
+      <div class="row">
+        <div class="col-md-9">
+          <form class="form" method="post" action="." enctype="multipart/form-data">
+              {% csrf_token %}
+              {% bootstrap_form review_form %}
+              {% buttons %}
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    {% bootstrap_icon "star" %} {% trans "Submit" %}
+                </button>
+              {% endbuttons %}
+          </form>
+        </div>
+      </div>
     </div>
     <div class="clearfix"></div>
 
@@ -96,7 +104,7 @@
               {% for review in reviews %}
               <tr>
                   <td>{{review.rank}}</td>
-                  <td>{{review.comment}}</td>
+                  <td><pre>{{review.comment}}</pre></td>
                   <td>{{review.reviewer.username}}</td>
               </tr>
               {% empty %}
@@ -108,6 +116,30 @@
         </table>
 
     </div>
+    {% if is_reviewer_admin %}
+    <h2 class="doc-title">Proposal Decision</h2>
+    <div class="paper">
+      <p>
+      <dl class="">
+        <dt>{% trans "Decision" %}</dt>
+        <dd>{{ proposal_result.get_decision_display }}</dd>
+        <dt>{% trans "Referee" %}</dt>
+        <dd>{{ proposal_result.referee }}</dd>
+      </dl>
+      </p>
+
+      <form class="form" method="post" action="{% url "proposal_review:make_decision" proposal.id %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% bootstrap_form result_form %}
+          {% buttons %}
+            <hr>
+            <button type="submit" class="btn btn-primary btn-lg">
+                {% bootstrap_icon "star" %} {% trans "Submit" %}
+            </button>
+          {% endbuttons %}
+      </form>
+    </div>
+    {% endif %}
   </div>
 
 

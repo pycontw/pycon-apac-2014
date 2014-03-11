@@ -430,7 +430,6 @@ msgid "You're already logged in."
 msgstr "您已經登入。"
 
 #: templates/accounts/account_login.html:11
-#, fuzzy, python-format
 msgid ""
 "If you don't have an account you can <a href=\"%(signup_url)s?next=%(next)s"
 "\">sign up</a> for one now."
@@ -815,7 +814,6 @@ msgstr "近期推文"
 #~ msgid "Title or job"
 #~ msgstr "頭銜或職稱"
 
-#, fuzzy
 #~ msgid "Occupation"
 #~ msgstr "來自"
 

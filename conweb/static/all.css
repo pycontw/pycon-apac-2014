@@ -776,7 +776,7 @@ hr {
 }
 .paper,
 .richpage {
-  background: rgba(255,255,255,0.8);
+  background: #fdfcf6;
   padding: 2.5em 3em;
   margin-bottom: 1.5em;
 }
@@ -867,6 +867,10 @@ hr {
 }
 .dl-info dd {
   margin-bottom: 1em;
+}
+.dl-info dd pre {
+  background: #fff;
+  font-size: 16px;
 }
 .dl-info dd:last-child {
   margin-bottom: 0;
@@ -1025,4 +1029,7 @@ hr {
 .action-btn-block {
   text-align: center;
   margin: 2em 0 1em;
+}
+table#proposal_review_list tbody tr td.number {
+  text-align: center;
 }

@@ -120,6 +120,8 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
 
+CALL_FOR_PROPOSAL = False
+
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
@@ -127,7 +129,7 @@ USE_I18N = True
 LANGUAGES = (
     ('en', 'English'),
     ('zh', '中文'),
-    #('ja', '日本語'),
+    ('ja', '日本語'),
 )
 
 # Language code for this installation. All choices can be found here:
@@ -283,6 +285,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     "django.core.context_processors.tz",
     "mezzanine.conf.context_processors.settings",
+    "proposal.context_processors.cfp",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
@@ -313,6 +316,21 @@ MIDDLEWARE_CLASSES = (
 # at the moment we are using custom forks of them.
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
+
+RICHTEXT_ALLOWED_TAGS = (
+    u'video', u'header', u'article', u'output', u'details', u'figure',
+    u'figcation', u'progress', u'meter', u'datalist',
+    u'main', u'article', u'aside', u'footer', u'header', u'nav',
+    u'a', u'abbr', u'acronym', u'address', u'area', u'b', u'bdo', u'big',
+    u'blockquote', u'br', u'button', u'caption', u'center', u'cite', u'code',
+    u'col', u'colgroup', u'dd', u'del', u'dfn', u'dir', u'div', u'dl', u'dt',
+    u'em', u'fieldset', u'font', u'form', u'h1', u'h2', u'h3', u'h4', u'h5',
+    u'h6', u'hr', u'i', u'img', u'input', u'ins', u'kbd', u'label', u'legend',
+    u'li', u'map', u'menu', u'ol', u'optgroup', u'option', u'p', u'pre', u'q',
+    u's', u'samp', u'select', u'small', u'span', u'strike', u'strong', u'sub',
+    u'sup', u'table', u'tbody', u'td', u'textarea', u'tfoot', u'th', u'thead',
+    u'tr', u'tt', u'u', u'ul', u'var', u'wbr'
+)
 
 #########################
 # OPTIONAL APPLICATIONS #

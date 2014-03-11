@@ -1,7 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models import ReviewRecordModel
+from .models import ReviewRecordModel, ProposalResultModel
 
 
 class ReviewForm(forms.ModelForm):
@@ -16,3 +16,11 @@ class ReviewForm(forms.ModelForm):
         if data > 3 or data < -3:
             raise forms.ValidationError(_("The value of rank should be between 3 and -3."))
         return data
+
+
+class ProposalResultForm(forms.ModelForm):
+
+    class Meta:
+        model = ProposalResultModel
+        fields = ("decision",)
+        widgets = {'decision': forms.RadioSelect}
