@@ -872,6 +872,30 @@ hr {
   font-size: 15px;
 }
 
+.pycon-table tbody td.english {
+  color: #54d871;
+}
+
+.pycon-table tbody td.mandarin {
+  color: #8c460e;
+}
+
+.pycon-table tbody td.regular-talk {
+  color: #54afd8;
+}
+
+.pycon-table tbody td.scipy-talk {
+  color: #000;
+}
+
+.pycon-table tbody td.lightning-talk {
+  color: #c154d8;
+}
+
+.pycon-table tbody td.tutorial {
+  color: #dd4438;
+}
+
 .form-group label {
   display: block;
 }
