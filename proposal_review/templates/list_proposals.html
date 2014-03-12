@@ -34,6 +34,7 @@
             <tr>
                 <th>{% trans "ID" %}</th>
                 <th>{% trans "Author" %}</th>
+                <th>{% trans "Lang" %}</th>
                 <th>{% trans "Title" %}</th>
                 <th>{% trans "Speech Type" %}</th>
                 <th>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></th>
@@ -51,8 +52,9 @@
             <tr>
                 <td>{{proposal.id}}</td>
                 <td title="{{proposal.author.username}}">{{proposal.author.get_full_name}}</td>
+                <td class="{{proposal.get_language_display|slugify}}">{{proposal.get_language_display}}</td>
                 <td>{{proposal.title}}</td>
-                <td>{{proposal.get_speech_type_display}}</td>
+                <td class="{{proposal.get_speech_type_display|slugify}}">{{proposal.get_speech_type_display}}</td>
                 <td>
                   {% if proposal.abstractfile and proposal.abstractfile.has_file %}
                   <a href="{{proposal.abstractfile.url}}" target="_blank">
@@ -78,7 +80,7 @@
                 </td>
                 <td class="number">
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        {{proposal.rank_avg}}
+                        {{proposal.rank_avg|default:0|floatformat:"-2"}}
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
