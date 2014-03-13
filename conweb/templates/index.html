@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load staticfiles %}
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
@@ -18,17 +19,8 @@
   </div>
 </div>
 
-<div class="home-sponsers hide">
-  <h4>{% trans "Sponsors" %}</h4>
-  <div class="sponser-logos">
-    <img src="//placehold.it/200x80" alt="">
-  </div>
-  <div class="sponser-more clear">
-    <a href="" class="btn btn-info">{% trans "Show me all" %}</a>
-  </div>
 
-</div>
-<div class="home-sponsers">
+<div class="home-sponsors">
   <h3 class="title">{% trans "Sponsorship available!" %}</h3>
   <p class="apply">
     {% blocktrans %}
@@ -44,6 +36,33 @@
     {% endblocktrans %}
   </p>
 </div>
+
+<div class="home-sponsors">
+  <h3>{% trans "Sponsors" %}</h4>
+  <br>
+  <br>
+  <div class="sponsor-logos">
+    <h4 class="sponsor-title">Golden</h4>
+    <p>
+      <img src="{% static 'images/sponsor_logo/hde.png' %}" width=200 height=80 alt="">
+      <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt="">
+      <img src="{% static 'images/sponsor_logo/google.png' %}" width=200 height=80 alt="">
+    <h4 class="sponsor-title silver">Silver</h4>
+    <p>
+      <img src="{% static 'images/sponsor_logo/github.png' %}" width=200 height=80 alt="">
+      <img src="{% static 'images/sponsor_logo/tagtoo.png' %}" width=200 height=80 alt="">
+    <h4 class="sponsor-title bronze">Bronze</h4>
+    <p>
+      <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="">
+      <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="">
+
+  </div>
+  <div class="sponsor-more clear hide">
+    <a href="" class="btn btn-info">{% trans "Show me all" %}</a>
+  </div>
+
+</div>
+
 <div class="content">
   <div class="">
     <h2 class="doc-title">{% trans "What is PyCon and PyCon APAC" %}</h2>
