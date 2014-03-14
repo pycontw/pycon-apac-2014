@@ -58,10 +58,10 @@
                 <td>
                   {% if proposal.abstractfile and proposal.abstractfile.has_file %}
                   <a href="{{proposal.abstractfile.url}}" target="_blank">
-                  {{proposal.abstractfile}}
+                  {% trans 'Download' %}
                   </a>
                   {% else %}
-                  <span>{% trans "No abstract file." %}</span>
+                  <span>{% trans "－－－" %}</span>
                   {% endif %}
                 </td>
                 <td class="number">
@@ -73,7 +73,7 @@
                 </td>
                 <td class="number">
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        {{proposal.rank_sum}}
+                        {{ proposal.rank_sum|default_if_none:_('－－－') }}
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
