@@ -27,6 +27,8 @@ def _is_review_admin(request):
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
+    filters = request.GET
+
     reviewed_proposal_ids = ProposalModel.objects.filter(
         reviewrecordmodel__reviewer=request.user
     ).values_list('id', flat=True)
@@ -38,8 +40,10 @@ def list_proposals(request):
                  .order_by('-id'))
 
     type_counts = {
-        type_name: len([p for p in proposals if p.speech_type == speech_type])
-        for speech_type, type_name in ProposalModel.SPEECH_TYPE_CHOICES
+        ProposalModel.SPEECH_TYPE_CHOICES[i[0]][1]: i[1]
+        for i in proposals.annotate(count=Count('speech_type')).values_list(
+            'speech_type', 'count'
+        )
     }
     statistic = {
         "total": len(proposals),
