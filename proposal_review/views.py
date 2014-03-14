@@ -30,8 +30,8 @@ def list_proposals(request):
     proposals = (ProposalModel.objects
                  .annotate(rank_avg=Avg('reviewrecordmodel__rank'))
                  .annotate(rank_sum=Sum('reviewrecordmodel__rank'))
-                 .annotate(reviewers_amount=Count('reviewrecordmodel__rank')))
-    proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
+                 .annotate(reviewers_amount=Count('reviewrecordmodel__rank'))
+                 .order_by('-id'))
 
     type_counts = {
         type_name: len([p for p in proposals if p.speech_type == speech_type])
