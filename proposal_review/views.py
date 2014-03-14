@@ -27,7 +27,7 @@ def _is_review_admin(request):
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
-    filters = request.GET
+    filter_type = request.GET.get('type', None)
 
     reviewed_proposal_ids = ProposalModel.objects.filter(
         reviewrecordmodel__reviewer=request.user
@@ -38,15 +38,15 @@ def list_proposals(request):
                  .annotate(rank_sum=Sum('reviewrecordmodel__rank'))
                  .annotate(reviewers_amount=Count('reviewrecordmodel__rank'))
                  .order_by('-id'))
+    if filter_type is not None:
+        proposals = proposals.filter(speech_type=filter_type)
 
-    type_counts = {
-        ProposalModel.SPEECH_TYPE_CHOICES[i[0]][1]: i[1]
-        for i in proposals.annotate(count=Count('speech_type')).values_list(
-            'speech_type', 'count'
-        )
-    }
+    type_counts = [
+        (v, n, ProposalModel.objects.filter(speech_type=v).count())
+        for v, n in ProposalModel.SPEECH_TYPE_CHOICES
+    ]
     statistic = {
-        "total": len(proposals),
+        "total": ProposalModel.objects.count(),
         "type_counts": type_counts
     }
     is_reviewer_admin = _is_review_admin(request)
