@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+{% block .breadcrumb %}{% endblock %}
+
+{% block content %}
+  <div class="content">
+    <h2 class="doc-title">Proposal Info</h2>
+      <div class="paper">
+        <h3 class="d-title">
+          {{proposal.title}}
+          <small>by</small>
+          {{proposal.author.get_full_name}}
+        </h3>
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Speech Type" %}</dt>
+              <dd>{{proposal.get_speech_type_display}}</dd>
+              <dt>{% trans "Audience level" %}</dt>
+              <dd>{{proposal.get_audience_level_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Language" %}</dt>
+              <dd>{{proposal.get_language_display}}</dd>
+              <dt>{% trans "Recording Perm." %}</dt>
+              <dd>{{proposal.get_talk_perm_display}}</dd>
+            </dl>
+          </div>
+          <div class="col-md-4">
+            <dl class="dl-info">
+              <dt>{% trans "Abstract" %} <span class="note">{% trans "(PDF file)" %}</span></dt>
+              <dd>
+                {% if proposal.abstractfile and proposal.abstractfile.has_file %}
+                <a href="{{proposal.abstractfile.url}}" target="_blank">
+                {{proposal.abstractfile}}
+                </a>
+                {% else %}
+                <span>{% trans "No abstract file." %}</span>
+                {% endif %}
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <div class="row">
+          <div class="col-md-9">
+            <dl class="dl-info">
+              <dt>{% trans "Description" %}</dt>
+              <dd><pre>{{proposal.description}}</pre></dd>
+              <dt>{% trans "Additional information" %}</dt>
+              <dd><pre>{{proposal.additional_info}}</pre></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="clear"></div>
+
+      </div>
+    <h2 class="doc-title">Proposal Review</h2>
+    <div class="paper">
+      <div class="row">
+        <div class="col-md-9">
+          <form class="form" method="post" action="." enctype="multipart/form-data">
+              {% csrf_token %}
+              {% bootstrap_form review_form %}
+              {% buttons %}
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    {% bootstrap_icon "star" %} {% trans "Submit" %}
+                </button>
+              {% endbuttons %}
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <h2 class="doc-title">
+      {% blocktrans %}
+      Other Reviews:
+      {% endblocktrans %}
+
+    </h2>
+    <div class="paper">
+        <p>{% trans "Average Rank" %}:{{ average_rank|floatformat:1 }}</p>
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>{% trans "Rank" %}</th>
+                  <th>{% trans "Comment" %}</th>
+                  <th>{% trans "Reviewer" %}</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for review in reviews %}
+              <tr>
+                  <td>{{review.rank}}</td>
+                  <td><pre>{{review.comment}}</pre></td>
+                  <td>{{review.reviewer.username}}</td>
+              </tr>
+              {% empty %}
+              <tr>
+                  <td colspan="3">{% trans "No Review" %}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
+    {% if is_reviewer_admin %}
+    <h2 class="doc-title">Proposal Decision</h2>
+    <div class="paper">
+      <p>
+      <dl class="">
+        <dt>{% trans "Decision" %}</dt>
+        <dd>{{ proposal_result.get_decision_display }}</dd>
+        <dt>{% trans "Referee" %}</dt>
+        <dd>{{ proposal_result.referee }}</dd>
+      </dl>
+      </p>
+
+      <form class="form" method="post" action="{% url "proposal_review:make_decision" proposal.id %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% bootstrap_form result_form %}
+          {% buttons %}
+            <hr>
+            <button type="submit" class="btn btn-primary btn-lg">
+                {% bootstrap_icon "star" %} {% trans "Submit" %}
+            </button>
+          {% endbuttons %}
+      </form>
+    </div>
+    {% endif %}
+  </div>
+
+
+{% endblock %}

@@ -64,9 +64,11 @@ def do_review(request, proposal_id):
     average_rank = ReviewRecordModel.objects.filter(proposal=proposal) \
         .aggregate(Avg('rank')).get("rank__avg", None)
 
+    is_create = True
+
     if request.method == "POST":
 
-        review, create = ReviewRecordModel.objects.get_or_create(
+        review, is_create = ReviewRecordModel.objects.get_or_create(
             proposal=proposal,
             reviewer=request.user
         )
@@ -93,7 +95,13 @@ def do_review(request, proposal_id):
         else:
             proposal_result = None
             result_form = None
-    return render(request, "create_review.html",
+
+    if is_create:
+        template_name = "create_review.html"
+    else:
+        template_name = "update_review.html"
+
+    return render(request, template_name,
                   {"proposal": proposal, "review_form": review_form,
                    "reviews": reviews, "average_rank": average_rank,
                    "result_form": result_form,
