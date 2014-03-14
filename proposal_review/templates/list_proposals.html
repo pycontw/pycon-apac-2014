@@ -87,7 +87,7 @@
                 </td>
                 <td>
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% if proposal.id in reviewed_proposal_ids %}{% trans 'Update' %}{% else %}{% trans "Review" %}{% endif %}</a>
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}

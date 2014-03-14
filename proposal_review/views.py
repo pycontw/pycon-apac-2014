@@ -27,6 +27,10 @@ def _is_review_admin(request):
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
+    reviewed_proposal_ids = ProposalModel.objects.filter(
+        reviewrecordmodel__reviewer=request.user
+    ).values_list('id', flat=True)
+
     proposals = (ProposalModel.objects
                  .annotate(rank_avg=Avg('reviewrecordmodel__rank'))
                  .annotate(rank_sum=Sum('reviewrecordmodel__rank'))
@@ -44,7 +48,8 @@ def list_proposals(request):
     is_reviewer_admin = _is_review_admin(request)
     return render(request, "list_proposals.html",
                   {'proposals': proposals, 'statistic': statistic,
-                   'is_reviewer_admin': is_reviewer_admin})
+                   'is_reviewer_admin': is_reviewer_admin,
+                   'reviewed_proposal_ids': reviewed_proposal_ids})
 
 
 @login_required
