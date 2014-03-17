@@ -16,14 +16,20 @@
         <thead>
             <tr>
                 <th style="text-align: center;">{% trans "Total" %}</th>
-                {% for type_name in statistic.type_counts %}
-                    <th style="text-align: center;">{{type_name}}</th>
+                {% for type_info in statistic.type_counts %}
+                    <th style="text-align: center;">{{ type_info.1 }}</th>
                 {% endfor %}
             </tr>
             <tr>
-                <td style="text-align: center;">{{statistic.total}}</td>
-                {% for count in statistic.type_counts.values %}
-                    <td style="text-align: center;">{{count}}</td>
+                <td style="text-align: center;">
+                    <a href="{{ request.path }}">{{ statistic.total }}</a>
+                </td>
+                {% for type_info in statistic.type_counts %}
+                    <td style="text-align: center;">
+                        <a href="{{ request.path }}?type={{ type_info.0 }}">
+                            {{ type_info.2 }}
+                        </a>
+                    </td>
                 {% endfor %}
             </tr>
         </thead>
@@ -58,10 +64,10 @@
                 <td>
                   {% if proposal.abstractfile and proposal.abstractfile.has_file %}
                   <a href="{{proposal.abstractfile.url}}" target="_blank">
-                  {{proposal.abstractfile}}
+                  {% trans 'Download' %}
                   </a>
                   {% else %}
-                  <span>{% trans "No abstract file." %}</span>
+                  <span>{% trans "－－－" %}</span>
                   {% endif %}
                 </td>
                 <td class="number">
@@ -73,7 +79,7 @@
                 </td>
                 <td class="number">
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        {{proposal.rank_sum}}
+                        {{ proposal.rank_sum|default_if_none:_('－－－') }}
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}
@@ -87,7 +93,7 @@
                 </td>
                 <td>
                     {% if is_reviewer_admin or proposal.author != request.user %}
-                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% trans "Review" %}</a>
+                        <a href="{% url "proposal_review:do_review" proposal.id %}" class="">{% if proposal.id in reviewed_proposal_ids %}{% trans 'Update' %}{% else %}{% trans "Review" %}{% endif %}</a>
                     {% else %}
                         <span class="note">{% trans "－－－" %}</span>
                     {% endif %}

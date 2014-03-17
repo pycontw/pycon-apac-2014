@@ -27,24 +27,33 @@ def _is_review_admin(request):
 @require_group(REVIEWER_GROUP_NAME)
 def list_proposals(request):
 
+    filter_type = request.GET.get('type', None)
+
+    reviewed_proposal_ids = ProposalModel.objects.filter(
+        reviewrecordmodel__reviewer=request.user
+    ).values_list('id', flat=True)
+
     proposals = (ProposalModel.objects
                  .annotate(rank_avg=Avg('reviewrecordmodel__rank'))
                  .annotate(rank_sum=Sum('reviewrecordmodel__rank'))
-                 .annotate(reviewers_amount=Count('reviewrecordmodel__rank')))
-    proposals = sorted(proposals, key=lambda x: x.id, reverse=True)
+                 .annotate(reviewers_amount=Count('reviewrecordmodel__rank'))
+                 .order_by('-id'))
+    if filter_type is not None:
+        proposals = proposals.filter(speech_type=filter_type)
 
-    type_counts = {
-        type_name: len([p for p in proposals if p.speech_type == speech_type])
-        for speech_type, type_name in ProposalModel.SPEECH_TYPE_CHOICES
-    }
+    type_counts = [
+        (v, n, ProposalModel.objects.filter(speech_type=v).count())
+        for v, n in ProposalModel.SPEECH_TYPE_CHOICES
+    ]
     statistic = {
-        "total": len(proposals),
+        "total": ProposalModel.objects.count(),
         "type_counts": type_counts
     }
     is_reviewer_admin = _is_review_admin(request)
     return render(request, "list_proposals.html",
                   {'proposals': proposals, 'statistic': statistic,
-                   'is_reviewer_admin': is_reviewer_admin})
+                   'is_reviewer_admin': is_reviewer_admin,
+                   'reviewed_proposal_ids': reviewed_proposal_ids})
 
 
 @login_required
@@ -66,7 +75,7 @@ def do_review(request, proposal_id):
 
     if request.method == "POST":
 
-        review, create = ReviewRecordModel.objects.get_or_create(
+        review, is_create = ReviewRecordModel.objects.get_or_create(
             proposal=proposal,
             reviewer=request.user
         )
@@ -93,7 +102,13 @@ def do_review(request, proposal_id):
         else:
             proposal_result = None
             result_form = None
-    return render(request, "create_review.html",
+
+    if review is None:
+        template_name = "create_review.html"
+    else:
+        template_name = "update_review.html"
+
+    return render(request, template_name,
                   {"proposal": proposal, "review_form": review_form,
                    "reviews": reviews, "average_rank": average_rank,
                    "result_form": result_form,

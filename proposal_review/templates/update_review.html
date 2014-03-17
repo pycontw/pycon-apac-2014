@@ -1,0 +1,7 @@
+{% extends 'edit_review.html' %}
+
+{% load i18n %}
+
+{% block title %}{% blocktrans with ptitle=proposal.title %}Update Review for “{{ ptitle }}”{% endblocktrans %}{% endblock %}
+
+{% block meta_title %}{% blocktrans with ptitle=proposal.title %}Update Review for “{{ ptitle }}”{% endblocktrans %}{% endblock %}
