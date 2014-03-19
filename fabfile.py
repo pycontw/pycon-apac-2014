@@ -171,6 +171,12 @@ def shell(interface=""):
 
 
 @_in_virtualenv
+def bgworker(interface=""):
+    "run Celery background worker"
+    local("python manage.py celery worker")
+
+
+@_in_virtualenv
 def dumpdata(output="dumpdata.json"):
     "dump Django databse data into JSON file"
     local("python manage.py dumpdata > {}{}{}".format(
