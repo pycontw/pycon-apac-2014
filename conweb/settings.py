@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import djcelery
+djcelery.setup_loader()
 
 ######################
 # MEZZANINE SETTINGS #
@@ -268,7 +270,13 @@ INSTALLED_APPS = (
     "proposal",
     "proposal_review",
     "raven.contrib.django.raven_compat",
+    "djcelery",
+    "djcelery_email",
 )
+REVIEWER_ADMINS = []
+BROKER_URL = 'redis://127.0.0.1:6379/15'
+EMAIL_HOST_USER = 'localhost@example.com'
+EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
 AUTH_PROFILE_MODULE = "conweb.UserProfile"
 
