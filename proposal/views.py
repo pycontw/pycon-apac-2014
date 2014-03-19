@@ -9,6 +9,7 @@ from django.core.exceptions import PermissionDenied
 
 from .forms import ProposalForm, AbstractFileForm
 from .models import ProposalModel, AbstractFile
+from .tasks import email_proposal_changed_task
 
 
 @login_required
@@ -27,6 +28,7 @@ def create_proposal(request):
             proposal.save()
             message = _("Thanks for your submission!")
             messages.add_message(request, messages.SUCCESS, message)
+            email_proposal_changed_task(proposal)
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",

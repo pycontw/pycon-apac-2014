@@ -4,7 +4,7 @@ from django.conf import settings
 from conweb.lib.mailer import Mailer
 
 
-def send_proposal_changed_notification(proposal):
+def email_proposal_changed_task(proposal):
     subject = u'Proposal Changed: {}'.format(proposal.title)
     content = "https://tw.pycon.org/proposal_review/review/{}".format(
         proposal.id)
