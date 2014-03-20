@@ -133,7 +133,7 @@ def _remote_deploy(migrate=False):
         if migrate:
             run('fab db_migrate')
         run('fab compilemessages')
-        run('supervisorctl restart pycon')
+        run('supervisorctl restart pycon celery')
 
 
 def deploy(target="", remote_migrate=False):
