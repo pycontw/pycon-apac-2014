@@ -28,7 +28,6 @@ def create_proposal(request):
             proposal.save()
             message = _("Thanks for your submission!")
             messages.add_message(request, messages.SUCCESS, message)
-            email_proposal_changed_task(proposal)
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",
@@ -65,6 +64,7 @@ def update_proposal(request, proposal_id):
             proposal_form.save()
             message = _("Proposal updated")
             messages.add_message(request, messages.SUCCESS, message)
+            email_proposal_changed_task(proposal)
             return redirect(reverse("proposal:list"))
         else:
             return render(request, "proposal/create.html",
