@@ -1,6 +1,7 @@
 fabric
 Mezzanine==1.4.16
 south==0.8.4
+redis
 django-celery-email==1.0.4
 django-bootstrap3
 raven
