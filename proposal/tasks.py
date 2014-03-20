@@ -10,7 +10,9 @@ def email_proposal_changed_task(proposal):
         proposal.id)
     receivers = {review.reviewer.email
                  for review in proposal.reviewrecordmodel_set.all()}
+    bcc = set()
     for useranme in settings.REVIEWER_ADMINS:
         review_admin = User.objects.get(username__exact=useranme)
-        receivers.add(review_admin.email)
-    Mailer.send_to(receivers, subject, content)
+        if review_admin.email not in receivers:
+            bcc.add(review_admin.email)
+    Mailer.send_to(receivers, subject, content, bcc)

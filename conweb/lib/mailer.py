@@ -7,5 +7,6 @@ class Mailer(object):
     sender = settings.EMAIL_HOST_USER
 
     @classmethod
-    def send_to(Cls, receivers, subject, content):
-        mail.send_mail(subject, content, Cls.sender, receivers)
+    def send_to(Cls, receivers, subject, content, bcc=[]):
+        email = mail.EmailMessage(subject, content, Cls.sender, receivers, bcc)
+        email.send()
