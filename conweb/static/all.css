@@ -5,7 +5,7 @@ body {
 }
 body {
   overflow: hidden;
-  background: #eee;
+  background: #fff;
   font-size: 18px;
 }
 a {
@@ -254,26 +254,28 @@ a:hover {
 }
 #title {
   margin: 0;
-  background-color: #fff;
   border-bottom: 1px solid #8dc63f;
-}
-#title h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-}
-@media only screen and (max-width: 1000px) {
-  #title h1 {
-    font-size: 24px;
-  }
 }
 .page-title {
   padding: 33px 0 0;
   height: 135px;
+  background-color: #90c51a;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 @media only screen and (max-width: 1000px) {
   .page-title {
     padding: 25px 0 10px;
     height: auto;
+  }
+}
+.page-title h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1000px) {
+  .page-title h1 {
+    font-size: 24px;
   }
 }
 .content {
@@ -367,7 +369,6 @@ a:hover {
 }
 #nav {
   position: absolute;
-  padding-top: 100px;
   left: 0;
   bottom: 0;
   top: 0;
@@ -471,7 +472,7 @@ a:hover {
   line-height: 45px;
   width: 45px;
   height: 45px;
-  background-color: #b81c28;
+  background-color: #dadada rk-red;
   color: #fff !important;
   font-weight: bold;
   text-align: center;
@@ -492,7 +493,7 @@ a:hover {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: #b81c28 no-repeat center center;
+  background: #dadada rk-red no-repeat center center;
   margin: 2px;
   border-radius: 50%;
   opacity: 0.7;
@@ -825,9 +826,9 @@ hr {
 }
 .paper,
 .richpage {
-  background: #fff;
   padding: 2.5em 3em;
   margin-bottom: 1.5em;
+  background-color: #fff;
 }
 .paper-title {
   padding-bottom: 0.3em;
@@ -837,7 +838,7 @@ hr {
   border: 1px solid #eee;
   color: #555;
   font-size: 16px;
-  margin-top: -40px;
+  margin-top: -30px;
   -webkit-box-shadow: 2px 2px 12px rgba(102,102,102,0.1);
   box-shadow: 2px 2px 12px rgba(102,102,102,0.1);
 }
@@ -855,14 +856,14 @@ hr {
 }
 .richpage h1,
 .richpage h2 {
-  font-size: 24px;
   font-weight: bold;
-  color: #b81c28;
+  color: #04556a;
 }
 .richpage h1 {
-  border-bottom: 3px double #b81c28;
   margin-bottom: 1em;
   padding-bottom: 10px;
+  font-size: 28px;
+  border-bottom: 1px solid #eee;
 }
 .richpage h1:first-child {
   margin-top: 0;
@@ -887,7 +888,7 @@ hr {
   content: '-';
   margin: 0 9px 0 0;
   font-weight: bold;
-  color: #b81c28;
+  color: #dadada rk-red;
 }
 .richpage b {
   color: #04556a;
@@ -927,6 +928,8 @@ hr {
 .index-title {
   height: 75%;
   position: relative;
+  background-color: #102d57;
+  color: #fff;
 }
 @media only screen and (max-width: 1000px) {
   .index-title {
@@ -954,16 +957,16 @@ hr {
 }
 .home-condate {
   margin: 1em;
-  color: #6e6f72;
+  color: #fff;
   font-size: 24px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 .home-condate b {
-  color: #d0272b;
+  color: #8dc63f;
 }
 .home-condate strong {
-  color: #04556a;
+  color: #0e6eb8;
 }
 @media $mobile-iphone {
   .home-condate {
@@ -991,17 +994,16 @@ hr {
 .home-sponsors {
   font-family: 'Lato', sans-serif;
   text-align: center;
-  background: #fff;
-  background: rgba(255,255,255,0.4);
   color: #666;
   margin: -20px 0 0;
   padding: 30px 0 20px;
   position: relative;
   -webkit-box-shadow: 0 1px 2px rgba(102,102,102,0.1);
   box-shadow: 0 1px 2px rgba(102,102,102,0.1);
+  background-color: #8dc63f;
 }
 .home-sponsors h3 {
-  color: #c2bb92;
+  color: #fff;
   margin: 5 0 15px;
 }
 .home-sponsors p.apply {

@@ -77,10 +77,21 @@
 
 #title {
   margin: 0;
-  // background: url('images/pattern.png');
-  background-color: #fff
   border-bottom: 1px solid #8DC63F
 
+
+}
+.page-title {
+  padding: 33px 0 0;
+  height: 135px;
+  background-color: $green;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+  @media $mobile-query {
+    padding: 25px 0 10px;
+    height: auto;
+  }
   h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -88,15 +99,6 @@
     @media $mobile-query {
       font-size: 24px;
     }
-  }
-}
-.page-title {
-  padding: 33px 0 0;
-  height: 135px;
-
-  @media $mobile-query {
-    padding: 25px 0 10px;
-    height: auto;
   }
 }
 

@@ -1,11 +1,12 @@
 .paper {
-  background: #FDFCF6;
   padding: 2.5em 3em;
   margin-bottom 1.5em;
+  background-color: #fff;
 }
 .paper-title {
   padding-bottom: 0.3em;
   margin: 0 0 1em;
+
 }
 
 .richpage {
@@ -14,7 +15,7 @@
   border: 1px solid #eee;
   color: #555;
   font-size: 16px;
-  margin-top: -40px;
+  margin-top: -30px;
   box-shadow: 2px 2px 12px rgba(#666,0.1);
 
   table {
@@ -32,14 +33,14 @@
   }
 
   h1,h2 {
-    font-size: 24px;
     font-weight: bold;
-    color: #B81C28;
+    color: $dark-blue;
   }
   h1 {
-    border-bottom: 3px double #B81C28;
     margin-bottom: 1em;
     padding-bottom: 10px;
+    font-size: 28px;
+    border-bottom: 1px solid #eee
   }
   h1:first-child {
     margin-top: 0;
@@ -64,12 +65,12 @@
       content: '-';
       margin: 0 9px 0 0;
       font-weight: bold;
-      color: #B81C28;
+      color: #dark-red;
     }
 
   }
   b {
-    color: #04556A;
+    color: $dark-blue;
   }
 
   @media $mobile-query {
