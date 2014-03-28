@@ -1,4 +1,5 @@
 <!doctype html>
+{% with utm_vars="utm_source=pycontw&utm_medium=website&utm_campaign=sponsor2014apac" %}
 <html lang="{% if LANGUAGE_CODE == 'zh' %}zh-Hant{% else %}{{LANGUAGE_CODE}}{% endif %}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
@@ -94,25 +95,32 @@
       </div>
       {% block sider %}
         <div id="sider" class="col-right">
-            <div class="sponsors  hide">
-              <h4 class="sponsor-title  golden">Golden</h4>
+            <div class="sponsors">
+              <h4 class="sponsor-title golden">Golden</h4>
               <p>
-                <img src="{% static 'images/sponsor_logo/hde.png' %}" width=200 height=80 alt="">
-                <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt="">
-                <img src="{% static 'images/sponsor_logo/google.png' %}" width=200 height=80 alt="">
-              <h4 class="sponsor-title silver">Silver</h4>
+                <a href="http://www.hde.co.jp/gip/?{{utm_vars}}" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/hde.png' %}" width=200 height=80 alt="HDE, Inc.">
+                </a>
+                <!-- <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt=""> -->
+                <!-- <img src="{% static 'images/sponsor_logo/google.png' %}" width=200 height=80 alt=""> -->
+              <!-- <h4 class="sponsor-title silver">Silver</h4> -->
+              <!-- <p> -->
+                <!-- <img src="{% static 'images/sponsor_logo/github.png' %}" width=200 height=80 alt=""> -->
+                <!-- <img src="{% static 'images/sponsor_logo/tagtoo.png' %}" width=200 height=80 alt=""> -->
+              <!-- <h4 class="sponsor-title bronze">Bronze</h4> -->
+              <!-- <p> -->
+              <h4 class="sponsor-title bronze">Special Thanks</h4>
               <p>
-                <img src="{% static 'images/sponsor_logo/github.png' %}" width=200 height=80 alt="">
-                <img src="{% static 'images/sponsor_logo/tagtoo.png' %}" width=200 height=80 alt="">
-                <img src="{% static 'images/sponsor_logo/vpon.png' %}" width=200 height=80 alt="">
-              <h4 class="sponsor-title bronze">Bronze</h4>
-              <p>
-                <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="">
-                <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="">
-              <h4 class="sponsor-title">Media</h4>
-              <p>
-                <img src="{% static 'images/sponsor_logo/qsearch.png' %}" width=200 height=80 alt="">
 
+                <a href="http://clbc.tw/?{{utm_vars}}" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="CLBC">
+                </a>
+                <a href="https://kktix.com/?utm_source=pyconapac&utm_medium=website&utm_campaign=sponsor" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="KKTIX">
+                </a>
+                <a href="http://www.qsearch.cc/?{{utm_vars}}" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/qsearch.png' %}" width=200 height=80 alt="QSearch">
+                </a>
             </div>
         </div>
       {% endblock %}
@@ -145,3 +153,4 @@
 
 </body>
 </html>
+{% endwith %}
