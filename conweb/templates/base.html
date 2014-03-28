@@ -1,5 +1,5 @@
 <!doctype html>
-{% with utm_vars="utm_source=tw.pycon.org&utm_medium=website&utm_campaign=sponsor" %}
+{% with utm_vars="utm_source=pycontw&utm_medium=website&utm_campaign=sponsor2014apac" %}
 <html lang="{% if LANGUAGE_CODE == 'zh' %}zh-Hant{% else %}{{LANGUAGE_CODE}}{% endif %}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
@@ -114,7 +114,7 @@
                 <a href="http://clbc.tw/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="CLBC">
                 </a>
-                <a href="https://kktix.com/?{{utm_vars}}" target="_blank">
+                <a href="https://kktix.com/?utm_source=pyconapac&utm_medium=website&utm_campaign=sponsor" target="_blank">
                   <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="KKTIX">
                 </a>
                 <a href="http://www.qsearch.cc/?{{utm_vars}}" target="_blank">
