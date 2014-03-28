@@ -35,5 +35,5 @@ Site Translators
 - Japanese: https://www.transifex.com/projects/p/pycon-apac-2014/language/ja/members/
 
 Content Editors and Translators
-------------------------------------
+-------------------------------
 https://github.com/pycontw/PyconAPACDraft/graphs/contributors
