@@ -1095,6 +1095,7 @@ hr {
 .program-time {
   color: #739e15;
   border-bottom: 1px solid #739e15;
+  font-size: 20px;
 }
 .program-time span {
   position: relative;
