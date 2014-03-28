@@ -637,6 +637,11 @@ a:hover {
   margin: 0 0 1px;
 }
 .sponsor-title {
+  font-size: 15px;
+  color: #0e6eb8;
+  margin: 2em 0 1em;
+}
+.golden {
   color: #9d8e32;
   font-size: 18px;
 }
@@ -1065,9 +1070,26 @@ hr {
 .schedule-table thead th {
   color: #999;
 }
-.schedule-table th {
+.schedule-table tbody th {
   color: #04556a;
   font-weight: normal;
+  vertical-align: middle !important;
+}
+.schedule-table .panel {
+  margin: 10px;
+}
+.schedule-table .panel-body {
+  padding: 0 10px 10px 10px;
+}
+.program-table {
+  margin-bottom: 0;
+}
+.program-table tbody tr:first-child th,
+.program-table tbody tr:first-child td {
+  border: #000;
+}
+.program-title {
+  margin: 0;
 }
 .speaker-link {
   margin: 0;
