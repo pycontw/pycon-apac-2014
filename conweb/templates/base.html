@@ -1,4 +1,5 @@
 <!doctype html>
+{% with utm_vars="utm_source=tw.pycon.org&utm_medium=website&utm_campaign=sponsor" %}
 <html lang="{% if LANGUAGE_CODE == 'zh' %}zh-Hant{% else %}{{LANGUAGE_CODE}}{% endif %}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
@@ -97,7 +98,7 @@
             <div class="sponsors">
               <h4 class="sponsor-title">Golden</h4>
               <p>
-                <a href="http://www.hde.co.jp/gip/" target="_blank">
+                <a href="http://www.hde.co.jp/gip/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/hde.png' %}" width=200 height=80 alt="HDE, Inc.">
                 </a>
                 <!-- <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt=""> -->
@@ -110,13 +111,13 @@
               <!-- <p> -->
               <h4 class="sponsor-title bronze">Special Thanks</h4>
               <p>
-                <a href="http://www.qsearch.cc/" target="_blank">
+                <a href="http://clbc.tw/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="CLBC">
                 </a>
-                <a href="http://www.qsearch.cc/" target="_blank">
+                <a href="https://kktix.com/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="KKTIX">
                 </a>
-                <a href="http://www.qsearch.cc/" target="_blank">
+                <a href="http://www.qsearch.cc/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/qsearch.png' %}" width=200 height=80 alt="QSearch">
                 </a>
             </div>
@@ -151,3 +152,4 @@
 
 </body>
 </html>
+{% endwith %}
