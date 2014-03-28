@@ -13,3 +13,6 @@ def show(request, page='show'):
 
     return render(request, template, data)
 
+
+def program(request):
+    return render(request, 'demo/program.html')

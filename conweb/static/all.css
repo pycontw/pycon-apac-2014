@@ -1084,12 +1084,36 @@ hr {
 .program-table {
   margin-bottom: 0;
 }
-.program-table tbody tr:first-child th,
-.program-table tbody tr:first-child td {
-  border: #000;
+.program-table th,
+.program-table td {
+  padding: 5px 10px;
+}
+.program-table > tbody > tr > th {
+  color: #0e6eb8;
+  vertical-align: middlem;
+}
+.program-time {
+  color: #739e15;
+  border-bottom: 1px solid #739e15;
+}
+.program-time span {
+  position: relative;
+  top: 0.7em;
+  padding: 5px;
+  background-color: #fff;
+}
+.program-day {
+  margin: 1px;
 }
 .program-title {
+  font-size: 16px;
   margin: 0;
+}
+.program-title a {
+  color: #666;
+}
+.program-title small a {
+  color: #90c51a;
 }
 .speaker-link {
   margin: 0;
