@@ -269,6 +269,7 @@ INSTALLED_APPS = (
     "conweb",
     "proposal",
     "proposal_review",
+    "speaker",
     "raven.contrib.django.raven_compat",
     "djcelery",
     "djcelery_email",

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block title %}Speaker List{% endblock title %}
+
+{% block meta_title %}Speaker List{% endblock %}
+
+
+{% block content %}
+
+<div class="content">
+    <table id="proposal_review_list" class="pycon-table table table-strip">
+        <thead>
+            <tr>
+                <th>{% trans "Username" %}</th>
+                <th>{% trans "Full name" %}</th>
+                <th>{% trans "Location" %}</th>
+                <th>{% trans "Organization/Company" %}</th>
+                <th>{% trans "Job title" %}</th>
+                <th>{% trans "Picture" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for speaker in speakers %}
+            <tr>
+                <td>{{speaker.username}}</td>
+                <td>{{speaker.get_full_name}}</td>
+                <td>{{speaker.get_profile.location}}</td>
+                <td>{{speaker.get_profile.org}}</td>
+                <td>{{speaker.get_profile.title}}</td>
+                <td><a href="{{speaker.get_profile.picture.url}}">{{speaker.get_profile.picture.url}}</a>
+                ({{speaker.get_profile.picture_size}})</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
