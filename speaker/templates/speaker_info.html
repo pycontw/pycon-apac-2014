@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title_block %}PyCon APAC 2014{% endblock %}
+
+{% block title %}{% trans "Speaker Information:" %} {{speaker.get_full_name}}{% endblock %}
+
+{% block .breadcrumb %}{% endblock %}
+
+{% block content %}
+
+<div class="content">
+  <div class="paper">
+    <div class="row">
+      <div class="col-md-4">
+        <dl class="dl-info">
+          <dt>{% trans "Username" %}</dt>
+          <dd>{{speaker.username}}</dd>
+          <dt>{% trans "Full name" %}</dt>
+          <dd>{{speaker.get_full_name}}</dd>
+        </dl>
+      </div>
+      <div class="col-md-4">
+        <dl class="dl-info">
+          <dt>{% trans "Organization/Company" %}</dt>
+          <dd>{{speaker.get_profile.org}}</dd>
+          <dt>{% trans "Job title" %}</dt>
+          <dd>{{speaker.get_profile.title}}</dd>
+        </dl>
+      </div>
+      <div class="col-md-4">
+        <dl class="dl-info">
+          <dt>{% trans "Location" %}</dt>
+          <dd>{{speaker.get_profile.location}}</dd>
+          <dt>{% trans "Picture" %}</dt>
+          {% if speaker.get_profile.picture %}
+          <dd><p><img src="{{speaker.get_profile.picture.url}}"><br>
+          ({{speaker.get_profile.picture_size}})</p></dd>
+          {% else %}
+          <dd>{% trans "No picture" %}</dd>
+          {% endif %}
+        </dl>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block sider %}{% endblock %}

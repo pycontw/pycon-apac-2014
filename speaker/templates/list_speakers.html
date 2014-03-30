@@ -25,12 +25,12 @@
             {% for speaker in speakers %}
             <tr>
                 <td>{{speaker.username}}</td>
-                <td>{{speaker.get_full_name}}</td>
+                <td><a href="{% url 'speaker:info' speaker.id %}">{{speaker.get_full_name}}</a></td>
                 <td>{{speaker.get_profile.location}}</td>
                 <td>{{speaker.get_profile.org}}</td>
                 <td>{{speaker.get_profile.title}}</td>
                 {% if speaker.get_profile.picture %}
-                <td><a href="{{speaker.get_profile.picture.url}}">{{speaker.get_profile.picture.url}}</a>
+                <td><a href="{{speaker.get_profile.picture.url}}">{{speaker.get_profile.picture.name}}</a>
                 ({{speaker.get_profile.picture_size}})</td>
                 {% else %}
                 <td>{% trans "No picture" %}</td>
