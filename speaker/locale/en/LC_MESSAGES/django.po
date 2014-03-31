@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-31 15:04+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/list_speakers.html:16
+msgid "Full name"
+msgstr ""
+
+#: templates/list_speakers.html:17 templates/speaker_info.html:45
+msgid "Location"
+msgstr ""
+
+#: templates/list_speakers.html:18 templates/speaker_info.html:51
+msgid "Organization/Company"
+msgstr ""
+
+#: templates/list_speakers.html:19 templates/speaker_info.html:63
+msgid "Title"
+msgstr ""
+
+#: templates/list_speakers.html:20
+msgid "Picture"
+msgstr ""
+
+#: templates/list_speakers.html:31
+msgid "Link"
+msgstr ""
+
+#: templates/list_speakers.html:34
+msgid "Not available"
+msgstr ""
+
+#: templates/speaker_info.html:4 templates/speaker_info.html.py:6
+#: templates/speaker_info.html:7
+msgid "Speaker: "
+msgstr ""
+
+#: templates/speaker_info.html:29
+msgid "Personal Link"
+msgstr ""
+
+#: templates/speaker_info.html:37
+msgid "Twitter"
+msgstr ""
+
+#: templates/speaker_info.html:69
+msgid "Speaker Brief"
+msgstr ""

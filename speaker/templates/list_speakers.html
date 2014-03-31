@@ -13,7 +13,6 @@
     <table id="proposal_review_list" class="pycon-table table table-strip">
         <thead>
             <tr>
-                <th>{% trans "Username" %}</th>
                 <th>{% trans "Full name" %}</th>
                 <th>{% trans "Location" %}</th>
                 <th>{% trans "Organization/Company" %}</th>
@@ -24,7 +23,6 @@
         <tbody>
             {% for speaker in speakers %}
             <tr>
-                <td>{{speaker.username}}</td>
                 <td><a href="{% url 'speaker:info' speaker.id %}">{{speaker.get_full_name}}</a></td>
                 <td>{{speaker.get_profile.location}}</td>
                 <td>{{speaker.get_profile.org}}</td>

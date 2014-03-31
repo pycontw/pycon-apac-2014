@@ -1,0 +1,62 @@
+# Translation of pyconapac2014.speaker app.
+# Copyright (C) 2014 PyCon Taiwan
+# This file is distributed under the same license as the pyconapac2014 package.
+# Keith Yang <yang@keitheis.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-31 15:04+0800\n"
+"PO-Revision-Date: 2014-03-31 12:00+0800\n"
+"Last-Translator: Keith Yang <yang@keitheis.org>\n"
+"Language-Team: PyCon Taiwan <dev@pycon.tw>\n"
+"Language: Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/list_speakers.html:16
+msgid "Full name"
+msgstr "名稱"
+
+#: templates/list_speakers.html:17 templates/speaker_info.html:45
+msgid "Location"
+msgstr "來自"
+
+#: templates/list_speakers.html:18 templates/speaker_info.html:51
+msgid "Organization/Company"
+msgstr "組織/公司"
+
+#: templates/list_speakers.html:19 templates/speaker_info.html:63
+msgid "Title"
+msgstr "頭銜"
+
+#: templates/list_speakers.html:20
+msgid "Picture"
+msgstr "照片"
+
+#: templates/list_speakers.html:31
+msgid "Link"
+msgstr "連結"
+
+#: templates/list_speakers.html:34
+msgid "Not available"
+msgstr "無"
+
+#: templates/speaker_info.html:4 templates/speaker_info.html.py:6
+#: templates/speaker_info.html:7
+msgid "Speaker: "
+msgstr "講者："
+
+#: templates/speaker_info.html:29
+msgid "Personal Link"
+msgstr "個人網頁連結"
+
+#: templates/speaker_info.html:37
+msgid "Twitter"
+msgstr "Twitter"
+
+#: templates/speaker_info.html:69
+msgid "Speaker Brief"
+msgstr "講者簡介"
