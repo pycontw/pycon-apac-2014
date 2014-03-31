@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:04+0800\n"
+"POT-Creation-Date: 2014-03-31 15:07+0800\n"
 "PO-Revision-Date: 2014-03-31 12:00+0800\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: PyCon Taiwan <dev@pycon.tw>\n"
@@ -15,6 +15,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: templates/list_speakers.html:5 templates/list_speakers.html.py:7
+msgid "Speaker List"
+msgstr "講者列表"
 
 #: templates/list_speakers.html:16
 msgid "Full name"
