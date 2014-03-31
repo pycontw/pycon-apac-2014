@@ -9,8 +9,8 @@ from proposal.models import ProposalModel
 def _get_author_of_accept_proposals():
     author_of_accept_proposals = ProposalModel.objects \
         .filter(result__decision=1) \
-        .order_by('author__first_name') \
-        .values_list("author", flat=True)
+        .values_list("author", flat=True) \
+        .order_by('author__first_name')
     return author_of_accept_proposals
 
 
