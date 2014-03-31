@@ -19,7 +19,7 @@
 
     <title>
       {% block meta_title_block %}
-      {% block meta_title %}{% endblock %}{{ settings.SITE_TITLE }}
+      {% block meta_title %}{% endblock %} | {{ settings.SITE_TITLE }}
       {% endblock %}
     </title>
     <link rel="shortcut icon" href="{% static "favicon.png" %}">
