@@ -53,7 +53,7 @@ urlpatterns += i18n_patterns(
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^proposal/", include("proposal.urls", namespace="proposal")),
     url("^proposal_review/", include("proposal_review.urls", namespace="proposal_review")),
-    url("^speaker/", include("speaker.urls", namespace="speaker")),
+    url("^speakers/", include("speaker.urls", namespace="speaker")),
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
     # This pattern gives us a normal ``Page`` object, so that your
