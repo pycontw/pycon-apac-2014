@@ -5,7 +5,7 @@ from django.http import Http404
 
 
 def _get_author_of_accept_proposals():
-    return User.objects.filter(proposals__result__decision=1)
+    return User.objects.filter(proposals__result__decision=1).distinct()
 
 
 def list_speakers(request):
