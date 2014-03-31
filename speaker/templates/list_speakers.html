@@ -17,7 +17,7 @@
                 <th>{% trans "Full name" %}</th>
                 <th>{% trans "Location" %}</th>
                 <th>{% trans "Organization/Company" %}</th>
-                <th>{% trans "Job title" %}</th>
+                <th>{% trans "Title" %}</th>
                 <th>{% trans "Picture" %}</th>
             </tr>
         </thead>
@@ -30,10 +30,10 @@
                 <td>{{speaker.get_profile.org}}</td>
                 <td>{{speaker.get_profile.title}}</td>
                 {% if speaker.get_profile.picture %}
-                <td><a href="{{speaker.get_profile.picture.url}}">{{speaker.get_profile.picture.name}}</a>
+                <td><a href="{{speaker.get_profile.picture.url}}">{% trans "Link" %}</a>
                 ({{speaker.get_profile.picture_size}})</td>
                 {% else %}
-                <td>{% trans "No picture" %}</td>
+                <td>{% trans "Not available" %}</td>
                 {% endif %}
             </tr>
             {% endfor %}
