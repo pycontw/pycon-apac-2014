@@ -36,7 +36,7 @@ class ProposalModel(models.Model):
     title = models.CharField(verbose_name=_("Title"),
                              help_text=_("Title of the talk or tutorial"),
                              max_length=100)
-    author = models.ForeignKey("auth.User")
+    author = models.ForeignKey("auth.User", related_name="proposals")
     speech_type = models.IntegerField(verbose_name=_("Type of the proposal"),
                                       choices=SPEECH_TYPE_CHOICES)
     language = models.IntegerField(
