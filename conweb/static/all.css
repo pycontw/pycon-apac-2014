@@ -945,8 +945,6 @@ hr {
 .index-title {
   height: 75%;
   position: relative;
-  background-color: #102d57;
-  color: #fff;
 }
 @media only screen and (max-width: 1000px) {
   .index-title {
@@ -974,7 +972,6 @@ hr {
 }
 .home-condate {
   margin: 1em;
-  color: #fff;
   font-size: 24px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
