@@ -22,16 +22,84 @@
 
     }
   }
-  th {
-    color: #04556A;
-    font-weight: normal;
+
+  tbody {
+    th {
+      color: $dark-blue;
+      font-weight: normal;
+      // padding: 20px !important;
+      vertical-align: middle !important;
+    }
+  }
+  .panel {
+    margin: 10px
+  }
+  .panel-body {
+    padding: 0 10px 10px 10px
   }
 }
+.program-table {
+  margin-bottom: 0
 
+  th, td {
+    padding: 5px 10px
+  }
+
+  > tbody > tr > th {
+    color: $blue
+    vertical-align: middlem
+  }
+  // tbody tr:first-child  {
+  //   th, td {
+  //     border: #000
+  //   }
+  // }
+
+}
+.program-time {
+  color: darken($green, 20%)
+  border-bottom:1px solid @color
+  font-size: 20px
+  span {
+    position: relative
+    top:0.7em
+    padding: 5px
+    background-color: #fff
+  }
+}
+.program-day {
+  padding: 1px 1px 3em
+}
+
+.program-title {
+  font-size: 16px
+  margin: 0
+  a {
+    color: #666
+  }
+  small a{
+    color: $green
+  }
+}
+.program-block {
+  background-color: rgba($blue, 0.1)
+  color: $dark-blue
+  text-align: center
+  margin: 1em 0
+  padding: 0.3em 0
+}
+.program-break {
+  background-color: rgba(#666, 0.1)
+  color: #666
+  text-align: center
+  margin: 1em 0
+  padding: 0.2em 0
+  font-size: 15px
+}
 .speaker-link {
   margin: 0;
   a {
-    color: #04556A;
+    color: $dark-blue;
     font-size: 0.8em;
   }
 }

@@ -2,7 +2,7 @@
 
 }
 .mobile-header {
-  background-color: $red;
+  background-color: $blue;
   padding: 5px;
   height: 46px;
   text-align: center;
@@ -75,7 +75,7 @@
   bottom: 0;
   top:0;
   width: 250px;
-  background-color: $red;
+  background-color: $main-blue;
   color: #FCFBF5;
   z-index: 10;
   font-size: 16px;
@@ -91,28 +91,67 @@
       color: #1C1B15;
     }
     &.btn {
-      color: $red;
+      color: darken($main-blue, 20%);
       margin: 20px
     }
   }
-  ul.navlist-menu-level-0 {
-    border-top: 1px dotted #DC4F55;
+  i {
+    color: #8dc63f
+    font-style: normal
+
+    &:before {
+      content: '_';
+      // font-weight: bold
+      margin: 0 10px 0 0;
+      color: lighten($main-blue, 20%)
+    }
+    &:after {
+      content: '_';
+      // font-weight: bold
+      margin: 0 0 0 10px;
+      color: lighten($main-blue, 20%)
+    }
   }
+  .nav-block {
+    border-top:    1px solid  darken($main-blue, 12%);
+    border-bottom: 1px solid  darken($main-blue, 12%);
+    box-shadow: 0 0 3px rgba(#fff, 0.2)
+    padding: 5px 0
+    margin-bottom: 10px
+    background-color: darken($main-blue, 5%)
+  }
+
+  hr {
+    margin: 5px 3em
+    border-top-color: rgba(#fff,0.2)
+  }
+
   ul {
     a {
-      border-bottom: 1px dotted #DC4F55;
-      padding-left: 40px;
+      // border-bottom: 1px solid  lighten($main-blue, 8%);
+      padding-left: 2em;
+      color: lighten($main-blue, 75%)
+      font-size: 15px
     }
     a:hover, .active > a {
-      background-color: darken($red, 6%);
+      background-color: darken($main-blue, 10%);
+      // background-color: tr
+      color: #fff
+    }
+
+    ul {
     }
   }
   ul ul li > a{
-    padding-left: 45px;
+    // padding-left: 45px;
+    padding: 6px 0 6px 40px;
     font-size: 0.8em;
 
     &:before {
-      content: ' - ';
+      content: '+';
+      font-weight: bold
+      margin: 0 10px 0 0;
+      color: lighten($main-blue, 20%)
     }
   }
 
@@ -157,7 +196,7 @@
   line-height: $size;
   width: $size;
   height: $size;
-  background-color: #B81C28;
+  background-color: #dark-red;
   color: #fff!important;
   font-weight: bold;
   text-align: center;
@@ -180,7 +219,7 @@
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: #B81C28 no-repeat center center;
+  background: #dark-red no-repeat center center;
   margin: 2px;
   -webkit-border-radius: 50%;
           border-radius: 50%;

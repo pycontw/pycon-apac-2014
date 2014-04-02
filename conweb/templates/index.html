@@ -11,7 +11,7 @@
 {% block content %}
 <div id="title" class="index-title">
   <div class="welcome-header">
-    <img src="{{ STATIC_URL }}images/logo.svg" alt="">
+    <img src="{{ STATIC_URL }}images/logo.svg?2" alt="">
     <p class="home-condate">
       MAY <b>17-18</b> 2014 in <strong>Taipei</strong>
     </p>
@@ -37,7 +37,8 @@
   </p>
 </div>
 
-<div class="home-sponsors">
+<div class="text-center">
+  <br>
   <h3>{% trans "Sponsors" %}</h4>
   <br>
   <div class="sponsor-logos">
@@ -51,11 +52,12 @@
       </a>
       <!-- <img src="{% static 'images/sponsor_logo/google.png' %}" width=200 height=80 alt=""> -->
     <!-- <h4 class="sponsor-title silver">Silver</h4> -->
+    <!-- <h4 class="sponsor-title bronze">Bronze</h4> -->
     <!-- <p> -->
       <!-- <img src="{% static 'images/sponsor_logo/github.png' %}" width=200 height=80 alt=""> -->
       <!-- <img src="{% static 'images/sponsor_logo/tagtoo.png' %}" width=200 height=80 alt=""> -->
-    <!-- <h4 class="sponsor-title bronze">Bronze</h4> -->
-    <h4 class="sponsor-title bronze">Special Thanks</h4>
+      <!-- <img src="{% static 'images/sponsor_logo/vpon.png' %}" width=200 height=80 alt=""> -->
+    <h4 class="sponsor-title">Special Thanks</h4>
     <p>
       <a href="http://clbc.tw/?{{utm_vars}}" target="_blank">
         <img src="{% static 'images/sponsor_logo/clbc.png' %}" width=200 height=80 alt="CLBC">
@@ -63,18 +65,21 @@
       <a href="https://kktix.com/?utm_source=pyconapac&utm_medium=website&utm_campaign=sponsor" target="_blank">
         <img src="{% static 'images/sponsor_logo/kktix.png' %}" width=200 height=80 alt="KKTIX">
       </a>
+
+    <p>
       <a href="http://www.qsearch.cc/?{{utm_vars}}" target="_blank">
         <img src="{% static 'images/sponsor_logo/qsearch.png' %}" width=200 height=80 alt="QSearch">
       </a>
   </div>
+  <hr>
   <div class="sponsor-more clear">
     <a href="/2014apac/{{LANGUAGE_CODE}}/sponsors/" class="btn btn-info">{% trans "Show me all" %}</a>
   </div>
 
 </div>
 
-<div class="content">
-  <div class="">
+<div class="content ">
+  <div class="paper">
     <h2 class="doc-title">{% trans "What is PyCon and PyCon APAC" %}</h2>
 
 
