@@ -2,6 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from PIL import Image
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField("auth.User")
@@ -43,3 +45,8 @@ class UserProfile(models.Model):
     def is_reviewer(self):
         group_name = getattr(settings, "REVIEWER_GROUP_NAME", "Reviewer")
         return self.user.groups.filter(name=group_name).count()
+
+    @property
+    def picture_size(self):
+        width, height = Image.open(self.picture.path).size if self.picture else (0, 0)
+        return "{} x {}".format(width, height)

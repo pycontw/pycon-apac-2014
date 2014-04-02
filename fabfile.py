@@ -46,7 +46,7 @@ _load_fabric_settings()
 
 
 VENV_PREFIX = _get_venv_prefix()
-MY_APPS = ['proposal']
+MY_APPS = ['proposal', 'speaker']
 LANGUAGES = ('en', 'zh', 'ja')
 
 

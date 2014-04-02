@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Speaker: " %}{{speaker.get_full_name}}{% endblock %}
+
+{% block title %}{% trans "Speaker: " %}{{speaker.get_full_name}}{% endblock %}
+{% block og_title %}{% trans "Speaker: " %}{{speaker.get_full_name}}{% endblock %}
+{% block meta_description %}{{speaker.brief}}{% endblock %}
+{% block meta_keywords %}{{speaker.first_name}},{{speaker.first_name}},{{profile.tagline}},pyconapac,2014{% endblock %}
+
+{% block content %}
+
+<div class="content">
+  <div class="paper">
+    {% if profile.tagline %}
+    <h2>Tagline</h2>
+    <div class="row">
+      <div class="col-md-12">{{profile.tagline}}</div>
+    </div>
+    {% endif %}
+    {% if og_image_url %}
+    <div class="row">
+      <div class="col-md-12">
+        <img src="{{og_image_url}}" alt="Profile picture">
+      </div>
+    </div>
+    {% endif %}
+    {% if profile.personal_url %}
+    <h2>{% trans "Personal Link" %}</h2>
+    <div class="row">
+      <div class="col-md-12">
+      <a href="{{profile.personal_url}}" target="_blank">{{profile.personal_url}}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% if profile.twitter_username %}
+    <h2>{% trans "Twitter" %}</h2>
+    <div class="row">
+      <div class="col-md-12">
+      <a href="https://twitter.com/{{profile.twitter_username}}" target="_blank">@{{profile.twitter_username}}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% if profile.Location %}
+    <h3>{% trans "Location" %}</h3>
+    <div class="row">
+      <div class="col-md-12">{{profile.location}}</div>
+    </div>
+    {% endif %}
+    {% if profile.org %}
+    <h3>{% trans "Organization/Company" %}</h3>
+    <div class="row">
+      {% if profile.org_url %}
+      <a href="{{profile.org_url}}" target="_blank">
+      {% endif %}
+      <div class="col-md-12">{{profile.org}}</div>
+      {% if profile.org_url %}
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if profile.title %}
+    <h3>{% trans "Title" %}</h3>
+    <div class="row">
+      <div class="col-md-12">{{profile.title}}</div>
+    </div>
+    {% endif %}
+    {% if profile.brief %}
+    <h3>{% trans "Speaker Brief" %}</h3>
+    <div class="row">
+      <pre class="col-md-10">{{profile.brief}}</pre>
+    </div>
+    {% endif %}
+    <div class="clear"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block sider %}{% endblock %}

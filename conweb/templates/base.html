@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta property="og:title" content="{{ settings.SITE_TITLE }}" />
-    <meta property="og:image" content="{% static "images/og.png" %}"/>
-    <meta property="og:image" content="{% static "images/og.png" %}"/>
+    {% block meta_og %}
+    <meta property="og:title" content="{% block og_title %}{% endblock %}{{ settings.SITE_TITLE }}" />
+    {% block meta_og_image  %}
+    <meta property="og:image" content="{% if og_image_url %}{{og_image_url}}{% else %}{% static "images/og.png" %}{% endif %}"/>
+    {% endblock %}
     <meta property="og:location" content="{% trans "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan" %}">
     <meta property="og:startDate" content="2014-05-17">
     <meta property="og:endDate" content="2014-05-18">
+    {% endblock %}
 
     <title>
       {% block meta_title_block %}
-      {% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}
+      {% block meta_title %}{% endblock %} | {{ settings.SITE_TITLE }}
       {% endblock %}
     </title>
     <link rel="shortcut icon" href="{% static "favicon.png" %}">
@@ -101,7 +104,9 @@
                 <a href="http://www.hde.co.jp/gip/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/hde.png' %}" width=200 height=80 alt="HDE, Inc.">
                 </a>
-                <!-- <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt=""> -->
+                <a href="https://www.mongodb.com/learn/mongodb?{{utm_vars}}" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/mongodb.png' %}" width=200 height=80 alt="MongoDB">
+                </a>
                 <!-- <img src="{% static 'images/sponsor_logo/google.png' %}" width=200 height=80 alt=""> -->
               <!-- <h4 class="sponsor-title silver">Silver</h4> -->
               <!-- <p> -->
