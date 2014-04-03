@@ -11,7 +11,7 @@
     {% block meta_og %}
     <meta property="og:title" content="{% block og_title %}{% endblock %}{{ settings.SITE_TITLE }}" />
     {% block meta_og_image  %}
-    <meta property="og:image" content="{% if og_image_url %}{{og_image_url}}{% else %}{% static "images/og.png" %}?v=2{% endif %}"/>
+    <meta property="og:image" content="{% if og_image_url %}{{og_image_url}}{% else %}{% static "images/og.png" %}{% endif %}"/>
     {% endblock %}
     <meta property="og:location" content="{% trans "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan" %}">
     <meta property="og:startDate" content="2014-05-17">
@@ -23,7 +23,7 @@
       {% block meta_title %}{% endblock %} | {{ settings.SITE_TITLE }}
       {% endblock %}
     </title>
-    <link rel="shortcut icon" href="{% static "favicon.png" %}?v=2">
+    <link rel="shortcut icon" href="{% static "favicon.png" %}">
     <link rel="apple-touch-icon" sizes="57x57" href="{% static "apple-icon-57x57.png" %}" />
     <link rel="apple-touch-icon" sizes="72x72" href="{% static "apple-icon-72x72.png" %}" />
     <link rel="apple-touch-icon" sizes="114x114" href="{% static "apple-icon-114x114.png" %}" />
