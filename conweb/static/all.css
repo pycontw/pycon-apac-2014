@@ -302,6 +302,14 @@ a:hover {
 .footnote a {
   color: #1188e3;
 }
+#tree-menu-home {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  #tree-menu-home {
+    display: block;
+  }
+}
 .mobile-header {
   background-color: #0e6eb8;
   padding: 5px;
