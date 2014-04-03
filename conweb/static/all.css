@@ -404,6 +404,9 @@ a:hover {
   color: #0b5893;
   margin: 20px;
 }
+#nav a.home-href:hover {
+  text-decoration: none;
+}
 #nav i {
   color: #8dc63f;
   font-style: normal;

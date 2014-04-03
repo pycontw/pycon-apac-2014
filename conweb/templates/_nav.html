@@ -8,12 +8,14 @@
               ng-click="showNav=!showNav"
             >✕</a>
         </div>
-        <div id="logo">
-            <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" alt=""></a>
-        </div>
+        <a href="{% url "home" %}" class="home-href">
+          <div id="logo">
+            <img src="{% static "images/logo.png" %}" alt="">
+          </div>
         <p class="side-condate">
           MAY 17-18 2014 in Taipei
         </p>
+        </a>
         {% block left_panel %}
 
         <div class="nav-block">
