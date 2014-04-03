@@ -330,7 +330,7 @@ a:hover {
   display: inline-block;
   width: 82px;
   height: 28px;
-  background: url("images/logo.png") no-repeat;
+  background: url("/static/images/logo.png") no-repeat;
   -webkit-background-size: 82px 28px;
   background-size: 82px 28px;
 }
@@ -517,13 +517,13 @@ a:hover {
   transition: 0.3s;
 }
 .social-icon.icon-facebook {
-  background-image: url("images/social/facebook-48.png");
+  background-image: url("/static/images/social/facebook-48.png");
 }
 .social-icon.icon-twitter {
-  background-image: url("images/social/twitter-48.png");
+  background-image: url("/static/images/social/twitter-48.png");
 }
 .social-icon.icon-googleplus {
-  background-image: url("images/social/googleplus-48.png");
+  background-image: url("/static/images/social/googleplus-48.png");
 }
 .close-btn {
   padding: 10px 15px;
