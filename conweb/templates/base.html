@@ -11,7 +11,7 @@
     {% block meta_og %}
     <meta property="og:title" content="{% block og_title %}{% endblock %}{{ settings.SITE_TITLE }}" />
     {% block meta_og_image  %}
-    <meta property="og:image" content="{% if og_image_url %}{{og_image_url}}{% else %}{% static "images/ogv2.png" %}{% endif %}"/>
+    <meta property="og:image" content="{% if og_image_url %}{{og_image_url}}{% else %}https://tw.pycon.org/static/images/ogv2.png{% endif %}"/>
     {% endblock %}
     <meta property="og:location" content="{% trans "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan" %}">
     <meta property="og:startDate" content="2014-05-17">
