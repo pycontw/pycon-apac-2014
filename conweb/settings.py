@@ -265,7 +265,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "mezzanine.accounts",
     #"mezzanine.mobile",
-    'bootstrap3',
+    "bootstrap3",
     "conweb",
     "proposal",
     "proposal_review",
@@ -273,6 +273,7 @@ INSTALLED_APPS = (
     "raven.contrib.django.raven_compat",
     "djcelery",
     "djcelery_email",
+    "django_assets",
 )
 REVIEWER_ADMINS = []
 BROKER_URL = 'redis://127.0.0.1:6379/15'
@@ -355,6 +356,10 @@ OPTIONAL_APPS = (
 )
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
+
+# webassets (django-assets)
+ASSETS_DEBUG = True
+ASSETS_ROOT = STATIC_ROOT
 
 ###################
 # DEPLOY SETTINGS #

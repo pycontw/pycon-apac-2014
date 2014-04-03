@@ -5,3 +5,5 @@ redis
 django-celery-email==1.0.4
 django-bootstrap3
 raven
+git+https://github.com/keitheis/django-assets.git@5fa46d613252b284695be88247a53d1c4d342093#egg=django-assets
+cssmin

@@ -1,4 +1,5 @@
 <!doctype html>
+{% load assets %}
 {% with utm_vars="utm_source=pycontw&utm_medium=website&utm_campaign=sponsor2014apac" %}
 <html lang="{% if LANGUAGE_CODE == 'zh' %}zh-Hant{% else %}{{LANGUAGE_CODE}}{% endif %}" ng-app="App" itemscope itemtype="http://schema.org/Event">
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
@@ -37,7 +38,9 @@
     {% compress css %}
     <link rel="stylesheet" href="{% static "vendor/bootstrap-3.0.3/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "vendor/mezzanine/mezzanine.css" %}">
-    <link rel="stylesheet" href="{% static "all.css" %}">
+    {% assets "pycontw_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
     <link rel="stylesheet" media="all" href="{% static "css/han.css" %}">
     {% block extra_css %}{% endblock %}
     {% endcompress %}
