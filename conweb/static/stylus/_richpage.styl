@@ -60,17 +60,15 @@
     margin-top: 1.5em;
   }
   ul {
-    padding: 0.2em;
-  }
-  li {
-    list-style-type: none;
-    &:before {
-      content: '-';
-      margin: 0 9px 0 0;
-      font-weight: bold;
-      color: #dark-red;
+    > li {
+      list-style-type: none;
+      &:before {
+        content: '-';
+        margin: 0 9px 0 -1em;
+        font-weight: bold;
+        color: #dark-red;
+      }
     }
-
   }
   b {
     color: $dark-blue;
