@@ -75,7 +75,9 @@
   {% endnevercache %}
 
   <div class="mobile-header">
+    {% if not has_home and page.is_primary and forloop.first %}
     <h1 itemprop="name"><a href="{% url "home" %}" class="mobile-title">PyCon 2014 APAC</a></h1>
+    {% endif %}
     <img itemprop="image" src="{% static "images/ogv2.png" %}" class="hide">
 
     <a href="#" class="btn-nav menu-button" ng-class="{opened: showNav}" ng-click="showNav=!showNav">N</a>
@@ -129,6 +131,13 @@
                 <a href="http://www.qsearch.cc/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/qsearch.png' %}" width=200 height=80 alt="QSearch">
                 </a>
+
+              <h4 class="sponsor-title bronze">Media Sponsors</h4>
+              <p>
+                <a href="http://yowureport.com/?{{utm_vars}}" target="_blank">
+                  <img src="{% static 'images/sponsor_logo/yowureport.png' %}" width=200 height=80 alt="QSearch">
+                </a>
+
             </div>
         </div>
       {% endblock %}
