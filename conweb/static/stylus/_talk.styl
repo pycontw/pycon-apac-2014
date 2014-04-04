@@ -43,11 +43,15 @@
 
   th, td {
     padding: 5px 10px
+    position: relative
   }
 
   > tbody > tr > th {
     color: $blue
     vertical-align: middlem
+  }
+  tr {
+    min-height: 3em
   }
   // tbody tr:first-child  {
   //   th, td {
@@ -74,10 +78,11 @@
 .program-title {
   font-size: 16px
   margin: 0
+  color: #666
   a {
-    color: #666
+
   }
-  small a{
+  small {
     color: $green
   }
 }
@@ -87,6 +92,9 @@
   text-align: center
   margin: 1em 0
   padding: 0.3em 0
+}
+.program-section {
+  min-height: 18em
 }
 .program-break {
   background-color: rgba(#666, 0.1)

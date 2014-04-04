@@ -1104,10 +1104,14 @@ hr {
 .program-table th,
 .program-table td {
   padding: 5px 10px;
+  position: relative;
 }
 .program-table > tbody > tr > th {
   color: #0e6eb8;
   vertical-align: middlem;
+}
+.program-table tr {
+  min-height: 3em;
 }
 .program-time {
   color: #739e15;
@@ -1126,11 +1130,9 @@ hr {
 .program-title {
   font-size: 16px;
   margin: 0;
-}
-.program-title a {
   color: #666;
 }
-.program-title small a {
+.program-title small {
   color: #90c51a;
 }
 .program-block {
@@ -1139,6 +1141,9 @@ hr {
   text-align: center;
   margin: 1em 0;
   padding: 0.3em 0;
+}
+.program-section {
+  min-height: 18em;
 }
 .program-break {
   background-color: rgba(102,102,102,0.1);
