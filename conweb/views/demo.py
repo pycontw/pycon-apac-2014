@@ -47,6 +47,8 @@ def program(request):
       '77':  [ 'Michael McKerns'   , 'en',  'optimization and uncertainty quantification at exascale'],
       '73':  [ 'Muyueh Lee'        , 'en',  'Real-time visualization with Python and d3.js'],
       '69':  [ '國棟 高'            , 'zh',  'Openstack 簡介'],
+
+      '65':  ['Chia-Chi Chang'     , 'en', 'Hacking Models with Python'],
     }
 
     programs[1] = {
@@ -75,7 +77,7 @@ def program(request):
       '37':  ['Jiwon Seo',            'en', 'Designing a Python-integrated query language for distributed computing '],
       '38':  ['zaki akhmad',          'en', 'Python for Application Security Testing  '],
       '26':  ['Sakshi Bansal',        'en', 'Python Request'],
-
+      's0': ['Sponsored Talk by VPon', 'en', 'Item-Based Mobile Advertisement Recommendation System in Python with Hadoop Streaming']
     }
 
     data = {
