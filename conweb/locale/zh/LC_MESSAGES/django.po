@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-07 23:12+0800\n"
+"POT-Creation-Date: 2014-04-07 23:16+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -228,7 +228,7 @@ msgstr ""
 "    "
 
 #: templates/index.html:22
-msgid "Registration Open NOW!"
+msgid "Registration NOW open!"
 msgstr "立即購票！"
 
 #: templates/index.html:23
