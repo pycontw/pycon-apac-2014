@@ -975,7 +975,7 @@ hr {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 40px;
   }
 }
 .home-condate {
@@ -990,7 +990,7 @@ hr {
 .home-condate strong {
   color: #0e6eb8;
 }
-@media $mobile-iphone {
+@media only screen and (max-width: 1000px) {
   .home-condate {
     font-size: 20px;
   }
@@ -1003,12 +1003,12 @@ hr {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
   .hero-text {
     font-size: 30px;
   }
 }
-@media $mobile-iphone {
+@media only screen and (max-width: 480px) {
   .hero-text {
     font-size: 20px;
   }
@@ -1049,12 +1049,6 @@ hr {
     display: none;
   }
 }
-.home-sponsors .sponsor-logos {
-  margin: 5px;
-}
-.home-sponsors .sponsor-logos img {
-  margin: 10px 5px;
-}
 .home-sponsors .sponsor-more {
   margin: -3px 0 0;
   height: 0;
@@ -1067,6 +1061,18 @@ hr {
 }
 .home-sponsors .sponsor-more a.btn:hover {
   color: #000;
+}
+.sponsor-logos {
+  margin: 5px;
+}
+.sponsor-logos img {
+  margin: 10px 15px;
+}
+@media only screen and (max-width: 480px) {
+  .sponsor-logos img {
+    width: 100px;
+    height: 40px;
+  }
 }
 .talk-meta dt {
   color: #999;
