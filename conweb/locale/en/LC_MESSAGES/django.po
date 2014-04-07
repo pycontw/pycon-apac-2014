@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:10+0800\n"
+"POT-Creation-Date: 2014-04-07 23:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,48 +144,44 @@ msgstr ""
 msgid "Profile updated"
 msgstr ""
 
-#: templates/_nav.html:21
-msgid "Speaker List"
-msgstr ""
-
-#: templates/_nav.html:26 templates/blog/blog_post_list.html:4
+#: templates/_nav.html:27 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
 msgstr ""
 
-#: templates/_nav.html:34
+#: templates/_nav.html:35
 msgid "My Proposals"
 msgstr ""
 
-#: templates/_nav.html:38
+#: templates/_nav.html:40
 msgid "Review"
 msgstr ""
 
-#: templates/_nav.html:41
+#: templates/_nav.html:43
 msgid "All Proposals"
 msgstr ""
 
-#: templates/_nav.html:44
+#: templates/_nav.html:46
 msgid "My Review"
 msgstr ""
 
-#: templates/_nav.html:50
+#: templates/_nav.html:53
 msgid "My Profile"
 msgstr ""
 
-#: templates/_nav.html:54
+#: templates/_nav.html:62
 msgid "LOG OUT"
 msgstr ""
 
-#: templates/_nav.html:57
+#: templates/_nav.html:66
 msgid "SPEAKER LOG IN"
 msgstr ""
 
-#: templates/base.html:15
+#: templates/base.html:16
 msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
 msgstr ""
 
-#: templates/base.html:133
+#: templates/base.html:153
 msgid ""
 "\n"
 "    <p>\n"
@@ -204,11 +200,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:24
+#: templates/index.html:22
+msgid "Registration Open NOW!"
+msgstr ""
+
+#: templates/index.html:23
 msgid "Sponsorship available!"
 msgstr ""
 
-#: templates/index.html:26
+#: templates/index.html:25
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -230,15 +230,15 @@ msgstr ""
 msgid "Sponsors"
 msgstr ""
 
-#: templates/index.html:69
+#: templates/index.html:86
 msgid "Show me all"
 msgstr ""
 
-#: templates/index.html:76
+#: templates/index.html:93
 msgid "What is PyCon and PyCon APAC"
 msgstr ""
 
-#: templates/index.html:81
+#: templates/index.html:98
 msgid ""
 "\n"
 "      PyCon is a conference by the Python community for the community.\n"
@@ -251,7 +251,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:90
+#: templates/index.html:107
 msgid ""
 "\n"
 "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
@@ -267,7 +267,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:100
+#: templates/index.html:117
 msgid ""
 "\n"
 "          <li>\n"
@@ -413,6 +413,14 @@ msgstr ""
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:18
+msgid "Quick Blog"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:27
+msgid "Save Draft"
 msgstr ""
 
 #: templates/blog/blog_post_detail.html:29
