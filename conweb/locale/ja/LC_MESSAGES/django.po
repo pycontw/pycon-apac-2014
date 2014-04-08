@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-07 23:16+0800\n"
+"POT-Creation-Date: 2014-04-08 10:16+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -533,6 +533,42 @@ msgstr ""
 #: templates/blog/includes/filter_panel.html:87
 #: templates/blog/includes/filter_panel.html:91
 msgid "Atom"
+msgstr ""
+
+#: templates/demo/program.html:5 templates/demo/program.html.py:8
+#: templates/demo/program.html:11 templates/demo/program.html.py:14
+msgid "Program"
+msgstr ""
+
+#: templates/demo/program.html:14
+msgid "Taiwan"
+msgstr ""
+
+#: templates/demo/program.html:25 templates/demo/program.html.py:107
+msgid "Opening"
+msgstr ""
+
+#: templates/demo/program.html:27 templates/demo/program.html.py:62
+#: templates/demo/program.html:110 templates/demo/program.html.py:143
+msgid "Keynote"
+msgstr ""
+
+#: templates/demo/program.html:30 templates/demo/program.html.py:65
+#: templates/demo/program.html:95 templates/demo/program.html.py:113
+#: templates/demo/program.html:146 templates/demo/program.html.py:176
+msgid "Break"
+msgstr ""
+
+#: templates/demo/program.html:59 templates/demo/program.html.py:140
+msgid "Lunch"
+msgstr ""
+
+#: templates/demo/program.html:98
+msgid "Lightning Talks"
+msgstr ""
+
+#: templates/demo/program.html:179
+msgid "Closing and Taking Photos Together"
 msgstr ""
 
 #: templates/email/account_approve.html:3

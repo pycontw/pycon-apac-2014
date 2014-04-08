@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-07 23:16+0800\n"
+"POT-Creation-Date: 2014-04-08 10:16+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -632,6 +632,42 @@ msgstr "RSS"
 #: templates/blog/includes/filter_panel.html:91
 msgid "Atom"
 msgstr "Atom"
+
+#: templates/demo/program.html:5 templates/demo/program.html.py:8
+#: templates/demo/program.html:11 templates/demo/program.html.py:14
+msgid "Program"
+msgstr "議程"
+
+#: templates/demo/program.html:14
+msgid "Taiwan"
+msgstr "台灣"
+
+#: templates/demo/program.html:25 templates/demo/program.html.py:107
+msgid "Opening"
+msgstr "開幕式"
+
+#: templates/demo/program.html:27 templates/demo/program.html.py:62
+#: templates/demo/program.html:110 templates/demo/program.html.py:143
+msgid "Keynote"
+msgstr "特邀講者"
+
+#: templates/demo/program.html:30 templates/demo/program.html.py:65
+#: templates/demo/program.html:95 templates/demo/program.html.py:113
+#: templates/demo/program.html:146 templates/demo/program.html.py:176
+msgid "Break"
+msgstr "休息"
+
+#: templates/demo/program.html:59 templates/demo/program.html.py:140
+msgid "Lunch"
+msgstr "午餐"
+
+#: templates/demo/program.html:98
+msgid "Lightning Talks"
+msgstr "閃電秀"
+
+#: templates/demo/program.html:179
+msgid "Closing and Taking Photos Together"
+msgstr "閉幕式 & 大合照"
 
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3

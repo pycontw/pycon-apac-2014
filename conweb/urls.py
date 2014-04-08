@@ -34,7 +34,6 @@ urlpatterns = patterns(
     #(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^setlang/$', 'conweb.views.i18n.set_language', name='set_language'),
     url(r'^demo/(?P<page>\w+)/$', 'conweb.views.demo.show', name='demo'),
-    url(r'^program/$', 'conweb.views.demo.program', name='program'),
 
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
@@ -51,9 +50,11 @@ urlpatterns = patterns(
 urlpatterns += i18n_patterns(
     "",
 
+    url(r'^program/$', 'conweb.views.demo.program', name='program'),
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^proposal/", include("proposal.urls", namespace="proposal")),
-    url("^proposal_review/", include("proposal_review.urls", namespace="proposal_review")),
+    url("^proposal_review/", include("proposal_review.urls",
+                                     namespace="proposal_review")),
     url("^speakers/", include("speaker.urls", namespace="speaker")),
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
