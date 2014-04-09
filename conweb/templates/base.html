@@ -75,7 +75,7 @@
   {% endnevercache %}
 
   <div class="mobile-header">
-    {% if page.slug %}
+    {% if page.slug or blog_post %}
     <h1 itemprop="name"><a href="{% url "home" %}" class="mobile-title">PyCon 2014 APAC</a></h1>
     {% endif %}
     <img itemprop="image" src="{% static "images/ogv2.png" %}" class="hide">
@@ -141,6 +141,9 @@
               <p>
                 <a href="http://yowureport.com/?{{utm_vars}}" target="_blank">
                   <img src="{% static 'images/sponsor_logo/yowureport.png' %}" width=200 height=80 alt="QSearch">
+                </a>
+                <a href="http://www.bnext.com.tw/?{{utm_vars}}" target="_blank">
+                  <img src="https://tw.pycon.org/static/media/uploads/Sponsor/logo/bnext.png" width=200 height=80 alt="bnext">
                 </a>
 
             </div>
