@@ -1106,6 +1106,7 @@ hr {
 }
 .program-table {
   margin-bottom: 0;
+  width: 100%;
 }
 .program-table th,
 .program-table td {
@@ -1146,7 +1147,8 @@ hr {
   color: #04556a;
   text-align: center;
   margin: 1em 0;
-  padding: 0.3em 0;
+  padding: 1em 0;
+  font-weight: bold;
 }
 .program-section {
   min-height: 18em;
@@ -1156,7 +1158,7 @@ hr {
   color: #666;
   text-align: center;
   margin: 1em 0;
-  padding: 0.2em 0;
+  padding: 0.5em 0;
   font-size: 15px;
 }
 .speaker-link {
@@ -1165,6 +1167,24 @@ hr {
 .speaker-link a {
   color: #04556a;
   font-size: 0.8em;
+}
+.program-keynote,
+.program-edu {
+  padding: 1em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.program-keynote {
+  background-color: #e6f0f7;
+}
+.program-edu {
+  background-color: #a4ce85;
+}
+.tag {
+  text-decoration: underline;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  color: #999;
 }
 .action-btn-block {
   text-align: center;

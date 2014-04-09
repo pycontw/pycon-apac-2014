@@ -40,7 +40,7 @@
 }
 .program-table {
   margin-bottom: 0
-
+  width: 100%
   th, td {
     padding: 5px 10px
     position: relative
@@ -91,7 +91,8 @@
   color: $dark-blue
   text-align: center
   margin: 1em 0
-  padding: 0.3em 0
+  padding: 1em 0
+  font-weight: bold
 }
 .program-section {
   min-height: 18em
@@ -101,7 +102,7 @@
   color: #666
   text-align: center
   margin: 1em 0
-  padding: 0.2em 0
+  padding: 0.5em 0
   font-size: 15px
 }
 .speaker-link {
@@ -110,4 +111,25 @@
     color: $dark-blue;
     font-size: 0.8em;
   }
+}
+$program-em {
+  padding: 1em
+  margin: 10px 0
+  font-weight: bold
+}
+
+.program-keynote {
+  @extends $program-em
+  background-color: #e6f0f7
+}
+.program-edu {
+  @extends $program-em
+  background-color: #a4ce85
+}
+
+.tag {
+  text-decoration: underline
+  font-size: 0.8em
+  margin-left: 0.5em
+  color: #999
 }

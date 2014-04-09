@@ -71,7 +71,9 @@
         <p class="text-center  program-time"><span>15:00</span></p>
         <div class="program-section"><table class="program-table">
           <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.60 %}</td> </tr>
-          <tr><th> R1 </th> <td class="program-block"> 教育座談 </td> </tr>
+          <tr><th> R1 </th> <td>
+            <div class="program-edu">教育座談</div>
+           </td> </tr>
           <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.91 %}</td> </tr>
           <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.27 %}</td> </tr>
           <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.64 %}</td> </tr>
@@ -80,7 +82,7 @@
         <p class="text-center  program-time"><span>15:30</span></p>
         <div class="program-section"><table class="program-table">
           <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.58 %}</td> </tr>
-          <tr><th> R1 </th> <td class="program-block"> 教育座談 </td> </tr>
+          <tr><th> R1 </th> <td> <div class="program-edu">教育座談</div> </td> </tr>
           <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.65 %}</td> </tr>
           <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.73 %}</td> </tr>
           <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with talk=programs.0.69 %}</td> </tr>
@@ -152,7 +154,11 @@
 
         <p class="text-center  program-time"><span>15:00</span></p>
         <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td class="program-block"> {% trans "Keynote" %} Andreas Klöckner </td> </tr>
+          <tr><th> R0 </th> <td>
+            <div class="program-keynote">
+              {% trans "Keynote" %} Andreas Klöckner
+            </div>
+           </td> </tr>
           <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with talk=programs.1.41 %}</td> </tr>
           <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with talk=programs.1.36 %}</td> </tr>
           <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with talk=programs.1.46 %}</td> </tr>
@@ -161,7 +167,13 @@
 
         <p class="text-center  program-time"><span>15:30</span></p>
         <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td class="program-block"> {% trans "Keynote" %} Andreas Klöckner </td> </tr>
+          <tr><th> R0 </th>
+            <td>
+            <div class="program-keynote">
+              {% trans "Keynote" %} Andreas Klöckner
+            </div>
+            </td>
+          </tr>
           <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with talk=programs.1.84 %}</td> </tr>
 
           <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with talk=programs.1.37 %}</td> </tr>
