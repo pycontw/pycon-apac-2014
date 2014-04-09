@@ -6,36 +6,26 @@
 
 {% block meta_title %}{% trans "Speaker List" %}{% endblock %}
 
-
 {% block content %}
-
-<div class="content">
-    <table id="proposal_review_list" class="pycon-table table table-strip">
-        <thead>
-            <tr>
-                <th>{% trans "Full name" %}</th>
-                <th>{% trans "Location" %}</th>
-                <th>{% trans "Organization/Company" %}</th>
-                <th>{% trans "Title" %}</th>
-                <th>{% trans "Picture" %}</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for speaker in speakers %}
-            <tr>
-                <td><a href="{% url 'speaker:info' speaker.id %}">{{speaker.get_full_name}}</a></td>
-                <td>{{speaker.get_profile.location}}</td>
-                <td>{{speaker.get_profile.org}}</td>
-                <td>{{speaker.get_profile.title}}</td>
+<div class="container-main">
+    {% for speaker in speakers %}
+        <div class="panel speaker-panel">
+            <div class="figure">
                 {% if speaker.get_profile.picture %}
-                <td><a href="{{speaker.get_profile.picture.url}}">{% trans "Link" %}</a>
-                ({{speaker.get_profile.picture_size}})</td>
-                {% else %}
-                <td>{% trans "Not available" %}</td>
+                <a href="{% url 'speaker:info' speaker.id %}">
+                <img src="{{speaker.get_profile.picture.url}}" alt="" class="img-responsive">
+                </a>
                 {% endif %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </div>
+
+            <div class="panel-body">
+                <p class="location">{{speaker.get_profile.location}}</p>
+                <p class="name"><a href="{% url 'speaker:info' speaker.id %}">{{speaker.get_full_name}}</a></p>
+                <p class="org">{{speaker.get_profile.org}}</p>
+                <p class="title">{{speaker.get_profile.title}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="clear"></div>
 </div>
 {% endblock content %}

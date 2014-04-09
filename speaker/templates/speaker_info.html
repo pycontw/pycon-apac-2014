@@ -13,7 +13,7 @@
 <div class="content">
   <div class="paper">
     {% if profile.tagline %}
-    <h2>Tagline</h2>
+    <h4>Tagline</h4>
     <div class="row">
       <div class="col-md-12">{{profile.tagline}}</div>
     </div>
@@ -25,8 +25,11 @@
       </div>
     </div>
     {% endif %}
+    <div style="white-space: pre-wrap">{{profile.brief}}</div>
+
+    <br>
     {% if profile.personal_url %}
-    <h2>{% trans "Personal Link" %}</h2>
+    <h4>{% trans "Personal Link" %}</h4>
     <div class="row">
       <div class="col-md-12">
       <a href="{{profile.personal_url}}" target="_blank">{{profile.personal_url}}</a>
@@ -34,7 +37,7 @@
     </div>
     {% endif %}
     {% if profile.twitter_username %}
-    <h2>{% trans "Twitter" %}</h2>
+    <h4>{% trans "Twitter" %}</h4>
     <div class="row">
       <div class="col-md-12">
       <a href="https://twitter.com/{{profile.twitter_username}}" target="_blank">@{{profile.twitter_username}}</a>
@@ -42,13 +45,13 @@
     </div>
     {% endif %}
     {% if profile.Location %}
-    <h3>{% trans "Location" %}</h3>
+    <h4>{% trans "Location" %}</h4>
     <div class="row">
       <div class="col-md-12">{{profile.location}}</div>
     </div>
     {% endif %}
     {% if profile.org %}
-    <h3>{% trans "Organization/Company" %}</h3>
+    <h4>{% trans "Organization/Company" %}</h4>
     <div class="row">
       {% if profile.org_url %}
       <a href="{{profile.org_url}}" target="_blank">
@@ -60,16 +63,14 @@
     </div>
     {% endif %}
     {% if profile.title %}
-    <h3>{% trans "Title" %}</h3>
+    <h4>{% trans "Title" %}</h4>
     <div class="row">
       <div class="col-md-12">{{profile.title}}</div>
     </div>
     {% endif %}
     {% if profile.brief %}
-    <h3>{% trans "Speaker Brief" %}</h3>
-    <div class="row">
-      <pre class="col-md-10">{{profile.brief}}</pre>
-    </div>
+    <h4>{% trans "Speaker Brief" %}</h4>
+
     {% endif %}
     <div class="clear"></div>
   </div>
