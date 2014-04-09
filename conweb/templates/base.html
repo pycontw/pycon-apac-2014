@@ -75,7 +75,7 @@
   {% endnevercache %}
 
   <div class="mobile-header">
-    {% if page.slug %}
+    {% if page.slug or blog_post %}
     <h1 itemprop="name"><a href="{% url "home" %}" class="mobile-title">PyCon 2014 APAC</a></h1>
     {% endif %}
     <img itemprop="image" src="{% static "images/ogv2.png" %}" class="hide">
