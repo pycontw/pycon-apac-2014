@@ -11,9 +11,9 @@
     {% for speaker in speakers %}
         <div class="panel speaker-panel">
         {% if speaker.get_profile.picture %}
-            <div class="figure" style="background-image: url({{speaker.get_profile.picture.url}})">
-
-            </div>
+            <a href="{% url 'speaker:info' speaker.id %}">
+            <div class="figure" style="background-image: url({{speaker.get_profile.picture.url}})"></div>
+            </a>
         {% else %}
             <div class="figure"></div>
         {% endif %}
