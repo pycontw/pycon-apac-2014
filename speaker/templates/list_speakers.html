@@ -10,13 +10,14 @@
 <div class="container-main">
     {% for speaker in speakers %}
         <div class="panel speaker-panel">
-            <div class="figure">
-                {% if speaker.get_profile.picture %}
-                <a href="{% url 'speaker:info' speaker.id %}">
-                <img src="{{speaker.get_profile.picture.url}}" alt="" class="img-responsive">
-                </a>
-                {% endif %}
+        {% if speaker.get_profile.picture %}
+            <div class="figure" style="background-image: url({{speaker.get_profile.picture.url}})">
+
             </div>
+        {% else %}
+            <div class="figure"></div>
+        {% endif %}
+
 
             <div class="panel-body">
                 <p class="location">{{speaker.get_profile.location}}</p>

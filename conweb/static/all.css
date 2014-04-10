@@ -1209,9 +1209,11 @@ table#proposal_review_list tbody tr td.number {
 }
 .speaker-panel .figure {
   height: 250px;
-  background-color: #90c51a;
   overflow: hidden;
   border-radius: 4px 4px 0 0;
+  background: #90c51a no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .speaker-panel .name {
   font-size: 20px;
