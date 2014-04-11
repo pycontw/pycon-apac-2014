@@ -1,0 +1,14 @@
+{% load i18n %}
+
+<div class="text-center">
+  <br>
+  <h3>{% trans "Sponsors" %}</h4>
+  <br>
+  <div class="sponsor-logos">
+    {% include "_sponsors.html" %}
+  </div>
+  <hr>
+  <div class="sponsor-more clear">
+    <a href="/2014apac/{{LANGUAGE_CODE}}/sponsors/" class="btn btn-info">{% trans "Show me all" %}</a>
+  </div>
+</div>
