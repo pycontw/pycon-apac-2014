@@ -1189,6 +1189,11 @@ hr {
   margin-left: 0.5em;
   color: #999;
 }
+.tag-scipy {
+  font-weight: bold;
+  color: #a4ce85;
+  border-bottom: 1px solid #a4ce85;
+}
 .btn-xlg {
   font-size: 24px;
   padding: 1em;

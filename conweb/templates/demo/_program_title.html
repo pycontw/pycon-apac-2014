@@ -1,6 +1,15 @@
+{% load i18n %}
 <div class="program-title">
-  {{talk.2}}
+  {{proposal.title}}
   <br>
-  <small>{{talk.0}}</small>
-  <span class="tag tag-primary">{{talk.1}}</span>
+  <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
+  {% if proposal.language == 1 %}
+  <span class="tag tag-primary" title="{% trans "English" %}"> EN
+  {% else %}
+  <span class="tag tag-primary" title="{% trans "Mandarin" %}"> ZH
+  {% endif %}
+  </span>
+  {% if proposal.speech_type == 2 %}
+  <span class="tag tag-scipy">SciPy</span>
+  {% endif %}
 </div>

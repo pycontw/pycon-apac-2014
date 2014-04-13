@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-08 10:16+0800\n"
+"POT-Creation-Date: 2014-04-13 23:33+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -145,6 +145,14 @@ msgstr ""
 msgid "Profile updated"
 msgstr ""
 
+#: templates/_indexsponsors.html:5
+msgid "Sponsors"
+msgstr ""
+
+#: templates/_indexsponsors.html:12
+msgid "Show me all"
+msgstr ""
+
 #: templates/_nav.html:27 templates/blog/blog_post_list.html:4
 #: templates/blog/blog_post_list.html:22
 msgid "Blog"
@@ -182,13 +190,13 @@ msgstr ""
 msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
 msgstr ""
 
-#: templates/base.html:153
+#: templates/base.html:115
 msgid ""
 "\n"
 "    <p>\n"
 "    Built with <a href=\"https://www.djangoproject.com/\">Django</a> and\n"
 "    <a href=\"http://mezzanine.jupo.org/\">Mezzanine</a>\n"
-"    by PyCon Taiwan web team.</p>\n"
+"    by PyCon Taiwan</p>\n"
 "    <p>\n"
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
@@ -201,15 +209,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:22
+#: templates/index.html:24
 msgid "Registration NOW open!"
 msgstr ""
 
-#: templates/index.html:23
+#: templates/index.html:30
 msgid "Sponsorship available!"
 msgstr ""
 
-#: templates/index.html:25
+#: templates/index.html:32
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -227,19 +235,11 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:41
-msgid "Sponsors"
-msgstr ""
-
-#: templates/index.html:86
-msgid "Show me all"
-msgstr ""
-
-#: templates/index.html:93
+#: templates/index.html:50
 msgid "What is PyCon and PyCon APAC"
 msgstr ""
 
-#: templates/index.html:98
+#: templates/index.html:55
 msgid ""
 "\n"
 "      PyCon is a conference by the Python community for the community.\n"
@@ -252,7 +252,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:107
+#: templates/index.html:64
 msgid ""
 "\n"
 "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
@@ -268,7 +268,7 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/index.html:117
+#: templates/index.html:74
 msgid ""
 "\n"
 "          <li>\n"
@@ -535,39 +535,49 @@ msgstr ""
 msgid "Atom"
 msgstr ""
 
-#: templates/demo/program.html:5 templates/demo/program.html.py:8
-#: templates/demo/program.html:11 templates/demo/program.html.py:14
+#: templates/demo/_program_title.html:7
+msgid "English"
+msgstr ""
+
+#: templates/demo/_program_title.html:9
+msgid "Mandarin"
+msgstr ""
+
+#: templates/demo/program.html:4 templates/demo/program.html.py:5
+#: templates/demo/program.html:7 templates/demo/program.html.py:9
+#: templates/demo/program.html:10
 msgid "Program"
 msgstr ""
 
-#: templates/demo/program.html:14
+#: templates/demo/program.html:9 templates/demo/program.html.py:10
 msgid "Taiwan"
 msgstr ""
 
-#: templates/demo/program.html:25 templates/demo/program.html.py:107
+#: templates/demo/program.html:20 templates/demo/program.html.py:104
 msgid "Opening"
 msgstr ""
 
-#: templates/demo/program.html:27 templates/demo/program.html.py:62
-#: templates/demo/program.html:110 templates/demo/program.html.py:143
+#: templates/demo/program.html:22 templates/demo/program.html.py:57
+#: templates/demo/program.html:107 templates/demo/program.html.py:150
+#: templates/demo/program.html:169 templates/demo/program.html.py:183
 msgid "Keynote"
 msgstr ""
 
-#: templates/demo/program.html:30 templates/demo/program.html.py:65
-#: templates/demo/program.html:95 templates/demo/program.html.py:113
-#: templates/demo/program.html:146 templates/demo/program.html.py:176
+#: templates/demo/program.html:25 templates/demo/program.html.py:60
+#: templates/demo/program.html:92 templates/demo/program.html.py:110
+#: templates/demo/program.html:153 templates/demo/program.html.py:195
 msgid "Break"
 msgstr ""
 
-#: templates/demo/program.html:59 templates/demo/program.html.py:140
+#: templates/demo/program.html:54 templates/demo/program.html.py:147
 msgid "Lunch"
 msgstr ""
 
-#: templates/demo/program.html:98
+#: templates/demo/program.html:95
 msgid "Lightning Talks"
 msgstr ""
 
-#: templates/demo/program.html:179
+#: templates/demo/program.html:198
 msgid "Closing and Taking Photos Together"
 msgstr ""
 

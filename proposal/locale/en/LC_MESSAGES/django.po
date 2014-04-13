@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-01 01:21+0800\n"
+"POT-Creation-Date: 2014-04-13 23:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Don't publish my slide"
 msgstr ""
 
-#: models.py:36 templates/proposal/list.html:50
+#: models.py:36
 msgid "Title"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Type of the proposal"
 msgstr ""
 
-#: models.py:43
+#: models.py:43 templates/proposal/list.html:70
 msgid "Language"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "SciPy Talk accepts only English"
 msgstr ""
 
-#: models.py:47
+#: models.py:47 templates/proposal/list.html:64
 msgid "Audience level"
 msgstr ""
 
@@ -113,7 +113,7 @@ msgid ""
 "website"
 msgstr ""
 
-#: models.py:62
+#: models.py:62 templates/proposal/list.html:99
 msgid "Description"
 msgstr ""
 
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Abstract or outline of your presentation. "
 msgstr ""
 
-#: models.py:66
+#: models.py:66 templates/proposal/list.html:101
 msgid "Additional information"
 msgstr ""
 
@@ -131,15 +131,15 @@ msgid ""
 "(e.g., years of experie)"
 msgstr ""
 
-#: models.py:76 templates/proposal/list.html:52
+#: models.py:76 templates/proposal/list.html:78
 msgid "Abstract"
 msgstr ""
 
-#: views.py:23
+#: views.py:29
 msgid "Thanks for your submission!"
 msgstr ""
 
-#: views.py:59
+#: views.py:65
 msgid "Proposal updated"
 msgstr ""
 
@@ -209,55 +209,55 @@ msgstr ""
 msgid "My Proposals"
 msgstr ""
 
-#: templates/proposal/list.html:44
+#: templates/proposal/list.html:45
 msgid "Create a Proposal"
 msgstr ""
 
-#: templates/proposal/list.html:51
+#: templates/proposal/list.html:62
 msgid "Speech Type"
 msgstr ""
 
-#: templates/proposal/list.html:52
+#: templates/proposal/list.html:72
+msgid "Recording Perm."
+msgstr ""
+
+#: templates/proposal/list.html:78
 msgid "(PDF file)"
 msgstr ""
 
-#: templates/proposal/list.html:53
-msgid "Action"
-msgstr ""
-
-#: templates/proposal/list.html:67
+#: templates/proposal/list.html:85
 msgid "No abstract file."
 msgstr ""
 
-#: templates/proposal/list.html:70 templates/proposal/list.html.py:101
+#: templates/proposal/list.html:88 templates/proposal/list.html.py:139
 msgid "Upload"
 msgstr ""
 
-#: templates/proposal/list.html:73
+#: templates/proposal/list.html:106
 msgid "Update"
 msgstr ""
 
-#: templates/proposal/list.html:74 templates/proposal/list.html.py:124
+#: templates/proposal/list.html:108 templates/proposal/list.html.py:162
 msgid "Delete"
 msgstr ""
 
-#: templates/proposal/list.html:79
+#: templates/proposal/list.html:119
 msgid "No Proposal"
 msgstr ""
 
-#: templates/proposal/list.html:92
+#: templates/proposal/list.html:130
 msgid "Upload Abstract"
 msgstr ""
 
-#: templates/proposal/list.html:100 templates/proposal/list.html.py:123
+#: templates/proposal/list.html:138 templates/proposal/list.html.py:161
 msgid "Close"
 msgstr ""
 
-#: templates/proposal/list.html:113
+#: templates/proposal/list.html:151
 msgid "Delete Proposal"
 msgstr ""
 
-#: templates/proposal/list.html:116
+#: templates/proposal/list.html:154
 msgid ""
 "\n"
 "                Are you sure to <strong>delete</strong> this proposal?\n"
