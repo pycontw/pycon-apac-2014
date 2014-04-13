@@ -17,23 +17,21 @@ Chief Design
 
 * Art Pai <art@stylecoder.tw>
 
-Editor Lead
------------
-
-* Liang Bo Wang <ccwang002@gmail.com>
-
 Code Contributors
 -----------------
 
 * Tzu-ping Chung
 * Chia-Chi Chang
 
-Site Translators
-----------------
+Site content and translators
+----------------------------
 
-- Chinese: https://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/members/
-- Japanese: https://www.transifex.com/projects/p/pycon-apac-2014/language/ja/members/
+* PyCon Taiwan committees
 
-Content Editors and Translators
--------------------------------
-https://github.com/pycontw/PyconAPACDraft/graphs/contributors
+  * Special thanks to our Chief Editor, Liang Bo Wang <ccwang002@gmail.com>.
+  * https://github.com/pycontw/PyconAPACDraft/graphs/contributors
+  * Chinese:
+    https://www.transifex.com/projects/p/pycon-apac-2014/language/zh_TW/members
+  * Japanese:
+    https://www.transifex.com/projects/p/pycon-apac-2014/language/ja/members
+
