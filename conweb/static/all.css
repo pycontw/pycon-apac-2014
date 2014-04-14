@@ -1116,6 +1116,9 @@ hr {
   padding: 5px 10px;
   position: relative;
 }
+.program-table th {
+  text-align: center;
+}
 .program-table > tbody > tr > th {
   color: #0e6eb8;
   vertical-align: middlem;
@@ -1192,6 +1195,15 @@ hr {
 .btn-xlg {
   font-size: 24px;
   padding: 1em;
+}
+.SciPy {
+  font-size: 13px;
+  font-weight: bold;
+  color: #900;
+  border-bottom: 1px solid #900;
+  height: 100%;
+  display: block;
+  margin: -5px;
 }
 .action-btn-block {
   text-align: center;
