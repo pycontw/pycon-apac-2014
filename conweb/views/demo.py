@@ -22,6 +22,17 @@ def show(request, page='show'):
     return render(request, template, data)
 
 
+def proposal_content(request, proposal_id):
+    try:
+        proposal = ProposalModel.objects.get(id=int(proposal_id))
+    except ProposalModel.DoesNotExist:
+        return Http404
+
+    data = {'proposal': proposal}
+
+    return render(request, 'demo/talk_content.html', data)
+
+
 def program(request):
     programs = {}
 
@@ -42,6 +53,13 @@ def program(request):
         {pid: accepted_proposals[pid] for pid in day1_programs_id},
         {pid: accepted_proposals[pid] for pid in day2_programs_id}
     )
+    programs[1][301] = {
+        'author': {'first_name': 'Vpon'},
+        'title':
+        u'Item-Based Mobile Advertisement Recommendation System'
+        u' in Python with Hadoop Streaming',
+        'language': 1
+    }
 
     # programs[0] = {
     #     '30': ['勁成 駱',         'zh', '立委投票指南 -- 從零開始'],

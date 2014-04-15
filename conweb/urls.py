@@ -50,7 +50,9 @@ urlpatterns = patterns(
 urlpatterns += i18n_patterns(
     "",
 
-    url(r'^program/$', 'conweb.views.demo.program', name='program'),
+    url("^program/$", 'conweb.views.demo.program', name='program'),
+    url("^program/(?P<proposal_id>\d+)$",
+        'conweb.views.demo.proposal_content', name='proposal_content'),
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^proposal/", include("proposal.urls", namespace="proposal")),
     url("^proposal_review/", include("proposal_review.urls",

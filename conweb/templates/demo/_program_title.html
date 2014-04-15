@@ -1,15 +1,22 @@
 {% load i18n %}
+
 <div class="program-title">
-  {{proposal.title}}
-  <br>
-  <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
-  {% if proposal.language == 1 %}
-  <span class="tag tag-primary" title="{% trans "English" %}"> EN
+  {% if proposal.id %}
+  <a href="{% url 'proposal_content' proposal_id=proposal.id %}" turbolink>{{proposal.title}}</a>
   {% else %}
-  <span class="tag tag-primary" title="{% trans "Mandarin" %}"> ZH
+  {{proposal.title}}
   {% endif %}
-  </span>
-  {% if proposal.speech_type == 2 %}
-  <span class="tag tag-scipy">SciPy</span>
+  <br>
+  {% if proposal.author.id %}
+  <a href="/{{LANGUAGE_CODE}}/speakers/{{proposal.author.id}}">
+    <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
+  </a>
+  {% else %}
+    <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
+  {% endif %}
+  {% if proposal.language == 1 %}
+  <span class="tag tag-primary" title="{% trans "English" %}"> en </span>
+  {% else %}
+  <span class="tag tag-primary" title="{% trans "Mandarin" %}"> zh </span>
   {% endif %}
 </div>

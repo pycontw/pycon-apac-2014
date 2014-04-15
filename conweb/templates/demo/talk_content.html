@@ -1,31 +1,34 @@
+{% load i18n %}
+
 <div class="panel-heading">
     <h1>
-    The Python Paradox
+      {{proposal.title}}
     </h1>
 </div>
 
 <div class="panel-body">
     <dl class="talk-meta">
-        <dt>Speaker</dt>
-        <dd><a href="/pycon/2013/speakers/mike_muller/">Mike Müller</a></dd>
-
-        <dt>When</dt>
-        <dd><a href="/pycon/2013/schedule/#talk-the_python_paradox">Saturday 10:00 - 11:00</a></dd>
+      <dt>{% trans "Speaker" %}</dt>
+        <dd>
+          <a href="/{{LANGUAGE_CODE}}/speakers/{{proposal.author.id}}">
+            {{proposal.author.first_name}} {{proposal.author.last_name}}
+          </a>
+        </dd>
+        <dt>{% trans "Language" %}</dt>
+        <dd>
+            {% trans proposal.get_language_display %}
+        </dd>
     </dl>
 
     <hr>
 
-    <p>染料恐致癌，女愛吃青蛙鍋，張鈞甯說，我相信我此生都不會跟他們有交集的...一定不會有的，林書豪官方T恤明在台開賣，公家機關和企業延至10時才上班，我無法相信弗格森爵士真的退休了，還是因時事應變比較對呢？冏編的哥哥的女友的朋友的三叔...目前還失業找不到工作哩...難不成水果報有聽到我的心聲，任何議題問名嘴，天哪.........
+    <p><pre>{{proposal.description}}</pre>
 
-    <p>This talk explores the features of Python that make it suitable for both extremes of the programmer spectrum. It analyzes this paradoxical situation to find out how much it contributes to Python's success.</p>
-    <hr>
-    <h4 class="small-title">Media</h4>
-    <ul class="square-list text-muted">
-        <li>Slide: coming soon.</li>
-        <li>Video: coming soon.</li>
-    </ul>
-
-
-
+    <!-- <hr> -->
+    <!-- <h4 class="small-title">Media</h4> -->
+    <!-- <ul class="square-list text-muted"> -->
+    <!--     <li>Slide: coming soon.</li> -->
+    <!--     <li>Video: coming soon.</li> -->
+    <!-- </ul> -->
 
 </div>
