@@ -1148,6 +1148,9 @@ hr {
 .program-title small {
   color: #90c51a;
 }
+.program-title small a {
+  color: inherit;
+}
 .program-block {
   background-color: rgba(14,110,184,0.1);
   color: #04556a;
