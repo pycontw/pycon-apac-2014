@@ -29,7 +29,6 @@ def proposal_content(request, proposal_id):
         return Http404
 
     data = {'proposal': proposal}
-
     return render(request, 'demo/talk_content.html', data)
 
 

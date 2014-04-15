@@ -1116,6 +1116,9 @@ hr {
   padding: 5px 10px;
   position: relative;
 }
+.program-table th {
+  text-align: center;
+}
 .program-table > tbody > tr > th {
   color: #0e6eb8;
   vertical-align: middlem;
@@ -1144,6 +1147,9 @@ hr {
 }
 .program-title small {
   color: #90c51a;
+}
+.program-title small a {
+  color: inherit;
 }
 .program-block {
   background-color: rgba(14,110,184,0.1);
@@ -1197,6 +1203,14 @@ hr {
 .btn-xlg {
   font-size: 24px;
   padding: 1em;
+}
+.SciPy {
+  font-size: 13px;
+  font-weight: bold;
+  color: #8caae6;
+  height: 100%;
+  display: block;
+  margin: -5px;
 }
 .action-btn-block {
   text-align: center;
