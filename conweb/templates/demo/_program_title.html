@@ -1,16 +1,13 @@
 {% load i18n %}
 
 <div class="program-title">
-  {% if proposal.id %}
-  <a href="{% url 'proposal_content' proposal_id=proposal.id %}" turbolink>{{proposal.title}}</a>
-  {% else %}
+  {% if proposal.id %}<a href="{% url 'proposal_content' proposal_id=proposal.id %}" turbolink>{% endif %}
+
   {{proposal.title}}
-  {% endif %}
+
   <br>
   {% if proposal.author.id %}
-  <a href="/{{LANGUAGE_CODE}}/speakers/{{proposal.author.id}}">
     <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
-  </a>
   {% else %}
     <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
   {% endif %}
@@ -19,4 +16,5 @@
   {% else %}
   <span class="tag tag-primary" title="{% trans "Mandarin" %}"> zh </span>
   {% endif %}
+  {% if proposal.id %}</a>{% endif %}
 </div>

@@ -28,8 +28,20 @@ def proposal_content(request, proposal_id):
     except ProposalModel.DoesNotExist:
         return Http404
 
-    data = {'proposal': proposal}
-    return render(request, 'demo/talk_content.html', data)
+    profile = proposal.author.get_profile()
+
+    data = {
+      'proposal': proposal,
+      'profile': profile,
+    }
+
+    if request.is_ajax():
+        template = 'demo/talk_content.html'
+    else:
+        template = 'demo/talk.html'
+
+
+    return render(request, template, data)
 
 
 def program(request):

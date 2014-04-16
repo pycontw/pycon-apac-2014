@@ -547,7 +547,7 @@ a:hover {
   bottom: 0;
   right: 250px;
   padding: 0 40px 0 280px;
-  background-color: #f5f4ee;
+  background-color: #fff;
   -webkit-box-shadow: 0 0 20px 2px #999;
   box-shadow: 0 0 20px 2px #999;
   height: 100%;
@@ -557,6 +557,12 @@ a:hover {
   position: absolute;
   right: 0;
   top: 0;
+}
+@media only screen and (max-width: 1000px) {
+  .slideInPage {
+    padding: 0 20px;
+    right: 50px;
+  }
 }
 .ng-trans.ng-enter,
 .ng-trans.ng-leave {
@@ -754,7 +760,6 @@ hr {
   border-color: #e7e4d6;
 }
 .single-line {
-  display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -1077,6 +1082,19 @@ hr {
     height: 40px;
   }
 }
+.talk-title {
+  font-size: 32px;
+}
+.talk-author {
+  color: #90c51a;
+  font-size: 20px;
+}
+.talk-lang {
+  font-size: 15px;
+}
+.talk-meta {
+  color: #999;
+}
 .talk-meta dt {
   color: #999;
   font-weight: normal;
@@ -1144,6 +1162,15 @@ hr {
   font-size: 16px;
   margin: 0;
   color: #666;
+}
+.program-title a {
+  display: block;
+  padding: 4px;
+  border-radius: 4px;
+}
+.program-title a:hover {
+  background-color: #e6f0f7;
+  text-decoration: none;
 }
 .program-title small {
   color: #90c51a;
