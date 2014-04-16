@@ -15,7 +15,10 @@
   <br>
   {% if profile.personal_url %}
     <h4>{% trans "Personal Link" %}</h4>
-    <a href="{{profile.personal_url}}" target="_blank">{{profile.personal_url}}</a>
+    <p class="single-line">
+      <a href="{{profile.personal_url}}" target="_blank">{{profile.personal_url}}</a>
+
+    </p>
   {% endif %}
   {% if profile.twitter_username %}
     <h4>{% trans "Twitter" %}</h4>

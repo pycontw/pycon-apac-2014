@@ -1,9 +1,17 @@
 .talk-title {
   font-size: 32px
+
+  @media $ipad-query {
+    font-size: 24px
+  }
+
+  @media $iphone-query {
+    font-size: 20px
+  }
 }
-.talk-author {
+.talk-speaker {
   color: $green
-  font-size: 20px
+  font-size: 1.2em
 }
 
 .talk-lang {
@@ -177,4 +185,13 @@ $program-em {
   height: 100%
   display: block
   margin: -5px
+}
+
+.panel-body, .panel-heading {
+  @media $ipad-query {
+    font-size: 16px
+  }
+  @media $iphone-query {
+    font-size: 15px
+  }
 }

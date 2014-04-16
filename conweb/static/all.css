@@ -1085,9 +1085,19 @@ hr {
 .talk-title {
   font-size: 32px;
 }
-.talk-author {
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  .talk-title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .talk-title {
+    font-size: 20px;
+  }
+}
+.talk-speaker {
   color: #90c51a;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 .talk-lang {
   font-size: 15px;
@@ -1238,6 +1248,18 @@ hr {
   height: 100%;
   display: block;
   margin: -5px;
+}
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+  .panel-body,
+  .panel-heading {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .panel-body,
+  .panel-heading {
+    font-size: 15px;
+  }
 }
 .action-btn-block {
   text-align: center;

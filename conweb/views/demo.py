@@ -29,10 +29,13 @@ def proposal_content(request, proposal_id):
         return Http404
 
     profile = proposal.author.get_profile()
+    picture = profile.picture
+    og_image_url = picture.url if picture else None
 
     data = {
       'proposal': proposal,
       'profile': profile,
+      "og_image_url": og_image_url,
     }
 
     if request.is_ajax():
