@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<div class="col-md-4">
+  {% if og_image_url %}
+      <img src="{{og_image_url}}" alt="Profile picture" class="img-responsive">
+  {% endif %}
+</div>
+<div class="col-md-8 speaker-info">
+  {% if progile.tagline %}
+    <h4>Tagline</h4>
+    {{profile.tagline}}
+  {% endif %}
+
+  <div style="white-space: pre-wrap">{{profile.brief}}</div>
+  <br>
+  {% if profile.personal_url %}
+    <h4>{% trans "Personal Link" %}</h4>
+    <a href="{{profile.personal_url}}" target="_blank">{{profile.personal_url}}</a>
+  {% endif %}
+  {% if profile.twitter_username %}
+    <h4>{% trans "Twitter" %}</h4>
+    <a href="https://twitter.com/{{profile.twitter_username}}" target="_blank">@{{profile.twitter_username}}</a>
+  {% endif %}
+  {% if profile.Location %}
+    <h4>{% trans "Location" %}</h4>
+    {{profile.location}}
+  {% endif %}
+  {% if profile.org %}
+    <h4>{% trans "Organization/Company" %}</h4>
+    {% if profile.org_url %}
+    <a href="{{profile.org_url}}" target="_blank">
+    {% endif %}
+    {{profile.org}}
+    {% if profile.org_url %}
+    </a>
+    {% endif %}
+  {% endif %}
+  {% if profile.title %}
+    <h4>{% trans "Title" %}</h4>
+    {{profile.title}}
+  {% endif %}
+</div>
