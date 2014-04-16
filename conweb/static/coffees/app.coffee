@@ -7,7 +7,10 @@ App.controller 'base', ($rootScope, $scope)->
     $rootScope.slidePageUrl = ''
 
     $rootScope.closePage = ()->
+      if $rootScope.slidePageUrl == ''
+        return
       $rootScope.slidePageUrl = ''
+      return
 
     $scope.btnNavText = ()->
       if $scope.showNav
@@ -15,14 +18,16 @@ App.controller 'base', ($rootScope, $scope)->
       else
         return 'N'
 
-App.directive 'turbolink', ($http, $rootScope)->
+App.directive 'turbolink', ($http, $rootScope, $document)->
   return {
     restrict: 'A'
     scope: false
     link: (scope, element, attrs)->
       element.on 'click', (event)->
         event.preventDefault()
+        event.stopPropagation()
         $rootScope.slidePageUrl = attrs.href
         scope.$digest()
+
       return
   }

@@ -11,7 +11,10 @@
   App.controller('base', function($rootScope, $scope) {
     $rootScope.slidePageUrl = '';
     $rootScope.closePage = function() {
-      return $rootScope.slidePageUrl = '';
+      if ($rootScope.slidePageUrl === '') {
+        return;
+      }
+      $rootScope.slidePageUrl = '';
     };
     return $scope.btnNavText = function() {
       if ($scope.showNav) {
@@ -22,13 +25,14 @@
     };
   });
 
-  App.directive('turbolink', function($http, $rootScope) {
+  App.directive('turbolink', function($http, $rootScope, $document) {
     return {
       restrict: 'A',
       scope: false,
       link: function(scope, element, attrs) {
         element.on('click', function(event) {
           event.preventDefault();
+          event.stopPropagation();
           $rootScope.slidePageUrl = attrs.href;
           return scope.$digest();
         });

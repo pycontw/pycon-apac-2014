@@ -64,7 +64,7 @@
 <body id="{% block body_id %}body{% endblock %}" ng-controller="base">
 
 
-<div id="main">
+<div id="main" ng-click="closePage()">
   {% nevercache %}
   {% for message in messages %}
     <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
@@ -125,7 +125,7 @@
     <p>More on contact <a href="mailto:organizers@pycon.tw"><i>organizers@pycon.tw</i></a></p>
     {% endblocktrans %}
   </div>
-  <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl">
+  <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl" ng-click="$event.stopPropagation()">
     <div class="close-btn" ng-click=" closePage() ">&times</div>
     <div ng-include src="slidePageUrl"></div>
   </div>
