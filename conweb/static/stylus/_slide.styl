@@ -13,13 +13,15 @@
 
 
 .slideInPage {
+
+
   position: fixed;
   left: 0;
   top:0;
   bottom:0;
   right:250px;
   padding: 0 40px 0 280px;
-  background-color: #F5F4EE;
+  background-color: #fff;
   box-shadow: 0 0 20px 2px #999;
   height: 100%;
   overflow: auto;
@@ -27,6 +29,10 @@
     position: absolute;
     right: 0;
     top:0;
+  }
+  @media $mobile-query {
+    padding: 0 20px;
+    right: 50px
   }
 }
 

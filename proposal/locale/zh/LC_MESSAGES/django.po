@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-01 01:21+0800\n"
+"POT-Creation-Date: 2014-04-13 23:34+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -86,7 +86,7 @@ msgstr "我的講題請不要錄影"
 msgid "Don't publish my slide"
 msgstr "不要發表我的投影片"
 
-#: models.py:36 templates/proposal/list.html:50
+#: models.py:36
 msgid "Title"
 msgstr "標題"
 
@@ -98,7 +98,7 @@ msgstr "議程主題 / 教學主題"
 msgid "Type of the proposal"
 msgstr "講題類型"
 
-#: models.py:43
+#: models.py:43 templates/proposal/list.html:70
 msgid "Language"
 msgstr "語言"
 
@@ -106,7 +106,7 @@ msgstr "語言"
 msgid "SciPy Talk accepts only English"
 msgstr "SciPy 講題只接受英文演講"
 
-#: models.py:47
+#: models.py:47 templates/proposal/list.html:64
 msgid "Audience level"
 msgstr "聽眾等級"
 
@@ -122,7 +122,7 @@ msgid ""
 "website"
 msgstr "是否同意公開投影片於研討會網站，並提供下載"
 
-#: models.py:62
+#: models.py:62 templates/proposal/list.html:99
 msgid "Description"
 msgstr "描述"
 
@@ -130,7 +130,7 @@ msgstr "描述"
 msgid "Abstract or outline of your presentation. "
 msgstr "你的演講摘要 / 大綱"
 
-#: models.py:66
+#: models.py:66 templates/proposal/list.html:101
 msgid "Additional information"
 msgstr "額外資訊"
 
@@ -140,15 +140,15 @@ msgid ""
 "(e.g., years of experie)"
 msgstr "其它可以幫助審稿委員會了解議題的相關資訊（例如，幾年的經驗）"
 
-#: models.py:76 templates/proposal/list.html:52
+#: models.py:76 templates/proposal/list.html:78
 msgid "Abstract"
 msgstr "摘要"
 
-#: views.py:23
+#: views.py:29
 msgid "Thanks for your submission!"
 msgstr "謝謝您的配合"
 
-#: views.py:59
+#: views.py:65
 msgid "Proposal updated"
 msgstr "講題已更新"
 
@@ -258,55 +258,55 @@ msgstr ""
 msgid "My Proposals"
 msgstr "我的講題"
 
-#: templates/proposal/list.html:44
+#: templates/proposal/list.html:45
 msgid "Create a Proposal"
 msgstr "建立講題"
 
-#: templates/proposal/list.html:51
+#: templates/proposal/list.html:62
 msgid "Speech Type"
 msgstr "講題類型"
 
-#: templates/proposal/list.html:52
+#: templates/proposal/list.html:72
+msgid "Recording Perm."
+msgstr ""
+
+#: templates/proposal/list.html:78
 msgid "(PDF file)"
 msgstr "（PDF 檔）"
 
-#: templates/proposal/list.html:53
-msgid "Action"
-msgstr "動作"
-
-#: templates/proposal/list.html:67
+#: templates/proposal/list.html:85
 msgid "No abstract file."
 msgstr "尚無摘要檔案。"
 
-#: templates/proposal/list.html:70 templates/proposal/list.html.py:101
+#: templates/proposal/list.html:88 templates/proposal/list.html.py:139
 msgid "Upload"
 msgstr "上傳"
 
-#: templates/proposal/list.html:73
+#: templates/proposal/list.html:106
 msgid "Update"
 msgstr "更新"
 
-#: templates/proposal/list.html:74 templates/proposal/list.html.py:124
+#: templates/proposal/list.html:108 templates/proposal/list.html.py:162
 msgid "Delete"
 msgstr "刪除"
 
-#: templates/proposal/list.html:79
+#: templates/proposal/list.html:119
 msgid "No Proposal"
 msgstr "尚無講題"
 
-#: templates/proposal/list.html:92
+#: templates/proposal/list.html:130
 msgid "Upload Abstract"
 msgstr "上傳摘要"
 
-#: templates/proposal/list.html:100 templates/proposal/list.html.py:123
+#: templates/proposal/list.html:138 templates/proposal/list.html.py:161
 msgid "Close"
 msgstr "關閉"
 
-#: templates/proposal/list.html:113
+#: templates/proposal/list.html:151
 msgid "Delete Proposal"
 msgstr "刪除講題"
 
-#: templates/proposal/list.html:116
+#: templates/proposal/list.html:154
 msgid ""
 "\n"
 "                Are you sure to <strong>delete</strong> this proposal?\n"
@@ -315,3 +315,6 @@ msgstr ""
 "\n"
 "                你確定要<strong>刪除</strong>這個講題嗎？\n"
 "              "
+
+#~ msgid "Action"
+#~ msgstr "動作"

@@ -1,6 +1,20 @@
+{% load i18n %}
+
 <div class="program-title">
-  {{talk.3}}
+  {% if proposal.id %}<a href="{% url 'proposal_content' proposal_id=proposal.id %}" turbolink>{% endif %}
+
+  {{proposal.title}}
+
   <br>
-  <small>{% if talk.0 %}<a href="/speakers/{{talk.0}}">{{talk.1}}</a>{% else %}{{talk.1}}{% endif %}</small>
-  <span class="tag tag-primary">{{talk.2}}</span>
+  {% if proposal.author.id %}
+    <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
+  {% else %}
+    <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
+  {% endif %}
+  {% if proposal.language == 1 %}
+  <span class="tag tag-primary" title="{% trans "English" %}"> en </span>
+  {% else %}
+  <span class="tag tag-primary" title="{% trans "Mandarin" %}"> zh </span>
+  {% endif %}
+  {% if proposal.id %}</a>{% endif %}
 </div>

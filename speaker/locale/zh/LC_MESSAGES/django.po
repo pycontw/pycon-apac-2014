@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 15:07+0800\n"
+"POT-Creation-Date: 2014-04-13 23:34+0800\n"
 "PO-Revision-Date: 2014-03-31 12:00+0800\n"
 "Last-Translator: Keith Yang <yang@keitheis.org>\n"
 "Language-Team: PyCon Taiwan <dev@pycon.tw>\n"
@@ -20,47 +20,42 @@ msgstr ""
 msgid "Speaker List"
 msgstr "講者列表"
 
-#: templates/list_speakers.html:16
-msgid "Full name"
-msgstr "名稱"
-
-#: templates/list_speakers.html:17 templates/speaker_info.html:45
-msgid "Location"
-msgstr "來自"
-
-#: templates/list_speakers.html:18 templates/speaker_info.html:51
-msgid "Organization/Company"
-msgstr "組織/公司"
-
-#: templates/list_speakers.html:19 templates/speaker_info.html:63
-msgid "Title"
-msgstr "頭銜"
-
-#: templates/list_speakers.html:20
-msgid "Picture"
-msgstr "照片"
-
-#: templates/list_speakers.html:31
-msgid "Link"
-msgstr "連結"
-
-#: templates/list_speakers.html:34
-msgid "Not available"
-msgstr "無"
-
 #: templates/speaker_info.html:4 templates/speaker_info.html.py:6
 #: templates/speaker_info.html:7
 msgid "Speaker: "
 msgstr "講者："
 
-#: templates/speaker_info.html:29
+#: templates/speaker_info.html:30
 msgid "Personal Link"
 msgstr "個人網頁連結"
 
-#: templates/speaker_info.html:37
+#: templates/speaker_info.html:34
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/speaker_info.html:69
-msgid "Speaker Brief"
-msgstr "講者簡介"
+#: templates/speaker_info.html:38
+msgid "Location"
+msgstr "來自"
+
+#: templates/speaker_info.html:42
+msgid "Organization/Company"
+msgstr "組織/公司"
+
+#: templates/speaker_info.html:52
+msgid "Title"
+msgstr "頭銜"
+
+#~ msgid "Full name"
+#~ msgstr "名稱"
+
+#~ msgid "Picture"
+#~ msgstr "照片"
+
+#~ msgid "Link"
+#~ msgstr "連結"
+
+#~ msgid "Not available"
+#~ msgstr "無"
+
+#~ msgid "Speaker Brief"
+#~ msgstr "講者簡介"
