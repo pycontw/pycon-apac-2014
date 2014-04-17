@@ -590,9 +590,9 @@ a:hover {
   -webkit-transform: translate(-100%, 0);
 }
 #loader {
-  position: absolute;
-  left: 300px;
-  top: 50px;
+  position: relative;
+  left: 0.8em;
+  top: 6em;
   width: 100px;
   height: 60px;
   margin: auto;
