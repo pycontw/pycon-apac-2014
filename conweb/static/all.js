@@ -38,6 +38,9 @@
       link: function(scope, element, attrs) {
         element.on('click', function(event) {
           event.preventDefault();
+          if ($rootScope.slidePageUrl !== '') {
+            return;
+          }
           event.stopPropagation();
           $rootScope.slidePageUrl = attrs.href;
           return scope.$digest();
