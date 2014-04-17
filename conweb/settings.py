@@ -160,7 +160,8 @@ AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # The numeric mode to set newly-uploaded files to. The value should be
@@ -273,7 +274,6 @@ INSTALLED_APPS = (
     "raven.contrib.django.raven_compat",
     "djcelery",
     "djcelery_email",
-    "django_assets",
 )
 REVIEWER_ADMINS = []
 BROKER_URL = 'redis://127.0.0.1:6379/15'
@@ -356,10 +356,6 @@ OPTIONAL_APPS = (
 )
 
 DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
-
-# webassets (django-assets)
-ASSETS_DEBUG = True
-ASSETS_ROOT = STATIC_ROOT
 
 ###################
 # DEPLOY SETTINGS #
