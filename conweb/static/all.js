@@ -16,13 +16,19 @@
       }
       $rootScope.slidePageUrl = '';
     };
-    return $scope.btnNavText = function() {
+    $scope.btnNavText = function() {
       if ($scope.showNav) {
         return '✕';
       } else {
         return 'N';
       }
     };
+    $scope.$on('$includeContentRequested', function() {
+      return $scope.loading = true;
+    });
+    return $scope.$on('$includeContentLoaded', function() {
+      return $scope.loading = false;
+    });
   });
 
   App.directive('turbolink', function($http, $rootScope, $document) {
@@ -32,9 +38,6 @@
       link: function(scope, element, attrs) {
         element.on('click', function(event) {
           event.preventDefault();
-          if ($rootScope.slidePageUrl !== '') {
-            return;
-          }
           event.stopPropagation();
           $rootScope.slidePageUrl = attrs.href;
           return scope.$digest();

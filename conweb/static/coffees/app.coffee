@@ -18,6 +18,13 @@ App.controller 'base', ($rootScope, $scope)->
     else
       return 'N'
 
+  $scope.$on '$includeContentRequested', ()->
+    $scope.loading = true
+
+  $scope.$on '$includeContentLoaded', ()->
+    $scope.loading = false
+
+
 App.directive 'turbolink', ($http, $rootScope, $document)->
   return {
     restrict: 'A'
@@ -25,8 +32,6 @@ App.directive 'turbolink', ($http, $rootScope, $document)->
     link: (scope, element, attrs)->
       element.on 'click', (event)->
         event.preventDefault()
-        if $rootScope.slidePageUrl != ''
-          return
         event.stopPropagation()
         $rootScope.slidePageUrl = attrs.href
         scope.$digest()

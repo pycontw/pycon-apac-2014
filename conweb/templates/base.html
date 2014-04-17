@@ -123,8 +123,16 @@
     {% endblocktrans %}
   </div>
   <div class="slideInPage ng-trans ng-trans-slide ng-cloak" ng-if="slidePageUrl" ng-click="$event.stopPropagation()">
+
     <div class="close-btn" ng-click=" closePage() ">&times</div>
     <div ng-include src="slidePageUrl"></div>
+    <div id="loader" class="loaded" ng-show="loading">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </div>
 </div>
 
