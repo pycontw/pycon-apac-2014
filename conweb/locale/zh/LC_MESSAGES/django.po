@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-13 23:33+0800\n"
+"POT-Creation-Date: 2014-04-17 09:32+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -634,11 +634,11 @@ msgstr "RSS"
 msgid "Atom"
 msgstr "Atom"
 
-#: templates/demo/_program_title.html:7
+#: templates/demo/_program_title.html:15
 msgid "English"
 msgstr "英語"
 
-#: templates/demo/_program_title.html:9
+#: templates/demo/_program_title.html:17
 msgid "Mandarin"
 msgstr "中文"
 
@@ -679,6 +679,10 @@ msgstr "閃電秀"
 #: templates/demo/program.html:198
 msgid "Closing and Taking Photos Together"
 msgstr "閉幕式 & 大合照"
+
+#: templates/demo/talk_content.html:30
+msgid "About Speaker"
+msgstr "關於講者"
 
 #: templates/email/account_approve.html:3
 #: templates/email/account_approve.txt:3
@@ -876,9 +880,6 @@ msgstr "近期推文"
 
 #~ msgid "ZH"
 #~ msgstr "中"
-
-#~ msgid "Speaker List"
-#~ msgstr "講者列表"
 
 #~ msgid "Title or job"
 #~ msgstr "頭銜或職稱"

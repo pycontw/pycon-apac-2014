@@ -10,7 +10,7 @@
 
   App.controller('base', function($rootScope, $scope) {
     $rootScope.slidePageUrl = '';
-    $rootScope.closePage = function() {
+    $rootScope.closePage = function(event) {
       if ($rootScope.slidePageUrl === '') {
         return;
       }
@@ -32,6 +32,9 @@
       link: function(scope, element, attrs) {
         element.on('click', function(event) {
           event.preventDefault();
+          if ($rootScope.slidePageUrl !== '') {
+            return;
+          }
           event.stopPropagation();
           $rootScope.slidePageUrl = attrs.href;
           return scope.$digest();

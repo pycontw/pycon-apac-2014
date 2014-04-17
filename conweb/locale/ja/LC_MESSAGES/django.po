@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-13 23:33+0800\n"
+"POT-Creation-Date: 2014-04-17 09:32+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -535,11 +535,11 @@ msgstr ""
 msgid "Atom"
 msgstr ""
 
-#: templates/demo/_program_title.html:7
+#: templates/demo/_program_title.html:15
 msgid "English"
 msgstr ""
 
-#: templates/demo/_program_title.html:9
+#: templates/demo/_program_title.html:17
 msgid "Mandarin"
 msgstr ""
 
@@ -579,6 +579,10 @@ msgstr ""
 
 #: templates/demo/program.html:198
 msgid "Closing and Taking Photos Together"
+msgstr ""
+
+#: templates/demo/talk_content.html:30
+msgid "About Speaker"
 msgstr ""
 
 #: templates/email/account_approve.html:3
