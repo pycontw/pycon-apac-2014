@@ -12,9 +12,9 @@
     <small>{{proposal.author.first_name}} {{proposal.author.last_name}}</small>
   {% endif %}
   {% if proposal.language == 1 %}
-  <span class="tag tag-primary" title="{% trans "English" %}"> en </span>
-  {% else %}
   <span class="tag tag-primary" title="{% trans "Mandarin" %}"> zh </span>
+  {% else %}
+  <span class="tag tag-primary" title="{% trans "English" %}"> en </span>
   {% endif %}
   {% if proposal.id %}</a>{% endif %}
 </div>
