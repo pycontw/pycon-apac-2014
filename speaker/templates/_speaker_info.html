@@ -6,13 +6,13 @@
   {% endif %}
 </div>
 <div class="col-md-8 speaker-info">
+  <div style="white-space: pre-wrap">{{profile.brief}}</div>
+  <br>
   {% if profile.tagline %}
     <h4>Tagline</h4>
     {{profile.tagline}}
   {% endif %}
 
-  <div style="white-space: pre-wrap">{{profile.brief}}</div>
-  <br>
   {% if profile.personal_url %}
     <h4>{% trans "Personal Link" %}</h4>
     <p class="single-line">
