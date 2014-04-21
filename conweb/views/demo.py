@@ -26,7 +26,7 @@ def proposal_content(request, proposal_id):
     try:
         proposal = ProposalModel.objects.get(id=int(proposal_id))
     except ProposalModel.DoesNotExist:
-        return Http404
+        raise Http404
 
     profile = proposal.author.get_profile()
     picture = profile.picture
