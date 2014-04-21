@@ -49,4 +49,23 @@
     };
   });
 
+  App.directive('foldList', function() {
+    return {
+      restrict: 'A',
+      scope: false,
+      link: function(scope, element, attrs) {
+        var li;
+        li = element.find('li');
+        if (li.length === 0) {
+          return;
+        }
+        li.hide();
+        element.append('<fold>+</fold>');
+        element.find('fold').on('click', function() {
+          return li.toggle();
+        });
+      }
+    };
+  });
+
 }).call(this);

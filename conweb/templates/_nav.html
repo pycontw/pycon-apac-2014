@@ -36,7 +36,7 @@
             </li>
 
             {% if request.user.is_superuser or request.user.get_profile.is_reviewer %}
-            <li id="tree-menu-review">
+            <li id="tree-menu-review" fold-list>
               <a href="{% url "proposal_review:list_proposals" %}">{% trans "Review" %}</a>
               <ul class="nav nav-list navlist-menu-level-2">
                 <li id="tree-menu-call-for-proposals">

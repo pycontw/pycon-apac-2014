@@ -40,3 +40,30 @@ App.directive 'turbolink', ($http, $rootScope, $document)->
 
       return
   }
+
+App.directive 'foldList', ()->
+  return {
+    restrict: 'A'
+    scope: false
+    link: (scope, element, attrs)->
+      li = element.find('li')
+      if li.length == 0
+        return
+
+      li.hide()
+
+      element.append('<fold>+</fold>')
+
+      element.find('fold').on 'click', ()->
+        li.toggle()
+
+      # element.on 'click', (event)->
+      #   event.preventDefault()
+      #   if $rootScope.slidePageUrl != ''
+      #     return
+      #   event.stopPropagation()
+      #   $rootScope.slidePageUrl = attrs.href
+      #   scope.$digest()
+
+      return
+  }
