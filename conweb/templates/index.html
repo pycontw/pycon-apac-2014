@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load staticfiles %}
+{% load blog_tags keyword_tags %}
 
 {% block meta_title_block %}PyCon APAC 2014{% endblock %}
 
@@ -47,28 +48,50 @@
 
 <div class="content ">
   <div class="paper">
-    <h2 class="doc-title">{% trans "What is PyCon and PyCon APAC" %}</h2>
-
-
+    <h2 class="doc-title">{% trans "BLOG" %}</h2>
     <div class="doc-content">
+      {% for blog_post in blog_posts %}
+      <h2>
+          <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
+      </h2>
 
-      <p>{% blocktrans %}
-      PyCon is a conference by the Python community for the community.
-      It is for Python enthusiasts of all experience levels, from new users to core developers.
-      The original PyCon was formed in North America in 2003,
-      but there are now a number of other conferences being run in the
-      PyCon spirit around the world.
-      -- PyCon: Community-Run Python Conference
-      {% endblocktrans %}</p>
+      <h6>
+          {% trans "Posted by" %}:
+          {% with blog_post.user as author %}
+          <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
+          {% endwith %}
+          {% with blog_post.categories.all as categories %}
+          {% if categories %}
+          {% trans "in" %}
+          {% for category in categories %}
+          <a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+          {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
+      </h6>
 
-      <p>{% blocktrans %}
-      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and Taiwan.
-      It will be hosted in Taipei, and we would like to invite you to join this big event,
-      being a part of it by sponsoring, promoting your brand and product,
-      and even making your company succeed through it.
-      Two previous PyCon TW (<a href="/2012/">2012</a> and <a href="/2013/">2013</a>)
-      was formed with support of the following, but not limited to, active user groups:
-      {% endblocktrans %}</p>
+      {{ blog_post.description_from_content|safe }}
+
+      <p class="blog-list-detail">
+          {% keywords_for blog_post as tags %}
+          {% if tags %}
+          {% trans "Tags" %}:
+          {% spaceless %}
+          {% for tag in tags %}
+          <a href="{% url "blog_post_list_tag" tag.slug %}" class="tag">{{ tag }}</a>
+          {% endfor %}
+          {% endspaceless %}
+          <br>
+          {% endif %}
+          <a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>
+      </p>
+      {% endfor %}
+
+    </div>
+
+    <h2 class="doc-title">{% trans "Local User Group" %}</h2>
+    <div class="doc-content">
       <div class="user-groups">
         <ul class="well-list clearfix">
           <p>{% blocktrans %}
