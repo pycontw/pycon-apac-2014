@@ -55,7 +55,7 @@
       restrict: 'A',
       scope: false,
       link: function(scope, element, attrs) {
-        var foldStore, id, li, open;
+        var fold, foldStore, id, li, open;
         li = element.find('li');
         if (li.length === 0) {
           return;
@@ -63,22 +63,26 @@
         foldStore = $cookieStore.get('foldStore') || [];
         id = attrs.foldList;
         open = __indexOf.call(foldStore, id) >= 0;
+        fold = angular.element('<fold>▾</fold>');
+        element.append(fold);
         if (open === false) {
           element.addClass('fold');
+          fold.text('▸');
         }
-        element.append('<fold>+</fold>');
         element.find('fold').on('click', function() {
-          if (open === true) {
+          open = !open;
+          if (open === false) {
             foldStore.pop(id);
             element.addClass('fold');
+            fold.text('▸');
           } else {
             foldStore.push(id);
             element.removeClass('fold');
+            fold.text('▾');
           }
           scope.$apply(function() {
             return $cookieStore.put('foldStore', foldStore);
           });
-          open = !open;
         });
       }
     };

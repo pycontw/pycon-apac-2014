@@ -55,23 +55,28 @@ App.directive 'foldList', ($cookieStore)->
       id = attrs.foldList
       open = id in foldStore
 
+      fold = angular.element('<fold>▾</fold>')
+      element.append(fold)
+
       if open == false
         element.addClass('fold')
+        fold.text('▸')
 
-      element.append('<fold>+</fold>')
 
       element.find('fold').on 'click', ()->
-        if open == true
+        open = !open
+        if open == false
           foldStore.pop(id)
           element.addClass('fold')
+          fold.text('▸')
 
         else
           foldStore.push(id)
           element.removeClass('fold')
+          fold.text('▾')
 
         scope.$apply ()->
           $cookieStore.put('foldStore', foldStore)
-        open = !open
 
         return
 
