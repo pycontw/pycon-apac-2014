@@ -1,4 +1,4 @@
-App = angular.module('App', ['ngAnimate'])
+App = angular.module('App', ['ngAnimate', 'ngCookies'])
 
 App.config ($httpProvider)->
   $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
@@ -41,29 +41,39 @@ App.directive 'turbolink', ($http, $rootScope, $document)->
       return
   }
 
-App.directive 'foldList', ()->
+App.directive 'foldList', ($cookieStore)->
   return {
     restrict: 'A'
     scope: false
     link: (scope, element, attrs)->
       li = element.find('li')
+
       if li.length == 0
         return
 
-      li.hide()
+      foldStore = $cookieStore.get('foldStore') || []
+      id = attrs.foldList
+      open = id in foldStore
+
+      if open == false
+        element.addClass('fold')
 
       element.append('<fold>+</fold>')
 
       element.find('fold').on 'click', ()->
-        li.toggle()
+        if open == true
+          foldStore.pop(id)
+          element.addClass('fold')
 
-      # element.on 'click', (event)->
-      #   event.preventDefault()
-      #   if $rootScope.slidePageUrl != ''
-      #     return
-      #   event.stopPropagation()
-      #   $rootScope.slidePageUrl = attrs.href
-      #   scope.$digest()
+        else
+          foldStore.push(id)
+          element.removeClass('fold')
+
+        scope.$apply ()->
+          $cookieStore.put('foldStore', foldStore)
+        open = !open
+
+        return
 
       return
   }

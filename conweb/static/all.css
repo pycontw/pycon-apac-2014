@@ -444,6 +444,9 @@ a:hover {
 #nav fold:hover {
   color: #fff;
 }
+#nav .fold > ul {
+  display: none;
+}
 #nav hr {
   margin: 5px 3em;
   border-top-color: rgba(255,255,255,0.2);
