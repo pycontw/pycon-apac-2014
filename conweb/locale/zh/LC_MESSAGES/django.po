@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-17 09:32+0800\n"
+"POT-Creation-Date: 2014-04-25 16:12+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -197,11 +197,11 @@ msgstr "登出"
 msgid "SPEAKER LOG IN"
 msgstr "講者登入"
 
-#: templates/base.html:16
+#: templates/base.html:15
 msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
 msgstr "115 台灣台北市南港區研究院路 2 段 128 號"
 
-#: templates/base.html:115
+#: templates/base.html:112
 #, fuzzy
 msgid ""
 "\n"
@@ -236,15 +236,15 @@ msgstr ""
 "\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 
-#: templates/index.html:24
-msgid "Registration NOW open!"
-msgstr "立即購票！"
+#: templates/index.html:25
+msgid "Tutorial NOW open!"
+msgstr "立刻報名 PyConAPAC 年度專業課程！"
 
-#: templates/index.html:30
+#: templates/index.html:31
 msgid "Sponsorship available!"
 msgstr "歡迎贊助！"
 
-#: templates/index.html:32
+#: templates/index.html:33
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -277,54 +277,44 @@ msgstr ""
 "    </a></span>\n"
 "    "
 
-#: templates/index.html:50
-msgid "What is PyCon and PyCon APAC"
+#: templates/index.html:51
+msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:55
-msgid ""
-"\n"
-"      PyCon is a conference by the Python community for the community.\n"
-"      It is for Python enthusiasts of all experience levels, from new users "
-"to core developers.\n"
-"      The original PyCon was formed in North America in 2003,\n"
-"      but there are now a number of other conferences being run in the\n"
-"      PyCon spirit around the world.\n"
-"      -- PyCon: Community-Run Python Conference\n"
-"      "
-msgstr ""
-"\n"
-"<u class=\"pn\">Python 年會</u>是由 <u class=\"pn\">Python</u> 愛好者籌辦的"
-"<em>年度盛會</em>，族群對象包括關注 Python 技術的各界人士，目標是提昇 Python "
-"社群的整體質量。最早的 Python 年會在 2003 年開始於北美，目前已經有許 多符合 "
-"Python 年會精神的研討會在世界各地舉行。－－<u class=\"pn\">PyCon</u>：Python "
-"社群的研討會\n"
-"      "
+#: templates/index.html:59 templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:83
+msgid "Posted by"
+msgstr "發表人："
 
-#: templates/index.html:64
-msgid ""
-"\n"
-"      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
-"Taiwan.\n"
-"      It will be hosted in Taipei, and we would like to invite you to join "
-"this big event,\n"
-"      being a part of it by sponsoring, promoting your brand and product,\n"
-"      and even making your company succeed through it.\n"
-"      Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/"
-"\">2013</a>)\n"
-"      was formed with support of the following, but not limited to, active "
-"user groups:\n"
-"      "
+#: templates/index.html:65 templates/blog/blog_post_list.html:89
+msgid "in"
 msgstr ""
-"\n"
-"2014 <u class=\"pn\">亞太</u>／<u class=\"pn\">台灣</u> <u class=\"pn"
-"\">Python 年會</u>是為亞太及台灣區的 Python 愛好者舉辦的研討會。它將在<u "
-"class=\"pn\">台北</u>舉行，而我們誠摯地邀請您加入這個盛大的活動，可透過贊助此"
-"活動來推廣您的品牌及商品，甚至透過它讓您的公司更加成功。前兩屆的台灣 Python "
-"年會（<a href=\"/2012/\">2012</a> 與 <a href=\"/2013/\">2013</a>）是主要由下"
-"列的使用者社群來籌劃策辦："
 
-#: templates/index.html:74
+#: templates/index.html:71 templates/blog/blog_post_detail.html:33
+#: templates/blog/blog_post_list.html:95
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:53
+#: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
+#, python-format
+msgid "%(sometime)s ago"
+msgstr "%(sometime)s前"
+
+#: templates/index.html:79 templates/blog/blog_post_detail.html:76
+#: templates/blog/blog_post_list.html:119
+#: templates/blog/includes/filter_panel.html:48
+msgid "Tags"
+msgstr "標籤"
+
+#: templates/index.html:87 templates/search_results.html:35
+#: templates/blog/blog_post_list.html:128
+msgid "read more"
+msgstr "更多"
+
+#: templates/index.html:93
+msgid "Local User Group"
+msgstr ""
+
+#: templates/index.html:97
 msgid ""
 "\n"
 "          <li>\n"
@@ -421,10 +411,6 @@ msgstr ""
 "\n"
 "在 %(search_type)s 中搜尋 %(query)s:  共有 %(total)s 項符合 ，目前顯示 "
 "%(start)s - %(end)s 項\n"
-
-#: templates/search_results.html:35 templates/blog/blog_post_list.html:128
-msgid "read more"
-msgstr "更多"
 
 #: templates/accounts/account_form.html:20
 msgid "Submit"
@@ -523,20 +509,6 @@ msgstr ""
 msgid "Save Draft"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:29
-#: templates/blog/blog_post_list.html:83
-msgid "Posted by"
-msgstr "發表人："
-
-#: templates/blog/blog_post_detail.html:33
-#: templates/blog/blog_post_list.html:95
-#: templates/generic/includes/comment.html:22
-#: templates/generic/includes/comment.html:53
-#: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
-#, python-format
-msgid "%(sometime)s ago"
-msgstr "%(sometime)s前"
-
 #: templates/blog/blog_post_detail.html:44
 #: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
@@ -549,12 +521,6 @@ msgstr "評論"
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] "%(comments_count)s 個評論"
-
-#: templates/blog/blog_post_detail.html:76
-#: templates/blog/blog_post_list.html:119
-#: templates/blog/includes/filter_panel.html:48
-msgid "Tags"
-msgstr "標籤"
 
 #: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
@@ -596,10 +562,6 @@ msgstr ""
 msgid "Viewing posts by"
 msgstr "文章作者"
 
-#: templates/blog/blog_post_list.html:89
-msgid "in"
-msgstr ""
-
 #: templates/blog/includes/filter_panel.html:6
 msgid "Recent Posts"
 msgstr "近期文章"
@@ -635,12 +597,12 @@ msgid "Atom"
 msgstr "Atom"
 
 #: templates/demo/_program_title.html:15
-msgid "English"
-msgstr "英語"
-
-#: templates/demo/_program_title.html:17
 msgid "Mandarin"
 msgstr "中文"
+
+#: templates/demo/_program_title.html:17
+msgid "English"
+msgstr "英語"
 
 #: templates/demo/program.html:4 templates/demo/program.html.py:5
 #: templates/demo/program.html:7 templates/demo/program.html.py:9
@@ -680,7 +642,7 @@ msgstr "閃電秀"
 msgid "Closing and Taking Photos Together"
 msgstr "閉幕式 & 大合照"
 
-#: templates/demo/talk_content.html:30
+#: templates/demo/talk_content.html:27
 msgid "About Speaker"
 msgstr "關於講者"
 
@@ -874,6 +836,48 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid ""
+#~ "\n"
+#~ "      PyCon is a conference by the Python community for the community.\n"
+#~ "      It is for Python enthusiasts of all experience levels, from new "
+#~ "users to core developers.\n"
+#~ "      The original PyCon was formed in North America in 2003,\n"
+#~ "      but there are now a number of other conferences being run in the\n"
+#~ "      PyCon spirit around the world.\n"
+#~ "      -- PyCon: Community-Run Python Conference\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "<u class=\"pn\">Python 年會</u>是由 <u class=\"pn\">Python</u> 愛好者籌辦"
+#~ "的<em>年度盛會</em>，族群對象包括關注 Python 技術的各界人士，目標是提昇 "
+#~ "Python 社群的整體質量。最早的 Python 年會在 2003 年開始於北美，目前已經有"
+#~ "許 多符合 Python 年會精神的研討會在世界各地舉行。－－<u class=\"pn"
+#~ "\">PyCon</u>：Python 社群的研討會\n"
+#~ "      "
+
+#~ msgid ""
+#~ "\n"
+#~ "      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
+#~ "Taiwan.\n"
+#~ "      It will be hosted in Taipei, and we would like to invite you to "
+#~ "join this big event,\n"
+#~ "      being a part of it by sponsoring, promoting your brand and "
+#~ "product,\n"
+#~ "      and even making your company succeed through it.\n"
+#~ "      Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href="
+#~ "\"/2013/\">2013</a>)\n"
+#~ "      was formed with support of the following, but not limited to, "
+#~ "active user groups:\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "2014 <u class=\"pn\">亞太</u>／<u class=\"pn\">台灣</u> <u class=\"pn"
+#~ "\">Python 年會</u>是為亞太及台灣區的 Python 愛好者舉辦的研討會。它將在<u "
+#~ "class=\"pn\">台北</u>舉行，而我們誠摯地邀請您加入這個盛大的活動，可透過贊"
+#~ "助此活動來推廣您的品牌及商品，甚至透過它讓您的公司更加成功。前兩屆的台灣 "
+#~ "Python 年會（<a href=\"/2012/\">2012</a> 與 <a href=\"/2013/\">2013</a>）"
+#~ "是主要由下列的使用者社群來籌劃策辦："
 
 #~ msgid "EN"
 #~ msgstr "英"
