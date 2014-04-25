@@ -238,7 +238,7 @@ msgstr ""
 
 #: templates/index.html:25
 msgid "Tutorial NOW open!"
-msgstr "立刻報名 PyConAPAC 年度專業課程！"
+msgstr "報名年度專業課程！"
 
 #: templates/index.html:31
 msgid "Sponsorship available!"
