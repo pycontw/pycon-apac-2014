@@ -51,9 +51,9 @@ App.directive 'foldList', ($cookieStore)->
       if li.length == 0
         return
 
-      foldArray = $cookieStore.get('foldArray') || []
+      foldSet = $cookieStore.get('foldSet') || {}
       id = attrs.foldList
-      isFold = id in foldArray
+      isFold = foldSet[id]
 
       foldIcon = angular.element('<fold>▾</fold>')
       element.append(foldIcon)
@@ -67,21 +67,20 @@ App.directive 'foldList', ($cookieStore)->
         element.removeClass('fold')
         foldIcon.text('▾')
 
-      if isFold == true
+      if isFold
         fold()
 
       element.find('fold').on 'click', ()->
         isFold = !isFold
-        if isFold == true
-          foldArray.push(id)
-          fold()
+        foldSet[id] = isFold
 
+        if isFold
+          fold()
         else
-          foldArray.pop(id)
           unfold()
 
         scope.$apply ()->
-          $cookieStore.put('foldArray', foldArray)
+          $cookieStore.put('foldSet', foldSet)
 
         return
 
