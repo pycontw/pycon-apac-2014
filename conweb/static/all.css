@@ -435,11 +435,12 @@ a:hover {
 }
 #nav fold {
   position: absolute;
-  left: 0.7em;
-  top: 0.5em;
+  left: 0;
+  top: 0;
   display: inline;
   cursor: pointer;
   color: #dbe9f5;
+  padding: 8px 12px;
 }
 #nav fold:hover {
   color: #fff;
