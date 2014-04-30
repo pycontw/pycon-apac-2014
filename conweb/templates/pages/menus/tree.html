@@ -10,7 +10,7 @@
   </li>
   {% endif %}
   {% if page.in_menu %}
-  <li{% if page.is_current %} class="active"{% endif %} id="tree-menu-{{ page.html_id }}">
+  <li{% if page.is_current %} class="active"{% endif %} id="tree-menu-{{ page.html_id }}" fold-list="{{ page.html_id }}">
     <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
     {# wrap the next line with 'if page.is_current_or_ascendant' #}
     {# to only show child pages in the menu for the current page #}
