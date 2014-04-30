@@ -462,7 +462,7 @@ a:hover {
   color: #fff;
 }
 #nav ul ul li > a {
-  padding: 6px 0 6px 40px;
+  padding: 6px 0 6px 30px;
   font-size: 0.8em;
 }
 #nav ul ul li > a:before {

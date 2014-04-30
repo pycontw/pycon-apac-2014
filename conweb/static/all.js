@@ -55,33 +55,38 @@
       restrict: 'A',
       scope: false,
       link: function(scope, element, attrs) {
-        var fold, foldStore, id, li, open;
+        var fold, foldArray, foldIcon, id, isFold, li, unfold;
         li = element.find('li');
         if (li.length === 0) {
           return;
         }
-        foldStore = $cookieStore.get('foldStore') || [];
+        foldArray = $cookieStore.get('foldArray') || [];
         id = attrs.foldList;
-        open = __indexOf.call(foldStore, id) >= 0;
-        fold = angular.element('<fold>▾</fold>');
-        element.append(fold);
-        if (open === false) {
+        isFold = __indexOf.call(foldArray, id) >= 0;
+        foldIcon = angular.element('<fold>▾</fold>');
+        element.append(foldIcon);
+        fold = function() {
           element.addClass('fold');
-          fold.text('▸');
+          return foldIcon.text('▸');
+        };
+        unfold = function() {
+          element.removeClass('fold');
+          return foldIcon.text('▾');
+        };
+        if (isFold === true) {
+          fold();
         }
         element.find('fold').on('click', function() {
-          open = !open;
-          if (open === false) {
-            foldStore.pop(id);
-            element.addClass('fold');
-            fold.text('▸');
+          isFold = !isFold;
+          if (isFold === true) {
+            foldArray.push(id);
+            fold();
           } else {
-            foldStore.push(id);
-            element.removeClass('fold');
-            fold.text('▾');
+            foldArray.pop(id);
+            unfold();
           }
           scope.$apply(function() {
-            return $cookieStore.put('foldStore', foldStore);
+            return $cookieStore.put('foldArray', foldArray);
           });
         });
       }
