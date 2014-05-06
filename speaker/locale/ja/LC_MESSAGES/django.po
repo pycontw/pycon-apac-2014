@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-13 23:34+0800\n"
+"POT-Creation-Date: 2014-05-06 16:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: templates/_speaker_info.html:17
+msgid "Personal Link"
+msgstr ""
+
+#: templates/_speaker_info.html:24
+msgid "Twitter"
+msgstr ""
+
+#: templates/_speaker_info.html:28
+msgid "Location"
+msgstr ""
+
+#: templates/_speaker_info.html:32
+msgid "Organization/Company"
+msgstr ""
+
+#: templates/_speaker_info.html:42
+msgid "Job title"
+msgstr ""
+
 #: templates/list_speakers.html:5 templates/list_speakers.html.py:7
 msgid "Speaker List"
 msgstr ""
@@ -25,24 +44,4 @@ msgstr ""
 #: templates/speaker_info.html:4 templates/speaker_info.html.py:6
 #: templates/speaker_info.html:7
 msgid "Speaker: "
-msgstr ""
-
-#: templates/speaker_info.html:30
-msgid "Personal Link"
-msgstr ""
-
-#: templates/speaker_info.html:34
-msgid "Twitter"
-msgstr ""
-
-#: templates/speaker_info.html:38
-msgid "Location"
-msgstr ""
-
-#: templates/speaker_info.html:42
-msgid "Organization/Company"
-msgstr ""
-
-#: templates/speaker_info.html:52
-msgid "Title"
 msgstr ""

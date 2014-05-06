@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-17 09:32+0800\n"
+"POT-Creation-Date: 2014-05-06 16:24+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -186,11 +186,11 @@ msgstr ""
 msgid "SPEAKER LOG IN"
 msgstr ""
 
-#: templates/base.html:16
+#: templates/base.html:15
 msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
 msgstr ""
 
-#: templates/base.html:115
+#: templates/base.html:113
 msgid ""
 "\n"
 "    <p>\n"
@@ -209,15 +209,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:24
-msgid "Registration NOW open!"
+#: templates/index.html:25
+msgid "Tutorial NOW open!"
 msgstr ""
 
-#: templates/index.html:30
+#: templates/index.html:31
 msgid "Sponsorship available!"
 msgstr ""
 
-#: templates/index.html:32
+#: templates/index.html:33
 msgid ""
 "\n"
 "    <span>Prospectus in\n"
@@ -235,40 +235,44 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:50
-msgid "What is PyCon and PyCon APAC"
+#: templates/index.html:51
+msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:55
-msgid ""
-"\n"
-"      PyCon is a conference by the Python community for the community.\n"
-"      It is for Python enthusiasts of all experience levels, from new users "
-"to core developers.\n"
-"      The original PyCon was formed in North America in 2003,\n"
-"      but there are now a number of other conferences being run in the\n"
-"      PyCon spirit around the world.\n"
-"      -- PyCon: Community-Run Python Conference\n"
-"      "
+#: templates/index.html:59 templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:83
+msgid "Posted by"
 msgstr ""
 
-#: templates/index.html:64
-msgid ""
-"\n"
-"      PyCon APAC/TW 2014 is organized for pythonistas in Asia-Pacific and "
-"Taiwan.\n"
-"      It will be hosted in Taipei, and we would like to invite you to join "
-"this big event,\n"
-"      being a part of it by sponsoring, promoting your brand and product,\n"
-"      and even making your company succeed through it.\n"
-"      Two previous PyCon TW (<a href=\"/2012/\">2012</a> and <a href=\"/2013/"
-"\">2013</a>)\n"
-"      was formed with support of the following, but not limited to, active "
-"user groups:\n"
-"      "
+#: templates/index.html:65 templates/blog/blog_post_list.html:89
+msgid "in"
 msgstr ""
 
-#: templates/index.html:74
+#: templates/index.html:71 templates/blog/blog_post_detail.html:33
+#: templates/blog/blog_post_list.html:95
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:53
+#: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+#: templates/index.html:79 templates/blog/blog_post_detail.html:76
+#: templates/blog/blog_post_list.html:119
+#: templates/blog/includes/filter_panel.html:48
+msgid "Tags"
+msgstr ""
+
+#: templates/index.html:87 templates/search_results.html:35
+#: templates/blog/blog_post_list.html:128
+msgid "read more"
+msgstr ""
+
+#: templates/index.html:93
+msgid "Local User Group"
+msgstr ""
+
+#: templates/index.html:97
 msgid ""
 "\n"
 "          <li>\n"
@@ -329,10 +333,6 @@ msgid ""
 "\n"
 "Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
 "matching your query: %(query)s\n"
-msgstr ""
-
-#: templates/search_results.html:35 templates/blog/blog_post_list.html:128
-msgid "read more"
 msgstr ""
 
 #: templates/accounts/account_form.html:20
@@ -424,20 +424,6 @@ msgstr ""
 msgid "Save Draft"
 msgstr ""
 
-#: templates/blog/blog_post_detail.html:29
-#: templates/blog/blog_post_list.html:83
-msgid "Posted by"
-msgstr ""
-
-#: templates/blog/blog_post_detail.html:33
-#: templates/blog/blog_post_list.html:95
-#: templates/generic/includes/comment.html:22
-#: templates/generic/includes/comment.html:53
-#: templates/generic/includes/comment.html:63 templates/twitter/tweets.html:20
-#, python-format
-msgid "%(sometime)s ago"
-msgstr ""
-
 #: templates/blog/blog_post_detail.html:44
 #: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
@@ -450,12 +436,6 @@ msgstr ""
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] ""
-
-#: templates/blog/blog_post_detail.html:76
-#: templates/blog/blog_post_list.html:119
-#: templates/blog/includes/filter_panel.html:48
-msgid "Tags"
-msgstr ""
 
 #: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
@@ -497,10 +477,6 @@ msgstr ""
 msgid "Viewing posts by"
 msgstr ""
 
-#: templates/blog/blog_post_list.html:89
-msgid "in"
-msgstr ""
-
 #: templates/blog/includes/filter_panel.html:6
 msgid "Recent Posts"
 msgstr ""
@@ -536,11 +512,11 @@ msgid "Atom"
 msgstr ""
 
 #: templates/demo/_program_title.html:15
-msgid "English"
+msgid "Mandarin"
 msgstr ""
 
 #: templates/demo/_program_title.html:17
-msgid "Mandarin"
+msgid "English"
 msgstr ""
 
 #: templates/demo/program.html:4 templates/demo/program.html.py:5
@@ -581,7 +557,7 @@ msgstr ""
 msgid "Closing and Taking Photos Together"
 msgstr ""
 
-#: templates/demo/talk_content.html:30
+#: templates/demo/talk_content.html:27
 msgid "About Speaker"
 msgstr ""
 

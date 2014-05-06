@@ -1,6 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Translation of pyconapac2014.conweb app.
+# Copyright (C) 2014 PyCon Taiwan
+# This file is distributed under the same license as the pyconapac2014 package.
 #
 # Translators:
 # Chien-Hsun Chen <lucemia@gmail.com>, 2014
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 16:12+0800\n"
+"POT-Creation-Date: 2014-05-06 16:24+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -201,8 +201,7 @@ msgstr "講者登入"
 msgid "No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan"
 msgstr "115 台灣台北市南港區研究院路 2 段 128 號"
 
-#: templates/base.html:112
-#, fuzzy
+#: templates/base.html:113
 msgid ""
 "\n"
 "    <p>\n"
@@ -224,15 +223,15 @@ msgstr ""
 "    <p>\n"
 "    Built with <a href=\"https://www.djangoproject.com/\">Django</a> and\n"
 "    <a href=\"http://mezzanine.jupo.org/\">Mezzanine</a>\n"
-"    by PyCon Taiwan web team.</p>\n"
+"    by PyCon Taiwan</p>\n"
 "    <p>\n"
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
 "    </p>\n"
-"    <p>網站問題或建議請<a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
+"    <p>網站問題或建議請 <a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
 "\">回饋給我們</a>\n"
 "    </p>\n"
-"    <p>其它問題可聯絡 <a href=\"mailto:organizers@pycon.tw"
+"    <p>其它問題可聯絡<a href=\"mailto:organizers@pycon.tw"
 "\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 
