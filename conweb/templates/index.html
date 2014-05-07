@@ -51,15 +51,7 @@
     <h2 class="doc-title">{% trans "BLOG" %}</h2>
     <div class="doc-content">
       {% for blog_post in blog_posts %}
-      <h2>
-          <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
-      </h2>
-
-      <h6>
-          {% trans "Posted by" %}:
-          {% with blog_post.user as author %}
-          <a href="{% url "blog_post_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>
-          {% endwith %}
+      <h6 class="pull-right">
           {% with blog_post.categories.all as categories %}
           {% if categories %}
           {% trans "in" %}
@@ -71,19 +63,10 @@
           {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
       </h6>
 
-      <p class="blog-list-detail">
-          {% keywords_for blog_post as tags %}
-          {% if tags %}
-          {% trans "Tags" %}:
-          {% spaceless %}
-          {% for tag in tags %}
-          <a href="{% url "blog_post_list_tag" tag.slug %}" class="tag">{{ tag }}</a>
-          {% endfor %}
-          {% endspaceless %}
-          <br>
-          {% endif %}
-          <a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>
-      </p>
+      <h3>
+          <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
+      </h3>
+
       {% endfor %}
 
     </div>
