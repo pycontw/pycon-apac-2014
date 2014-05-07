@@ -63,7 +63,7 @@
           {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
       </h6>
 
-      <h3>
+      <h3 class="blog-list-detail">
           <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
       </h3>
 
