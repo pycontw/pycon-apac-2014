@@ -71,8 +71,6 @@
           {% blocktrans with sometime=blog_post.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}
       </h6>
 
-      {{ blog_post.description_from_content|safe }}
-
       <p class="blog-list-detail">
           {% keywords_for blog_post as tags %}
           {% if tags %}
