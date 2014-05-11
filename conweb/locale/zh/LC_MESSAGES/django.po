@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-06 16:24+0800\n"
+"POT-Creation-Date: 2014-05-11 16:39+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -228,8 +228,8 @@ msgstr ""
 "    Hosting provided by <a href=\"http://streetvoice.com/\">StreetVoice</"
 "a>.\n"
 "    </p>\n"
-"    <p>網站問題或建議請 <a id=\"feedback_directly\" href=\"mailto:dev@pycon.tw"
-"\">回饋給我們</a>\n"
+"    <p>網站問題或建議請 <a id=\"feedback_directly\" href=\"mailto:dev@pycon."
+"tw\">回饋給我們</a>\n"
 "    </p>\n"
 "    <p>其它問題可聯絡<a href=\"mailto:organizers@pycon.tw"
 "\"><i>organizers@pycon.tw</i></a></p>\n"
@@ -280,16 +280,11 @@ msgstr ""
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:59 templates/blog/blog_post_detail.html:29
-#: templates/blog/blog_post_list.html:83
-msgid "Posted by"
-msgstr "發表人："
-
-#: templates/index.html:65 templates/blog/blog_post_list.html:89
+#: templates/index.html:57 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:71 templates/blog/blog_post_detail.html:33
+#: templates/index.html:63 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -298,22 +293,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr "%(sometime)s前"
 
-#: templates/index.html:79 templates/blog/blog_post_detail.html:76
-#: templates/blog/blog_post_list.html:119
-#: templates/blog/includes/filter_panel.html:48
-msgid "Tags"
-msgstr "標籤"
-
-#: templates/index.html:87 templates/search_results.html:35
-#: templates/blog/blog_post_list.html:128
-msgid "read more"
-msgstr "更多"
-
-#: templates/index.html:93
+#: templates/index.html:74
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:97
+#: templates/index.html:78
 msgid ""
 "\n"
 "          <li>\n"
@@ -410,6 +394,10 @@ msgstr ""
 "\n"
 "在 %(search_type)s 中搜尋 %(query)s:  共有 %(total)s 項符合 ，目前顯示 "
 "%(start)s - %(end)s 項\n"
+
+#: templates/search_results.html:35 templates/blog/blog_post_list.html:128
+msgid "read more"
+msgstr "更多"
 
 #: templates/accounts/account_form.html:20
 msgid "Submit"
@@ -508,6 +496,11 @@ msgstr ""
 msgid "Save Draft"
 msgstr ""
 
+#: templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:83
+msgid "Posted by"
+msgstr "發表人："
+
 #: templates/blog/blog_post_detail.html:44
 #: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
@@ -520,6 +513,12 @@ msgstr "評論"
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] "%(comments_count)s 個評論"
+
+#: templates/blog/blog_post_detail.html:76
+#: templates/blog/blog_post_list.html:119
+#: templates/blog/includes/filter_panel.html:48
+msgid "Tags"
+msgstr "標籤"
 
 #: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
@@ -613,33 +612,49 @@ msgstr "議程"
 msgid "Taiwan"
 msgstr "台灣"
 
-#: templates/demo/program.html:20 templates/demo/program.html.py:104
+#: templates/demo/program.html:17
+msgid "Map of R0 - R4, 4FC"
+msgstr "R0 - R4 及 4FC 的平面圖"
+
+#: templates/demo/program.html:25 templates/demo/program.html.py:114
 msgid "Opening"
 msgstr "開幕式"
 
-#: templates/demo/program.html:22 templates/demo/program.html.py:57
-#: templates/demo/program.html:107 templates/demo/program.html.py:150
-#: templates/demo/program.html:169 templates/demo/program.html.py:183
+#: templates/demo/program.html:27 templates/demo/program.html.py:60
+#: templates/demo/program.html:117 templates/demo/program.html.py:160
+#: templates/demo/program.html:186 templates/demo/program.html.py:200
 msgid "Keynote"
 msgstr "特邀講者"
 
-#: templates/demo/program.html:25 templates/demo/program.html.py:60
-#: templates/demo/program.html:92 templates/demo/program.html.py:110
-#: templates/demo/program.html:153 templates/demo/program.html.py:195
-msgid "Break"
-msgstr "休息"
+#: templates/demo/program.html:30 templates/demo/program.html.py:99
+#: templates/demo/program.html:120
+msgid "Refreshment"
+msgstr "休息點心"
 
-#: templates/demo/program.html:54 templates/demo/program.html.py:147
+#: templates/demo/program.html:57 templates/demo/program.html.py:157
 msgid "Lunch"
 msgstr "午餐"
 
-#: templates/demo/program.html:95
+#: templates/demo/program.html:65
+msgid "Sponsor Show Time"
+msgstr "贊助商 Show Time"
+
+#: templates/demo/program.html:70 templates/demo/program.html.py:170
+#: templates/demo/program.html:211
+msgid "Break"
+msgstr "休息"
+
+#: templates/demo/program.html:102
 msgid "Lightning Talks"
 msgstr "閃電秀"
 
-#: templates/demo/program.html:198
-msgid "Closing and Taking Photos Together"
-msgstr "閉幕式 & 大合照"
+#: templates/demo/program.html:165
+msgid "Job Fair"
+msgstr ""
+
+#: templates/demo/program.html:214
+msgid "Closing"
+msgstr "閉幕式"
 
 #: templates/demo/talk_content.html:27
 msgid "About Speaker"
@@ -835,6 +850,9 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Closing and Taking Photos Together"
+#~ msgstr "閉幕式 & 大合照"
 
 #~ msgid ""
 #~ "\n"

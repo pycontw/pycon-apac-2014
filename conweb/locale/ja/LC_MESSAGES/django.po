@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-06 16:24+0800\n"
+"POT-Creation-Date: 2014-05-11 16:39+0800\n"
 "PO-Revision-Date: 2014-01-23 12:16+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pycon-apac-2014/"
@@ -239,16 +239,11 @@ msgstr ""
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:59 templates/blog/blog_post_detail.html:29
-#: templates/blog/blog_post_list.html:83
-msgid "Posted by"
-msgstr ""
-
-#: templates/index.html:65 templates/blog/blog_post_list.html:89
+#: templates/index.html:57 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:71 templates/blog/blog_post_detail.html:33
+#: templates/index.html:63 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -257,22 +252,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: templates/index.html:79 templates/blog/blog_post_detail.html:76
-#: templates/blog/blog_post_list.html:119
-#: templates/blog/includes/filter_panel.html:48
-msgid "Tags"
-msgstr ""
-
-#: templates/index.html:87 templates/search_results.html:35
-#: templates/blog/blog_post_list.html:128
-msgid "read more"
-msgstr ""
-
-#: templates/index.html:93
+#: templates/index.html:74
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:97
+#: templates/index.html:78
 msgid ""
 "\n"
 "          <li>\n"
@@ -333,6 +317,10 @@ msgid ""
 "\n"
 "Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
 "matching your query: %(query)s\n"
+msgstr ""
+
+#: templates/search_results.html:35 templates/blog/blog_post_list.html:128
+msgid "read more"
 msgstr ""
 
 #: templates/accounts/account_form.html:20
@@ -424,6 +412,11 @@ msgstr ""
 msgid "Save Draft"
 msgstr ""
 
+#: templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:83
+msgid "Posted by"
+msgstr ""
+
 #: templates/blog/blog_post_detail.html:44
 #: templates/blog/blog_post_list.html:134
 #: templates/generic/includes/comments.html:3
@@ -436,6 +429,12 @@ msgstr ""
 msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] ""
+
+#: templates/blog/blog_post_detail.html:76
+#: templates/blog/blog_post_list.html:119
+#: templates/blog/includes/filter_panel.html:48
+msgid "Tags"
+msgstr ""
 
 #: templates/blog/blog_post_detail.html:91
 msgid "Share on Twitter"
@@ -529,32 +528,48 @@ msgstr ""
 msgid "Taiwan"
 msgstr ""
 
-#: templates/demo/program.html:20 templates/demo/program.html.py:104
+#: templates/demo/program.html:17
+msgid "Map of R0 - R4, 4FC"
+msgstr ""
+
+#: templates/demo/program.html:25 templates/demo/program.html.py:114
 msgid "Opening"
 msgstr ""
 
-#: templates/demo/program.html:22 templates/demo/program.html.py:57
-#: templates/demo/program.html:107 templates/demo/program.html.py:150
-#: templates/demo/program.html:169 templates/demo/program.html.py:183
+#: templates/demo/program.html:27 templates/demo/program.html.py:60
+#: templates/demo/program.html:117 templates/demo/program.html.py:160
+#: templates/demo/program.html:186 templates/demo/program.html.py:200
 msgid "Keynote"
 msgstr ""
 
-#: templates/demo/program.html:25 templates/demo/program.html.py:60
-#: templates/demo/program.html:92 templates/demo/program.html.py:110
-#: templates/demo/program.html:153 templates/demo/program.html.py:195
-msgid "Break"
+#: templates/demo/program.html:30 templates/demo/program.html.py:99
+#: templates/demo/program.html:120
+msgid "Refreshment"
 msgstr ""
 
-#: templates/demo/program.html:54 templates/demo/program.html.py:147
+#: templates/demo/program.html:57 templates/demo/program.html.py:157
 msgid "Lunch"
 msgstr ""
 
-#: templates/demo/program.html:95
+#: templates/demo/program.html:65
+msgid "Sponsor Show Time"
+msgstr ""
+
+#: templates/demo/program.html:70 templates/demo/program.html.py:170
+#: templates/demo/program.html:211
+msgid "Break"
+msgstr ""
+
+#: templates/demo/program.html:102
 msgid "Lightning Talks"
 msgstr ""
 
-#: templates/demo/program.html:198
-msgid "Closing and Taking Photos Together"
+#: templates/demo/program.html:165
+msgid "Job Fair"
+msgstr ""
+
+#: templates/demo/program.html:214
+msgid "Closing"
 msgstr ""
 
 #: templates/demo/talk_content.html:27
