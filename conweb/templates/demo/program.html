@@ -11,208 +11,236 @@
 
 {% block content %}
 
-<div style="margin:0 30px">
-  <div class="row program-break">
-    <a href="/venue/details/">
-      <h4 class="col-md-12 text-center">{% trans "Map of R0 - R4, 4FC" %}</h3>
-    </a>
+<div style="margin:30px" ng-controller="Program" >
+  <div class="col-md-12 program-toolbar">
+    <div class="row clearfix well">
+      <div class="col-md-9">
+        <div class="room-filter">
+        <a class="btn btn-default" ng-click=" em=9 "  ng-class="{active: em==9}">09-10</a>
+        <a class="btn btn-default" ng-click=" em=11 " ng-class="{active: em==11}">11-12</a>
+        <a class="btn btn-default" ng-click=" em=13 " ng-class="{active: em==13}">13-14</a>
+        <a class="btn btn-default" ng-click=" em=15 " ng-class="{active: em==15}">15-16</a>
+
+        &nbsp;
+        <a class="btn btn-default" ng-click=" em=null ">Reset</a>
+        </div>
+      </div>
+      <div class="col-md-3 text-right">
+        <a class="btn btn-primary" href="/venue/details/">{% trans "Map of R0 - R4, 4FC" %}</a>
+      </div>
+    </div>
+
   </div>
   <div class="row">
     <div class="col-md-6">
       <div class="program-day">
         <h3 class="text-center program-date">DAY1 <small>May 17</small></h3>
-        <p class="text-center  program-time"><span>09:00</span></p>
-        <p class="program-block">{% trans "Opening" %}</p>
-        <p class="text-center  program-time"><span>09:20</span></p>
-        <p class="program-block">{% trans "Keynote" %} Wes McKinney </p>
+        <div ng-show="checkEm(9)">
+          <p class="text-center  program-time"><span>09:00</span></p>
+          <p class="program-block">{% trans "Opening" %}</p>
+          <p class="text-center  program-time"><span>09:20</span></p>
+          <p class="program-block">{% trans "Keynote" %} Wes McKinney </p>
 
-        <p class="text-center  program-time"><span>10:10</span></p>
-        <p class="program-break">{% trans "Refreshment" %}</p>
+          <p class="text-center  program-time"><span>10:10</span></p>
+          <p class="program-break">{% trans "Refreshment" %}</p>
 
-        <p class="text-center  program-time"><span>10:40</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.30 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.71 %}</td> </tr>
-          <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.88 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.73 %}</td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>10:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.30 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.71 %}</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.88 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.73 %}</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(11)">
 
-        <p class="text-center  program-time"><span>11:10</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.55 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.102 %}</td> </tr>
-          <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.93 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.29 %}</td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>11:10</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.55 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.102 %}</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.93 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.29 %}</td> </tr>
+          </table></div>
 
-        <p class="text-center  program-time"><span>11:40</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.81 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.51 %}</td> </tr>
-          <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.35 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.6 %}</td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>11:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.81 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.51 %}</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.35 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.6 %}</td> </tr>
+          </table></div>
 
-        <p class="text-center  program-time"><span>12:10</span></p>
-        <p class="program-break">{% trans "Lunch" %}</p>
+          <p class="text-center  program-time"><span>12:10</span></p>
+          <p class="program-break">{% trans "Lunch" %}</p>
+        </div>
+        <div ng-show="checkEm(13)">
 
-        <p class="text-center  program-time"><span>13:30</span></p>
-        <p class="program-block">{% trans "Keynote" %} Fernando Perez </p>
+          <p class="text-center  program-time"><span>13:30</span></p>
+          <p class="program-block">{% trans "Keynote" %} Fernando Perez </p>
 
-        <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
-        <div class="program-event-section"> <table class="program-table">
-            <tr><th> 4FC </th> <td class="program-edu">
-                {% trans "Sponsor Show Time" %}
-            </td> </tr>
-        </table> </div>
+          <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
+          <div class="program-event-section"> <table class="program-table">
+              <tr><th> 4FC </th> <td class="program-edu">
+                  {% trans "Sponsor Show Time" %}
+              </td> </tr>
+          </table> </div>
 
-        <p class="text-center  program-time"><span>14:20</span></p>
-        <p class="program-break">{% trans "Break" %}</p>
+          <p class="text-center  program-time"><span>14:20</span></p>
+          <p class="program-break">{% trans "Break" %}</p>
 
-        <p class="text-center  program-time"><span>14:30</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.96 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.66 %}</td> </tr>
-          <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.74 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.78 %}</td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>14:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.96 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.66 %}</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.74 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.78 %}</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(15)">
 
-        <p class="text-center  program-time"><span>15:00</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.60 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.64 %}</td> </tr>
-          <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.65 %}</td> </tr>
-          <tr><th> R3 </th> <td>
-            <div class="program-edu">教育座談</div>
-           </td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>15:00</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.60 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.64 %}</td> </tr>
+            <tr><th> R2 <span class="SciPy">SciPy</span></th> <td> {% include "demo/_program_title.html" with proposal=programs.0.65 %}</td> </tr>
+            <tr><th> R3 </th> <td>
+              <div class="program-edu">教育座談</div>
+             </td> </tr>
+          </table></div>
 
-        <p class="text-center  program-time"><span>15:30</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.58 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.69 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.7 %}</td> </tr>
-          <tr><th> R3 </th> <td> <div class="program-edu">教育座談</div> </td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>15:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.58 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.69 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.0.7 %}</td> </tr>
+            <tr><th> R3 </th> <td> <div class="program-edu">教育座談</div> </td> </tr>
+          </table></div>
 
-        <p class="text-center  program-time"><span>16:00</span></p>
-        <p class="program-break">{% trans "Refreshment" %}</p>
+          <p class="text-center  program-time"><span>16:00</span></p>
+          <p class="program-break">{% trans "Refreshment" %}</p>
 
-        <p class="text-center  program-time"><span>16:30</span></p>
-        <p class="program-block">{% trans "Lightning Talks" %}</p>
+          <p class="text-center  program-time"><span>16:30</span></p>
+          <p class="program-block">{% trans "Lightning Talks" %}</p>
 
-        <p class="text-center  program-time"><span>18:00</span></p>
-        <p class="program-block" title="Birds of a Feather">BoF</p>
-
+          <p class="text-center  program-time"><span>18:00</span></p>
+          <p class="program-block" title="Birds of a Feather">BoF</p>
+        </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="program-day">
         <h3 class="text-center">DAY2 <small>May 18</small></h3>
+        <div ng-show="checkEm(9)">
 
-        <p class="text-center  program-time"><span>09:00</span></p>
-        <p class="program-block">{% trans "Opening" %}</p>
+          <p class="text-center  program-time"><span>09:00</span></p>
+          <p class="program-block">{% trans "Opening" %}</p>
 
-        <p class="text-center  program-time"><span>09:20</span></p>
-        <p class="program-block">{% trans "Keynote" %} Jessica McKellar </p>
+          <p class="text-center  program-time"><span>09:20</span></p>
+          <p class="program-block">{% trans "Keynote" %} Jessica McKellar </p>
 
-        <p class="text-center  program-time"><span>10:10</span></p>
-        <p class="program-break">{% trans "Refreshment" %}</p>
+          <p class="text-center  program-time"><span>10:10</span></p>
+          <p class="program-break">{% trans "Refreshment" %}</p>
 
-        <p class="text-center  program-time"><span>10:40</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.97 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.99 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.53 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.67%}</td> </tr>
-          <tr><th> R4 </th> <td>
-          <div class="program-edu">
-            APAC community panel
-          </div>
-          </td> </tr>
-        </table></div>
-
-        <p class="text-center  program-time"><span>11:10</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.70 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.28 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.95 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.40 %}</td> </tr>
-          <tr><th> R4 </th> <td>
-          <div class="program-edu">
-            APAC community panel
-          </div>
-          </td> </tr>
-        </table></div>
-
-        <p class="text-center  program-time"><span>11:40</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.63 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.101 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.31 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.75 %}</td> </tr>
-        </table></div>
-
-        <p class="text-center  program-time"><span>12:10</span></p>
-        <p class="program-break">{% trans "Lunch" %}</p>
-
-        <p class="text-center  program-time"><span>13:30</span></p>
-        <p class="program-block">{% trans "Keynote" %} Stephen McDonald</p>
-
-        <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
-        <div class="program-event-section"> <table class="program-table">
-            <tr><th> 4FC </th> <td class="program-edu">
-                {% trans "Job Fair" %}
+          <p class="text-center  program-time"><span>10:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.97 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.99 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.53 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.67%}</td> </tr>
+            <tr><th> R4 </th> <td>
+            <div class="program-edu">
+              APAC community panel
+            </div>
             </td> </tr>
-        </table> </div>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(11)">
 
-        <p class="text-center  program-time"><span>14:20</span></p>
-        <p class="program-break">{% trans "Break" %}</p>
-
-        <p class="text-center  program-time"><span>14:30</span></p>
-        <div class="program-section"><table class="program-table">
-
-          <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.103 %}</td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.45 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.49 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.54 %}</td> </tr>
-          <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.61 %}</td> </tr>
-        </table></div>
-
-        <p class="text-center  program-time"><span>15:00</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th> <td>
-            <div class="program-keynote">
-              {% trans "Keynote" %} Andreas Klöckner
+          <p class="text-center  program-time"><span>11:10</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.70 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.28 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.95 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.40 %}</td> </tr>
+            <tr><th> R4 </th> <td>
+            <div class="program-edu">
+              APAC community panel
             </div>
-           </td> </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.41 %}</td> </tr>
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.36 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.46 %}</td> </tr>
-          <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.44 %}</td> </tr>
-        </table></div>
+            </td> </tr>
+          </table></div>
 
-        <p class="text-center  program-time"><span>15:30</span></p>
-        <div class="program-section"><table class="program-table">
-          <tr><th> R0 </th>
-            <td>
-            <div class="program-keynote">
-              {% trans "Keynote" %} Andreas Klöckner
-            </div>
-            </td>
-          </tr>
-          <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.84 %}</td> </tr>
+          <p class="text-center  program-time"><span>11:40</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.63 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.101 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.31 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.75 %}</td> </tr>
+          </table></div>
 
-          <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.37 %}</td> </tr>
-          <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.38 %}</td> </tr>
-        </table></div>
+          <p class="text-center  program-time"><span>12:10</span></p>
+          <p class="program-break">{% trans "Lunch" %}</p>
+        </div>
+        <div ng-show="checkEm(13)">
 
-        <p class="text-center  program-time"><span>16:00</span></p>
-        <p class="program-break">{% trans "Break" %}</p>
+          <p class="text-center  program-time"><span>13:30</span></p>
+          <p class="program-block">{% trans "Keynote" %} Stephen McDonald</p>
 
-        <p class="text-center  program-time"><span>16:20</span></p>
-        <p class="program-block">{% trans "Closing" %}</p>
+          <p class="text-center  program-time"><span>13:30 - 16:00</span></p>
+          <div class="program-event-section"> <table class="program-table">
+              <tr><th> 4FC </th> <td class="program-edu">
+                  {% trans "Job Fair" %}
+              </td> </tr>
+          </table> </div>
 
+          <p class="text-center  program-time"><span>14:20</span></p>
+          <p class="program-break">{% trans "Break" %}</p>
+
+          <p class="text-center  program-time"><span>14:30</span></p>
+          <div class="program-section"><table class="program-table">
+
+            <tr><th> R0 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.103 %}</td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.45 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.49 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.54 %}</td> </tr>
+            <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.61 %}</td> </tr>
+          </table></div>
+        </div>
+        <div ng-show="checkEm(15)">
+
+          <p class="text-center  program-time"><span>15:00</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th> <td>
+              <div class="program-keynote">
+                {% trans "Keynote" %} Andreas Klöckner
+              </div>
+             </td> </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.41 %}</td> </tr>
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.36 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.46 %}</td> </tr>
+            <tr><th> R4 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.44 %}</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>15:30</span></p>
+          <div class="program-section"><table class="program-table">
+            <tr><th> R0 </th>
+              <td>
+              <div class="program-keynote">
+                {% trans "Keynote" %} Andreas Klöckner
+              </div>
+              </td>
+            </tr>
+            <tr><th> R1 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.84 %}</td> </tr>
+
+            <tr><th> R2 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.37 %}</td> </tr>
+            <tr><th> R3 </th> <td> {% include "demo/_program_title.html" with proposal=programs.1.38 %}</td> </tr>
+          </table></div>
+
+          <p class="text-center  program-time"><span>16:00</span></p>
+          <p class="program-break">{% trans "Break" %}</p>
+
+          <p class="text-center  program-time"><span>16:20</span></p>
+          <p class="program-block">{% trans "Closing" %}</p>
+        </div>
       </div>
     </div>
   </div>

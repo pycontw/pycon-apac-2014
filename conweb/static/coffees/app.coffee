@@ -25,6 +25,11 @@ App.controller 'base', ($rootScope, $scope)->
     $scope.loading = false
 
 
+App.controller 'Program', ($scope)->
+  $scope.em = null
+  $scope.checkEm = (time)->
+    return $scope.em == time or $scope.em == null
+
 App.directive 'turbolink', ($http, $rootScope, $document)->
   return {
     restrict: 'A'

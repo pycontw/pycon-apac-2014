@@ -31,6 +31,13 @@
     });
   });
 
+  App.controller('Program', function($scope) {
+    $scope.em = null;
+    return $scope.checkEm = function(time) {
+      return $scope.em === time || $scope.em === null;
+    };
+  });
+
   App.directive('turbolink', function($http, $rootScope, $document) {
     return {
       restrict: 'A',
