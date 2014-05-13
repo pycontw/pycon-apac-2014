@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-11 16:39+0800\n"
+"POT-Creation-Date: 2014-05-13 22:07+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -239,52 +239,77 @@ msgstr ""
 msgid "Tutorial NOW open!"
 msgstr "報名年度專業課程！"
 
-#: templates/index.html:31
-msgid "Sponsorship available!"
-msgstr "歡迎贊助！"
-
 #: templates/index.html:33
 msgid ""
 "\n"
-"    <span>Prospectus in\n"
-"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/"
-"edit?usp=sharing\">English</a>\n"
-"      and\n"
-"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/"
-"edit?usp=sharing\">Chinese</a>\n"
+"    <span>\n"
+"      <a href=\"/program/\">Program</a>,\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"/bof/\">BoF</a>,\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
+"Index-ZQKz3p7rhmP\">\n"
+"        Co-note\n"
+"      </a> &\n"
+"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
+"Index-ZQKz3p7rhmP#:h=IRC\">\n"
+"        IRC\n"
+"      </a>,\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"/showtime-jobfair/\">Sponsors Show Time & Job Fair</a>,\n"
+"    </span>\n"
+"    <span>\n"
+"      and \n"
+"      <a href=\"/venue/\">Venue</a>\n"
 "    </span>\n"
 "    <span class=\"div-line\">&nbsp;</span>\n"
-"    <span><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
-"JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
-"      Application Form\n"
-"    </a></span>\n"
+"    <span>\n"
+"      <a href=\"/about/code-of-conduct/\">Code of Conduct</a>\n"
+"    </span>\n"
 "    "
 msgstr ""
 "\n"
 "    <span>\n"
-"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/"
-"edit?usp=sharing\">英文版</a>\n"
-"      及\n"
-"      <a href=\"https://drive.google.com/file/d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/"
-"edit?usp=sharing\">中文版</a>\n"
-"    的贊助企劃書\n"
+"      <a href=\"/program/\">議程表</a>、\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"/bof/\">自助小聚</a>、\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
+"Index-ZQKz3p7rhmP\">\n"
+"        共同筆記\n"
+"      </a> &\n"
+"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
+"Index-ZQKz3p7rhmP#:h=IRC\">\n"
+"        IRC\n"
+"      </a>、\n"
+"    </span>\n"
+"    <span>\n"
+"      <a href=\"/showtime-jobfair/\">贊助商 Show Time & Job Fair</a>，\n"
+"    </span>\n"
+"    <span>\n"
+"      及 \n"
+"      <a href=\"/venue/\">場地</a>\n"
 "    </span>\n"
 "    <span class=\"div-line\">&nbsp;</span>\n"
-"    <span><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
-"JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
-"      申請表格\n"
-"    </a></span>\n"
+"    <span>\n"
+"      <a href=\"/about/code-of-conduct/\">行為準則</a>\n"
+"    </span>\n"
 "    "
 
-#: templates/index.html:51
+#: templates/index.html:67
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:57 templates/blog/blog_post_list.html:89
+#: templates/index.html:73 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:63 templates/blog/blog_post_detail.html:33
+#: templates/index.html:79 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -293,11 +318,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr "%(sometime)s前"
 
-#: templates/index.html:74
+#: templates/index.html:90
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:78
+#: templates/index.html:94
 msgid ""
 "\n"
 "          <li>\n"
@@ -612,47 +637,46 @@ msgstr "議程"
 msgid "Taiwan"
 msgstr "台灣"
 
-#: templates/demo/program.html:17
+#: templates/demo/program.html:34
 msgid "Map of R0 - R4, 4FC"
 msgstr "R0 - R4 及 4FC 的平面圖"
 
-#: templates/demo/program.html:25 templates/demo/program.html.py:114
+#: templates/demo/program.html:45 templates/demo/program.html.py:141
 msgid "Opening"
 msgstr "開幕式"
 
-#: templates/demo/program.html:27 templates/demo/program.html.py:60
-#: templates/demo/program.html:117 templates/demo/program.html.py:160
-#: templates/demo/program.html:186 templates/demo/program.html.py:200
+#: templates/demo/program.html:47 templates/demo/program.html.py:84
+#: templates/demo/program.html:144 templates/demo/program.html.py:191
+#: templates/demo/program.html:219 templates/demo/program.html.py:233
 msgid "Keynote"
 msgstr "特邀講者"
 
-#: templates/demo/program.html:30 templates/demo/program.html.py:99
-#: templates/demo/program.html:120
-msgid "Refreshment"
-msgstr "茶點"
-
-#: templates/demo/program.html:57 templates/demo/program.html.py:157
-msgid "Lunch"
-msgstr "午餐"
-
-#: templates/demo/program.html:65
-msgid "Sponsor Show Time"
-msgstr "贊助商 Show Time"
-
-#: templates/demo/program.html:70 templates/demo/program.html.py:170
-#: templates/demo/program.html:211
+#: templates/demo/program.html:50 templates/demo/program.html.py:94
+#: templates/demo/program.html:201 templates/demo/program.html.py:244
 msgid "Break"
 msgstr "休息"
 
-#: templates/demo/program.html:102
+#: templates/demo/program.html:79 templates/demo/program.html.py:186
+msgid "Lunch"
+msgstr "午餐"
+
+#: templates/demo/program.html:89
+msgid "Sponsor Show Time"
+msgstr "贊助商 Show Time"
+
+#: templates/demo/program.html:125 templates/demo/program.html.py:147
+msgid "Refreshment"
+msgstr "茶點"
+
+#: templates/demo/program.html:128
 msgid "Lightning Talks"
 msgstr "閃電秀"
 
-#: templates/demo/program.html:165
+#: templates/demo/program.html:196
 msgid "Job Fair"
 msgstr ""
 
-#: templates/demo/program.html:214
+#: templates/demo/program.html:247
 msgid "Closing"
 msgstr "閉幕式"
 
@@ -850,6 +874,41 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Sponsorship available!"
+#~ msgstr "歡迎贊助！"
+
+#~ msgid ""
+#~ "\n"
+#~ "    <span>Prospectus in\n"
+#~ "      <a href=\"https://drive.google.com/file/"
+#~ "d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">English</a>\n"
+#~ "      and\n"
+#~ "      <a href=\"https://drive.google.com/file/"
+#~ "d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">Chinese</a>\n"
+#~ "    </span>\n"
+#~ "    <span class=\"div-line\">&nbsp;</span>\n"
+#~ "    <span><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
+#~ "JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+#~ "      Application Form\n"
+#~ "    </a></span>\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "    <span>\n"
+#~ "      <a href=\"https://drive.google.com/file/"
+#~ "d/0B_IeEiRqxuYWU09IMU9vbXlSZDQ/edit?usp=sharing\">英文版</a>\n"
+#~ "      及\n"
+#~ "      <a href=\"https://drive.google.com/file/"
+#~ "d/0B_IeEiRqxuYWSV9rSlJ0MTJWNVE/edit?usp=sharing\">中文版</a>\n"
+#~ "    的贊助企劃書\n"
+#~ "    </span>\n"
+#~ "    <span class=\"div-line\">&nbsp;</span>\n"
+#~ "    <span><a href=\"https://docs.google.com/forms/d/1zyeB8uI69Dr7kyKv6d-"
+#~ "JbP-4S5bsJt88FmY0xFEmNN0/viewform\">\n"
+#~ "      申請表格\n"
+#~ "    </a></span>\n"
+#~ "    "
 
 #~ msgid "Closing and Taking Photos Together"
 #~ msgstr "閉幕式 & 大合照"
