@@ -33,8 +33,12 @@
 
   App.controller('Program', function($scope) {
     $scope.em = null;
-    return $scope.checkEm = function(time) {
+    $scope.day = null;
+    $scope.checkEm = function(time) {
       return $scope.em === time || $scope.em === null;
+    };
+    return $scope.checkDay = function(day) {
+      return $scope.day === day || $scope.day === null;
     };
   });
 

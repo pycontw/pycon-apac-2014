@@ -22,7 +22,12 @@
         <a class="btn btn-default" ng-click=" em=15 " ng-class="{active: em==15}">15-16</a>
 
         &nbsp;
-        <a class="btn btn-default" ng-click=" em=null ">Reset</a>
+
+        <a class="btn btn-default" ng-click=" day=1 " ng-class="{active: day==1}">Day1</a>
+        <a class="btn btn-default" ng-click=" day=2 " ng-class="{active: day==2}">Day2</a>
+
+        &nbsp;
+        <a class="btn btn-default" ng-click=" em=null;day=null ">Reset</a>
         </div>
       </div>
       <div class="col-md-3 text-right">
@@ -32,7 +37,7 @@
 
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div ng-class="{'col-md-6': day!=1}" ng-show="checkDay(1)">
       <div class="program-day">
         <h3 class="text-center program-date">DAY1 <small>May 17</small></h3>
         <div ng-show="checkEm(9)">
@@ -127,7 +132,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div ng-class="{'col-md-6': day!=2}" ng-show="checkDay(2)">
       <div class="program-day">
         <h3 class="text-center">DAY2 <small>May 18</small></h3>
         <div ng-show="checkEm(9)">

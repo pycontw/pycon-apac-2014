@@ -27,8 +27,14 @@ App.controller 'base', ($rootScope, $scope)->
 
 App.controller 'Program', ($scope)->
   $scope.em = null
+  $scope.day = null
   $scope.checkEm = (time)->
     return $scope.em == time or $scope.em == null
+
+  $scope.checkDay = (day)->
+    return $scope.day == day or $scope.day == null
+
+
 
 App.directive 'turbolink', ($http, $rootScope, $document)->
   return {
