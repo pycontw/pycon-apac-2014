@@ -90,7 +90,7 @@
 	</g>
 </g>
 <g id="Time_Slot">
-	 <a xlink:href="https://pyconapac2014bof.hackpad.com/9B7eCnjZrSu" target="_blank"><g id="_x34_FA-1">
+	 <a xlink:href="https://pyconapac2014bof.hackpad.com/9B7eCnjZrSu" target="_blank"><g id="_x34_FA-1" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M176,227.83H80c-6.63,0-12-4.48-12-10v-130c0-5.52,5.37-10,12-10
 			h96c6.63,0,12,4.48,12,10v130C188,223.36,182.63,227.83,176,227.83z"/>
 		<g>
@@ -190,7 +190,7 @@
 				c-0.3,0.19-0.66,0.29-1.07,0.29c-0.21,0-0.42-0.01-0.61-0.04c-0.19-0.03-0.37-0.06-0.53-0.1V165.15z"/>
 		</g>
 	</g></a>
-	<a xlink:href="https://pyconapac2014bof.hackpad.com/CqA3sPy0hLR" target="_blank"><g id="_x34_FA-2">
+	<a xlink:href="https://pyconapac2014bof.hackpad.com/CqA3sPy0hLR" target="_blank"><g id="_x34_FA-2" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M176,353.33H80c-6.63,0-12-4.48-12-10v-105c0-5.52,5.37-10,12-10
 			h96c6.63,0,12,4.48,12,10v105C188,348.86,182.63,353.33,176,353.33z"/>
 		<g>
@@ -549,7 +549,7 @@
 				c-0.66,0-1.1,0.33-1.31,0.98c-0.21,0.66-0.32,1.67-0.32,3.03C169.91,248.41,170.01,249.41,170.23,250.1z"/>
 		</g>
 	</g></a>
-	<a xlink:href="https://pyconapac2014bof.hackpad.com/GnujifgUaTe" target="_blank"><g id="_x34_FA-3">
+	<a xlink:href="https://pyconapac2014bof.hackpad.com/GnujifgUaTe" target="_blank"><g id="_x34_FA-3" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M176,503.33H80c-6.63,0-12-4.48-12-10v-130c0-5.52,5.37-10,12-10
 			h96c6.63,0,12,4.48,12,10v130C188,498.86,182.63,503.33,176,503.33z"/>
 		<g>
@@ -657,7 +657,7 @@
 			</g>
 		</g>
 	</g></a>
-    <a xlink:href="https://pyconapac2014bof.hackpad.com/xUuwIPKpqJd" target="_blank"><g id="_x34_FB-1">
+    <a xlink:href="https://pyconapac2014bof.hackpad.com/xUuwIPKpqJd" target="_blank"><g id="_x34_FB-1" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M306,404.33h-96c-6.63,0-12-4.48-12-10v-193
 			c0-5.52,5.37-10,12-10h96c6.63,0,12,4.48,12,10v193C318,399.86,312.63,404.33,306,404.33z"/>
 		<g>
@@ -835,7 +835,7 @@
 			</g>
 		</g>
 	</g></a>
-    <a xlink:href="https://pyconapac2014bof.hackpad.com/bB1YM8lHyHd" target="_blank"><g id="_x34_FB-2">
+    <a xlink:href="https://pyconapac2014bof.hackpad.com/bB1YM8lHyHd" target="_blank"><g id="_x34_FB-2" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M306,528.33h-96c-6.63,0-12-4.48-12-10v-104
 			c0-5.52,5.37-10,12-10h96c6.63,0,12,4.48,12,10v104C318,523.86,312.63,528.33,306,528.33z"/>
 		<g>
@@ -900,7 +900,7 @@
 			</g>
 		</g>
 	</g></a>
-    <a xlink:href="https://pyconapac2014bof.hackpad.com/JBk9l8NNUI6" target="_blank"><g id="_x34_FD-1">
+    <a xlink:href="https://pyconapac2014bof.hackpad.com/JBk9l8NNUI6" target="_blank"><g id="_x34_FD-1" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M436,353.33h-96c-6.63,0-12-4.48-12-10v-180
 			c0-5.52,5.37-10,12-10h96c6.63,0,12,4.48,12,10v180C448,348.86,442.63,353.33,436,353.33z"/>
 		<g>
@@ -1000,7 +1000,7 @@
 			</g>
 		</g>
 	</g></a>
-    <a xlink:href="https://pyconapac2014bof.hackpad.com/tF5U5fJ1SvP" target="_blank"><g id="_x34_FD-2">
+    <a xlink:href="https://pyconapac2014bof.hackpad.com/tF5U5fJ1SvP" target="_blank"><g id="_x34_FD-2" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M436,503.33h-96c-6.63,0-12-4.48-12-10v-130
 			c0-5.52,5.37-10,12-10h96c6.63,0,12,4.48,12,10v130C448,498.86,442.63,503.33,436,503.33z"/>
 		<g>
@@ -1105,7 +1105,7 @@
 			</g>
 		</g>
 	</g></a>
-    <a xlink:href="https://pyconapac2014bof.hackpad.com/RoiRjHZlTkM" target="_blank"><g id="_x34_FE-1">
+    <a xlink:href="https://pyconapac2014bof.hackpad.com/RoiRjHZlTkM" target="_blank"><g id="_x34_FE-1" class="bof-slot">
 		<path fill="#3276B1" stroke="#0E2F4B" stroke-miterlimit="10" d="M565,229.33h-96c-6.63,0-12-4.48-12-10v-55c0-5.52,5.37-10,12-10
 			h96c6.63,0,12,4.48,12,10v55C577,224.86,571.63,229.33,565,229.33z"/>
 		<g>
@@ -1995,4 +1995,14 @@
 			c-0.29,0.33-0.52,0.72-0.69,1.16c-0.17,0.44-0.29,0.91-0.34,1.4H534.83z"/>
 	</g>
 </g>
+<style>
+.bof-slot:hover {
+opacity: 0.6;
+-o-transition: .2s;
+-ms-transition: .2s;
+-moz-transition: .2s;
+-webkit-transition: .2s;
+transition: .2s;
+}
+</style>
 </svg>
