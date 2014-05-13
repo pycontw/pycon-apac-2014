@@ -69,7 +69,7 @@ def program(request):
         45, 54, 61,
         41, 36, 46, 44,
         84, 37, 38,
-         49
+        103, 49
     )
     programs = (
         {pid: accepted_proposals[pid] for pid in day1_programs_id},
