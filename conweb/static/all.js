@@ -31,6 +31,17 @@
     });
   });
 
+  App.controller('Program', function($scope) {
+    $scope.em = null;
+    $scope.day = null;
+    $scope.checkEm = function(time) {
+      return $scope.em === time || $scope.em === null;
+    };
+    return $scope.checkDay = function(day) {
+      return $scope.day === day || $scope.day === null;
+    };
+  });
+
   App.directive('turbolink', function($http, $rootScope, $document) {
     return {
       restrict: 'A',
