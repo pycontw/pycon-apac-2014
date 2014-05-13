@@ -629,7 +629,7 @@ msgstr "特邀講者"
 #: templates/demo/program.html:30 templates/demo/program.html.py:99
 #: templates/demo/program.html:120
 msgid "Refreshment"
-msgstr "休息點心"
+msgstr "茶點"
 
 #: templates/demo/program.html:57 templates/demo/program.html.py:157
 msgid "Lunch"
