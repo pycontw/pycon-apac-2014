@@ -49,12 +49,15 @@
       link: function(scope, element, attrs) {
         element.on('click', function(event) {
           event.preventDefault();
+          if ($rootScope.slidePageUrl === '') {
+            event.stopPropagation();
+          }
           if ($rootScope.slidePageUrl !== '') {
             return;
           }
-          event.stopPropagation();
-          $rootScope.slidePageUrl = attrs.href;
-          return scope.$digest();
+          return scope.$apply(function() {
+            return $rootScope.slidePageUrl = attrs.href;
+          });
         });
       }
     };

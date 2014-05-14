@@ -5,7 +5,6 @@ App.config ($httpProvider)->
 
 App.controller 'base', ($rootScope, $scope)->
   $rootScope.slidePageUrl = ''
-
   $rootScope.closePage = (event)->
     if $rootScope.slidePageUrl == ''
       return
@@ -43,11 +42,15 @@ App.directive 'turbolink', ($http, $rootScope, $document)->
     link: (scope, element, attrs)->
       element.on 'click', (event)->
         event.preventDefault()
+
+        if $rootScope.slidePageUrl == ''
+          event.stopPropagation()
+
         if $rootScope.slidePageUrl != ''
           return
-        event.stopPropagation()
-        $rootScope.slidePageUrl = attrs.href
-        scope.$digest()
+
+        scope.$apply ()->
+          $rootScope.slidePageUrl = attrs.href
 
       return
   }
