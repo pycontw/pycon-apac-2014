@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-13 22:07+0800\n"
+"POT-Creation-Date: 2014-05-16 14:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,11 +208,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:25
-msgid "Tutorial NOW open!"
-msgstr ""
-
-#: templates/index.html:33
+#: templates/index.html:27
 msgid ""
 "\n"
 "    <span>\n"
@@ -232,7 +228,8 @@ msgid ""
 "      </a>,\n"
 "    </span>\n"
 "    <span>\n"
-"      <a href=\"/showtime-jobfair/\">Sponsors Show Time & Job Fair</a>,\n"
+"      <a href=\"/program/showtime-jobfair/\">Sponsors Show Time & Job Fair</"
+"a>,\n"
 "    </span>\n"
 "    <span>\n"
 "      and \n"
@@ -245,15 +242,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:67
+#: templates/index.html:61
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:73 templates/blog/blog_post_list.html:89
+#: templates/index.html:67 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:79 templates/blog/blog_post_detail.html:33
+#: templates/index.html:73 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -262,11 +259,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: templates/index.html:90
+#: templates/index.html:84
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:94
+#: templates/index.html:88
 msgid ""
 "\n"
 "          <li>\n"
@@ -543,42 +540,54 @@ msgstr ""
 msgid "Map of R0 - R4, 4FC"
 msgstr ""
 
-#: templates/demo/program.html:45 templates/demo/program.html.py:141
+#: templates/demo/program.html:42 templates/demo/program.html.py:141
+msgid "May"
+msgstr ""
+
+#: templates/demo/program.html:45
+msgid "Registration & Breakfast"
+msgstr ""
+
+#: templates/demo/program.html:48 templates/demo/program.html.py:148
 msgid "Opening"
 msgstr ""
 
-#: templates/demo/program.html:47 templates/demo/program.html.py:84
-#: templates/demo/program.html:144 templates/demo/program.html.py:191
-#: templates/demo/program.html:219 templates/demo/program.html.py:233
+#: templates/demo/program.html:51 templates/demo/program.html.py:88
+#: templates/demo/program.html:151 templates/demo/program.html.py:198
+#: templates/demo/program.html:226 templates/demo/program.html.py:240
 msgid "Keynote"
 msgstr ""
 
-#: templates/demo/program.html:50 templates/demo/program.html.py:94
-#: templates/demo/program.html:201 templates/demo/program.html.py:244
+#: templates/demo/program.html:54 templates/demo/program.html.py:98
+#: templates/demo/program.html:208 templates/demo/program.html.py:251
 msgid "Break"
 msgstr ""
 
-#: templates/demo/program.html:79 templates/demo/program.html.py:186
+#: templates/demo/program.html:83 templates/demo/program.html.py:193
 msgid "Lunch"
 msgstr ""
 
-#: templates/demo/program.html:89
+#: templates/demo/program.html:93
 msgid "Sponsor Show Time"
 msgstr ""
 
-#: templates/demo/program.html:125 templates/demo/program.html.py:147
+#: templates/demo/program.html:129 templates/demo/program.html.py:154
 msgid "Refreshment"
 msgstr ""
 
-#: templates/demo/program.html:128
+#: templates/demo/program.html:132
 msgid "Lightning Talks"
 msgstr ""
 
-#: templates/demo/program.html:196
+#: templates/demo/program.html:145
+msgid "Registration"
+msgstr ""
+
+#: templates/demo/program.html:203
 msgid "Job Fair"
 msgstr ""
 
-#: templates/demo/program.html:247
+#: templates/demo/program.html:254
 msgid "Closing"
 msgstr ""
 

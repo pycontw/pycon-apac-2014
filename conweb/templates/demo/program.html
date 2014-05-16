@@ -39,10 +39,14 @@
   <div class="row">
     <div ng-class="{'col-md-6': day!=1}" ng-show="checkDay(1)">
       <div class="program-day">
-        <h3 class="text-center program-date">DAY1 <small>May 17</small></h3>
+        <h3 class="text-center program-date">DAY1 <small>{% trans "May" %} 17</small></h3>
         <div ng-show="checkEm(9)">
+          <p class="text-center  program-time"><span>08:30</span></p>
+          <p class="program-block">{% trans "Registration & Breakfast" %}</p>
+
           <p class="text-center  program-time"><span>09:00</span></p>
           <p class="program-block">{% trans "Opening" %}</p>
+
           <p class="text-center  program-time"><span>09:20</span></p>
           <p class="program-block">{% trans "Keynote" %} Wes McKinney </p>
 
@@ -134,8 +138,11 @@
     </div>
     <div ng-class="{'col-md-6': day!=2}" ng-show="checkDay(2)">
       <div class="program-day">
-        <h3 class="text-center">DAY2 <small>May 18</small></h3>
+        <h3 class="text-center">DAY2 <small>{% trans "May" %} 18</small></h3>
         <div ng-show="checkEm(9)">
+
+          <p class="text-center  program-time"><span>08:30</span></p>
+          <p class="program-block">{% trans "Registration" %}</p>
 
           <p class="text-center  program-time"><span>09:00</span></p>
           <p class="program-block">{% trans "Opening" %}</p>

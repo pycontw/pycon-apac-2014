@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14 13:10+0800\n"
+"POT-Creation-Date: 2014-05-16 14:33+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -235,11 +235,7 @@ msgstr ""
 "\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 
-#: templates/index.html:25
-msgid "Tutorial NOW open!"
-msgstr "報名年度專業課程！"
-
-#: templates/index.html:33
+#: templates/index.html:27
 msgid ""
 "\n"
 "    <span>\n"
@@ -290,7 +286,8 @@ msgstr ""
 "      </a>、\n"
 "    </span>\n"
 "    <span>\n"
-"      <a href=\"/program/showtime-jobfair/\">贊助商 Show Time & Job Fair</a>，\n"
+"      <a href=\"/program/showtime-jobfair/\">贊助商 Show Time & Job Fair</"
+"a>，\n"
 "    </span>\n"
 "    <span>\n"
 "      及 \n"
@@ -302,15 +299,15 @@ msgstr ""
 "    </span>\n"
 "    "
 
-#: templates/index.html:67
+#: templates/index.html:61
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:73 templates/blog/blog_post_list.html:89
+#: templates/index.html:67 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:79 templates/blog/blog_post_detail.html:33
+#: templates/index.html:73 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -319,11 +316,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr "%(sometime)s前"
 
-#: templates/index.html:90
+#: templates/index.html:84
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:94
+#: templates/index.html:88
 msgid ""
 "\n"
 "          <li>\n"
@@ -642,42 +639,54 @@ msgstr "台灣"
 msgid "Map of R0 - R4, 4FC"
 msgstr "R0 - R4 及 4FC 的平面圖"
 
-#: templates/demo/program.html:45 templates/demo/program.html.py:141
+#: templates/demo/program.html:42 templates/demo/program.html.py:141
+msgid "May"
+msgstr "五月"
+
+#: templates/demo/program.html:45
+msgid "Registration & Breakfast"
+msgstr "報到 & 早餐"
+
+#: templates/demo/program.html:48 templates/demo/program.html.py:148
 msgid "Opening"
 msgstr "開幕式"
 
-#: templates/demo/program.html:47 templates/demo/program.html.py:84
-#: templates/demo/program.html:144 templates/demo/program.html.py:191
-#: templates/demo/program.html:219 templates/demo/program.html.py:233
+#: templates/demo/program.html:51 templates/demo/program.html.py:88
+#: templates/demo/program.html:151 templates/demo/program.html.py:198
+#: templates/demo/program.html:226 templates/demo/program.html.py:240
 msgid "Keynote"
 msgstr "特邀講者"
 
-#: templates/demo/program.html:50 templates/demo/program.html.py:94
-#: templates/demo/program.html:201 templates/demo/program.html.py:244
+#: templates/demo/program.html:54 templates/demo/program.html.py:98
+#: templates/demo/program.html:208 templates/demo/program.html.py:251
 msgid "Break"
 msgstr "休息"
 
-#: templates/demo/program.html:79 templates/demo/program.html.py:186
+#: templates/demo/program.html:83 templates/demo/program.html.py:193
 msgid "Lunch"
 msgstr "午餐"
 
-#: templates/demo/program.html:89
+#: templates/demo/program.html:93
 msgid "Sponsor Show Time"
 msgstr "贊助商 Show Time"
 
-#: templates/demo/program.html:125 templates/demo/program.html.py:147
+#: templates/demo/program.html:129 templates/demo/program.html.py:154
 msgid "Refreshment"
 msgstr "茶點"
 
-#: templates/demo/program.html:128
+#: templates/demo/program.html:132
 msgid "Lightning Talks"
 msgstr "閃電秀"
 
-#: templates/demo/program.html:196
+#: templates/demo/program.html:145
+msgid "Registration"
+msgstr "報到"
+
+#: templates/demo/program.html:203
 msgid "Job Fair"
 msgstr ""
 
-#: templates/demo/program.html:247
+#: templates/demo/program.html:254
 msgid "Closing"
 msgstr "閉幕式"
 
@@ -875,6 +884,9 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Tutorial NOW open!"
+#~ msgstr "報名年度專業課程！"
 
 #~ msgid "Sponsorship available!"
 #~ msgstr "歡迎贊助！"
