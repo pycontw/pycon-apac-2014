@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-17 10:30+0800\n"
+"POT-Creation-Date: 2014-05-17 11:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,49 +208,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:30
-msgid ""
-"\n"
-"    <span>\n"
-"      <a href=\"/program/\">Program</a>,\n"
-"    </span>\n"
-"    <span>\n"
-"      <a href=\"/bof/\">BoF</a>,\n"
-"    </span>\n"
-"    <span>\n"
-"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
-"Index-ZQKz3p7rhmP\">\n"
-"        Co-note\n"
-"      </a> &\n"
-"      <a href=\"https://pyconapac2014.hackpad.com/PyCon-APAC-2014-Co-Notes-"
-"Index-ZQKz3p7rhmP#:h=IRC\">\n"
-"        IRC\n"
-"      </a>,\n"
-"    </span>\n"
-"    <span>\n"
-"      <a href=\"/program/showtime-jobfair/\">Sponsors Show Time & Job Fair</"
-"a>,\n"
-"    </span>\n"
-"    <span>\n"
-"      and \n"
-"      <a href=\"/venue/\">Venue</a>\n"
-"    </span>\n"
-"    <span class=\"div-line\">&nbsp;</span>\n"
-"    <span>\n"
-"      <a href=\"/about/code-of-conduct/\">Code of Conduct</a>\n"
-"    </span>\n"
-"    "
-msgstr ""
-
-#: templates/index.html:64
+#: templates/index.html:58
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:70 templates/blog/blog_post_list.html:89
+#: templates/index.html:64 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:76 templates/blog/blog_post_detail.html:33
+#: templates/index.html:70 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -259,11 +225,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: templates/index.html:87
+#: templates/index.html:81
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:91
+#: templates/index.html:85
 msgid ""
 "\n"
 "          <li>\n"
@@ -569,10 +535,6 @@ msgstr ""
 
 #: templates/demo/program.html:93
 msgid "Sponsor Show Time"
-msgstr ""
-
-#: templates/demo/program.html:116 templates/demo/program.html.py:125
-msgid "Education Panel"
 msgstr ""
 
 #: templates/demo/program.html:129 templates/demo/program.html.py:154
