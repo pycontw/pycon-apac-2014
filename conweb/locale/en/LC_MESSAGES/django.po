@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-16 14:33+0800\n"
+"POT-Creation-Date: 2014-05-17 10:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,7 +208,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:27
+#: templates/index.html:30
 msgid ""
 "\n"
 "    <span>\n"
@@ -242,15 +242,15 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:64
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:67 templates/blog/blog_post_list.html:89
+#: templates/index.html:70 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:73 templates/blog/blog_post_detail.html:33
+#: templates/index.html:76 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -259,11 +259,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: templates/index.html:84
+#: templates/index.html:87
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:88
+#: templates/index.html:91
 msgid ""
 "\n"
 "          <li>\n"
@@ -569,6 +569,10 @@ msgstr ""
 
 #: templates/demo/program.html:93
 msgid "Sponsor Show Time"
+msgstr ""
+
+#: templates/demo/program.html:116 templates/demo/program.html.py:125
+msgid "Education Panel"
 msgstr ""
 
 #: templates/demo/program.html:129 templates/demo/program.html.py:154
