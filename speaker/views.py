@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.http import Http404
+from proposal.models import ProposalModel
 
 
 def _get_author_of_accepted_proposals():
@@ -20,9 +21,11 @@ def speaker_info(request, speaker_id):
         raise Http404
 
     profile = speaker.get_profile()
+    proposals = ProposalModel.objects.filter(author=speaker)
     picture = profile.picture
     og_image_url = picture.url if picture else None
     return render(request, "speaker_info.html",
                   {"speaker": speaker,
                    "profile": profile,
+                   "proposals": proposals,
                    "og_image_url": og_image_url})

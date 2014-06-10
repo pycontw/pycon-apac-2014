@@ -16,6 +16,26 @@
       {% include "_speaker_info.html"  %}
     </div>
     <div class="clear"></div>
+    <hr>
+    <div class="program-title">
+      <h3>{% trans "Presentations" %}</h3>
+      {% if proposals %}
+        {% for proposal in proposals %}
+          <div class="speaker-proposal">
+            {% if proposal.id %}<a href="{% url 'proposal_content' proposal_id=proposal.id %}" turbolink style="display:inline;">{% endif %}
+              {{proposal.title}}
+            {% if proposal.id %}</a>{% endif %}
+            <span class="talk-lang">
+              ／{% trans proposal.get_language_display %}
+            </span>
+            <span class="program-link">
+                {% if proposal.slide_link %}<a class="link-btn" href="{{proposal.slide_link}}" target="_blank">{% trans "Slide" %}</a>{% endif %}
+                {% if proposal.video_link %}<a class="link-btn" href="{{proposal.video_link}}" target="_blank">{% trans "Video" %}</a>{% endif %}
+            </span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </div>
 

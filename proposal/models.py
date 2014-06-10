@@ -69,7 +69,8 @@ class ProposalModel(models.Model):
     )
     create_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-
+    slide_link = models.URLField(null=True, blank=True)
+    video_link = models.URLField(null=True, blank=True)
 
 class AbstractFile(models.Model):
     proposal = models.OneToOneField(ProposalModel)

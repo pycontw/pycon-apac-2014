@@ -7,12 +7,17 @@
     </h1>
     <p class="talk-meta">
         <span class="talk-speaker">
-            {{proposal.author.first_name}}
-            {{proposal.author.last_name}}
-        </span>
 
+        {{proposal.author.first_name}}
+        {{proposal.author.last_name}}
+
+        </span>
         <span class="talk-lang">
             ／{% trans proposal.get_language_display %}
+        </span>
+        <span class="program-link">
+            {% if proposal.slide_link %}<a class="link-btn" href="{{proposal.slide_link}}" target="_blank">{% trans "Slide" %}</a>{% endif %}
+            {% if proposal.video_link %}<a class="link-btn" href="{{proposal.video_link}}" target="_blank">{% trans "Video" %}</a>{% endif %}
         </span>
     </p>
 </div>

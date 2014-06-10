@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyCon APAC 2014\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-17 11:29+0800\n"
+"POT-Creation-Date: 2014-06-10 17:54+0800\n"
 "PO-Revision-Date: 2014-02-25 04:10+0000\n"
 "Last-Translator: keitheis <keitheis+transifex@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pycon-"
@@ -235,15 +235,15 @@ msgstr ""
 "\"><i>organizers@pycon.tw</i></a></p>\n"
 "    "
 
-#: templates/index.html:58
+#: templates/index.html:52
 msgid "BLOG"
 msgstr ""
 
-#: templates/index.html:64 templates/blog/blog_post_list.html:89
+#: templates/index.html:58 templates/blog/blog_post_list.html:89
 msgid "in"
 msgstr ""
 
-#: templates/index.html:70 templates/blog/blog_post_detail.html:33
+#: templates/index.html:64 templates/blog/blog_post_detail.html:33
 #: templates/blog/blog_post_list.html:95
 #: templates/generic/includes/comment.html:22
 #: templates/generic/includes/comment.html:53
@@ -252,11 +252,11 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr "%(sometime)s前"
 
-#: templates/index.html:81
+#: templates/index.html:75
 msgid "Local User Group"
 msgstr ""
 
-#: templates/index.html:85
+#: templates/index.html:79
 msgid ""
 "\n"
 "          <li>\n"
@@ -553,13 +553,21 @@ msgstr "RSS"
 msgid "Atom"
 msgstr "Atom"
 
-#: templates/demo/_program_title.html:15
+#: templates/demo/_program_title.html:13
 msgid "Mandarin"
 msgstr "中文"
 
-#: templates/demo/_program_title.html:17
+#: templates/demo/_program_title.html:15
 msgid "English"
 msgstr "英語"
+
+#: templates/demo/_program_title.html:18 templates/demo/talk_content.html:19
+msgid "Slide"
+msgstr "投影片"
+
+#: templates/demo/_program_title.html:19 templates/demo/talk_content.html:20
+msgid "Video"
+msgstr "錄影"
 
 #: templates/demo/program.html:4 templates/demo/program.html.py:5
 #: templates/demo/program.html:7 templates/demo/program.html.py:9
@@ -626,7 +634,7 @@ msgstr ""
 msgid "Closing"
 msgstr "閉幕式"
 
-#: templates/demo/talk_content.html:27
+#: templates/demo/talk_content.html:32
 msgid "About Speaker"
 msgstr "關於講者"
 
@@ -820,6 +828,9 @@ msgstr "新增"
 #: templates/twitter/tweets.html:7
 msgid "Recent Tweets"
 msgstr "近期推文"
+
+#~ msgid "Presentations"
+#~ msgstr "演講主題"
 
 #~ msgid ""
 #~ "\n"

@@ -1218,6 +1218,26 @@ hr {
 .program-title small a {
   color: inherit;
 }
+.program-link {
+  margin: 5px 20px;
+}
+.program-link a.link-btn {
+    border-radius: 4px;
+    display: inline;
+    background-color: rgba(102, 102, 102, 0.1);
+    color: #666666;
+    font-size: 0.8em;
+    margin-right: 4px;
+    padding: 6px 8px 4px 8px;
+    text-decoration: none;
+    box-shadow: 0 2px #cbcbcb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.program-link a.link-btn:hover {
+   border-color: #ccc;
+   border-bottom-color: red；
+   box-shadow: 0 2px #bbb;
+}
 .program-block {
   background-color: rgba(14,110,184,0.1);
   color: #04556a;
@@ -1350,6 +1370,12 @@ table#proposal_review_list tbody tr td.number {
   font-size: 0.9em;
   color: #777;
   margin: 0;
+}
+.speaker-proposal {
+  margin: 20px 0;
+}
+.speaker-proposal a {
+  display: inline;
 }
 .speaker-info h4 {
   font-size: 16px;
