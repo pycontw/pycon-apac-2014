@@ -21,7 +21,8 @@ def speaker_info(request, speaker_id):
         raise Http404
 
     profile = speaker.get_profile()
-    proposals = ProposalModel.objects.filter(author=speaker)
+    proposals = ProposalModel.objects.filter(author=speaker,
+                                             result__decision=1)
     picture = profile.picture
     og_image_url = picture.url if picture else None
     return render(request, "speaker_info.html",
