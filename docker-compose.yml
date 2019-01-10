@@ -4,10 +4,13 @@ services:
         build: .
         container_name: pycontw-2014
         hostname: pycontw-2014
-        volumes:
-            - ./data:/var/www
         ports:
             - 8014:80
+
+    pycontw-2014-redis:
+        image: redis:latest
+        container_name: pycontw-2014-redis
+        hostname: pycontw-2014-redis
 
 networks:
     default:
