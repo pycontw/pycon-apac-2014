@@ -1,0 +1,15 @@
+version: '3'
+services:
+    pycontw-2014:
+        build: .
+        container_name: pycontw-2014
+        hostname: pycontw-2014
+        volumes:
+            - ./data:/var/www
+        ports:
+            - 8014:8000
+
+networks:
+    default:
+        external:
+            name: pycontw-net
